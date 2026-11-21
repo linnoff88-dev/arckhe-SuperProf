@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2B.1: Anatomia de LLMs - Como Funcionam Por Dentro | SuperProfessores</title>
+    <meta name="description" content="Entenda a arquitetura interna de Large Language Models. Domine conceitos de transformers, attention mechanisms, tokenização e embeddings. Saiba como m">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'trilha-a': '#9b59b6',
+                        'trilha-b': '#10B981',
+                        'module-color': '#10B981',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out;
+        }
+        .preload * {
+            transition: none !important;
+        }
+    </style>
+</head>
+<body class="preload bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold bg-gradient-to-r from-primary to-trilha-a bg-clip-text text-transparent">
+                        🎓 SuperProfessores
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Início</a>
+                    <a href="../niveis/nivel-2b.html" class="text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Nível 2B</a>
+                    <a href="https://github.com/inematds/SuperProf" target="_blank" class="text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">GitHub</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-600">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <nav class="flex text-sm" aria-label="Breadcrumb">
+                <a href="../index.html" class="text-primary hover:text-blue-700">Início</a>
+                <span class="mx-2 text-neutral-400">/</span>
+                <a href="../niveis/nivel-2b.html" class="text-primary hover:text-blue-700">Trilha B</a><span class="mx-2 text-neutral-400">/</span><a href="../niveis/nivel-2b.html" class="text-primary hover:text-blue-700">Nível 2B</a><span class="mx-2 text-neutral-400">/</span><span class="text-neutral-600 dark:text-neutral-400">Módulo</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-module-color to-purple-700 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">Técnico</span>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">Módulo 2B.1: Anatomia de LLMs - Como Funcionam Por Dentro</h1>
+            <p class="text-xl text-purple-100 max-w-3xl">
+                Entenda a arquitetura interna de Large Language Models. Domine conceitos de transformers, attention mechanisms, tokenização e embeddings. Saiba como modelos "pensam" para usar com mais eficácia.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Visão Geral -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6">📖 Visão Geral</h2>
+            <div class="prose prose-lg dark:prose-invert max-w-none">
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-4">
+                    Entenda a arquitetura interna de Large Language Models. Domine conceitos de transformers, attention mechanisms, tokenização e embeddings. Saiba como modelos "pensam" para usar com mais eficácia.
+                </p>
+                <p class='text-lg text-neutral-700 dark:text-neutral-300'><strong>Ao final deste módulo, você será capaz de:</strong></p>
+                <ul class='list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300'><li>Compreender arquitetura Transformer (não precisa codificar)</li><li>Explicar como funciona self-attention e embeddings</li><li>Entender limitações técnicas (contexto, alucinações, vieses)</li><li>Comparar diferentes LLMs (GPT, Claude, Gemini, LLaMA)</li><li>Tomar decisões informadas sobre qual modelo usar quando</li></ul>
+            </div>
+        </section>
+
+        <!-- Conteúdo Detalhado -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8">📚 Conteúdo Detalhado</h2>
+            
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">🧠</span>
+                    <span>De Redes Neurais a Transformers</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Evolução Histórica:
+<strong>1. Perceptron (1958) → Redes Neurais Simples</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Input → [Camada de neurônios] → Output
+Limitação: Só funções lineares
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>2. Deep Learning (2010s) → CNNs, RNNs</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+CNNs: Boas para imagens (convolução espacial)
+RNNs: Boas para sequências (memória temporal)
+Limitação: RNNs não escalam (vanishing gradient)
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>3. Attention Mechanism (2017) → Transformers</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+"Attention is All You Need" (Vaswani et al)
+Ideia: Focar em partes relevantes do input
+Resultado: Escala para bilhões de parâmetros
+</code>``
+### Por que Transformers Dominam:
+✅ <strong>Paralelização:</strong> Processa texto todo de uma vez (vs RNN sequencial)
+✅ <strong>Long-range dependencies:</strong> Conecta palavras distantes no texto
+✅ <strong>Escalabilidade:</strong> Mais dados + mais parâmetros = melhor performance
+✅ <strong>Transfer learning:</strong> Pré-treino geral + fine-tune específico
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">🔍</span>
+                    <span>Arquitetura Transformer (Simplificada)</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Componentes Principais:
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+INPUT: "O gato está no telhado"
+   ↓
+[1. TOKENIZAÇÃO]
+   → ["O", "gato", "está", "no", "tel", "hado"]
+   ↓
+[2. EMBEDDING]
+   → Cada token vira vetor de 768-12288 dimensões
+   ↓
+[3. POSITIONAL ENCODING]
+   → Adiciona informação de ordem (palavra 1, 2, 3...)
+   ↓
+[4. SELF-ATTENTION] (🔑 Magia acontece aqui)
+   → Cada palavra "olha" para todas as outras
+   → Identifica relações: "gato" se relaciona com "telhado"
+   ↓
+[5. FEED-FORWARD]
+   → Transformações não-lineares
+   ↓
+[6. REPETIR 4-5] (12-96 vezes, dependendo do modelo)
+   ↓
+[7. OUTPUT]
+   → Probabilidades para próxima palavra
+   → Ex: "O gato está no telhado [comendo: 0.3, dormindo: 0.5, ...]"
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">💡</span>
+                    <span>Self-Attention: O Coração do Transformer</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Como Funciona (Analogia):
+Imagine uma sala de aula onde cada aluno (palavra) pode fazer perguntas para todos os outros:
+<strong>Frase:</strong> "O professor explica IA para alunos interessados"
+<strong>Self-Attention calcula:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>"professor" deveria prestar atenção em: "explica" (0.8), "alunos" (0.6), "IA" (0.7)</li>
+<li>"alunos" deveria prestar atenção em: "interessados" (0.9), "professor" (0.5)</li>
+<li>"interessados" deveria prestar atenção em: "alunos" (0.95), "IA" (0.4)</li>
+</ul>
+<strong>Resultado:</strong> Modelo entende que "interessados" modifica "alunos", não "professor"
+### Matematicamente (Conceitual):
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Para cada palavra:
+1. Query (Q): "O que eu estou procurando?"
+2. Key (K): "O que eu tenho a oferecer?"
+3. Value (V): "Qual informação eu carrego?"
+Attention Score = Similarity(Q, K)
+Output = Weighted sum of Values
+Exemplo:
+Palavra "gato" (Query) procura sujeitos de ação
+Palavra "pulou" (Key) oferece "sou um verbo"
+Score alto → "gato" presta atenção em "pulou"
+</code>``
+### Multi-Head Attention:
+Ao invés de 1 mecanismo de atenção, usa 8-96 em paralelo:
+<ul class="space-y-2 list-disc pl-6">
+<li>Head 1: Foca em sintaxe (sujeito-verbo-objeto)</li>
+<li>Head 2: Foca em semântica (significado)</li>
+<li>Head 3: Foca em contexto longo</li>
+<li>Head 4-8: Outros padrões aprendidos</li>
+</ul>
+<strong>Analogia:</strong> 8 especialistas analisando o mesmo texto de ângulos diferentes
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">📦</span>
+                    <span>Tokenização: Quebrando Texto em Pedaços</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### O que são Tokens?
+<strong>Não são palavras!</strong> São subunidades:
+<strong>Exemplo (GPT-4):</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Input: "Superprofessores"
+Tokens: ["Super", "prof", "ess", "ores"]
+4 tokens (não 1 palavra)
+Input: "ChatGPT é incrível!"
+Tokens: ["Chat", "G", "PT", " é", " in", "cr", "ível", "!"]
+8 tokens
+</code>``
+### Por que Tokenizar?
+✅ <strong>Eficiência:</strong> Vocabulário fixo (50k-100k tokens vs milhões de palavras)
+✅ <strong>Generalização:</strong> Palavras novas podem ser compostas de tokens conhecidos
+✅ <strong>Multilíngue:</strong> Mesmos tokens funcionam em múltiplas línguas
+### Algoritmos Comuns:
+<strong>1. Byte-Pair Encoding (BPE) - Usado por GPT</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Começa com caracteres</li>
+<li>Mescla pares frequentes</li>
+<li>Ex: "a" + "b" → "ab" se aparecem juntos frequentemente</li>
+</ul>
+<strong>2. WordPiece - Usado por BERT</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Similar a BPE, mas otimiza likelihood</li>
+</ul>
+<strong>3. SentencePiece - Usado por T5, LLaMA</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Trata texto como sequência de bytes (Unicode-aware)</li>
+</ul>
+### Implicações para Educadores:
+⚠️ <strong>Limite de tokens ≠ Limite de palavras</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>GPT-4: 128k tokens ≈ 96k palavras (português)</li>
+<li>Claude: 200k tokens ≈ 150k palavras</li>
+</ul>
+⚠️ <strong>Palavras longas custam mais</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>"a" = 1 token</li>
+<li>"Institucionalização" = 5+ tokens</li>
+</ul>
+<strong>Ferramenta para Contar:</strong> https://platform.openai.com/tokenizer
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">🎨</span>
+                    <span>Embeddings: Representando Significado em Vetores</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Conceito:
+<strong>Palavra → Vetor numérico de alta dimensão</strong>
+<strong>Exemplo (simplificado para 3D):</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+"rei"      → [0.8, 0.3, 0.1]
+"rainha"   → [0.8, 0.3, 0.9]
+"homem"    → [0.5, 0.2, 0.1]
+"mulher"   → [0.5, 0.2, 0.9]
+Matemática vetorial:
+rei - homem + mulher ≈ rainha
+[0.8,0.3,0.1] - [0.5,0.2,0.1] + [0.5,0.2,0.9] = [0.8,0.3,0.9]
+</code>``
+### Propriedades Mágicas:
+<strong>1. Similaridade Semântica</strong>
+Palavras similares têm vetores próximos:
+<ul class="space-y-2 list-disc pl-6">
+<li>"cachorro" e "cão" → Distância pequena</li>
+<li>"cachorro" e "árvore" → Distância grande</li>
+</ul>
+<strong>2. Analogias</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Paris : França :: Berlim : ? → Alemanha</li>
+<li>Funcionam via aritmética vetorial!</li>
+</ul>
+<strong>3. Transferência de Contexto</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>"banco" (sentar) vs "banco" (financeiro)</li>
+<li>Mesmo embedding muda significado por contexto</li>
+</ul>
+### Embeddings em LLMs:
+<strong>GPT-4:</strong> 12,288 dimensões (cada token = vetor de 12k números)
+<strong>Claude 3:</strong> Não revelado (estimado 8k-16k)
+<strong>Gemini:</strong> Não revelado
+<strong>Visualização:</strong> t-SNE ou PCA reduzem para 2D/3D para plotar
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">📌</span>
+                    <span>🏗️ Escala: De GPT-2 a GPT-4</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Evolução de Parâmetros:
+| Modelo | Parâmetros | Contexto | Ano |
+|--------|-----------|----------|-----|
+| GPT-2 | 1.5B | 1k tokens | 2019 |
+| GPT-3 | 175B | 4k tokens | 2020 |
+| GPT-3.5 | 175B | 16k tokens | 2022 |
+| GPT-4 | ~1.7T* | 128k tokens | 2023 |
+| Claude 3 Opus | ?** | 200k tokens | 2024 |
+| Gemini 1.5 | ?** | 1M tokens | 2024 |
+*Estimado, OpenAI não confirma
+**Não revelado
+### Lei de Escala (Scaling Laws):
+<strong>Descoberta (Kaplan et al, 2020):</strong>
+Performance ∝ (Parâmetros)^α × (Dados)^β × (Computação)^γ
+<strong>Implicação:</strong> Modelos maiores com mais dados são previsivelmente melhores
+<strong>Mas... há limites:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>💰 Custo: GPT-4 custou ~$100M para treinar</li>
+<li>⚡ Energia: Equivalente a 1000 lares/ano</li>
+<li>🌍 Dados: Internet tem limite</li>
+<li>📐 Retorno diminui (modelo 10x maior ≠ 10x melhor)</li>
+</ul>
+---</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10 rounded-xl p-8 text-center border-2 border-dashed border-module-color">
+                <p class="text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
+                    📚 Conteúdo Completo
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+                    Faça download do material completo em Markdown para acessar todos os tópicos, exemplos, prompts e atividades detalhadas.
+                </p>
+                <a href="../pdfs/modulo-2b-1.md" download class="inline-block px-6 py-3 bg-module-color text-white rounded-lg font-semibold hover:opacity-90 transition-colors">
+                    📄 Baixar Material Completo (MD)
+                </a>
+            </div>
+        </section>
+
+        <!-- Recursos -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6">📦 Recursos do Módulo</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>📹</span>
+                        <span>Videoaulas</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Aulas detalhadas sobre cada tópico do módulo
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>💬</span>
+                        <span>Práticas</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Atividades hands-on com projetos reais
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>✅</span>
+                        <span>Avaliação</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Quizzes e projetos para certificação
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>📚</span>
+                        <span>Referências</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Materiais complementares selecionados
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegação -->
+        <section class="flex justify-between items-center pt-8 border-t border-neutral-200 dark:border-neutral-700">
+            <a href="../niveis/nivel-2b.html" class="px-6 py-3 bg-neutral-200 dark:bg-neutral-700 rounded-lg font-semibold hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors">
+                ← Voltar ao Nível 2B
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 dark:bg-black text-neutral-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 SuperProfessores. Licença MIT.</p>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

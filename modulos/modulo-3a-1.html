@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3A.1: Currículo Aumentado por IA | SuperProfessores</title>
+    <meta name="description" content="Aprenda a redesenhar currículos inteiros usando IA como copiloto estratégico. Domine mapeamento de competências, desenho de trilhas adaptativas e alin">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'trilha-a': '#9b59b6',
+                        'trilha-b': '#10B981',
+                        'module-color': '#8e44ad',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out;
+        }
+        .preload * {
+            transition: none !important;
+        }
+    </style>
+</head>
+<body class="preload bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold bg-gradient-to-r from-primary to-trilha-a bg-clip-text text-transparent">
+                        🎓 SuperProfessores
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Início</a>
+                    <a href="../niveis/nivel-3a.html" class="text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Nível 3A</a>
+                    <a href="https://github.com/inematds/SuperProf" target="_blank" class="text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">GitHub</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-600">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <nav class="flex text-sm" aria-label="Breadcrumb">
+                <a href="../index.html" class="text-primary hover:text-blue-700">Início</a>
+                <span class="mx-2 text-neutral-400">/</span>
+                <a href="../niveis/nivel-3a.html" class="text-primary hover:text-blue-700">Trilha A</a><span class="mx-2 text-neutral-400">/</span><a href="../niveis/nivel-3a.html" class="text-primary hover:text-blue-700">Nível 3A</a><span class="mx-2 text-neutral-400">/</span><span class="text-neutral-600 dark:text-neutral-400">Módulo</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-module-color to-purple-700 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">Especialista</span>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">Módulo 3A.1: Currículo Aumentado por IA</h1>
+            <p class="text-xl text-purple-100 max-w-3xl">
+                Aprenda a redesenhar currículos inteiros usando IA como copiloto estratégico. Domine mapeamento de competências, desenho de trilhas adaptativas e alinhamento com frameworks educacionais (BNCC, Common Core, IB).
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Visão Geral -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6">📖 Visão Geral</h2>
+            <div class="prose prose-lg dark:prose-invert max-w-none">
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-4">
+                    Aprenda a redesenhar currículos inteiros usando IA como copiloto estratégico. Domine mapeamento de competências, desenho de trilhas adaptativas e alinhamento com frameworks educacionais (BNCC, Common Core, IB).
+                </p>
+                <p class='text-lg text-neutral-700 dark:text-neutral-300'><strong>Ao final deste módulo, você será capaz de:</strong></p>
+                <ul class='list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300'><li>Mapear currículo existente e identificar gaps com IA</li><li>Redesenhar experiências de aprendizagem orientadas por competências</li><li>Criar trilhas adaptativas multi-nível</li><li>Alinhar com frameworks nacionais/internacionais</li><li>Implementar currículo vivo (atualização contínua com IA)</li></ul>
+            </div>
+        </section>
+
+        <!-- Conteúdo Detalhado -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8">📚 Conteúdo Detalhado</h2>
+            
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">🎯</span>
+                    <span>Da Entrega de Conteúdo para Desenvolvimento de Competências</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Mudança de Paradigma:
+<strong>Currículo Tradicional (Input-based):</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Objetivo: "Ensinar 20 horas de álgebra"
+Métrica: Tempo gasto
+Problema: Não garante aprendizado
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Currículo Aumentado (Outcome-based):</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Objetivo: "Aluno resolve problemas reais usando álgebra"
+Métrica: Demonstração de competência
+IA ajuda: Caminhos personalizados para chegar lá
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">📌</span>
+                    <span>🗺️ Mapeamento de Currículo com IA</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Etapa 1: Auditoria do Currículo Atual
+<strong>Prompt Claude:</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Analise este currículo de [DISCIPLINA] para [ANO/SÉRIE]:
+[Colar ementa completa]
+Identifique:
+1. Competências trabalhadas (explícitas e implícitas)
+2. Taxonomia de Bloom: distribuição entre níveis (lembrar → criar)
+3. Gaps: o que está faltando para formação completa?
+4. Redundâncias: o que está repetido desnecessariamente?
+5. Sequenciamento: ordem lógica está otimizada?
+Formato: Relatório estruturado + tabela de competências
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+### Etapa 2: Alinhamento com Frameworks
+<strong>BNCC - Base Nacional Comum Curricular (Brasil)</strong>
+<strong>Prompt ChatGPT:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Currículo de Matemática 9º ano:
+[Colar tópicos]
+Tarefa: Mapear para competências gerais e específicas da BNCC:
+Competências Gerais (1-10):
+[Listar quais são trabalhadas]
+Objetos de Conhecimento (Matemática):
+<ul class="space-y-2 list-disc pl-6">
+<li>Números</li>
+<li>Álgebra</li>
+<li>Geometria</li>
+<li>Grandezas e medidas</li>
+<li>Probabilidade e estatística</li>
+</ul>
+Habilidades específicas:
+[Listar códigos BNCC: ex. EF09MA01, EF09MA02...]
+Gerar matriz de alinhamento:
+Tópico → Competência → Habilidade → Evidência
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+### Etapa 3: Mapeamento Visual
+<strong>Ferramenta:</strong> Miro + IA para gerar diagrama
+<strong>Prompt DALL-E 3:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Crie mapa conceitual visual do currículo de [DISCIPLINA]:
+Estrutura:
+<ul class="space-y-2 list-disc pl-6">
+<li>Centro: Competência central</li>
+<li>Ramos: 5-7 competências secundárias</li>
+<li>Folhas: Habilidades específicas (3-5 por ramo)</li>
+</ul>
+Estilo: Infográfico moderno, cores diferenciadas por ramo
+Formato: PNG 1920x1080
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">📌</span>
+                    <span>🧩 Competências do Século 21</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Framework 4Cs + IA:
+<strong>1. Critical Thinking (Pensamento Crítico)</strong>
+<strong>Como integrar:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Análise de vieses em outputs de IA</li>
+<li>Avaliação de fontes (fact-checking assistido)</li>
+<li>Resolução de problemas complexos com múltiplas variáveis</li>
+</ul>
+<strong>Atividade Exemplo:</strong>
+> "Use 3 LLMs diferentes (ChatGPT, Claude, Gemini) para pesquisar [TÓPICO CONTROVERSO]. Compare respostas, identifique vieses, construa síntese crítica."
+<strong>2. Communication (Comunicação)</strong>
+<strong>Como integrar:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Prompt engineering como escrita persuasiva</li>
+<li>Adaptação de mensagem para públicos diferentes (IA gera versões)</li>
+<li>Narrativas multimídia (texto + imagem + áudio com IA)</li>
+</ul>
+<strong>Atividade Exemplo:</strong>
+> "Explique [CONCEITO COMPLEXO] para 3 públicos: criança 8 anos, adolescente 15 anos, adulto especialista. Use IA para primeira versão, depois refine."
+<strong>3. Collaboration (Colaboração)</strong>
+<strong>Como integrar:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Projetos em grupo com IA como 'membro adicional'</li>
+<li>Resolução distribuída (cada aluno usa IA, depois consolidam)</li>
+<li>Peer review assistido por IA</li>
+</ul>
+<strong>Atividade Exemplo:</strong>
+> "Grupo de 4 alunos + 1 IA (ChatGPT). Cada humano pesquisa 1 aspecto, IA sintetiza e identifica gaps. Grupo discute e cria produto final."
+<strong>4. Creativity (Criatividade)</strong>
+<strong>Como integrar:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>IA como ferramenta de brainstorming</li>
+<li>Iteração criativa (humano + IA em loop)</li>
+<li>Remixagem e adaptação (pegar output IA e transformar)</li>
+</ul>
+<strong>Atividade Exemplo:</strong>
+> "Crie história original: 1) IA gera 5 premissas, 2) Você escolhe 1 e desenvolve, 3) IA sugere plot twist, 4) Você decide se aceita ou cria outro."
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">📌</span>
+                    <span>🛤️ Trilhas de Aprendizagem Adaptativas</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Estrutura de Trilha Multi-Nível:
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+                    🎯 Competência-Alvo
+                          |
+         ┌────────────────┼────────────────┐
+         │                │                │
+    📘 Iniciante     📗 Intermediário  📕 Avançado
+         │                │                │
+    [3 módulos]      [4 módulos]      [5 módulos]
+         │                │                │
+    [Quiz]  ──────►  [Quiz]  ──────►  [Certificação]
+         │                │
+    Se <70%: Review   Se <80%: Reforço
+    Se ≥70%: Avança   Se ≥80%: Avança
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+### Gerador de Trilhas com IA:
+<strong>Prompt Gemini:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Crie trilha de aprendizagem adaptativa para competência:
+"[DESCRIÇÃO DA COMPETÊNCIA]"
+Contexto:
+<ul class="space-y-2 list-disc pl-6">
+<li>Público: [IDADE/NÍVEL]</li>
+<li>Tempo disponível: [X horas]</li>
+<li>Modalidade: [Presencial/Híbrido/EAD]</li>
+</ul>
+Estrutura:
+1. Assessment inicial (10 questões diagnósticas)
+2. 3 trilhas paralelas (Iniciante/Intermediário/Avançado)
+3. Cada trilha: 3-5 módulos com objetivos SMART
+4. Checkpoints: onde aluno pode mudar de trilha
+5. Critérios de progressão claros
+6. Recursos diferenciados por trilha
+Formato: Tabela + Fluxograma em Mermaid
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">📚</span>
+                    <span>Currículo Vivo: Atualização Contínua</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Problema do Currículo Estático:
+<ul class="space-y-2 list-disc pl-6">
+<li>Criado em 2020 → Obsoleto em 2022</li>
+<li>IA evolui mais rápido que ciclos de revisão curricular</li>
+<li>Conteúdo desatualizado desmotiva alunos</li>
+</ul>
+### Solução: Currículo que se Atualiza
+<strong>Sistema de Monitoramento:</strong>
+<strong>Prompt Claude (Mensal):</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Monitore desenvolvimentos em [ÁREA DE CONHECIMENTO] no último mês:
+Fontes:
+<ul class="space-y-2 list-disc pl-6">
+<li>ArXiv (papers recentes)</li>
+<li>GitHub trending (ferramentas emergentes)</li>
+<li>Reddit r/MachineLearning (discussões)</li>
+<li>Twitter/X #AIEd (novidades)</li>
+</ul>
+Identifique:
+1. Novos conceitos que deveriam entrar no currículo
+2. Conceitos que se tornaram obsoletos
+3. Ferramentas novas que substituem antigas
+4. Mudanças em melhores práticas
+Recomendações:
+<ul class="space-y-2 list-disc pl-6">
+<li>Adicionar: [Listar com justificativa]</li>
+<li>Remover: [Listar com justificativa]</li>
+<li>Atualizar: [Listar o quê e como]</li>
+</ul>
+Formato: Relatório executivo (2 páginas)
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Ciclo de Atualização:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Mês 1-3: Implementar currículo v1.0
+Mês 4: IA gera relatório de atualização
+Mês 5: Equipe revisa e decide mudanças
+Mês 6: Lançar v1.1 com updates
+[Repetir ciclo]
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">🎓</span>
+                    <span>Casos Práticos</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Caso 1: Redesenho de Currículo de Ensino Médio
+<strong>Contexto:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Escola privada, 120 alunos por série</li>
+<li>Disciplina: Biologia 1º ano</li>
+<li>Problema: Currículo desconectado da realidade, baixo engajamento</li>
+</ul>
+<strong>Processo com IA:</strong>
+<strong>Etapa 1 - Auditoria (2h):</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Claude analisou ementa de 80 páginas
+Identificou: 70% focado em memorização, 15% aplicação, 15% análise
+Gap: Zero conexão com biotecnologia moderna, CRISPR, genômica
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Etapa 2 - Redesenho (4h):</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+ChatGPT gerou nova estrutura:
+<ul class="space-y-2 list-disc pl-6">
+<li>40% conceitos fundamentais (mantido)</li>
+<li>30% aplicações contemporâneas (novo)</li>
+<li>30% projeto hands-on (expandido de 15%)</li>
+</ul>
+Adicionou: Módulo "Biotecnologia na Prática"
+<ul class="space-y-2 list-disc pl-6">
+<li>CRISPR: ética e aplicações</li>
+<li>Sequenciamento DNA caseiro (kits acessíveis)</li>
+<li>Entrevista com cientista (IA agenda e prepara perguntas)</li>
+</ul>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Etapa 3 - Implementação (12 semanas):</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Aula tradicional → Flipped classroom + IA
+<ul class="space-y-2 list-disc pl-6">
+<li>Antes: IA gera quiz diagnóstico</li>
+<li>Durante: Discussão + lab</li>
+<li>Depois: IA corrige relatórios e dá feedback</li>
+</ul>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Resultados:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Engajamento (survey): 6.2/10 → 8.7/10</li>
+<li>Performance em vestibulares: +18%</li>
+<li>Alunos que consideraram Biologia na faculdade: 12% → 34%</li>
+</ul>
+---
+### Caso 2: Currículo Técnico de Programação
+<strong>Contexto:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Bootcamp 16 semanas, 40h/semana</li>
+<li>Objetivo: Preparar para mercado como desenvolvedor júnior</li>
+<li>Desafio: Mercado muda rápido, stack overflow de tecnologias</li>
+</ul>
+<strong>Solução com IA:</strong>
+<strong>Currículo Dinâmico:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Core (60% - Fixo):
+<ul class="space-y-2 list-disc pl-6">
+<li>Fundamentos CS (algoritmos, estruturas de dados)</li>
+<li>Git, terminal, debugging</li>
+<li>Conceitos backend/frontend</li>
+</ul>
+Electives (40% - Atualizado a cada cohort):
+<ul class="space-y-2 list-disc pl-6">
+<li>IA analisa 1000 vagas de emprego</li>
+<li>Identifica top 5 tecnologias em demanda</li>
+<li>Gera módulos para essas techs</li>
+<li>Ex: Cohort Jan/25: React, Next.js, PostgreSQL, Docker, AWS</li>
+<li>Ex: Cohort Jul/25: Svelte, Supabase, Kubernetes, Python+FastAPI</li>
+</ul>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Personalização por Aluno:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Semana 8: IA analisa performance de cada aluno
+<ul class="space-y-2 list-disc pl-6">
+<li>Aluno A: Forte em frontend, fraco em backend</li>
+</ul>
+  → Recomenda track "Frontend Specialist"
+<ul class="space-y-2 list-disc pl-6">
+<li>Aluno B: Equilibrado</li>
+</ul>
+  → Recomenda track "Full-stack Generalist"
+<ul class="space-y-2 list-disc pl-6">
+<li>Aluno C: Interesse em dados</li>
+</ul>
+  → Recomenda track "Data Engineering"
+</code>``
+<strong>Resultados:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Taxa de emprego 6 meses: 78% → 91%</li>
+<li>Salário médio primeiro emprego: +22%</li>
+<li>Satisfação com currículo: 8.9/10</li>
+</ul>
+---</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10 rounded-xl p-8 text-center border-2 border-dashed border-module-color">
+                <p class="text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
+                    📚 Conteúdo Completo
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+                    Faça download do material completo em Markdown para acessar todos os tópicos, exemplos, prompts e atividades detalhadas.
+                </p>
+                <a href="../pdfs/modulo-3a-1.md" download class="inline-block px-6 py-3 bg-module-color text-white rounded-lg font-semibold hover:opacity-90 transition-colors">
+                    📄 Baixar Material Completo (MD)
+                </a>
+            </div>
+        </section>
+
+        <!-- Recursos -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6">📦 Recursos do Módulo</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>📹</span>
+                        <span>Videoaulas</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Aulas detalhadas sobre cada tópico do módulo
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>💬</span>
+                        <span>Práticas</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Atividades hands-on com projetos reais
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>✅</span>
+                        <span>Avaliação</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Quizzes e projetos para certificação
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>📚</span>
+                        <span>Referências</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Materiais complementares selecionados
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegação -->
+        <section class="flex justify-between items-center pt-8 border-t border-neutral-200 dark:border-neutral-700">
+            <a href="../niveis/nivel-3a.html" class="px-6 py-3 bg-neutral-200 dark:bg-neutral-700 rounded-lg font-semibold hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors">
+                ← Voltar ao Nível 3A
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 dark:bg-black text-neutral-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 SuperProfessores. Licença MIT.</p>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2B.3: Criação de Agentes Educacionais com IA | SuperProfessores</title>
+    <meta name="description" content="Aprenda a criar agentes autônomos de IA capazes de executar tarefas complexas em educação. Domine frameworks como LangChain Agents, AutoGPT e CrewAI p">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'trilha-a': '#9b59b6',
+                        'trilha-b': '#10B981',
+                        'module-color': '#10B981',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out;
+        }
+        .preload * {
+            transition: none !important;
+        }
+    </style>
+</head>
+<body class="preload bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold bg-gradient-to-r from-primary to-trilha-a bg-clip-text text-transparent">
+                        🎓 SuperProfessores
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Início</a>
+                    <a href="../niveis/nivel-2b.html" class="text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Nível 2B</a>
+                    <a href="https://github.com/inematds/SuperProf" target="_blank" class="text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">GitHub</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-600">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <nav class="flex text-sm" aria-label="Breadcrumb">
+                <a href="../index.html" class="text-primary hover:text-blue-700">Início</a>
+                <span class="mx-2 text-neutral-400">/</span>
+                <a href="../niveis/nivel-2b.html" class="text-primary hover:text-blue-700">Trilha B</a><span class="mx-2 text-neutral-400">/</span><a href="../niveis/nivel-2b.html" class="text-primary hover:text-blue-700">Nível 2B</a><span class="mx-2 text-neutral-400">/</span><span class="text-neutral-600 dark:text-neutral-400">Módulo</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-module-color to-purple-700 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">Técnico</span>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">Módulo 2B.3: Criação de Agentes Educacionais com IA</h1>
+            <p class="text-xl text-purple-100 max-w-3xl">
+                Aprenda a criar agentes autônomos de IA capazes de executar tarefas complexas em educação. Domine frameworks como LangChain Agents, AutoGPT e CrewAI para construir tutores personalizados, geradores de conteúdo e assistentes de pesquisa que agem com m
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Visão Geral -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6">📖 Visão Geral</h2>
+            <div class="prose prose-lg dark:prose-invert max-w-none">
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-4">
+                    Aprenda a criar agentes autônomos de IA capazes de executar tarefas complexas em educação. Domine frameworks como LangChain Agents, AutoGPT e CrewAI para construir tutores personalizados, geradores de conteúdo e assistentes de pesquisa que agem com mínima supervisão humana.
+                </p>
+                <p class='text-lg text-neutral-700 dark:text-neutral-300'><strong>Ao final deste módulo, você será capaz de:</strong></p>
+                <ul class='list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300'><li>Entender arquitetura de agentes (ReAct, Plan-and-Execute)</li><li>Implementar agente com ferramentas customizadas</li><li>Criar tutor socrático que faz perguntas ao invés de dar respostas</li><li>Construir gerador de conteúdo multi-step (pesquisa + síntese + validação)</li><li>Orquestrar múltiplos agentes (multi-agent systems)</li></ul>
+            </div>
+        </section>
+
+        <!-- Conteúdo Detalhado -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8">📚 Conteúdo Detalhado</h2>
+            
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">🤖</span>
+                    <span>O que são Agentes de IA?</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Definição:
+<strong>Agente = LLM + Ferramentas + Loop de Raciocínio</strong>
+<strong>Diferença de Chatbot:</strong>
+<strong>Chatbot:</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+User: "Qual a capital da França?"
+LLM: "A capital da França é Paris."
+[1 turno, resposta direta]
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Agente:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+User: "Me dê informações atualizadas sobre Paris"
+Agent (interno):
+1. Thought: "Preciso buscar informações recentes"
+2. Action: google_search("Paris novidades 2025")
+3. Observation: [Resultados da busca]
+4. Thought: "Preciso sintetizar em tópicos"
+5. Action: None (raciocínio suficiente)
+6. Final Answer: "Aqui estão 5 novidades sobre Paris..."
+[Multi-step, usa ferramentas, raciocínio iterativo]
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">📌</span>
+                    <span>🧩 Arquitetura de Agentes</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Componente 1: Brain (LLM)
+<strong>Função:</strong> Raciocínio e decisão
+<strong>Modelos Recomendados:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li><strong>GPT-4:</strong> Melhor raciocínio, mais caro</li>
+<li><strong>GPT-3.5:</strong> Bom custo-benefício</li>
+<li><strong>Claude 3:</strong> Forte em reasoning chains</li>
+<li><strong>LLaMA 3 70B:</strong> Open-source, mas requer infra</li>
+</ul>
+---
+### Componente 2: Tools (Ferramentas)
+<strong>Função:</strong> Ações que agente pode executar
+<strong>Exemplos Educacionais:</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">python
+tools = [
+    Tool(
+        name="Buscar_Biblioteca",
+        func=buscar_em_pdfs,
+        description="Busca informação em materiais do curso"
+    ),
+    Tool(
+        name="Gerar_Quiz",
+        func=gerar_questoes,
+        description="Cria questões de múltipla escolha sobre tópico"
+    ),
+    Tool(
+        name="Avaliar_Resposta",
+        func=corrigir_resposta,
+        description="Avalia resposta do aluno (0-10)"
+    ),
+    Tool(
+        name="Recomendar_Material",
+        func=recomendar_recurso,
+        description="Sugere material baseado em dificuldades"
+    )
+]
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Anatomia de uma Tool:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li><strong>Nome:</strong> Identificador único</li>
+<li><strong>Função:</strong> Código Python que executa</li>
+<li><strong>Descrição:</strong> Como LLM entende quando usar (crítico!)</li>
+</ul>
+---
+### Componente 3: Memory (Memória)
+<strong>Função:</strong> Lembrar interações passadas
+<strong>Tipos:</strong>
+<strong>Short-term (Conversa Atual):</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">python
+from langchain.memory import ConversationBufferMemory
+memory = ConversationBufferMemory()
+memory.save_context(
+    {"input": "Olá"},
+    {"output": "Olá! Como posso ajudar?"}
+)
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Long-term (Entre Sessões):</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">python
+from langchain.memory import VectorStoreRetrieverMemory
+# Armazena em vector DB, busca por similaridade
+memory = VectorStoreRetrieverMemory(retriever=vectordb.as_retriever())
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+---
+### Componente 4: Agent Loop (Ciclo de Raciocínio)
+<strong>Framework: ReAct (Reasoning + Acting)</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Loop até responder:
+1. REASON: "Que informação preciso?"
+2. ACT: Usar ferramenta
+3. OBSERVE: Ver resultado
+4. [Repetir ou finalizar]
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Exemplo Real:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+User: "Crie quiz sobre fotossíntese para 8º ano"
+Iteration 1:
+├─ Thought: "Preciso saber o que alunos já aprenderam"
+├─ Action: Buscar_Biblioteca(tópico="fotossíntese", série="8º ano")
+└─ Observation: "Alunos já viram cloroplastos, mas não Calvin cycle"
+Iteration 2:
+├─ Thought: "Vou criar questões focadas no nível deles"
+├─ Action: Gerar_Quiz(tópico="fotossíntese", nível="intermediário", n=5)
+└─ Observation: [5 questões geradas]
+Iteration 3:
+├─ Thought: "Questões estão boas, posso responder"
+├─ Action: None
+└─ Final Answer: "Aqui está seu quiz: [QUESTÕES]"
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">🛠️</span>
+                    <span>Implementação: Tutor Socrático</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Objetivo:
+Criar agente que ensina fazendo perguntas (método socrático), não dando respostas diretas.
+### Código (LangChain):
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">python
+from langchain.agents import initialize_agent, Tool
+from langchain.llms import OpenAI
+from langchain.memory import ConversationBufferMemory
+# Ferramentas
+def avaliar_compreensao(resposta_aluno: str) -> str:
+    """Avalia se aluno entendeu conceito baseado na resposta"""
+    prompt = f"""
+    Resposta do aluno: {resposta_aluno}
+    Analise:
+    1. Aluno demonstrou compreensão? (Sim/Parcial/Não)
+    2. Conceitos corretos mencionados
+    3. Misconceptions identificadas
+    Formato: JSON
+    """
+    # [Chamar LLM para analisar]
+    return resultado
+def gerar_pergunta_socratica(topico: str, nivel_dificuldade: str) -> str:
+    """Gera pergunta que leva aluno a descobrir resposta"""
+    prompt = f"""
+    Tópico: {topico}
+    Nível: {nivel_dificuldade}
+    Crie pergunta socrática que:
+    - Não dá resposta direta
+    - Faz aluno pensar e conectar conceitos
+    - Usa analogias ou contra-exemplos
+    Exemplo ruim: "O que é fotossíntese?"
+    Exemplo bom: "Se plantas precisam de luz solar, como sobrevivem em florestas densas?"
+    """
+    # [Chamar LLM]
+    return pergunta
+tools = [
+    Tool(
+        name="Avaliar_Compreensao",
+        func=avaliar_compreensao,
+        description="Usa isto quando aluno responder uma pergunta. Retorna análise de compreensão."
+    ),
+    Tool(
+        name="Gerar_Pergunta",
+        func=gerar_pergunta_socratica,
+        description="Usa isto para criar próxima pergunta baseada em tópico e nível."
+    )
+]
+# System Prompt
+system_prompt = """
+Você é um tutor socrático de biologia.
+Regras:
+1. NUNCA dê respostas diretas
+2. SEMPRE faça perguntas que levem aluno a descobrir
+3. Use analogias e exemplos do cotidiano
+4. Se aluno errar, faça pergunta mais simples
+5. Se acertar, aprofunde com pergunta mais complexa
+6. Seja encorajador e paciente
+Ferramentas disponíveis: {tools}
+Formato de resposta:
+Thought: [Seu raciocínio]
+Action: [Ferramenta a usar]
+Action Input: [Input da ferramenta]
+Observation: [Resultado da ferramenta]
+... (repita Thought/Action/Observation até ter resposta)
+Final Answer: [Sua pergunta para o aluno]
+"""
+# Inicializar agente
+llm = OpenAI(temperature=0.7, model="gpt-4")
+memory = ConversationBufferMemory(memory_key="chat_history")
+agent = initialize_agent(
+    tools=tools,
+    llm=llm,
+    agent="conversational-react-description",
+    memory=memory,
+    verbose=True,  # Ver raciocínio interno
+    system_message=system_prompt
+)
+# Usar
+response = agent.run("Quero entender fotossíntese")
+print(response)
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Output Esperado:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Thought: Aluno quer entender fotossíntese. Vou começar descobrindo conhecimento prévio.
+Action: Gerar_Pergunta
+Action Input: {"topico": "fotossíntese", "nivel_dificuldade": "iniciante"}
+Observation: "Você já viu plantas em lugares diferentes (sombra vs sol). O que você nota de diferente nelas?"
+Final Answer: Ótimo! Vamos explorar fotossíntese juntos. Para começar: você já percebeu que plantas crescem em lugares diferentes - algumas no sol, outras na sombra. O que você acha que muda em plantas que ficam em locais muito ensolarados comparado às que ficam na sombra?
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">🎓</span>
+                    <span>Caso 2: Gerador de Conteúdo Multi-Step</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Objetivo:
+Agente que cria aula completa:
+1. Pesquisa tópico
+2. Estrutura conteúdo
+3. Gera materiais (slides, quiz, atividades)
+4. Valida qualidade
+### Arquitetura Plan-and-Execute:
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">python
+from langchain.agents import create_plan_and_execute_agent
+from langchain.tools import Tool
+# Fase 1: PLAN
+plan_prompt = """
+Tarefa: Criar aula de 50min sobre {topico} para {publico}
+Crie plano com:
+1. Objetivos de aprendizagem (3-5)
+2. Estrutura da aula (tempo em minutos)
+3. Materiais necessários
+4. Forma de avaliação
+Formato: Lista numerada de passos acionáveis
+"""
+# Fase 2: EXECUTE
+# Agente executa cada passo do plano usando ferramentas
+tools = [
+    Tool(
+        name="Pesquisar_Conteudo",
+        func=pesquisar_web_e_pdfs,
+        description="Busca informações atualizadas sobre tópico"
+    ),
+    Tool(
+        name="Gerar_Slide",
+        func=criar_slide_markdown,
+        description="Cria slide em markdown com título, conteúdo, imagens"
+    ),
+    Tool(
+        name="Gerar_Quiz",
+        func=criar_questoes,
+        description="Cria questões de múltipla escolha"
+    ),
+    Tool(
+        name="Validar_Qualidade",
+        func=revisar_conteudo,
+        description="Verifica se conteúdo está adequado (Bloom, BNCC, etc)"
+    )
+]
+agent = create_plan_and_execute_agent(
+    llm=llm,
+    tools=tools,
+    verbose=True
+)
+# Executar
+resultado = agent.run(
+    "Crie aula sobre Inteligência Artificial para ensino médio (15-17 anos)"
+)
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Output:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Plan:
+1. Pesquisar: conceitos de IA adequados para ensino médio
+2. Estruturar: aula de 50min (5min intro, 20min conceitos, 15min prática, 10min avaliação)
+3. Criar: 10 slides sobre IA (história, tipos, ética)
+4. Gerar: 5 questões de múltipla escolha
+5. Validar: checar alinhamento com BNCC
+6. Empacotar: ZIP com slides + quiz + plano de aula
+Executing Step 1...
+[Agente usa ferramenta Pesquisar_Conteudo]
+Found: "IA é campo da computação que simula inteligência humana..."
+Executing Step 2...
+[Agente raciocina sobre estrutura]
+Structure: Intro (historia) → Tipos (supervised/unsupervised/RL) → Etica → Hands-on
+...
+Final Package:
+├── aula_ia.md (10 slides)
+├── quiz_ia.json (5 questões)
+├── plano_aula.pdf
+└── recursos_adicionais.txt
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">📌</span>
+                    <span>🤝 Multi-Agent Systems</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Conceito:
+Múltiplos agentes especializados trabalhando juntos.
+<strong>Exemplo: Criação de Curso Completo</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Agente 1 - Pesquisador:
+└─ Busca conteúdo, papers, exemplos
+Agente 2 - Designer Instrucional:
+└─ Estrutura curso seguindo ADDIE
+Agente 3 - Criador de Conteúdo:
+└─ Gera aulas, slides, atividades
+Agente 4 - Avaliador:
+└─ Cria quizzes, rubricas
+Agente 5 - Revisor:
+└─ Valida qualidade, corrige erros
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+### Implementação (CrewAI):
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">python
+from crewai import Agent, Task, Crew
+# Definir agentes
+pesquisador = Agent(
+    role="Pesquisador Educacional",
+    goal="Encontrar conteúdo de qualidade sobre {topico}",
+    backstory="Você é PhD em Educação com 15 anos pesquisando métodos eficazes",
+    tools=[google_search, arxiv_search, wikipedia],
+    verbose=True
+)
+designer = Agent(
+    role="Designer Instrucional",
+    goal="Estruturar aprendizagem seguindo melhores práticas",
+    backstory="Especialista em ADDIE, Bloom, Merrill",
+    tools=[criar_estrutura, alinhar_bncc],
+    verbose=True
+)
+criador = Agent(
+    role="Criador de Conteúdo",
+    goal="Gerar materiais envolventes e claros",
+    backstory="Você é professor com 10 anos criando recursos didáticos",
+    tools=[gerar_slide, gerar_atividade, gerar_video_script],
+    verbose=True
+)
+revisor = Agent(
+    role="Revisor de Qualidade",
+    goal="Garantir excelência pedagógica",
+    backstory="Coordenador pedagógico rigoroso com olho para detalhes",
+    tools=[validar_conteudo, checar_acessibilidade],
+    verbose=True
+)
+# Definir tarefas
+task1 = Task(
+    description="Pesquisar sobre {topico} e compilar 10 melhores recursos",
+    agent=pesquisador
+)
+task2 = Task(
+    description="Criar estrutura de curso de 12h baseado na pesquisa",
+    agent=designer
+)
+task3 = Task(
+    description="Gerar materiais para os 6 módulos do curso",
+    agent=criador
+)
+task4 = Task(
+    description="Revisar todos os materiais e sugerir melhorias",
+    agent=revisor
+)
+# Criar crew (equipe)
+crew = Crew(
+    agents=[pesquisador, designer, criador, revisor],
+    tasks=[task1, task2, task3, task4],
+    verbose=True
+)
+# Executar
+resultado = crew.kickoff(inputs={"topico": "Pensamento Computacional para Ensino Fundamental"})
+print(resultado)
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Output:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+[Pesquisador]: Encontrei 10 recursos sobre pensamento computacional...
+[Designer]: Estruturei curso em 6 módulos: 1) Decomposição, 2) Padrões...
+[Criador]: Gerados 6 conjuntos de materiais com 18 atividades...
+[Revisor]: Validação completa. Sugestões: Módulo 3 muito denso, sugiro dividir...
+Final Result:
+✅ Curso de 12h estruturado
+✅ 18 atividades hands-on
+✅ 6 avaliações formativas
+✅ Alinhado com BNCC (EF05MA05, EF67LP04...)
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">📌</span>
+                    <span>⚠️ Challenges e Limitações</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### 1. Loops Infinitos
+<strong>Problema:</strong> Agente fica preso em ciclo
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Thought: Preciso de mais informação
+Action: Buscar
+Observation: [Resultados]
+Thought: Preciso de mais informação
+Action: Buscar
+[LOOP INFINITO]
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Solução:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">python
+agent = initialize_agent(
+    ...,
+    max_iterations=10,  # Limitar iterações
+    early_stopping_method="generate"  # Forçar resposta após max
+)
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+---
+### 2. Uso Excessivo de Ferramentas
+<strong>Problema:</strong> Agente usa 10 ferramentas para tarefa simples (custo $$)
+<strong>Solução: Few-shot Examples</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">python
+system_prompt = """
+Você é um agente eficiente.
+Bons exemplos:
+User: "Qual a capital da França?"
+Thought: Sei a resposta, não preciso de ferramentas
+Action: None
+Final Answer: "Paris"
+User: "Pesquise últimas notícias sobre IA"
+Thought: Preciso buscar informação atualizada
+Action: google_search("IA novidades 2025")
+[Usa ferramenta apropriadamente]
+"""
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+---
+### 3. Alucinação de Ferramentas
+<strong>Problema:</strong> Agente inventa ferramentas que não existem
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Action: Ferramenta_Magica(input="resolver tudo")
+[ERRO: Ferramenta não existe]
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Solução: Descrições Claras</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">python
+# Ruim
+Tool(name="Search", description="Busca coisas")
+# Bom
+Tool(
+    name="Buscar_Biblioteca_Curso",
+    description="Busca informação APENAS nos PDFs do curso XYZ. Use quando aluno perguntar sobre conteúdo do curso. NÃO use para informações gerais da web."
+)
+</code>``
+---</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10 rounded-xl p-8 text-center border-2 border-dashed border-module-color">
+                <p class="text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
+                    📚 Conteúdo Completo
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+                    Faça download do material completo em Markdown para acessar todos os tópicos, exemplos, prompts e atividades detalhadas.
+                </p>
+                <a href="../pdfs/modulo-2b-3.md" download class="inline-block px-6 py-3 bg-module-color text-white rounded-lg font-semibold hover:opacity-90 transition-colors">
+                    📄 Baixar Material Completo (MD)
+                </a>
+            </div>
+        </section>
+
+        <!-- Recursos -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6">📦 Recursos do Módulo</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>📹</span>
+                        <span>Videoaulas</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Aulas detalhadas sobre cada tópico do módulo
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>💬</span>
+                        <span>Práticas</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Atividades hands-on com projetos reais
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>✅</span>
+                        <span>Avaliação</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Quizzes e projetos para certificação
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>📚</span>
+                        <span>Referências</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Materiais complementares selecionados
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegação -->
+        <section class="flex justify-between items-center pt-8 border-t border-neutral-200 dark:border-neutral-700">
+            <a href="../niveis/nivel-2b.html" class="px-6 py-3 bg-neutral-200 dark:bg-neutral-700 rounded-lg font-semibold hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors">
+                ← Voltar ao Nível 2B
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 dark:bg-black text-neutral-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 SuperProfessores. Licença MIT.</p>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

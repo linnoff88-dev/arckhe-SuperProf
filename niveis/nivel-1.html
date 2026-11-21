@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nível 1: Fundamentos em IA | SuperProfessores</title>
+    <meta name="description" content="Base comum obrigatória para ambas as trilhas - 60 horas de formação em IA para educadores">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'trilha-a': '#9b59b6',
+                        'trilha-b': '#10B981',
+                        fundamentos: '#3B82F6',
+                        success: '#22C55E',
+                        warning: '#F59E0B',
+                        error: '#EF4444',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Smooth transitions for dark mode */
+        * {
+            transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out;
+        }
+
+        /* Remove transition from page load */
+        .preload * {
+            transition: none !important;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 1000px;
+            max-height: 90vh;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 20px 25px rgba(0,0,0,0.3);
+        }
+
+        .dark .modal-content {
+            background-color: #1f2937;
+        }
+
+        .modal-header {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dark .modal-header {
+            border-bottom-color: #374151;
+        }
+
+        .modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            max-height: calc(90vh - 80px);
+        }
+
+        .close-modal {
+            color: #9ca3af;
+            font-size: 2rem;
+            font-weight: 700;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close-modal:hover {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body class="preload bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold bg-gradient-to-r from-primary to-trilha-a bg-clip-text text-transparent">
+                        🎓 SuperProfessores
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-primary font-medium">Início</a>
+                    <a href="../index.html#trilhas" class="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-primary font-medium">Trilhas</a>
+                    <a href="https://github.com/inematds/SuperProf" target="_blank" class="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-primary font-medium">GitHub</a>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-neutral-100 dark:bg-neutral-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-neutral-200 dark:border-neutral-700">
+            <div class="px-4 py-4 space-y-3">
+                <a href="../index.html" class="block text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Início</a>
+                <a href="../index.html#trilhas" class="block text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Trilhas</a>
+                <a href="https://github.com/inematds/SuperProf" target="_blank" class="block text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <nav class="flex text-sm" aria-label="Breadcrumb">
+                <a href="../index.html" class="text-primary hover:text-blue-700">Início</a>
+                <span class="mx-2 text-neutral-400">/</span>
+                <span class="text-neutral-600 dark:text-neutral-400">Nível 1: Fundamentos</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <section class="bg-gradient-to-r from-primary to-blue-600 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <div class="flex items-center justify-between mb-4">
+                <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">60 horas</span>
+                <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Obrigatório</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">Nível 1: Fundamentos em IA</h1>
+            <p class="text-xl text-blue-100 mb-6">Base comum para ambas as trilhas - Capacitação essencial em Inteligência Artificial para educadores</p>
+
+            <div class="grid md:grid-cols-3 gap-4 mt-8">
+                <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
+                    <div class="text-2xl font-bold">5</div>
+                    <div class="text-sm text-blue-100">Módulos</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
+                    <div class="text-2xl font-bold">100%</div>
+                    <div class="text-sm text-blue-100">Prático</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
+                    <div class="text-2xl font-bold">R$ 0</div>
+                    <div class="text-sm text-blue-100">Ferramentas gratuitas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Módulo 1.1 -->
+        <div class="chapter-card bg-white dark:bg-neutral-800 rounded-2xl shadow-lg p-8 mb-8 border-2 border-transparent hover:border-fundamentos transition-all">
+            <div class="flex items-start justify-between mb-6">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-fundamentos/10 text-fundamentos rounded-full text-sm font-semibold mb-3">8 horas</span>
+                    <h2 class="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Módulo 1.1: A Revolução da IA na Educação</h2>
+                    <p class="text-neutral-600 dark:text-neutral-400">Entenda o contexto, a história e o impacto transformador da IA no cenário educacional global e brasileiro</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 mb-6">
+                <button onclick="openModal('modulo-1-1')" class="px-6 py-3 bg-fundamentos text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
+                    <span>📖</span>
+                    <span>Ver em Modal</span>
+                </button>
+                <a href="../modulos/modulo-1-1.html" class="px-6 py-3 bg-transparent border-2 border-fundamentos text-fundamentos dark:text-fundamentos rounded-lg font-semibold hover:bg-fundamentos hover:text-white transition-colors flex items-center gap-2">
+                    <span>📄</span>
+                    <span>Abrir Página Completa</span>
+                </a>
+                <a href="../pdfs/modulo-1-1.md" class="px-6 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors flex items-center gap-2">
+                    <span>📥</span>
+                    <span>Download PDF/MD</span>
+                </a>
+            </div>
+
+            <!-- Tópicos Expansíveis -->
+            <div class="mb-4">
+                <h3 class="font-semibold text-neutral-900 dark:text-neutral-100 mb-3 text-lg">📚 Tópicos-chave do módulo:</h3>
+
+                <ul class="topics-list space-y-0.5">
+                    <!-- Tópico 1 -->
+                    <li class="topic-item" data-topic="m1-1-tsunami">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🌊 O Tsunami da IA - Crescimento Exponencial
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> A explosão exponencial da IA entre 2023-2025, com crescimento de mercado de 38.4% ao ano, adoção estudantil de 92%, e lançamentos revolucionários a cada 4-6 meses (Claude Learning Mode, ChatGPT Study Mode, Gemini Guided Learning).
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Entender a velocidade da evolução ajuda você a se preparar para mudanças constantes, evitar obsolescência de conhecimento e adotar mindset de aprendizagem contínua. Professores que entendem essa dinâmica conseguem se adaptar rapidamente a novas ferramentas.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Crescimento exponencial, obsolescência tecnológica (4-6 meses), mercado de USD 7.57bi (2025), adoção de 92%, lançamentos mensais.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 2 -->
+                    <li class="topic-item" data-topic="m1-1-historia">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            📜 História da IA: De 1950 a 2025
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Linha do tempo da IA desde o Teste de Turing (1950), passando pelos "invernos da IA", até a revolução dos transformers (2017) e LLMs como GPT-4, Claude, Gemini (2023-2025). Marcos históricos incluem Deep Blue (1997), Watson (2011) e AlphaGo (2016).
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Conhecer a história evita expectativas irreais, ajuda a contextualizar avanços atuais e identifica padrões de evolução. Você saberá distinguir hype de verdadeira inovação e entenderá por que estamos em um momento único.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Teste de Turing, sistemas especialistas, machine learning, deep learning, redes neurais, transformers, LLMs, GPT, BERT.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 3 -->
+                    <li class="topic-item" data-topic="m1-1-unesco">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🌍 Framework UNESCO de IA na Educação
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Conjunto de diretrizes globais da UNESCO para uso ético e responsável de IA na educação, cobrindo políticas públicas, competências docentes, equidade, privacidade e preparação de infraestrutura. Framework oficial adotado por 193 países.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Garante que sua implementação de IA esteja alinhada com padrões internacionais, evita violações éticas/legais e fornece roadmap validado para adoção institucional. Essencial para gestores e coordenadores.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> UNESCO AI Competency Framework, equidade, privacidade, LGPD, inclusão digital, competências docentes, políticas públicas.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 4 -->
+                    <li class="topic-item" data-topic="m1-1-etica">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            ⚖️ Ética, Privacidade e LGPD
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Princípios éticos para uso de IA em educação, incluindo consentimento de dados, anonimização de informações de alunos, prevenção de vieses algorítmicos, transparência em decisões automatizadas e conformidade com LGPD (Lei Geral de Proteção de Dados).
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Protege você e sua instituição de processos legais, garante segurança dos alunos, constrói confiança com pais/responsáveis e estabelece cultura de responsabilidade. Essencial em 2025 com regulações crescentes.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> LGPD, consentimento, anonimização, viés algorítmico, transparência, auditabilidade, direito ao esquecimento, portabilidade de dados.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Módulo 1.2 -->
+        <div class="chapter-card bg-white dark:bg-neutral-800 rounded-2xl shadow-lg p-8 mb-8 border-2 border-transparent hover:border-fundamentos transition-all">
+            <div class="flex items-start justify-between mb-6">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-fundamentos/10 text-fundamentos rounded-full text-sm font-semibold mb-3">12 horas</span>
+                    <h2 class="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Módulo 1.2: Ecossistema de Ferramentas de IA (Nov 2025)</h2>
+                    <p class="text-neutral-600 dark:text-neutral-400">Panorama completo das principais ferramentas de IA disponíveis e framework atemporal para avaliar novas ferramentas</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 mb-6">
+                <button onclick="openModal('modulo-1-2')" class="px-6 py-3 bg-fundamentos text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
+                    <span>📖</span>
+                    <span>Ver em Modal</span>
+                </button>
+                <a href="../modulos/modulo-1-2.html" class="px-6 py-3 bg-transparent border-2 border-fundamentos text-fundamentos dark:text-fundamentos rounded-lg font-semibold hover:bg-fundamentos hover:text-white transition-colors flex items-center gap-2">
+                    <span>📄</span>
+                    <span>Abrir Página Completa</span>
+                </a>
+                <a href="../pdfs/modulo-1-2.md" class="px-6 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors flex items-center gap-2">
+                    <span>📥</span>
+                    <span>Download PDF/MD</span>
+                </a>
+            </div>
+
+            <!-- Tópicos Expansíveis -->
+            <div class="mb-4">
+                <h3 class="font-semibold text-neutral-900 dark:text-neutral-100 mb-3 text-lg">📚 Tópicos-chave do módulo:</h3>
+
+                <ul class="topics-list space-y-0.5">
+                    <!-- Tópico 1 -->
+                    <li class="topic-item" data-topic="m1-2-chatgpt">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🤖 ChatGPT + Study Mode (OpenAI)
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> LLM (Large Language Model) da OpenAI com modo específico para educação (Study Mode, lançado julho/2025). Gera textos, responde perguntas, cria conteúdo educacional, traduz, resume e ensina conceitos. ChatGPT Edu oferece versão institucional com privacidade reforçada.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> É a ferramenta de IA mais popular globalmente (180M+ usuários), com interface intuitiva, respostas rápidas e integração com Microsoft 365. Study Mode usa tutoria socrática ideal para educação. Dominar ChatGPT é porta de entrada para IA generativa.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> LLM, GPT-4, Study Mode, ChatGPT Edu, prompting, tutoria socrática, geração de texto, API, plugins educacionais.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 2 -->
+                    <li class="topic-item" data-topic="m1-2-claude">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🧠 Claude + Learning Mode (Anthropic)
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> LLM da Anthropic focado em segurança e respostas longas e estruturadas. Learning Mode (agosto/2025) implementa método socrático, fazendo perguntas guiadas ao invés de dar respostas diretas. Contexto de 200k tokens permite analisar documentos completos.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Melhor IA para análise de documentos longos (livros, artigos científicos), excelente para raciocínio complexo e explicações detalhadas. Learning Mode revoluciona tutoria personalizada. Ideal para ensino superior e pesquisa acadêmica.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Anthropic, método socrático, contexto longo (200k tokens), Constitutional AI, respostas estruturadas, análise de documentos.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 3 -->
+                    <li class="topic-item" data-topic="m1-2-gemini">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🌟 Gemini + Guided Learning (Google)
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> LLM multimodal do Google (texto, imagem, vídeo, áudio) com modo Guided Learning (agosto/2025). Integração nativa com Google Workspace for Education (Classroom, Docs, Sheets). Processa imagens, PDFs e vídeos diretamente no chat.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Integração perfeita com ecossistema Google (usado por 170M+ estudantes), multimodalidade permite analisar fotos de experimentos, diagramas, gráficos. Gratuito para educação via Google Workspace. Ideal para escolas que já usam Google.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Multimodalidade, Google Workspace for Education, Guided Learning, visão computacional, processamento de imagem/vídeo, integração nativa.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 4 -->
+                    <li class="topic-item" data-topic="m1-2-notebooklm">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🎙️ Google NotebookLM (Áudio/Vídeo Generativo)
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Ferramenta do Google (novembro/2025) que transforma documentos em podcasts, vídeos explicativos e flashcards. Você faz upload de PDFs/textos e a IA cria diálogos entre dois apresentadores, quizzes interativos e resumos visuais.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Cria materiais multimídia sem habilidades técnicas. Transforma apostilas em podcasts para alunos ouvirem no transporte. Gera quizzes automaticamente. Democratiza criação de conteúdo audiovisual educacional.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> IA generativa de áudio, text-to-speech, podcast educacional, flashcards automáticos, síntese de voz, conteúdo multimídia.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 5 -->
+                    <li class="topic-item" data-topic="m1-2-feat">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            ⚖️ Framework FEAT de Avaliação de Ferramentas
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Framework atemporal para avaliar qualquer ferramenta de IA (atual ou futura). FEAT = Features (funcionalidades), Ethics (ética/privacidade), Accessibility (acessibilidade), Total Cost (custo total). Matriz de decisão com pesos personalizáveis.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Permite escolher ferramentas de forma objetiva e defensável perante gestores/pais. Evita adoção de ferramentas arriscadas ou inadequadas. Essencial em ambiente de mudança rápida - você saberá avaliar ferramentas que sequer existem hoje.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Matriz de decisão, custo-benefício, privacidade de dados, conformidade LGPD, usabilidade, suporte em português, TCO (Total Cost of Ownership).
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Módulo 1.3 -->
+        <div class="chapter-card bg-white dark:bg-neutral-800 rounded-2xl shadow-lg p-8 mb-8 border-2 border-transparent hover:border-fundamentos transition-all">
+            <div class="flex items-start justify-between mb-6">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-fundamentos/10 text-fundamentos rounded-full text-sm font-semibold mb-3">16 horas</span>
+                    <h2 class="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Módulo 1.3: Prompt Engineering - A Habilidade Universal</h2>
+                    <p class="text-neutral-600 dark:text-neutral-400">Domine técnicas avançadas de criação de prompts que funcionam em qualquer LLM atual ou futuro</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 mb-6">
+                <button onclick="openModal('modulo-1-3')" class="px-6 py-3 bg-fundamentos text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
+                    <span>📖</span>
+                    <span>Ver em Modal</span>
+                </button>
+                <a href="../modulos/modulo-1-3.html" class="px-6 py-3 bg-transparent border-2 border-fundamentos text-fundamentos dark:text-fundamentos rounded-lg font-semibold hover:bg-fundamentos hover:text-white transition-colors flex items-center gap-2">
+                    <span>📄</span>
+                    <span>Abrir Página Completa</span>
+                </a>
+                <a href="../pdfs/modulo-1-3.md" class="px-6 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors flex items-center gap-2">
+                    <span>📥</span>
+                    <span>Download PDF/MD</span>
+                </a>
+            </div>
+
+            <!-- Tópicos Expansíveis -->
+            <div class="mb-4">
+                <h3 class="font-semibold text-neutral-900 dark:text-neutral-100 mb-3 text-lg">📚 Tópicos-chave do módulo:</h3>
+
+                <ul class="topics-list space-y-0.5">
+                    <!-- Tópico 1 -->
+                    <li class="topic-item" data-topic="m1-3-anatomia">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🔬 Anatomia de um Prompt Eficaz
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Estrutura fundamental de um prompt de qualidade: contexto, tarefa, formato de saída, tom/estilo e restrições. Aprenda a decompor prompts profissionais em elementos reutilizáveis, como receitas de cozinha com ingredientes intercambiáveis.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Entender a estrutura permite criar prompts eficazes em segundos, não horas. Você saberá EXATAMENTE o que está faltando quando um prompt não funciona. Reduz tentativa-e-erro de 10+ iterações para 1-2. Economiza tempo e frustração.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Contexto, tarefa explícita, formato de saída, tom/persona, restrições, temperatura, delimitadores, estrutura modular.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 2 -->
+                    <li class="topic-item" data-topic="m1-3-cot">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🧠 Chain-of-Thought (Raciocínio Passo-a-Passo)
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Técnica de forçar IA a "pensar em voz alta" antes de responder, usando prompts como "Pense passo-a-passo" ou "Explique seu raciocínio antes de concluir". Aumenta precisão em 40-80% para tarefas de raciocínio lógico, matemática e resolução de problemas.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Revoluciona qualidade de respostas em tarefas educacionais complexas. Essencial para criar questões de prova, resolver exercícios de física/matemática, análise de textos literários. IA mostra trabalho completo, não só resposta final - perfeito para ensinar processo.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Raciocínio explícito, pensamento intermediário, decomposição de problemas, "Let's think step by step", verificação de lógica.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 3 -->
+                    <li class="topic-item" data-topic="m1-3-fewshot">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🎯 Few-Shot Learning (Aprendizado com Exemplos)
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Ensinar IA através de exemplos concretos ao invés de instruções abstratas. Ex: mostrar 2-3 questões de prova bem formatadas antes de pedir novas. IA aprende padrão, tom, estrutura e complexidade desejada dos exemplos fornecidos.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Economiza 70% do texto do prompt - exemplos valem mais que explicações. Garante consistência de formato em tarefas repetitivas (correções, feedbacks, questões). Ideal para criar templates personalizados ao seu estilo de ensino sem programar.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Zero-shot vs few-shot vs many-shot, qualidade dos exemplos, diversidade de exemplos, formato input-output, consistência.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 4 -->
+                    <li class="topic-item" data-topic="m1-3-persona">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🎭 Persona-Based Prompting (Técnica de Papéis)
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Atribuir papel específico à IA antes da tarefa: "Você é um professor experiente de Matemática do 9º ano" ou "Você é especialista em educação inclusiva com 15 anos de experiência". IA ajusta vocabulário, profundidade e abordagem ao papel.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Controla nível de linguagem (infantil vs acadêmico), perspectiva pedagógica e conhecimento prévio assumido. Transforma IA genérica em especialista contextualizado. Essencial para diferenciar conteúdo por série/idade sem reescrever todo prompt.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Role-playing, system prompts, contexto de expertise, ajuste de tom, adaptação de vocabulário, persona consistency.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 5 -->
+                    <li class="topic-item" data-topic="m1-3-universal">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🌐 Prompt Engineering Multi-LLM (ChatGPT vs Claude vs Gemini)
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Diferenças práticas entre LLMs principais: ChatGPT prefere concisão, Claude aceita contextos longos, Gemini processa imagens nativamente. Aprenda adaptações necessárias para migrar prompts entre plataformas sem perder qualidade.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Evita dependência de uma única ferramenta - se ChatGPT cair, você migra para Claude em minutos. Escolha melhor LLM para cada tarefa: Claude para análise de artigos longos, Gemini para processar PDFs com gráficos, ChatGPT para respostas rápidas.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Interoperabilidade de prompts, pontos fortes por LLM, limitações de contexto, formato de instruções, markdown vs estruturado.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Módulo 1.4 -->
+        <div class="chapter-card bg-white dark:bg-neutral-800 rounded-2xl shadow-lg p-8 mb-8 border-2 border-transparent hover:border-fundamentos transition-all">
+            <div class="flex items-start justify-between mb-6">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-fundamentos/10 text-fundamentos rounded-full text-sm font-semibold mb-3">12 horas</span>
+                    <h2 class="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Módulo 1.4: Pensamento Crítico e Avaliação de IA</h2>
+                    <p class="text-neutral-600 dark:text-neutral-400">Desenvolva habilidades essenciais para validar, questionar e usar IA de forma responsável e eficaz</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 mb-6">
+                <button onclick="openModal('modulo-1-4')" class="px-6 py-3 bg-fundamentos text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
+                    <span>📖</span>
+                    <span>Ver em Modal</span>
+                </button>
+                <a href="../modulos/modulo-1-4.html" class="px-6 py-3 bg-transparent border-2 border-fundamentos text-fundamentos dark:text-fundamentos rounded-lg font-semibold hover:bg-fundamentos hover:text-white transition-colors flex items-center gap-2">
+                    <span>📄</span>
+                    <span>Abrir Página Completa</span>
+                </a>
+                <a href="../pdfs/modulo-1-4.md" class="px-6 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors flex items-center gap-2">
+                    <span>📥</span>
+                    <span>Download PDF/MD</span>
+                </a>
+            </div>
+
+            <!-- Tópicos Expansíveis -->
+            <div class="mb-4">
+                <h3 class="font-semibold text-neutral-900 dark:text-neutral-100 mb-3 text-lg">📚 Tópicos-chave do módulo:</h3>
+
+                <ul class="topics-list space-y-0.5">
+                    <!-- Tópico 1 -->
+                    <li class="topic-item" data-topic="m1-4-alucinacoes">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🌀 Alucinações de IA: O que são e como detectar
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Quando IA inventa fatos, citações, referências ou dados com confiança total. Ex: criar artigos científicos inexistentes, atribuir frases falsas a autores, inventar estatísticas plausíveis. Ocorre porque LLMs preveem texto provável, não consultam bases de fatos.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Uso educacional de IA SEM verificação causa desinformação massiva. Alunos citam fontes falsas em trabalhos. Professores ensinam conceitos errados confiando cegamente na IA. Saber detectar alucinações é tão importante quanto saber criar prompts.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Hallucination, confabulation, fact-checking, verificação cruzada, sinais de alerta, limitações de LLMs, probabilidade vs verdade.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 2 -->
+                    <li class="topic-item" data-topic="m1-4-vieses">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            ⚖️ Vieses Algorítmicos e Questões Éticas
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Vieses sociais, culturais e históricos embutidos em IAs treinadas com dados da internet. Ex: sugestões de carreiras diferentes para meninos vs meninas, representação desigual de raças/etnias, estereótipos regionais, viés cultural ocidental dominante.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Educadores formam visões de mundo - IA com viés perpetua desigualdades. Ensinar ética de IA prepara alunos para futuro onde algoritmos tomam decisões sobre suas vidas (emprego, crédito, saúde). Questionar IA é exercício crítico valioso por si só.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Bias algorítmico, fairness, representatividade de dados, estereótipos, discriminação automatizada, auditoria de IA, equidade.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 3 -->
+                    <li class="topic-item" data-topic="m1-4-validacao">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            ✅ Frameworks de Validação de Outputs de IA
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Metodologias sistemáticas para checar qualidade de respostas de IA: checklist CRAFT (Correto, Relevante, Alinhado, Factual, Tom adequado), verificação tripla, triangulação de fontes, teste de edge cases, validação por especialista humano.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Transforma uso de IA de "aceitar cegamente" para "colaboração crítica". Reduz riscos legais/pedagógicos de usar conteúdo errado. Ensina processo transferível para alunos: como validar QUALQUER informação online, não só IA.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Fact-checking, CRAFT framework, triangulação, verificação independente, peer review, especialista humano no loop, auditoria de conteúdo.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 4 -->
+                    <li class="topic-item" data-topic="m1-4-deteccao">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🔍 Detecção de Conteúdo Gerado por IA (e suas limitações)
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Ferramentas como GPTZero, Turnitin AI Detector, Copyleaks que tentam identificar textos escritos por IA. Funcionam detectando padrões estatísticos, mas têm 30-40% de taxa de falsos positivos/negativos. Não são confiáveis como única evidência de plágio.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Evita acusações injustas de alunos (falsos positivos). Compreende limitações técnicas de detecção. Foca em avaliar PENSAMENTO, não origem do texto. Ensina uso ético de IA aos alunos ao invés de proibição ineficaz.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> AI detection tools, falsos positivos, perplexity, burstiness, watermarking, limitações de detecção, avaliação autêntica.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Módulo 1.5 -->
+        <div class="chapter-card bg-white dark:bg-neutral-800 rounded-2xl shadow-lg p-8 mb-8 border-2 border-transparent hover:border-fundamentos transition-all">
+            <div class="flex items-start justify-between mb-6">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-fundamentos/10 text-fundamentos rounded-full text-sm font-semibold mb-3">12 horas</span>
+                    <h2 class="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Módulo 1.5: Projeto Prático - Piloto de 30 Dias</h2>
+                    <p class="text-neutral-600 dark:text-neutral-400">Aplique tudo que aprendeu em um projeto real na sua sala de aula com metodologia de implementação e avaliação</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 mb-6">
+                <button onclick="openModal('modulo-1-5')" class="px-6 py-3 bg-fundamentos text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2">
+                    <span>📖</span>
+                    <span>Ver em Modal</span>
+                </button>
+                <a href="../modulos/modulo-1-5.html" class="px-6 py-3 bg-transparent border-2 border-fundamentos text-fundamentos dark:text-fundamentos rounded-lg font-semibold hover:bg-fundamentos hover:text-white transition-colors flex items-center gap-2">
+                    <span>📄</span>
+                    <span>Abrir Página Completa</span>
+                </a>
+                <a href="../pdfs/modulo-1-5.md" class="px-6 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors flex items-center gap-2">
+                    <span>📥</span>
+                    <span>Download PDF/MD</span>
+                </a>
+            </div>
+
+            <!-- Tópicos Expansíveis -->
+            <div class="mb-4">
+                <h3 class="font-semibold text-neutral-900 dark:text-neutral-100 mb-3 text-lg">📚 Tópicos-chave do módulo:</h3>
+
+                <ul class="topics-list space-y-0.5">
+                    <!-- Tópico 1 -->
+                    <li class="topic-item" data-topic="m1-5-design">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            📐 Design de Projeto Piloto - Canvas de Planejamento
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Metodologia estruturada para planejar experimento de IA em sala: definir objetivo específico (ex: "reduzir tempo de correção em 50%"), escolher 1 ferramenta, definir escopo pequeno (1 turma, 4 semanas), estabelecer métricas mensuráveis antes/depois.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Projetos sem planejamento falham 80% das vezes. Canvas força clareza de propósito, evita sobrecarga (tentar usar 10 ferramentas de uma vez), cria base para escalar depois. Ensina método científico aplicado à inovação pedagógica.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Objetivo SMART, escopo definido, hipótese testável, baseline de comparação, métricas de sucesso, timeline realista, plano B.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 2 -->
+                    <li class="topic-item" data-topic="m1-5-implementacao">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🚀 Implementação na Sala de Aula - Semana a Semana
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Roteiro prático de 4 semanas: Semana 1 (introduzir IA aos alunos + coletar baseline), Semana 2-3 (aplicar intervenção com IA), Semana 4 (avaliar resultados + coletar feedback). Inclui scripts, atividades prontas e troubleshooting de problemas comuns.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Passo-a-passo elimina paralisia de "por onde começar". Cronograma realista evita burnout. Preparação para objeções de alunos/pais reduz resistência. Você não estará improvisando - terá plano testado por centenas de educadores.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Onboarding de alunos, alfabetização em IA, gestão de expectativas, troubleshooting, adaptação em tempo real, documentação de processo.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 3 -->
+                    <li class="topic-item" data-topic="m1-5-metricas">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            📊 Coleta de Métricas de Impacto - O que Medir e Como
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Métricas quantitativas (tempo economizado, notas antes/depois, taxa de conclusão) e qualitativas (satisfação de alunos, percepção de aprendizado, mudança de atitude). Ferramentas: Google Forms para surveys, planilhas para análise, templates de relatório prontos.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Dados convencem gestores a investir em IA ("reduzi 40% do tempo de correção" > "IA é legal"). Métricas guiam iteração: o que funcionou para repetir, o que falhou para ajustar. Constrói portfolio de evidências para promoção/reconhecimento profissional.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> KPIs educacionais, baseline, métricas de processo vs resultado, dados qualitativos, Net Promoter Score (NPS), análise pré/pós, significância prática.
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 4 -->
+                    <li class="topic-item" data-topic="m1-5-apresentacao">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🎤 Apresentação de Resultados - Storytelling com Dados
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-fundamentos">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">O que é:</strong> Como comunicar aprendizados do piloto para diferentes públicos: gestores (foco ROI/eficiência), colegas professores (replicabilidade/dicas práticas), pais (benefícios para alunos). Templates de apresentação, narrativa estruturada problema-solução-resultado.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Por que aprender:</strong> Projeto sem divulgação não escala. Apresentar bem multiplica impacto: outros professores replicam, escola expande programa, você se torna referência em IA educacional. Habilidade transferível para qualquer inovação futura.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-fundamentos">Conceitos chave:</strong> Storytelling com dados, visualização de resultados, adaptação de mensagem por público, lições aprendidas, próximos passos, call to action.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Destaque do Projeto -->
+            <div class="mt-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10 rounded-xl p-6 border-2 border-fundamentos/20">
+                <h4 class="font-bold text-lg mb-3 text-neutral-900 dark:text-neutral-100">🎯 Entrega Final do Módulo:</h4>
+                <p class="text-neutral-700 dark:text-neutral-300 mb-4">
+                    Você completará um projeto piloto real de 30 dias na sua sala de aula e apresentará:
+                </p>
+                <ul class="space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
+                    <li class="flex items-start gap-2">
+                        <span class="text-fundamentos">✓</span>
+                        <span><strong>Canvas de Projeto</strong> preenchido com seu planejamento completo</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-fundamentos">✓</span>
+                        <span><strong>Diário de Implementação</strong> documentando 4 semanas (o que funcionou, desafios, adaptações)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-fundamentos">✓</span>
+                        <span><strong>Relatório de Métricas</strong> com dados quantitativos e qualitativos antes/depois</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-fundamentos">✓</span>
+                        <span><strong>Apresentação de 10 minutos</strong> para comunidade SuperProfessores (formato ignite)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-fundamentos">✓</span>
+                        <span><strong>Certificação Nível 1</strong> ao concluir com sucesso o projeto</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal Container -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title" class="text-2xl font-bold text-neutral-900 dark:text-neutral-100"></h3>
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+            </div>
+            <div id="modal-body" class="modal-body text-neutral-700 dark:text-neutral-300"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 dark:bg-black text-neutral-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p>&copy; 2025 SuperProfessores. Licença MIT.</p>
+                <p class="mt-2 text-neutral-500">Última atualização: Novembro 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/app.js"></script>
+    <script>
+        // Modal functions
+        function openModal(moduleId) {
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+
+            // Content for each module
+            const moduleContent = {
+                'modulo-1-1': {
+                    title: 'Módulo 1.1: A Revolução da IA na Educação',
+                    content: `
+                        <h2 class="text-3xl font-bold mb-6">📖 Visão Geral</h2>
+                        <div class="prose prose-lg max-w-none mb-8">
+                            <p class="text-lg mb-4">
+                                Este módulo introduz o contexto revolucionário da IA na educação, explorando como a tecnologia está transformando processos de ensino e aprendizagem globalmente. Você compreenderá as mudanças exponenciais que estão acontecendo AGORA (2023-2025), aprenderá a história da IA desde 1950, entenderá frameworks internacionais de implementação ética e dominará princípios de privacidade e LGPD.
+                            </p>
+                            <p class="text-lg mb-3"><strong>Ao final deste módulo, você será capaz de:</strong></p>
+                            <ul class="list-disc pl-6 space-y-2 mb-6">
+                                <li>Explicar a velocidade da evolução da IA com dados concretos (crescimento de mercado, adoção, lançamentos)</li>
+                                <li>Contextualizar a história da IA e identificar padrões de evolução tecnológica</li>
+                                <li>Aplicar o framework UNESCO de IA na Educação em decisões institucionais</li>
+                                <li>Implementar práticas éticas de uso de IA com conformidade LGPD</li>
+                            </ul>
+                        </div>
+
+                        <h2 class="text-3xl font-bold mb-6">📚 Conteúdo Detalhado</h2>
+
+                        <!-- Tópico 1: O Tsunami da IA -->
+                        <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 mb-6 shadow-lg border-l-4 border-blue-600">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                                <span class="text-3xl">🌊</span>
+                                <span>O Tsunami da IA - Crescimento Exponencial</span>
+                            </h3>
+
+                            <h4 class="text-xl font-semibold mb-3 text-blue-600">O que você aprenderá:</h4>
+                            <p class="mb-4">
+                                A explosão exponencial da IA entre 2023-2025 não tem precedentes históricos. Enquanto a internet levou 10 anos para atingir 1 bilhão de usuários, o ChatGPT alcançou 100 milhões em apenas 2 meses. Este crescimento acelerado está transformando a educação em velocidade sem paralelo.
+                            </p>
+
+                            <h4 class="text-xl font-semibold mb-3 mt-6 text-blue-600">Dados-chave (Novembro 2025):</h4>
+                            <ul class="space-y-3 mb-6">
+                                <li><strong>Mercado global:</strong> USD 5.47bi (2024) → USD 7.57bi (2025) = <span class="text-green-600 font-bold">+38.4% em 1 ano</span></li>
+                                <li><strong>Adoção estudantil:</strong> 66% (2024) → <span class="text-green-600 font-bold">92% (2025)</span> = +26 pontos percentuais</li>
+                                <li><strong>Projeção 2034:</strong> USD 208.2 bilhões (CAGR de 41.4%)</li>
+                                <li><strong>Brasil:</strong> 74.8% dos professores apoiam uso de IA em sala (2025)</li>
+                            </ul>
+
+                            <h4 class="text-xl font-semibold mb-3 mt-6 text-blue-600">Marcos Recentes (4 meses):</h4>
+                            <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mb-6">
+                                <ul class="space-y-3">
+                                    <li><strong>Julho/2025:</strong> ChatGPT Study Mode - OpenAI foca em estudantes com tutoria adaptativa</li>
+                                    <li><strong>Agosto/2025:</strong> Claude Learning Mode - Anthropic lança método socrático revolucionário</li>
+                                    <li><strong>Agosto/2025:</strong> Gemini Guided Learning - Google entra forte na educação</li>
+                                    <li><strong>Novembro/2025:</strong> Microsoft Study & Learn - Agente de IA gratuito para estudos</li>
+                                    <li><strong>Novembro/2025:</strong> Google NotebookLM - IA cria podcasts e vídeos de materiais didáticos</li>
+                                </ul>
+                            </div>
+
+                            <h4 class="text-xl font-semibold mb-3 mt-6 text-blue-600">O Desafio da Obsolescência:</h4>
+                            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-4">
+                                <p class="mb-3"><strong>Tempo médio de obsolescência:</strong> 4-6 meses</p>
+                                <p>O que você aprende sobre ferramentas de IA hoje pode estar desatualizado em menos de 6 meses. Por isso, este curso foca em <strong class="text-blue-600">princípios atemporais</strong>, não tutoriais de ferramentas.</p>
+                            </div>
+
+                            <h4 class="text-xl font-semibold mb-3 mt-6 text-blue-600">Atividade Prática:</h4>
+                            <div class="bg-neutral-100 dark:bg-neutral-700 p-6 rounded-lg">
+                                <p class="mb-3"><strong>Exercício: Linha do Tempo Pessoal</strong></p>
+                                <p>Crie sua própria linha do tempo de contato com IA:</p>
+                                <ol class="list-decimal pl-6 mt-3 space-y-2">
+                                    <li>Quando você ouviu falar de ChatGPT pela primeira vez?</li>
+                                    <li>Qual foi a primeira ferramenta de IA que você testou?</li>
+                                    <li>Quantas ferramentas novas você descobriu nos últimos 3 meses?</li>
+                                    <li>Alguma ferramenta que você usava ficou obsoleta ou foi superada?</li>
+                                </ol>
+                                <p class="mt-4 text-sm italic">Esta reflexão ajuda a internalizar a velocidade da mudança.</p>
+                            </div>
+                        </div>
+
+                        <!-- Tópico 2: História da IA -->
+                        <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 mb-6 shadow-lg border-l-4 border-blue-600">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                                <span class="text-3xl">📜</span>
+                                <span>História da IA: De 1950 a 2025</span>
+                            </h3>
+
+                            <p class="mb-6">
+                                Compreender a história da IA é essencial para contextualizar o momento atual e entender que não estamos em uma "bolha" temporária, mas em uma transformação permanente.
+                            </p>
+
+                            <h4 class="text-xl font-semibold mb-3 text-blue-600">Linha do Tempo Essencial:</h4>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex gap-4">
+                                    <div class="w-32 flex-shrink-0 font-bold text-blue-600">1950</div>
+                                    <div><strong>Teste de Turing</strong> - Alan Turing propõe teste para avaliar inteligência de máquinas</div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-32 flex-shrink-0 font-bold text-blue-600">1956</div>
+                                    <div><strong>Conferência de Dartmouth</strong> - Termo "Inteligência Artificial" é criado. Nasce a IA como campo acadêmico.</div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-32 flex-shrink-0 font-bold text-blue-600">1974-1980</div>
+                                    <div><strong>Primeiro "Inverno da IA"</strong> - Promessas não cumpridas levam a cortes de financiamento</div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-32 flex-shrink-0 font-bold text-blue-600">1997</div>
+                                    <div><strong>Deep Blue vence Kasparov</strong> - IA da IBM derrota campeão mundial de xadrez</div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-32 flex-shrink-0 font-bold text-blue-600">2011</div>
+                                    <div><strong>Watson vence Jeopardy!</strong> - IA processa linguagem natural em competição ao vivo</div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-32 flex-shrink-0 font-bold text-blue-600">2012</div>
+                                    <div><strong>Revolução do Deep Learning</strong> - AlexNet vence ImageNet, iniciando era das redes neurais profundas</div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-32 flex-shrink-0 font-bold text-blue-600">2016</div>
+                                    <div><strong>AlphaGo vence Lee Sedol</strong> - IA domina jogo mais complexo que xadrez</div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-32 flex-shrink-0 font-bold text-blue-600">2017</div>
+                                    <div><strong>Transformers</strong> - Google publica paper "Attention is All You Need", base dos LLMs atuais</div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-32 flex-shrink-0 font-bold text-blue-600">2022</div>
+                                    <div><strong>ChatGPT lançado</strong> - Primeiro LLM acessível ao público geral, marca início da era atual</div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-32 flex-shrink-0 font-bold text-blue-600">2023-2025</div>
+                                    <div><strong>Explosão de LLMs</strong> - GPT-4, Claude, Gemini, modelos especializados em educação</div>
+                                </div>
+                            </div>
+
+                            <h4 class="text-xl font-semibold mb-3 mt-8 text-blue-600">Por Que Estamos em Momento Único:</h4>
+                            <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg mb-4">
+                                <ol class="list-decimal pl-6 space-y-3">
+                                    <li><strong>Acessibilidade:</strong> Pela primeira vez, IA avançada é gratuita e acessível a qualquer pessoa com internet</li>
+                                    <li><strong>Multimodalidade:</strong> IAs processam texto, imagem, áudio e vídeo simultaneamente</li>
+                                    <li><strong>Personalização:</strong> Tecnologia permite adaptação em escala (cada aluno pode ter experiência única)</li>
+                                    <li><strong>Velocidade de Evolução:</strong> Lançamentos mensais vs décadas entre avanços no passado</li>
+                                </ol>
+                            </div>
+
+                            <h4 class="text-xl font-semibold mb-3 mt-8 text-blue-600">Vídeo Recomendado:</h4>
+                            <div class="bg-neutral-100 dark:bg-neutral-700 p-6 rounded-lg">
+                                <p class="mb-2"><strong>📺 "A Brief History of AI" - Stanford University (15 min)</strong></p>
+                                <p class="text-sm">Documentário que contextualiza toda a evolução da IA de forma visual e acessível. Disponível no YouTube com legendas em português.</p>
+                            </div>
+                        </div>
+
+                        <!-- Nota sobre conteúdo adicional -->
+                        <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10 rounded-xl p-8 text-center border-2 border-dashed border-blue-600 mb-8">
+                            <p class="text-lg font-semibold mb-2">📚 Conteúdo Adicional</p>
+                            <p class="text-sm">Os demais tópicos (Framework UNESCO, Ética e LGPD) seguem a mesma estrutura detalhada com exemplos práticos, atividades e recursos multimídia.</p>
+                        </div>
+
+                        <h2 class="text-3xl font-bold mb-6">📦 Recursos do Módulo</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                                <h3 class="font-bold mb-3 flex items-center gap-2">
+                                    <span>📹</span>
+                                    <span>Videoaulas (2h)</span>
+                                </h3>
+                                <ul class="text-sm space-y-2">
+                                    <li>• Introdução ao módulo (10 min)</li>
+                                    <li>• Tsunami da IA - Dados 2025 (30 min)</li>
+                                    <li>• História da IA animada (25 min)</li>
+                                    <li>• Framework UNESCO explicado (35 min)</li>
+                                    <li>• LGPD para educadores (20 min)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                                <h3 class="font-bold mb-3 flex items-center gap-2">
+                                    <span>📄</span>
+                                    <span>Leituras (3h)</span>
+                                </h3>
+                                <ul class="text-sm space-y-2">
+                                    <li>• Artigo: "The AI Revolution in Education" (30 min)</li>
+                                    <li>• Framework UNESCO completo (45 min)</li>
+                                    <li>• Guia LGPD para escolas (30 min)</li>
+                                    <li>• Cases brasileiros de sucesso (45 min)</li>
+                                    <li>• Relatório de mercado 2025 (30 min)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                                <h3 class="font-bold mb-3 flex items-center gap-2">
+                                    <span>💬</span>
+                                    <span>Discussões (2h)</span>
+                                </h3>
+                                <ul class="text-sm space-y-2">
+                                    <li>• Fórum: "Minha primeira experiência com IA"</li>
+                                    <li>• Debate: "IA substitui ou potencializa professores?"</li>
+                                    <li>• Live Q&A com especialista (60 min)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                                <h3 class="font-bold mb-3 flex items-center gap-2">
+                                    <span>✅</span>
+                                    <span>Avaliação (1h)</span>
+                                </h3>
+                                <ul class="text-sm space-y-2">
+                                    <li>• Quiz de conhecimentos (20 questões)</li>
+                                    <li>• Análise de caso prático</li>
+                                    <li>• Reflexão escrita: "O que mudou"</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 text-center">
+                            <a href="../modulos/modulo-1-1.html" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                📄 Abrir Página Completa em Nova Aba
+                            </a>
+                        </div>
+                    `
+                },
+                'modulo-1-2': {
+                    title: 'Módulo 1.2: Ecossistema de Ferramentas de IA (Nov 2025)',
+                    content: `
+                        <h2 class="text-2xl font-bold mb-4">📖 Visão Geral</h2>
+                        <p class="mb-6">Panorama completo das principais ferramentas de IA educacional (Novembro 2025). Você aprenderá a operar ChatGPT Study Mode, Claude Learning Mode, Gemini Guided Learning, Google NotebookLM e dominará o Framework FEAT para ensinar com IA.</p>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">🤖 ChatGPT + Study Mode</h2>
+                        <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Recursos principais:</strong></p>
+                            <ul class="space-y-2 text-sm">
+                                <li>• <strong>Study Mode:</strong> Tutor socrático (guia com perguntas, não dá respostas)</li>
+                                <li>• <strong>Canvas:</strong> Editor colaborativo para textos/código</li>
+                                <li>• <strong>Custom GPTs:</strong> Criar assistentes especializados</li>
+                                <li>• <strong>Advanced Voice:</strong> Conversação por voz em tempo real</li>
+                            </ul>
+                            <p class="mt-4 text-sm"><strong>Tutorial prático:</strong> Criar quiz de 10 questões em 30 segundos com prompt estruturado</p>
+                            <p class="text-xs italic mt-2">✅ Ideal para: Geração rápida de materiais, tutoria socrática</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">🧠 Claude + Learning Mode</h2>
+                        <div class="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Vantagens competitivas:</strong></p>
+                            <ul class="space-y-2 text-sm">
+                                <li>• <strong>Contexto massivo:</strong> 200k tokens (500 páginas) vs 128k do GPT-4</li>
+                                <li>• <strong>Raciocínio superior:</strong> Melhor em matemática, lógica, programação</li>
+                                <li>• <strong>Transparência:</strong> Chain-of-Thought nativo (explica raciocínio)</li>
+                            </ul>
+                            <p class="mt-4 text-sm"><strong>Tutorial prático:</strong> Analisar TCC completo (50 páginas) em 2 minutos</p>
+                            <p class="text-xs italic mt-2">✅ Ideal para: Análise de documentos longos, raciocínio complexo</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">🌟 Gemini + Guided Learning</h2>
+                        <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Recursos únicos:</strong></p>
+                            <ul class="space-y-2 text-sm">
+                                <li>• <strong>Integração Google:</strong> Trabalha dentro de Docs/Sheets/Slides</li>
+                                <li>• <strong>Análise de vídeos:</strong> Transcreve e analisa vídeos do YouTube</li>
+                                <li>• <strong>Pesquisa em tempo real:</strong> Acessa Google Search durante respostas</li>
+                            </ul>
+                            <p class="mt-4 text-sm"><strong>Tutorial prático:</strong> Criar plano de aula dentro do Google Docs com vídeos do YouTube</p>
+                            <p class="text-xs italic mt-2">✅ Ideal para: Trabalho no Google Workspace, pesquisa atualizada</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">📚 Google NotebookLM</h2>
+                        <div class="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Recursos revolucionários:</strong></p>
+                            <ul class="space-y-2 text-sm">
+                                <li>• <strong>Audio Overviews:</strong> Gera podcasts de 10-20 min (2 vozes conversando)</li>
+                                <li>• <strong>Flashcards automáticos:</strong> Extrai conceitos-chave e gera cartões</li>
+                                <li>• <strong>Citações verificáveis:</strong> Link para trecho original do documento</li>
+                            </ul>
+                            <p class="mt-4 text-sm"><strong>Tutorial prático:</strong> Upload apostila → Podcast de revisão em 5 minutos</p>
+                            <p class="text-xs italic mt-2">✅ Ideal para: Material de revisão, acessibilidade, ensino híbrido</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">⚡ Framework FEAT - Pedagogia com IA</h2>
+                        <div class="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>4 Etapas para integração ética de IA:</strong></p>
+                            <div class="space-y-3 text-sm">
+                                <div><strong>F - Formulate:</strong> Definir problema pedagógico antes de usar IA</div>
+                                <div><strong>E - Explore:</strong> Testar 2-3 ferramentas e comparar resultados</div>
+                                <div><strong>A - Assess:</strong> Validar se IA gerou valor pedagógico real</div>
+                                <div><strong>T - Transform:</strong> Escalar uso de forma sistêmica</div>
+                            </div>
+                            <p class="text-xs italic mt-4">Framework UNESCO (2024) para garantir uso ético e eficaz</p>
+                        </div>
+
+                        <div class="mt-8 text-center">
+                            <a href="../modulos/modulo-1-2.html" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                📄 Ver Página Completa com Tutoriais Detalhados
+                            </a>
+                        </div>
+                    `
+                },
+                'modulo-1-3': {
+                    title: 'Módulo 1.3: Prompt Engineering - A Habilidade Universal',
+                    content: `
+                        <h2 class="text-2xl font-bold mb-4">📖 Visão Geral</h2>
+                        <p class="mb-6">Prompt Engineering é a habilidade mais valiosa da era da IA. Técnicas comprovadas para aumentar em 40-80% a qualidade das respostas de LLMs. Domine: Anatomia de Prompts, Chain-of-Thought, Few-Shot Learning, Engenharia de Persona e Estratégias Multi-LLM.</p>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">🔬 Anatomia de um Prompt Eficaz</h2>
+                        <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Os 5 Componentes Essenciais:</strong></p>
+                            <div class="space-y-3 text-sm">
+                                <div><strong>1. Papel (Role):</strong> Defina quem a IA deve ser | Ex: "Você é professor de química com 15 anos de experiência"</div>
+                                <div><strong>2. Contexto (Context):</strong> Forneça informações de fundo | Ex: "Turma de 30 alunos, 2º ano EM"</div>
+                                <div><strong>3. Tarefa (Task):</strong> Especifique o que quer | Ex: "Crie 10 exercícios progressivos"</div>
+                                <div><strong>4. Formato (Format):</strong> Defina estrutura da resposta | Ex: "Para cada exercício: enunciado + dica"</div>
+                                <div><strong>5. Tom (Tone):</strong> Especifique estilo | Ex: "Linguagem acessível para adolescentes"</div>
+                            </div>
+                            <p class="text-xs italic mt-4">❌ Prompt ruim: "Me ajude com química" | ✅ Prompt bom: Usa os 5 componentes</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">🧩 Chain-of-Thought (CoT)</h2>
+                        <div class="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Raciocínio Passo a Passo - Aumenta precisão em 40-80%</strong></p>
+                            <p class="text-sm mb-3">Em vez de pedir resposta direta, instrua o LLM a "mostrar raciocínio". Força decomposição de problemas complexos em etapas lógicas.</p>
+                            <div class="grid md:grid-cols-2 gap-4 text-xs">
+                                <div class="bg-white dark:bg-neutral-700 p-3 rounded">
+                                    <p class="font-bold mb-2">❌ Sem CoT:</p>
+                                    <p>"Quanto é 23 × 47?" → "1081" (sem explicação)</p>
+                                </div>
+                                <div class="bg-white dark:bg-neutral-700 p-3 rounded">
+                                    <p class="font-bold mb-2">✅ Com CoT:</p>
+                                    <p>"Quanto é 23 × 47? Mostre raciocínio" → Explica 3 passos</p>
+                                </div>
+                            </div>
+                            <p class="text-xs italic mt-3">Aplicação: Correção de redações ENEM com justificativa nota por nota</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">📝 Few-Shot Learning</h2>
+                        <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Aprender com Exemplos - Mais eficaz que instruções</strong></p>
+                            <p class="text-sm mb-3">Mostre 2-5 exemplos do output desejado. LLM replica o padrão automaticamente.</p>
+                            <div class="bg-white dark:bg-neutral-700 p-4 rounded text-xs mb-3">
+                                <p class="font-bold mb-2">Exemplo prático - Criar questões de quiz:</p>
+                                <p>1. Mostre 3 questões com formato específico (nível + enunciado + alternativas + justificativa)</p>
+                                <p>2. Peça: "Agora crie mais 7 questões seguindo exatamente esse padrão"</p>
+                                <p class="mt-2 italic">Resultado: Output consistente e controlado</p>
+                            </div>
+                            <p class="text-xs"><strong>Regra:</strong> 1 exemplo (formato simples) | 2-3 exemplos (padrões moderados) | 4-5 (complexos)</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">🎭 Engenharia de Persona</h2>
+                        <div class="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Especialistas Customizados</strong></p>
+                            <p class="text-sm mb-3">Defina identidade, experiência, estilo e valores. Transforma LLM genérico em especialista.</p>
+                            <div class="space-y-2 text-xs">
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>Identidade:</strong> "Você é Dra. Maria Silva, pedagoga PhD USP, 20 anos experiência"</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>Expertise:</strong> "Especialista em: ensino híbrido, gamificação, IA em currículos"</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>Estilo:</strong> "Tom empático, pragmático, usa metáforas do cotidiano"</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>Princípios:</strong> "Educação inclusiva, aprendizagem ativa"</div>
+                            </div>
+                            <p class="text-xs italic mt-3">Biblioteca: Tutor Socrático, Curator de Conteúdo, Avaliador Formativo, Designer de Gamificação</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">🔀 Estratégias Multi-LLM</h2>
+                        <div class="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Combine Forças - Resultados Superiores</strong></p>
+                            <div class="space-y-2 text-xs">
+                                <div><strong>Pipeline Sequencial:</strong> ChatGPT (brainstorming) → Claude (análise) → Gemini (pesquisa) → NotebookLM (podcast)</div>
+                                <div><strong>Validação Cruzada:</strong> Pergunte para 3 LLMs. Consenso = alta confiança</div>
+                                <div><strong>Especialização:</strong> Geração rápida (ChatGPT) | Análise profunda (Claude) | Pesquisa (Gemini) | Áudio (NotebookLM)</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-success/10 border-l-4 border-success p-6 rounded-lg mb-6">
+                            <p class="font-bold mb-2">🎯 Resultado Final: Biblioteca de 50+ Prompts</p>
+                            <p class="text-sm">Planos de aula, questões de prova, feedback personalizado, análise de redações, simplificação de textos</p>
+                        </div>
+
+                        <div class="mt-8 text-center">
+                            <a href="../modulos/modulo-1-3.html" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                📄 Ver Página Completa com Exemplos Práticos
+                            </a>
+                        </div>
+                    `
+                },
+                'modulo-1-4': {
+                    title: 'Módulo 1.4: Pensamento Crítico com IA',
+                    content: `
+                        <h2 class="text-2xl font-bold mb-4">📖 Visão Geral</h2>
+                        <p class="mb-6">LLMs não são infalíveis. Desenvolva ceticismo saudável para usar IA com responsabilidade. Aprenda a detectar alucinações, identificar vieses, avaliar qualidade com Framework CRAFT e usar detectores de IA criticamente.</p>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">🎯 Alucinações - O Risco #1</h2>
+                        <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Alucinação = LLM inventa dados com confiança absoluta</strong></p>
+                            <div class="space-y-3 text-sm">
+                                <div><strong>1. Factual:</strong> Invenção de dados/eventos | Ex: "Machado publicou livro em 1920" (morreu em 1908) ❌</div>
+                                <div><strong>2. Referência:</strong> Citação de fontes inexistentes | Ex: "Segundo Silva et al. (2024) na Nature..." ❌</div>
+                                <div><strong>3. Conceitual:</strong> Confusão entre conceitos | Ex: Mistura fotossíntese + fosforilação</div>
+                            </div>
+                            <p class="mt-4 text-xs"><strong>5 Técnicas de Detecção:</strong> Validação cruzada (2-3 LLMs) | Peça fontes | Verifique datas | Busca manual | Ceticismo com especificidade</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">⚖️ Vieses de LLMs</h2>
+                        <div class="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Viés = Tendência sistemática (reflexo dos dados de treinamento)</strong></p>
+                            <div class="grid md:grid-cols-2 gap-3 text-xs">
+                                <div class="bg-white dark:bg-neutral-700 p-3 rounded"><strong>1. Cultural:</strong> Favorece anglo-saxão</div>
+                                <div class="bg-white dark:bg-neutral-700 p-3 rounded"><strong>2. Temporal:</strong> Dados até 2023</div>
+                                <div class="bg-white dark:bg-neutral-700 p-3 rounded"><strong>3. Linguístico:</strong> Melhor em inglês</div>
+                                <div class="bg-white dark:bg-neutral-700 p-3 rounded"><strong>4. Gênero:</strong> Assume profissões</div>
+                                <div class="bg-white dark:bg-neutral-700 p-3 rounded"><strong>5. Consenso:</strong> Silencia minorias</div>
+                            </div>
+                            <p class="mt-4 text-xs"><strong>Mitigação:</strong> Prompt explícito sobre diversidade | Múltiplos LLMs | Educação crítica | Validação local</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">🔍 Framework CRAFT</h2>
+                        <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>5 Critérios para Avaliar Confiabilidade</strong></p>
+                            <div class="space-y-2 text-sm">
+                                <div><strong>C - Completeness:</strong> Cobre todos aspectos? (0-2 pts)</div>
+                                <div><strong>R - Relevance:</strong> Pertinente ao objetivo? (0-2 pts)</div>
+                                <div><strong>A - Accuracy:</strong> Informações verificáveis? (0-2 pts)</div>
+                                <div><strong>F - Fairness:</strong> Evita vieses? (0-2 pts)</div>
+                                <div><strong>T - Tone:</strong> Linguagem apropriada? (0-2 pts)</div>
+                            </div>
+                            <p class="mt-4 text-xs"><strong>Pontuação:</strong> 8-10 pts = Usar ✅ | 5-7 = Editar 🟡 | 0-4 = Refazer ❌</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">🤖 Detectores de IA</h2>
+                        <div class="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Ferramentas (Nov 2025) - Precisão 65-80%</strong></p>
+                            <div class="grid md:grid-cols-2 gap-3 text-xs mb-4">
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded">GPTZero (gratuito) - 70%</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded">Turnitin (pago) - 75%</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded">Originality.AI (pago) - 80%</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded">ZeroGPT (gratuito) - 65%</div>
+                            </div>
+                            <div class="bg-red-50 border-l-4 border-red-500 p-4 text-xs">
+                                <p class="font-bold mb-2">❌ Problemas graves:</p>
+                                <ul class="space-y-1">
+                                    <li>• 25-40% falsos positivos (humanos detectados como IA)</li>
+                                    <li>• Viés contra não-nativos (ESL mais detectados)</li>
+                                    <li>• Fácil de enganar (parafrasear burla detector)</li>
+                                </ul>
+                            </div>
+                            <p class="mt-4 text-xs"><strong>Recomendação:</strong> NÃO use como prova punitiva. Use para conversar com aluno, não punir automaticamente</p>
+                        </div>
+
+                        <div class="mt-8 text-center">
+                            <a href="../modulos/modulo-1-4.html" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                📄 Ver Página Completa com Análise Detalhada
+                            </a>
+                        </div>
+                    `
+                },
+                'modulo-1-5': {
+                    title: 'Módulo 1.5: Projeto Piloto de 30 Dias',
+                    content: `
+                        <h2 class="text-2xl font-bold mb-4">📖 Visão Geral</h2>
+                        <p class="mb-6">Síntese do Nível 1. Desenhe, implemente e avalie projeto piloto de IA em sua prática docente por 30 dias. Use Canvas de Projeto, colete métricas de impacto e apresente resultados com storytelling de dados.</p>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">📋 Canvas de Projeto - 9 Blocos</h2>
+                        <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Ferramenta visual de 1 página para planejar intervenção</strong></p>
+                            <div class="grid md:grid-cols-3 gap-2 text-xs">
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>1. Problema:</strong> Dificuldade específica</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>2. Público:</strong> Quem são os alunos</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>3. Objetivo:</strong> Meta mensurável</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>4. Ferramenta:</strong> Qual IA usar</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>5. Estratégia:</strong> Como integrar</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>6. Duração:</strong> 30 dias</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>7. Métricas:</strong> Como medir</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>8. Riscos:</strong> O que pode falhar</div>
+                                <div class="bg-white dark:bg-neutral-700 p-2 rounded"><strong>9. Critérios de Parada:</strong> Quando abandonar</div>
+                            </div>
+                            <p class="mt-4 text-xs italic">Exemplo: Reduzir erros de redação de 8 para 3 usando Claude + ChatGPT para feedback</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">🚀 Implementação - 4 Fases</h2>
+                        <div class="space-y-4">
+                            <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                                <p class="font-bold mb-2 text-sm">Semana 1: Preparação (Dias 1-7)</p>
+                                <ul class="text-xs space-y-1">
+                                    <li>☐ Apresentar projeto aos alunos (ética, objetivos)</li>
+                                    <li>☐ Coletar consentimento LGPD</li>
+                                    <li>☐ Realizar diagnóstico inicial (baseline)</li>
+                                    <li>☐ Treinar alunos na ferramenta (tutorial 20 min)</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+                                <p class="font-bold mb-2 text-sm">Semanas 2-3: Execução (Dias 8-21)</p>
+                                <ul class="text-xs space-y-1">
+                                    <li>☐ Monitorar uso diário</li>
+                                    <li>☐ Check-ins semanais (5 min: "Como está sendo?")</li>
+                                    <li>☐ Resolver problemas técnicos (<24h)</li>
+                                    <li>☐ Documentar observações (diário de bordo)</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg">
+                                <p class="font-bold mb-2 text-sm">Semana 4: Coleta (Dias 22-28)</p>
+                                <ul class="text-xs space-y-1">
+                                    <li>☐ Aplicar métrica final (comparar com baseline)</li>
+                                    <li>☐ Survey de satisfação (Google Forms, 5 min)</li>
+                                    <li>☐ Entrevistas qualitativas (3-5 voluntários)</li>
+                                    <li>☐ Organizar dados em planilha</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
+                                <p class="font-bold mb-2 text-sm">Dias 29-30: Análise</p>
+                                <ul class="text-xs space-y-1">
+                                    <li>☐ Comparar baseline vs final</li>
+                                    <li>☐ Analisar dados qualitativos</li>
+                                    <li>☐ Identificar o que funcionou/não funcionou</li>
+                                    <li>☐ Decidir: Escalar, ajustar ou abandonar</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">📊 Métricas - Regra 1+1+1</h2>
+                        <div class="bg-indigo-50 dark:bg-indigo-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Colete 1 quantitativa + 1 qualitativa + 1 de percepção</strong></p>
+                            <div class="space-y-3 text-xs">
+                                <div><strong>Quantitativa:</strong> Notas pré/pós, % uso, tempo economizado</div>
+                                <div><strong>Qualitativa:</strong> Observação direta, análise de artefatos, entrevistas</div>
+                                <div><strong>Percepção:</strong> Survey Likert 1-5 ("IA ajudou?", "Recomendaria?")</div>
+                            </div>
+                            <p class="mt-4 text-xs italic">Exemplo: Erros -62% (quant) + Textos mais coesos (qual) + Satisfação 4.2/5 (percepção)</p>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mb-4 mt-8">🎤 Apresentação - Storytelling</h2>
+                        <div class="bg-pink-50 dark:bg-pink-900/20 p-6 rounded-lg mb-6">
+                            <p class="mb-3"><strong>Estrutura de 10 min (formato Ignite)</strong></p>
+                            <div class="space-y-2 text-xs">
+                                <div><strong>1. Gancho (1 min):</strong> História real de aluno</div>
+                                <div><strong>2. Problema (2 min):</strong> Desafio pedagógico + por que IA</div>
+                                <div><strong>3. Método (1 min):</strong> Resumo do Canvas</div>
+                                <div><strong>4. Resultados (4 min):</strong> Dados com visualizações | O que funcionou/não funcionou</div>
+                                <div><strong>5. Lições (1 min):</strong> 3 insights práticos para colegas</div>
+                                <div><strong>6. Próximos passos (1 min):</strong> Escalar, ajustar ou parar</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-success/10 border-l-4 border-success p-6 rounded-lg mb-6">
+                            <p class="font-bold mb-2">🏆 Entrega Final</p>
+                            <p class="text-sm">Canvas + Diário (4 semanas) + Relatório de Métricas + Apresentação 10 min = <strong>Certificação Nível 1</strong></p>
+                        </div>
+
+                        <div class="mt-8 text-center">
+                            <a href="../modulos/modulo-1-5.html" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                📄 Ver Página Completa com Templates
+                            </a>
+                        </div>
+                    `
+                }
+            };
+
+            const content = moduleContent[moduleId];
+            if (content) {
+                modalTitle.textContent = content.title;
+                modalBody.innerHTML = content.content;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

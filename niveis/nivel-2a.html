@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nível 2A: Pedagógico | SuperProfessores</title>
+    <meta name="description" content="Base comum obrigatória para ambas as trilhas - 60 horas de formação em IA para educadores">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9b59b6',
+                        'trilha-a': '#9b59b6',
+                        'trilha-b': '#10B981',
+                        fundamentos: '#9b59b6',
+                        success: '#22C55E',
+                        warning: '#F59E0B',
+                        error: '#EF4444',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Smooth transitions for dark mode */
+        * {
+            transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out;
+        }
+
+        /* Remove transition from page load */
+        .preload * {
+            transition: none !important;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 1000px;
+            max-height: 90vh;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 20px 25px rgba(0,0,0,0.3);
+        }
+
+        .dark .modal-content {
+            background-color: #1f2937;
+        }
+
+        .modal-header {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dark .modal-header {
+            border-bottom-color: #374151;
+        }
+
+        .modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            max-height: calc(90vh - 80px);
+        }
+
+        .close-modal {
+            color: #9ca3af;
+            font-size: 2rem;
+            font-weight: 700;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close-modal:hover {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body class="preload bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold bg-gradient-to-r from-primary to-trilha-a bg-clip-text text-transparent">
+                        🎓 SuperProfessores
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-primary font-medium">Início</a>
+                    <a href="../index.html#trilhas" class="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-primary font-medium">Trilhas</a>
+                    <a href="https://github.com/inematds/SuperProf" target="_blank" class="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-primary font-medium">GitHub</a>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-neutral-100 dark:bg-neutral-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-neutral-200 dark:border-neutral-700">
+            <div class="px-4 py-4 space-y-3">
+                <a href="../index.html" class="block text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Início</a>
+                <a href="../index.html#trilhas" class="block text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Trilhas</a>
+                <a href="https://github.com/inematds/SuperProf" target="_blank" class="block text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <nav class="flex text-sm" aria-label="Breadcrumb">
+                <a href="../index.html" class="text-primary hover:text-purple-700">Início</a>
+                <span class="mx-2 text-neutral-400">/</span>
+                <a href="trilha-a.html" class="text-primary hover:text-purple-700">Trilha A</a>
+                <span class="mx-2 text-neutral-400">/</span>
+                <span class="text-neutral-600 dark:text-neutral-400">Nível 2A</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <section class="bg-gradient-to-r from-primary to-purple-600 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <div class="flex items-center justify-between mb-4">
+                <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">60 horas</span>
+                <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Obrigatório</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">Nível 2A: Pedagógico</h1>
+            <p class="text-xl text-white/90 mb-6">Aprofundamento pedagógico em design instrucional, avaliação formativa, personalização, gamificação e comunidades de prática com IA</p>
+
+            <div class="grid md:grid-cols-3 gap-4 mt-8">
+                <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
+                    <div class="text-2xl font-bold">5</div>
+                    <div class="text-sm text-blue-100">Módulos</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
+                    <div class="text-2xl font-bold">100%</div>
+                    <div class="text-sm text-blue-100">Prático</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
+                    <div class="text-2xl font-bold">R$ 0</div>
+                    <div class="text-sm text-blue-100">Ferramentas gratuitas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Módulo 2A.1 -->
+        <div class="chapter-card bg-white dark:bg-neutral-800 rounded-2xl shadow-lg p-8 mb-8 border-2 border-transparent hover:border-[#9b59b6] transition-all">
+            <div class="flex items-start justify-between mb-6">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-[#9b59b6]/10 text-[#9b59b6] rounded-full text-sm font-semibold mb-3">12 horas</span>
+                    <h2 class="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Módulo 2A.1: Design Instrucional com IA</h2>
+                    <p class="text-neutral-600 dark:text-neutral-400">Aprenda a criar experiências de aprendizagem estruturadas usando IA como copiloto de design. Domine modelos como ADDIE, Bloom 2.0, e Framework de Merrill aplicados com ferramentas de IA para acelerar criação de cursos em 70%</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 mb-6">
+                <button onclick="openModal('modulo-2a-1')" class="px-6 py-3 bg-[#9b59b6] text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors flex items-center gap-2">
+                    <span>📖</span>
+                    <span>Ver em Modal</span>
+                </button>
+                <a href="../modulos/modulo-2a-1.html" class="px-6 py-3 bg-transparent border-2 border-[#9b59b6] text-[#9b59b6] rounded-lg font-semibold hover:bg-[#9b59b6] hover:text-white transition-colors flex items-center gap-2">
+                    <span>📄</span>
+                    <span>Abrir Página Completa</span>
+                </a>
+                <a href="../pdfs/modulo-2a-1.md" download class="px-6 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors flex items-center gap-2">
+                    <span>📥</span>
+                    <span>Download PDF/MD</span>
+                </a>
+            </div>
+        
+            <!-- Tópicos Expandíveis -->
+            <div class="mb-4">
+                <h3 class="font-semibold text-neutral-900 dark:text-neutral-100 mb-3 text-lg">📚 Tópicos-chave do módulo:</h3>
+                <ul class="topics-list space-y-0.5">
+                    <!-- Tópico 🎯 -->
+                    <li class="topic-item" data-topic="m2a-1-addie">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🎯 ADDIE + IA: Framework Acelerado
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> Metodologia de design instrucional (Análise, Design, Desenvolvimento, Implementação, Avaliação) acelerada com IA. Reduz tempo de criação de cursos de semanas para dias usando prompts estruturados para cada fase.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Acelera criação de cursos em 70%, mantém rigor pedagógico e permite iterar rapidamente. Essencial para educadores que criam materiais didáticos frequentemente.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> ADDIE, Análise de necessidades, Design instrucional, Objetivos de aprendizagem, Desenvolvimento de conteúdo, Implementação, Avaliação formativa, Prompts estruturados
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 🌸 -->
+                    <li class="topic-item" data-topic="m2a-1-bloom">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🌸 Taxonomia de Bloom 2.0 com IA
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> Framework de 6 níveis cognitivos (Lembrar, Entender, Aplicar, Analisar, Avaliar, Criar) usado para gerar objetivos de aprendizagem balanceados. IA cria automaticamente 12 objetivos distribuídos pelos níveis.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Garante progressão cognitiva adequada dos objetivos de aprendizagem, evitando foco excessivo em memorização. Permite criar avaliações balanceadas que desenvolvem pensamento crítico.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Lembrar, Entender, Aplicar, Analisar, Avaliar, Criar, Verbos de ação, Objetivos mensuráveis, Progressão cognitiva, Anderson & Krathwohl
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico ⚙️ -->
+                    <li class="topic-item" data-topic="m2a-1-merrill">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            ⚙️ Princípios de Merrill aplicados
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> 5 Princípios (Problema, Ativação, Demonstração, Aplicação, Integração) que estruturam sequências didáticas eficazes. IA gera aulas de 50min seguindo essa estrutura comprovada.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Aumenta retenção em até 40% ao estruturar conteúdo seguindo princípios baseados em evidências. Reduz tempo de planejamento de aulas mantendo eficácia pedagógica.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Problema central, Ativação de conhecimento prévio, Demonstração, Aplicação prática, Integração, First Principles, Task-centered learning
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 📋 -->
+                    <li class="topic-item" data-topic="m2a-1-storyboard">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            📋 Storyboarding com IA em 2h
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> Criação de roteiros completos de cursos (estrutura, conteúdo, atividades, avaliações) em 2 horas ao invés de 2 dias. IA acelera planejamento mantendo qualidade pedagógica.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Reduz planejamento de 2 dias para 2 horas sem perder qualidade. Permite testar e ajustar estruturas de curso antes de investir em produção completa.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Storyboard, Roteiro instrucional, Sequenciamento, Atividades de aprendizagem, Avaliações alinhadas, Recursos didáticos, Cronograma, Scaffolding
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+            <!-- Módulo 2A.2 -->
+        <div class="chapter-card bg-white dark:bg-neutral-800 rounded-2xl shadow-lg p-8 mb-8 border-2 border-transparent hover:border-[#9b59b6] transition-all">
+            <div class="flex items-start justify-between mb-6">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-[#9b59b6]/10 text-[#9b59b6] rounded-full text-sm font-semibold mb-3">12 horas</span>
+                    <h2 class="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Módulo 2A.2: Avaliação Formativa Assistida por IA</h2>
+                    <p class="text-neutral-600 dark:text-neutral-400">Transforme avaliação de punitiva para formativa usando IA. Aprenda a dar feedback personalizado em escala, criar rubricas adaptativas e detectar gaps de aprendizagem com análise automática</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 mb-6">
+                <button onclick="openModal('modulo-2a-2')" class="px-6 py-3 bg-[#9b59b6] text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors flex items-center gap-2">
+                    <span>📖</span>
+                    <span>Ver em Modal</span>
+                </button>
+                <a href="../modulos/modulo-2a-2.html" class="px-6 py-3 bg-transparent border-2 border-[#9b59b6] text-[#9b59b6] rounded-lg font-semibold hover:bg-[#9b59b6] hover:text-white transition-colors flex items-center gap-2">
+                    <span>📄</span>
+                    <span>Abrir Página Completa</span>
+                </a>
+                <a href="../pdfs/modulo-2a-2.md" download class="px-6 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors flex items-center gap-2">
+                    <span>📥</span>
+                    <span>Download PDF/MD</span>
+                </a>
+            </div>
+        
+            <!-- Tópicos Expandíveis -->
+            <div class="mb-4">
+                <h3 class="font-semibold text-neutral-900 dark:text-neutral-100 mb-3 text-lg">📚 Tópicos-chave do módulo:</h3>
+                <ul class="topics-list space-y-0.5">
+                    <!-- Tópico 📊 -->
+                    <li class="topic-item" data-topic="m2a-2-tipos">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            📊 Tipos de Avaliação (Diagnóstica, Formativa, Somativa)
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> Diagnóstica identifica conhecimento prévio, Formativa monitora progresso durante aprendizagem, Somativa certifica ao final. IA automatiza todas as três gerando testes adaptativos e feedback personalizado.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Permite intervir pedagogicamente no momento certo ao invés de apenas certificar no final. Diagnóstica identifica pré-requisitos, formativa ajusta ensino, somativa valida resultados.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Avaliação diagnóstica, Avaliação formativa, Avaliação somativa, Pré-teste, Feedback contínuo, Certificação, Assessment for learning, Testes adaptativos
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 🎯 -->
+                    <li class="topic-item" data-topic="m2a-2-rubricas">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🎯 Rubricas Analíticas com IA
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> Tabelas de avaliação com critérios e descritores de níveis (Insuficiente, Básico, Proficiente, Avançado). IA gera rubricas completas alinhadas a objetivos de aprendizagem em minutos.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Torna avaliação objetiva, transparente e consistente. Alunos entendem expectativas claramente e professores avaliam com menos viés subjetivo. IA acelera criação de rubricas de horas para minutos.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Rubrica analítica, Critérios de avaliação, Descritores de desempenho, Níveis de proficiência, Insuficiente, Básico, Proficiente, Avançado, Alinhamento construtivo
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 💬 -->
+                    <li class="topic-item" data-topic="m2a-2-feedback">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            💬 Feedback Personalizado em Escala
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> Gerar feedback individualizado para 30+ alunos em 1h (vs 6h manual). IA analisa padrões, identifica pontos fortes/fracos específicos e cria mensagens encorajadoras e acionáveis.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Estudos mostram que feedback personalizado aumenta aprendizagem em 30%. IA permite dar feedback rico para 30+ alunos no tempo que levaria para corrigir 5 manualmente.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Feedback específico, Feedforward, Pontos fortes, Áreas de melhoria, Tom encorajador, Ações concretas, Feedback oportuno, Rubrica como base
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 📈 -->
+                    <li class="topic-item" data-topic="m2a-2-padroes">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            📈 Análise de Padrões de Erro
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> IA identifica automaticamente erros comuns em turmas (top 5), perfis de alunos por padrão, e gaps de aprendizagem. Permite intervenção pedagógica direcionada ao invés de genérica.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Permite identificar gaps conceituais da turma inteira rapidamente. Em vez de dar aula genérica de revisão, foca nos 3-5 erros mais comuns que 70% da turma cometeu.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Padrões de erro, Erros sistemáticos, Misconceptions, Gaps de aprendizagem, Análise de frequência, Intervenção direcionada, Agrupamento por perfil, Remediação
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+            <!-- Módulo 2A.3 -->
+        <div class="chapter-card bg-white dark:bg-neutral-800 rounded-2xl shadow-lg p-8 mb-8 border-2 border-transparent hover:border-[#9b59b6] transition-all">
+            <div class="flex items-start justify-between mb-6">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-[#9b59b6]/10 text-[#9b59b6] rounded-full text-sm font-semibold mb-3">12 horas</span>
+                    <h2 class="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Módulo 2A.3: Personalização em Escala</h2>
+                    <p class="text-neutral-600 dark:text-neutral-400">Aprenda a criar experiências de aprendizagem personalizadas para cada aluno usando IA. Domine trilhas adaptativas, recomendação de conteúdo e diferenciação automatizada</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 mb-6">
+                <button onclick="openModal('modulo-2a-3')" class="px-6 py-3 bg-[#9b59b6] text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors flex items-center gap-2">
+                    <span>📖</span>
+                    <span>Ver em Modal</span>
+                </button>
+                <a href="../modulos/modulo-2a-3.html" class="px-6 py-3 bg-transparent border-2 border-[#9b59b6] text-[#9b59b6] rounded-lg font-semibold hover:bg-[#9b59b6] hover:text-white transition-colors flex items-center gap-2">
+                    <span>📄</span>
+                    <span>Abrir Página Completa</span>
+                </a>
+                <a href="../pdfs/modulo-2a-3.md" download class="px-6 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors flex items-center gap-2">
+                    <span>📥</span>
+                    <span>Download PDF/MD</span>
+                </a>
+            </div>
+        
+            <!-- Tópicos Expandíveis -->
+            <div class="mb-4">
+                <h3 class="font-semibold text-neutral-900 dark:text-neutral-100 mb-3 text-lg">📚 Tópicos-chave do módulo:</h3>
+                <ul class="topics-list space-y-0.5">
+                    <!-- Tópico 🎯 -->
+                    <li class="topic-item" data-topic="m2a-3-dimensoes">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🎯 3 Dimensões da Personalização
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> Ritmo (velocidade individual), Conteúdo (nível de dificuldade adaptado) e Estilo (formato preferido: vídeo/texto/áudio). IA detecta perfil do aluno e ajusta experiência automaticamente.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Respeita que alunos aprendem em ritmos, níveis e formatos diferentes. Aumenta engajamento ao oferecer experiência adaptada ao perfil individual sem sobrecarregar o professor.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Ritmo individual, Conteúdo adaptativo, Estilo de aprendizagem, Preferências de formato, Vídeo, Texto, Áudio, Nível de dificuldade, Perfil do aluno
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 🛤️ -->
+                    <li class="topic-item" data-topic="m2a-3-trilhas">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🛤️ Trilhas de Aprendizagem Adaptativas
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> Caminhos personalizados com 3 níveis (Iniciante, Intermediário, Avançado). IA cria versões diferenciadas do mesmo conteúdo e redireciona aluno conforme desempenho em quizzes.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Evita frustração de alunos avançados com conteúdo muito fácil e sobrecarga de alunos iniciantes com conteúdo muito difícil. Maximiza zona de desenvolvimento proximal de cada aluno.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Trilha adaptativa, Bifurcação condicional, Pré-requisitos, Iniciante, Intermediário, Avançado, Mastery learning, Redirecionamento automático, Quiz de nivelamento
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 📦 -->
+                    <li class="topic-item" data-topic="m2a-3-recomendacao">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            📦 Sistema de Recomendação de Recursos
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> IA analisa histórico do aluno (módulos completados, tempo médio, quiz scores, interesses) e sugere próximos 5 recursos personalizados. Como Netflix para educação.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Alunos engajam 5x mais com conteúdo recomendado vs busca manual. Sistema aprende preferências ao longo do tempo e melhora sugestões continuamente.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Sistema de recomendação, Filtragem colaborativa, Histórico de interações, Perfil de interesses, Recursos complementares, Próximos passos, Similaridade de conteúdo
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 🎨 -->
+                    <li class="topic-item" data-topic="m2a-3-diferenciacao">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🎨 Diferenciação Automática de Conteúdo
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> IA gera 3 versões do mesmo conceito para níveis diferentes (ex: fotossíntese para 8 anos, 14 anos, adultos). Mesma informação, linguagem e profundidade adaptadas ao público.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Permite ensinar mesmo conceito para públicos diversos sem reescrever material 3 vezes. Crucial para escolas com turmas multi-idade ou cursos abertos ao público geral.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Diferenciação, Nível de leitura, Complexidade vocabular, Profundidade conceitual, Scaffolding, Exemplos contextualizados, Adaptação por idade, Zonamento
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+            <!-- Módulo 2A.4 -->
+        <div class="chapter-card bg-white dark:bg-neutral-800 rounded-2xl shadow-lg p-8 mb-8 border-2 border-transparent hover:border-[#9b59b6] transition-all">
+            <div class="flex items-start justify-between mb-6">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-[#9b59b6]/10 text-[#9b59b6] rounded-full text-sm font-semibold mb-3">12 horas</span>
+                    <h2 class="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Módulo 2A.4: Gamificação e Engajamento</h2>
+                    <p class="text-neutral-600 dark:text-neutral-400">Aprenda a usar gamificação baseada em IA para aumentar engajamento em 3-5x. Domine sistemas de pontos, badges, leaderboards adaptativos e narrativas personalizadas</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 mb-6">
+                <button onclick="openModal('modulo-2a-4')" class="px-6 py-3 bg-[#9b59b6] text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors flex items-center gap-2">
+                    <span>📖</span>
+                    <span>Ver em Modal</span>
+                </button>
+                <a href="../modulos/modulo-2a-4.html" class="px-6 py-3 bg-transparent border-2 border-[#9b59b6] text-[#9b59b6] rounded-lg font-semibold hover:bg-[#9b59b6] hover:text-white transition-colors flex items-center gap-2">
+                    <span>📄</span>
+                    <span>Abrir Página Completa</span>
+                </a>
+                <a href="../pdfs/modulo-2a-4.md" download class="px-6 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors flex items-center gap-2">
+                    <span>📥</span>
+                    <span>Download PDF/MD</span>
+                </a>
+            </div>
+        
+            <!-- Tópicos Expandíveis -->
+            <div class="mb-4">
+                <h3 class="font-semibold text-neutral-900 dark:text-neutral-100 mb-3 text-lg">📚 Tópicos-chave do módulo:</h3>
+                <ul class="topics-list space-y-0.5">
+                    <!-- Tópico 🏆 -->
+                    <li class="topic-item" data-topic="m2a-4-octalysis">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🏆 Octalysis Framework + IA
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> Framework de gamificação com 8 Core Drives (Epic Meaning, Accomplishment, Creativity, Ownership, Social, Scarcity, Unpredictability, Avoidance). IA gera missões gamificadas seguindo princípios comprovados.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Gamificação aumenta engajamento em 3-5x quando bem aplicada. Framework Octalysis evita gamificação superficial (apenas pontos/badges) e cria motivação intrínseca duradoura.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Octalysis, Core Drives, Epic Meaning, Accomplishment, Empowerment, Ownership, Social Influence, Scarcity, Unpredictability, Avoidance, White Hat, Black Hat
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 🎯 -->
+                    <li class="topic-item" data-topic="m2a-4-pontos">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🎯 Sistema de Pontos Adaptativo
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> Pontos baseados em esforço relativo ao histórico do aluno, não fixos. Aluno que melhora 50% ganha mais que aluno experiente que mantém 90%. IA calcula justiça contextual.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> PBLs são porta de entrada para gamificação quando usados corretamente. IA balanceia competição saudável com colaboração, evitando desmotivar alunos de baixo desempenho.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Sistema de pontos, Badges, Conquistas, Leaderboards, Rankings, XP (experiência), Níveis, Progressão visível, Competição vs Colaboração, Recompensas
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 🏅 -->
+                    <li class="topic-item" data-topic="m2a-4-badges">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            🏅 Badges Significativos
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> 3 tipos: Maestria (skill-based), Sociais (contribution), Jornada (progress). IA gera badges visuais com DALL-E e atribui automaticamente quando critérios são atingidos.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Narrativa dá significado às ações de aprendizagem. Estudos mostram que missões com contexto narrativo têm 60% mais conclusão que tarefas abstratas idênticas.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Storytelling educacional, Narrativa envolvente, Missões temáticas, Personagens, Jornada do herói, Progressão de enredo, Escolhas significativas, Quest design
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 📊 -->
+                    <li class="topic-item" data-topic="m2a-4-leaderboards">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            📊 Leaderboards Éticos
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> Ao invés de ranking absoluto (desmotiva 90%), usa Crescimento (quem mais melhorou), Pares (grupo similar) e Cooperativo (times vs times). IA agrupa alunos por perfil.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Mantém alunos na zona de flow (nem entediados nem frustrados). IA ajusta dificuldade automaticamente baseada em desempenho, mantendo desafio ótimo para cada perfil.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Progressão adaptativa, Dificuldade dinâmica, Zona de flow, Desafio crescente, Desbloqueio de conteúdo, Mastery gates, Prerequisitos, Boss battles (avaliações-chave)
+                            </p>
+                        </div>
+                    </li>
+
+                    <!-- Tópico 📖 -->
+                    <li class="topic-item" data-topic="m2a-4-narrativas">
+                        <button class="topic-button w-full text-left px-4 py-1 bg-neutral-50 dark:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-600 rounded-lg transition-colors font-medium text-neutral-800 dark:text-neutral-200">
+                            📖 Narrativas Personalizadas
+                        </button>
+                        <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-[#9b59b6]">
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">O que é:</strong> IA gera histórias imersivas onde aluno é protagonista e progresso curricular = progresso na narrativa. Exemplo: "Torre dos Prompts" onde cada andar é um conceito de IA.
+                            </p>
+                            <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Por que aprender:</strong> Aprendizagem é social. CoPs aceleram desenvolvimento profissional em 2-3x comparado a estudo individual. Compartilhar práticas reduz reinvenção da roda e eleva padrão coletivo.
+                            </p>
+                            <p class="text-sm text-neutral-700 dark:text-neutral-300">
+                                <strong class="text-[#9b59b6]">Conceitos chave:</strong> Comunidade de prática, Domínio compartilhado, Senso de comunidade, Prática colaborativa, Aprendizagem situada, Participação periférica legítima, Wenger, Lave
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+            <!-- Módulo 2A.5 -->
+        <div class="chapter-card bg-white dark:bg-neutral-800 rounded-2xl shadow-lg p-8 mb-8 border-2 border-transparent hover:border-[#9b59b6] transition-all">
+            <div class="flex items-start justify-between mb-6">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-[#9b59b6]/10 text-[#9b59b6] rounded-full text-sm font-semibold mb-3">12 horas</span>
+                    <h2 class="text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Módulo 2A.5: Comunidades de Prática e Aprendizagem Social</h2>
+                    <p class="text-neutral-600 dark:text-neutral-400">Aprenda a facilitar comunidades de aprendizagem onde IA amplifica interações humanas. Domine curadoria automatizada, moderação assistida e cultivo de cultura colaborativa em escala</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-3 mb-6">
+                <button onclick="openModal('modulo-2a-5')" class="px-6 py-3 bg-[#9b59b6] text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors flex items-center gap-2">
+                    <span>📖</span>
+                    <span>Ver em Modal</span>
+                </button>
+                <a href="../modulos/modulo-2a-5.html" class="px-6 py-3 bg-transparent border-2 border-[#9b59b6] text-[#9b59b6] rounded-lg font-semibold hover:bg-[#9b59b6] hover:text-white transition-colors flex items-center gap-2">
+                    <span>📄</span>
+                    <span>Abrir Página Completa</span>
+                </a>
+                <a href="../pdfs/modulo-2a-5.md" download class="px-6 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 rounded-lg font-semibold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors flex items-center gap-2">
+                    <span>📥</span>
+                    <span>Download PDF/MD</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal Container -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title" class="text-2xl font-bold text-neutral-900 dark:text-neutral-100"></h3>
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+            </div>
+            <div id="modal-body" class="modal-body text-neutral-700 dark:text-neutral-300"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 dark:bg-black text-neutral-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p>&copy; 2025 SuperProfessores. Licença MIT.</p>
+                <p class="mt-2 text-neutral-500">Última atualização: Novembro 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/app.js"></script>
+    <script>
+        // Modal functions
+        function openModal(moduleId) {
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+
+            // Content for each module
+            
+
+            const content = moduleContent[moduleId];
+            if (content) {
+                modalTitle.textContent = content.title;
+                modalBody.innerHTML = content.content;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+    <script>
+    const moduleContent = {
+    'modulo-2a-1': {
+        title: '2A.1: Design Instrucional com IA',
+        content: `
+            <div class="modal-content-inner">
+                <h2 class="text-3xl font-bold mb-6 mt-8 text-neutral-900 dark:text-neutral-100">Módulo 2A.1: Design Instrucional com IA</h2>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Nível 2A: Pedagógico | Carga Horária: 12 horas</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📖 Visão Geral</h3>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">Aprenda a criar experiências de aprendizagem estruturadas usando IA como copiloto de design. Domine modelos como ADDIE, Bloom 2.0, e Framework de Merrill aplicados com ferramentas de IA para acelerar criação de cursos em 70%.</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Objetivos:</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Aplicar ADDIE com IA em cada fase (Análise, Design, Desenvolvimento, Implementação, Avaliação)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Criar objetivos de aprendizagem alinhados à Taxonomia de Bloom revisitada</li>
+<li class="text-neutral-700 dark:text-neutral-300">Desenvolver sequências didáticas com Princípios de Merrill</li>
+<li class="text-neutral-700 dark:text-neutral-300">Gerar storyboards de cursos com IA em 2h (vs 2 dias manual)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🎯 ADDIE + IA: Framework Acelerado</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Fase 1: Análise (Accelerated com IA)</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Sem IA:</strong> 1 semana de pesquisa e entrevistas</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Com IA:</strong> 3 horas com análise automatizada</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt Claude para Análise de Necessidades:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Você é um designer instrucional sênior.
+
+Contexto: Curso sobre [TEMA] para [PÚBLICO]
+Dados: [Colar resultados de survey/entrevistas]
+
+Tarefa: Analise as necessidades de aprendizagem e forneça:
+1. Gaps de conhecimento (o que falta?)
+2. Perfil de aprendizes (estilos, motivações)
+3. Restrições (tempo, tecnologia, orçamento)
+4. Objetivos macro (3-5 objetivos mensuráveis)
+
+Formato: Relatório executivo (1-2 páginas)
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🌸 Taxonomia de Bloom 2.0 com IA</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">6 Níveis Cognitivos:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">1. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Lembrar:</strong> Recuperar conhecimento</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">2. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Entender:</strong> Construir significado</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">3. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Aplicar:</strong> Usar em situações</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">4. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Analisar:</strong> Decompor em partes</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">5. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Avaliar:</strong> Julgar com critérios</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">6. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Criar:</strong> Produzir algo novo</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Gerador de Objetivos com IA:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt ChatGPT:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Crie 12 objetivos de aprendizagem sobre [TEMA]:
+- 2 de Lembrar
+- 2 de Entender
+- 2 de Aplicar
+- 2 de Analisar
+- 2 de Avaliar
+- 2 de Criar
+
+Formato: &quot;Ao final, o aluno será capaz de [VERBO BLOOM] [OBJETO] [CONTEXTO]&quot;
+Exemplo: &quot;Avaliar a qualidade de prompts usando Framework CRAFT em cenários reais&quot;
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">⚙️ Princípios de Merrill</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">5 Princípios (First Principles of Instruction):</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">1. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Centrado em Problema:</strong> Aprendizagem focada em resolver problemas reais</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">2. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Ativação:</strong> Conectar com conhecimento prévio</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">3. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Demonstração:</strong> Mostrar o conhecimento</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">4. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Aplicação:</strong> Praticar com feedback</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">5. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Integração:</strong> Transferir para contexto real</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">IA como Geradora de Sequências:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt Gemini:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Crie sequência didática de 50 min sobre [TEMA] usando Princípios de Merrill:
+
+1. Problema (5 min): Apresente caso real motivador
+2. Ativação (5 min): Perguntas para ativar conhecimento prévio
+3. Demonstração (15 min): Explique conceito com exemplo
+4. Aplicação (20 min): Atividade prática com scaffolding
+5. Integração (5 min): Reflexão sobre aplicação futura
+
+Público: [DESCREVER]
+Nível: [INICIANTE/INTERMEDIÁRIO/AVANÇADO]
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📦 Recursos do Módulo</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">📹 Videoaulas (3h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">ADDIE + IA (45 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Bloom 2.0 aplicado (40 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Princípios de Merrill (45 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Storyboarding com IA (50 min)</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">💬 Práticas (7h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Projeto: Criar curso de 3h com IA (5h)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Peer review de designs (2h)</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">✅ Avaliação (2h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Entregar storyboard completo</li>
+<li class="text-neutral-700 dark:text-neutral-300">Quiz de frameworks (30 questões)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">© 2025 SuperProfessores | Licença MIT</strong></p>
+            </div>
+        `
+    },
+    'modulo-2a-2': {
+        title: '2A.2: Avaliação Formativa Assistida por IA',
+        content: `
+            <div class="modal-content-inner">
+                <h2 class="text-3xl font-bold mb-6 mt-8 text-neutral-900 dark:text-neutral-100">Módulo 2A.2: Avaliação Formativa Assistida por IA</h2>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Nível 2A: Pedagógico | Carga Horária: 12 horas</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📖 Visão Geral</h3>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">Transforme avaliação de punitiva para formativa usando IA. Aprenda a dar feedback personalizado em escala, criar rubricas adaptativas e detectar gaps de aprendizagem com análise automática.</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Objetivos:</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Gerar feedback personalizado para 30+ alunos em 1h (vs 6h manual)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Criar rubricas analíticas com IA alinhadas a objetivos</li>
+<li class="text-neutral-700 dark:text-neutral-300">Implementar avaliação diagnóstica, formativa e somativa com IA</li>
+<li class="text-neutral-700 dark:text-neutral-300">Analisar padrões de erro em turmas com dashboards automatizados</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📊 Tipos de Avaliação com IA</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">1. Diagnóstica (Pré-curso)</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Objetivo:</strong> Identificar conhecimento prévio</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">IA:</strong> Gerador de testes adaptativos</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt Claude:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Crie teste diagnóstico de 15 questões sobre [TEMA]:
+- 5 fáceis (conceitos básicos)
+- 5 médias (aplicação)
+- 5 difíceis (análise)
+
+Para cada questão:
+- Enunciado claro
+- 4 alternativas
+- Feedback para cada alternativa (por que está certa/errada)
+- Conceito testado
+
+Formato: JSON estruturado para quiz adaptativo
+</code></pre>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">2. Formativa (Durante)</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Objetivo:</strong> Monitorar progresso e ajustar ensino</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">IA:</strong> Feedback automatizado</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Caso Real - Correção de Redações:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Sem IA: 3 min/redação × 30 alunos = 90 min</li>
+<li class="text-neutral-700 dark:text-neutral-300">Com IA: 30 min total (revisar outputs da IA)</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Economia: 67%</strong></li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">3. Somativa (Final)</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Objetivo:</strong> Certificar aprendizagem</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">IA:</strong> Análise de consistência e vieses</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🎯 Rubricas Analíticas com IA</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Estrutura de Rubrica:</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Critérios:</strong> O que será avaliado</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Níveis:</strong> Insuficiente, Básico, Proficiente, Avançado</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Descritores:</strong> O que caracteriza cada nível</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Gerador de Rubricas:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt ChatGPT:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Crie rubrica analítica para avaliar [TAREFA]:
+
+Critérios (4-6):
+[Listar critérios essenciais]
+
+Para cada critério, defina 4 níveis:
+1. Insuficiente (0-25%): [Descritor específico]
+2. Básico (26-50%): [Descritor específico]
+3. Proficiente (51-75%): [Descritor específico]
+4. Avançado (76-100%): [Descritor específico]
+
+Formato: Tabela markdown
+Público: [NÍVEL]
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">💬 Feedback Personalizado em Escala</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Problema:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">Professores gastam 6h/semana dando feedback. 80% é repetitivo.</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Solução IA:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Feedback Generator</strong> - Personaliza mensagens baseado em padrões</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt Multi-LLM:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+# Etapa 1: Claude analisa todos os trabalhos
+Analise estas 30 redações e identifique:
+1. Erros mais comuns (top 5)
+2. Pontos fortes recorrentes (top 3)
+3. Perfis de alunos (por padrão de erro)
+
+# Etapa 2: ChatGPT gera feedbacks personalizados
+Para cada aluno, crie feedback que:
+- Menciona 2 pontos fortes específicos
+- Sugere 2 melhorias prioritárias
+- Conecta com erro comum identificado
+- Tom: Encorajador, construtivo, específico
+- Extensão: 100-150 palavras
+
+# Etapa 3: Professor revisa e ajusta
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Resultado:</strong> Feedback personalizado em 1h (vs 6h manual)</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📦 Recursos do Módulo</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">📹 Videoaulas (3h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Avaliação formativa vs somativa (40 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Criação de rubricas (45 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Feedback em escala (50 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Análise de padrões (45 min)</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">💬 Práticas (7h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Criar rubrica para sua disciplina (2h)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Corrigir 10 trabalhos com IA (3h)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Implementar ciclo de feedback (2h)</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">✅ Avaliação (2h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Entregar rubrica + 10 feedbacks</li>
+<li class="text-neutral-700 dark:text-neutral-300">Análise de impacto</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">© 2025 SuperProfessores | Licença MIT</strong></p>
+            </div>
+        `
+    },
+    'modulo-2a-3': {
+        title: '2A.3: Personalização em Escala',
+        content: `
+            <div class="modal-content-inner">
+                <h2 class="text-3xl font-bold mb-6 mt-8 text-neutral-900 dark:text-neutral-100">Módulo 2A.3: Personalização em Escala</h2>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Nível 2A: Pedagógico | Carga Horária: 12 horas</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📖 Visão Geral</h3>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">Aprenda a criar experiências de aprendizagem personalizadas para cada aluno usando IA. Domine trilhas adaptativas, recomendação de conteúdo e diferenciação automatizada.</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Objetivos:</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Criar trilhas de aprendizagem adaptativas com IA</li>
+<li class="text-neutral-700 dark:text-neutral-300">Implementar sistema de recomendação de recursos</li>
+<li class="text-neutral-700 dark:text-neutral-300">Diferenciar conteúdo por nível/estilo automaticamente</li>
+<li class="text-neutral-700 dark:text-neutral-300">Escalar personalização para 100+ alunos</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🎯 3 Dimensões da Personalização</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">1. Personalização de Ritmo</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">O que:</strong> Cada aluno avança na sua velocidade</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Como:</strong> IA detecta domínio e libera próximo módulo</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">2. Personalização de Conteúdo</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">O que:</strong> Materiais adaptados ao nível</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Como:</strong> IA gera versões fácil/média/difícil</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">3. Personalização de Estilo</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">O que:</strong> Formato preferido (vídeo/texto/áudio)</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Como:</strong> IA recomenda baseado em histórico</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🛤️ Trilhas Adaptativas</h3>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt NotebookLM + Claude:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+# Etapa 1: Estruturar trilha base
+Crie trilha de aprendizagem sobre [TEMA] com 10 módulos:
+- 3 fundamentos
+- 4 intermediários
+- 3 avançados
+
+Para cada módulo:
+- Pré-requisitos
+- Objetivos
+- Tempo estimado
+- Recursos (vídeo, leitura, prática)
+
+# Etapa 2: Criar versões diferenciadas
+Para cada módulo, gere 3 versões:
+1. Simplificada (iniciante absoluto)
+2. Padrão (conhecimento básico)
+3. Avançada (já domina conceitos base)
+
+# Etapa 3: Definir regras de adaptação
+Se aluno errar quiz do módulo X &gt; 2x:
+→ Redirecionar para versão simplificada
+→ Oferecer material de reforço
+→ Sugerir tutoria com professor
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📦 Sistema de Recomendação</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Como Funciona:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">1. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Input:</strong> Histórico de interação do aluno (cliques, tempo, quiz)</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">2. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Processamento:</strong> IA identifica lacunas e interesses</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">3. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Output:</strong> Lista de 5 recursos recomendados</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Implementação Simples:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt Gemini:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Baseado neste perfil de aluno:
+- Completou: [Módulos X, Y, Z]
+- Tempo médio: [15 min/módulo]
+- Quiz: [Acertos 70%]
+- Interesse demonstrado: [Tópicos A, B]
+- Estilo preferido: [Vídeo 60%, Texto 40%]
+
+Recomende 5 próximos recursos:
+1. [Título] - [Tipo] - [Duração] - [Por que?]
+2. ...
+
+Critérios:
+- Preencher lacunas identificadas
+- Respeitar estilo preferido
+- Aumentar dificuldade gradualmente
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🎨 Diferenciação Automática</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Ferramentas:</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Claude:</strong> Simplificar textos acadêmicos</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">ChatGPT:</strong> Criar analogias para diferentes contextos</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Gemini:</strong> Traduzir conceitos para múltiplas linguagens</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Exemplo Prático:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Conceito:</strong> Fotossíntese</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3 Versões Geradas por IA:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Iniciante (8-10 anos):</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> "Fotossíntese é como plantas fazem comida usando luz do sol. É tipo cozinhar, mas a receita usa sol, água e ar!"</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Intermediário (11-14 anos):</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> "Fotossíntese é o processo onde plantas convertem energia luminosa em glicose. Requer CO2 + H2O + Luz → C6H12O6 + O2."</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Avançado (15+ anos):</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> "Fotossíntese oxigênica ocorre em dois estágios: reações luminosas (fotossistemas I e II) e ciclo de Calvin (fixação de carbono via RuBisCO)."</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📦 Recursos do Módulo</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">📹 Videoaulas (3h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Personalização: O que é possível? (45 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Trilhas adaptativas (50 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Sistemas de recomendação (45 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Diferenciação automática (40 min)</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">💬 Práticas (7h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Criar trilha adaptativa (3h)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Implementar recomendação (2h)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Gerar 3 versões de conteúdo (2h)</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">✅ Avaliação (2h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Projeto: Sistema de personalização funcional</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">© 2025 SuperProfessores | Licença MIT</strong></p>
+            </div>
+        `
+    },
+    'modulo-2a-4': {
+        title: '2A.4: Gamificação Inteligente',
+        content: `
+            <div class="modal-content-inner">
+                <h2 class="text-3xl font-bold mb-6 mt-8 text-neutral-900 dark:text-neutral-100">Módulo 2A.4: Gamificação e Engajamento</h2>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Nível 2A: Pedagógico | Carga Horária: 12 horas</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📖 Visão Geral</h3>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">Aprenda a usar gamificação baseada em IA para aumentar engajamento em 3-5x. Domine sistemas de pontos, badges, leaderboards adaptativos e narrativas personalizadas.</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Objetivos:</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Implementar sistema de pontos e recompensas com IA</li>
+<li class="text-neutral-700 dark:text-neutral-300">Criar desafios adaptativos baseados em perfil</li>
+<li class="text-neutral-700 dark:text-neutral-300">Design de narrativas gamificadas personalizadas</li>
+<li class="text-neutral-700 dark:text-neutral-300">Medir engajamento e ajustar mecânicas</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🎮 Fundamentos de Gamificação</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">O que NÃO é Gamificação:</h4>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">❌ Apenas adicionar pontos e badges</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">❌ Competição forçada entre alunos</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">❌ Recompensas extrínsecas vazias</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">O que É Gamificação Efetiva:</h4>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">✅ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Autonomia:</strong> Aluno escolhe desafios</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">✅ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Maestria:</strong> Progresso visível e conquistas</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">✅ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Propósito:</strong> Conexão com objetivos reais</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">✅ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Social:</strong> Colaboração e reconhecimento</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🏆 Octalysis Framework + IA</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">8 Core Drives (Yu-kai Chou):</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">1. Epic Meaning & Calling</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Como:</strong> IA gera missões conectadas a impacto real</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt Claude:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Crie missão gamificada sobre [TEMA] que conecte com:
+- Problema real do mundo
+- Contribuição para comunidade
+- Legado que o aluno deixará
+
+Tom: Épico mas autêntico
+Formato: Narrativa de 150 palavras + 3 marcos
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">2. Development & Accomplishment</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Como:</strong> Sistema de níveis adaptativo</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt ChatGPT:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Crie sistema de níveis para [CURSO]:
+- 10 níveis (iniciante → mestre)
+- Cada nível requer 3 conquistas
+- Conquistas têm 3 dificuldades (bronze/prata/ouro)
+- IA sugere próxima conquista baseada em perfil
+
+Formato: JSON estruturado
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3. Empowerment of Creativity</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Como:</strong> Desafios abertos com showcase</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Exemplo:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> "Crie sua própria explicação de [CONCEITO] usando IA. Melhor criação vira material oficial do curso!"</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">4. Ownership & Possession</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Como:</strong> Portfólio gamificado</p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Coleção de badges únicos</li>
+<li class="text-neutral-700 dark:text-neutral-300">Customização de avatar com IA</li>
+<li class="text-neutral-700 dark:text-neutral-300">"Itens raros" desbloqueados por maestria</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">5. Social Influence & Relatedness</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Como:</strong> Guilds e cooperação</p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Times de 4-6 alunos</li>
+<li class="text-neutral-700 dark:text-neutral-300">Missões cooperativas (todos ganham ou todos perdem)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Reconhecimento público de contribuições</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">6. Scarcity & Impatience</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Como:</strong> Eventos limitados</p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">"Desafio Relâmpago" 24h</li>
+<li class="text-neutral-700 dark:text-neutral-300">Badges sazonais</li>
+<li class="text-neutral-700 dark:text-neutral-300">⚠️ Usar com moderação (pode desmotivar)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">7. Unpredictability & Curiosity</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Como:</strong> IA gera surpresas</p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Prompt Gemini:
+Gere &quot;Easter Egg&quot; educacional para aluno que completou [MÓDULO]:
+- Fato surpreendente relacionado
+- Mini-desafio bônus inesperado
+- Conexão com interesse demonstrado
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">8. Loss & Avoidance</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Como:</strong> Streaks positivos (não punitivos)</p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">"Você está há 7 dias estudando consecutivos! Continue!"</li>
+<li class="text-neutral-700 dark:text-neutral-300">Recuperação de streak perdido com missão especial</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🎯 Sistema de Pontos Adaptativo</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Problema dos Pontos Fixos:</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Aluno A faz tarefa em 10 min → 100 pontos</li>
+<li class="text-neutral-700 dark:text-neutral-300">Aluno B faz mesma tarefa em 2h → 100 pontos</li>
+<li class="text-neutral-700 dark:text-neutral-300">Aluno B se sente injustiçado</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Solução IA:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Pontos baseados em esforço relativo</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt NotebookLM:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Analise histórico de [ALUNO]:
+- Tempo médio em tarefas similares: [X min]
+- Nível de dificuldade percebido: [Score]
+- Curva de aprendizado: [Crescente/Estável/Decrescente]
+
+Para tarefa [TAREFA]:
+- Tempo gasto: [Y min]
+- Qualidade: [Score]
+
+Calcule pontos considerando:
+1. Esforço relativo (comparado com próprio histórico)
+2. Melhoria em relação a tentativas anteriores
+3. Qualidade do resultado
+4. Bônus por persistência (tentativas múltiplas)
+
+Fórmula: [Detalhar]
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🏅 Badges Significativos</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Tipos de Badges:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">1. Maestria (Skill-based)</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">🎯 "Mestre de Prompts" (100 prompts efetivos)</li>
+<li class="text-neutral-700 dark:text-neutral-300">📊 "Analista de Dados" (10 análises com IA)</li>
+<li class="text-neutral-700 dark:text-neutral-300">✍️ "Escritor Aumentado" (20 textos co-criados)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">2. Sociais (Contribution-based)</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">🤝 "Mentor" (Ajudou 5 colegas)</li>
+<li class="text-neutral-700 dark:text-neutral-300">💡 "Inovador" (Sugeriu melhoria implementada)</li>
+<li class="text-neutral-700 dark:text-neutral-300">🌟 "Curador" (Compartilhou 10 recursos úteis)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3. Jornada (Progress-based)</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">🚀 "Pioneiro" (Completou módulo em 24h)</li>
+<li class="text-neutral-700 dark:text-neutral-300">🔥 "Persistente" (Streak de 30 dias)</li>
+<li class="text-neutral-700 dark:text-neutral-300">🎓 "Graduado" (Completou nível)</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Gerador de Badges com IA:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt DALL-E 3:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Crie badge circular para conquista &quot;[NOME]&quot;:
+- Estilo: Flat design, cores vibrantes
+- Ícone central: [SÍMBOLO]
+- Borda: Gradiente [COR1] → [COR2]
+- Elementos: [DETALHES]
+- Tamanho: 512x512px
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📊 Leaderboards Éticos</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Problema dos Leaderboards Tradicionais:</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Top 10% fica motivado</li>
+<li class="text-neutral-700 dark:text-neutral-300">90% fica desmotivado</li>
+<li class="text-neutral-700 dark:text-neutral-300">Competição tóxica</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Solução: Leaderboards Personalizados</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Tipos:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">1. Leaderboard de Crescimento</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">Não mostra posição absoluta, mas % de melhoria</p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+🏆 Top 5 Maior Crescimento (Última Semana):
+1. Ana: +45% em quiz score
+2. Bruno: +38% em tempo de resposta
+3. Você: +32% em complexidade de projetos ⭐
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">2. Leaderboard de Pares</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">IA agrupa alunos similares (nível, ritmo, estilo)</p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+📊 Seu Grupo (Nível Intermediário):
+   Você: 2.340 pontos (3º de 8)
+   [Mostra apenas grupo similar]
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3. Leaderboard Cooperativo</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">Time vs Time (não indivíduo vs indivíduo)</p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+🤝 Ranking de Guilds:
+1. Guild &quot;Innovators&quot; - 12.450 pts
+2. Sua Guild &quot;Explorers&quot; - 11.890 pts
+3. Guild &quot;Creators&quot; - 10.230 pts
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📖 Narrativas Personalizadas</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Story-based Learning com IA</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Estrutura:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">1. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Mundo:</strong> Contexto imersivo relacionado ao tema</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">2. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Personagem:</strong> Aluno é protagonista (ou mentor)</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">3. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Conflito:</strong> Problema a resolver com conhecimento</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">4. <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Resolução:</strong> Aplicação prática = progresso na história</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Exemplo Prático:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Tema:</strong> Prompt Engineering</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Narrativa Gerada por IA:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Capítulo 1: A Torre dos Prompts</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> Você é um(a) Arquiteto(a) de Linguagem em 2025. A Torre Central de IA da cidade está em caos: prompts mal-escritos estão gerando respostas confusas, causando falhas em sistemas críticos.</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Sua Missão:</strong> Escalar os 10 andares da Torre, corrigindo prompts quebrados em cada nível. Quanto mais preciso seu conserto, mais rápido você sobe.</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Andar 1: Fundações Rachadas</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> Um prompt vago está causando respostas genéricas:</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> <code class="bg-purple-100 dark:bg-purple-900/30 px-2 py-1 rounded text-sm font-mono"></code>\`</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> Prompt atual: "Me fale sobre IA"</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> Problema: Resposta muito ampla</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> Seu desafio: Reescreva usando Framework CRAFT</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> <code class="bg-purple-100 dark:bg-purple-900/30 px-2 py-1 rounded text-sm font-mono"></code>\`</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt para Gerar Narrativa:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Crie narrativa gamificada sobre [TEMA]:
+
+Contexto: [DESCREVER MUNDO/CENÁRIO]
+Personagem: Professor(a) com superpoder de [RELACIONADO AO TEMA]
+Conflito: [PROBLEMA QUE O CONHECIMENTO RESOLVE]
+
+Estruture em 5 capítulos:
+- Cada capítulo = 1 conceito-chave
+- Incluir 2 desafios por capítulo
+- Progresso na história = domínio do conceito
+- Tom: Aventura + aprendizado
+
+Público: [IDADE/NÍVEL]
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🎨 Implementação Prática</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Stack Tecnológico:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">1. Plataforma Base:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Moodle + Plugin Gamification</li>
+<li class="text-neutral-700 dark:text-neutral-300">Canvas + Badges</li>
+<li class="text-neutral-700 dark:text-neutral-300">Google Classroom + extensões</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">2. Ferramentas IA:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">ChatGPT: Geração de desafios adaptativos</li>
+<li class="text-neutral-700 dark:text-neutral-300">Claude: Feedback narrativo personalizado</li>
+<li class="text-neutral-700 dark:text-neutral-300">Gemini: Análise de padrões de engajamento</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3. Integrações:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Zapier: Automatizar badges quando condições são atingidas</li>
+<li class="text-neutral-700 dark:text-neutral-300">Make.com: Conectar IA com LMS</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Exemplo de Fluxo:</h4>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+1. Aluno completa quiz no Moodle
+   ↓
+2. Zapier detecta → Envia dados para ChatGPT
+   ↓
+3. ChatGPT analisa desempenho + histórico
+   ↓
+4. Gera feedback personalizado + próximo desafio
+   ↓
+5. Zapier envia de volta para Moodle
+   ↓
+6. Aluno recebe notificação com missão personalizada
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📈 Métricas de Engajamento</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">O que Medir:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">1. Métricas de Atividade:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Frequência de login</li>
+<li class="text-neutral-700 dark:text-neutral-300">Tempo médio em plataforma</li>
+<li class="text-neutral-700 dark:text-neutral-300">Taxa de conclusão de módulos</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">2. Métricas de Qualidade:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Score em avaliações</li>
+<li class="text-neutral-700 dark:text-neutral-300">Número de revisões/resubmissões</li>
+<li class="text-neutral-700 dark:text-neutral-300">Profundidade de respostas (análise com IA)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3. Métricas Sociais:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Interações entre alunos</li>
+<li class="text-neutral-700 dark:text-neutral-300">Qualidade de contribuições em fóruns</li>
+<li class="text-neutral-700 dark:text-neutral-300">Taxa de ajuda mútua</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Dashboard Automatizado:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt para Análise Semanal:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Analise dados de engajamento da última semana:
+
+Dados brutos:
+[Colar CSV com: aluno_id, login_count, time_spent, quiz_scores, interactions]
+
+Gere relatório:
+1. Alunos em risco (baixo engajamento)
+2. Padrões identificados (horários, tópicos populares)
+3. Recomendações de ajuste (quais mecânicas funcionam/não funcionam)
+4. Sugestões de intervenção personalizada (top 5 alunos que precisam atenção)
+
+Formato: Executivo (1 página) + Dados (tabelas)
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🎓 Casos de Sucesso</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Caso 1: Duolingo</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Mecânica:</strong> Streaks + Owl mascot + Stories</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Resultado:</strong> Engajamento 3x maior que competidores</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Lição:</strong> Personalidade (owl) + hábito (streak) + contexto (stories)</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Caso 2: Classcraft</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Mecânica:</strong> RPG em sala de aula (avatares, quests, teams)</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Resultado:</strong> +75% participação em tarefas</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Lição:</strong> Narrativa imersiva + colaboração</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Caso 3: Khan Academy</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Mecânica:</strong> Árvore de habilidades + pontos de energia</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Resultado:</strong> +60% tempo médio em plataforma</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Lição:</strong> Visualização de progresso + autonomia na escolha</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">💡 Princípios-Chave</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Do's:</h4>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">✅ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Autonomia:</strong> Deixe aluno escolher caminhos</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">✅ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Feedback Imediato:</strong> IA responde em segundos</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">✅ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Progresso Visível:</strong> Dashboards e barras</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">✅ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Variedade:</strong> Mix de desafios individuais e sociais</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">✅ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Significado:</strong> Conecte com objetivos reais</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Don'ts:</h4>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">❌ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Gamificação Superficial:</strong> Pontos sem propósito</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">❌ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Competição Tóxica:</strong> Ranking público fixo</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">❌ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Pressão Excessiva:</strong> Timers estressantes</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">❌ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Recompensas Vazias:</strong> Badges que não significam maestria</p>
+<p class="mb-4 text-neutral-800 dark:text-neutral-200 font-medium">❌ <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Complexidade:</strong> Sistema difícil de entender</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📦 Recursos do Módulo</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">📹 Videoaulas (3h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Octalysis Framework aplicado (50 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Design de sistemas de pontos (45 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Narrativas gamificadas (40 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Ética em gamificação (45 min)</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">💬 Práticas (7h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Criar sistema de gamificação para seu curso (4h)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Implementar 3 mecânicas com IA (2h)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Análise de métricas (1h)</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">✅ Avaliação (2h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Projeto: Sistema gamificado funcional</li>
+<li class="text-neutral-700 dark:text-neutral-300">Documento de design (GDD simplificado)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Apresentação de resultados</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📚 Referências</h3>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Livro:</strong> <em>Actionable Gamification</em> - Yu-kai Chou</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Artigo:</strong> "Gamification in Education: What, How, Why Bother?" (Academic Edu)</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Framework:</strong> Octalysis (yukaichou.com)</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Ferramenta:</strong> Gamification Canvas (gameonlab.co)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">© 2025 SuperProfessores | Licença MIT</strong></p>
+            </div>
+        `
+    },
+    'modulo-2a-5': {
+        title: '2A.5: Comunidades de Prática e Aprendizagem Social',
+        content: `
+            <div class="modal-content-inner">
+                <h2 class="text-3xl font-bold mb-6 mt-8 text-neutral-900 dark:text-neutral-100">Módulo 2A.5: Comunidades de Prática e Aprendizagem Social</h2>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Nível 2A: Pedagógico | Carga Horária: 12 horas</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📖 Visão Geral</h3>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">Aprenda a facilitar comunidades de aprendizagem onde IA amplifica interações humanas. Domine curadoria automatizada, moderação assistida e cultivo de cultura colaborativa em escala.</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Objetivos:</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Estruturar comunidades de prática efetivas</li>
+<li class="text-neutral-700 dark:text-neutral-300">Usar IA para curadoria e moderação de conteúdo</li>
+<li class="text-neutral-700 dark:text-neutral-300">Facilitar aprendizagem entre pares com IA como copiloto</li>
+<li class="text-neutral-700 dark:text-neutral-300">Escalar mentoria de 1:10 para 1:100 com ferramentas inteligentes</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🌐 Teoria: Comunidades de Prática (Wenger)</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">3 Elementos Essenciais:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">1. Domínio (Domain)</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">O que:</strong> Área de conhecimento compartilhada</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Exemplo:</strong> "Professores usando IA em sala de aula"</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">IA ajuda:</strong> Mapear subdomínios e identificar lacunas</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">2. Comunidade (Community)</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">O que:</strong> Relacionamentos e interações entre membros</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Exemplo:</strong> Fóruns, encontros, mentorias</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">IA ajuda:</strong> Conectar pessoas com interesses similares</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3. Prática (Practice)</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">O que:</strong> Conhecimento compartilhado, recursos, experiências</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Exemplo:</strong> Biblioteca de prompts, cases, ferramentas</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">IA ajuda:</strong> Organizar, catalogar, recomendar</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🎯 Níveis de Participação</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Estrutura de Comunidade Saudável:</h4>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+         🌟 Core Group (5%)
+        Líderes, Curadores, Facilitadores
+              /          \
+         💪 Active (15%)
+    Contribuem regularmente, respondem, compartilham
+              /          \
+         👀 Peripheral (80%)
+    Observam, aprendem, participam esporadicamente
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Objetivo:</strong> Criar jornada de Peripheral → Active → Core</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">IA ajuda:</strong> Identificar membros prontos para subir de nível</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt Claude:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Analise atividade de membros da comunidade [NOME]:
+
+Dados:
+[CSV: membro_id, posts, comments, reactions, quality_score, tenure_days]
+
+Identifique:
+1. 5 membros Peripheral prontos para Active (alta lurking quality, começando a comentar)
+2. 3 membros Active prontos para Core (consistência, qualidade, influência)
+3. Sugestões de &quot;nudges&quot; personalizados para cada um
+
+Formato: Tabela com recomendações de ação
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🤖 IA como Facilitador</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Funções da IA:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">1. Conector de Pessoas</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Detecta interesses comuns</li>
+<li class="text-neutral-700 dark:text-neutral-300">Sugere connections</li>
+<li class="text-neutral-700 dark:text-neutral-300">Forma grupos de estudo</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt ChatGPT:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Membros da comunidade:
+1. Ana: Interessada em [prompts para matemática, avaliação formativa]
+2. Bruno: Interessado em [gamificação, engajamento de alunos]
+3. Carla: Interessada em [personalização, matemática adaptativa]
+...
+
+Sugira 3 conexões valiosas (pares que se beneficiariam de trocar experiências):
+- [Pessoa A] ↔️ [Pessoa B]: [Por que? Que tópico discutir?]
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">2. Curador de Conteúdo</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Resume discussões longas</li>
+<li class="text-neutral-700 dark:text-neutral-300">Destaca insights-chave</li>
+<li class="text-neutral-700 dark:text-neutral-300">Cria índices navegáveis</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt Gemini:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Fórum com 127 posts sobre &quot;Prompt Engineering para redação&quot;.
+
+Tarefa:
+1. Resuma discussão em 5 pontos-chave
+2. Identifique 3 melhores práticas consensuais
+3. Destaque 2 debates não resolvidos
+4. Liste 5 recursos compartilhados (links, prompts, exemplos)
+
+Formato: Post de &quot;TL;DR&quot; formatado em markdown
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3. Moderador Assistente</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Detecta toxicidade</li>
+<li class="text-neutral-700 dark:text-neutral-300">Sugere reformulações</li>
+<li class="text-neutral-700 dark:text-neutral-300">Escalona para humano quando necessário</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt Claude:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Analise este comentário:
+&quot;[COMENTÁRIO DO USUÁRIO]&quot;
+
+Classifique:
+- Tom: [Construtivo/Neutro/Ofensivo]
+- Contribuição: [Alta/Média/Baixa]
+- Ação sugerida: [Aprovar/Pedir reformulação/Escalar para moderador]
+
+Se reformulação necessária, sugira versão melhorada mantendo intenção original.
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">💬 Facilitação de Discussões</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Técnica: Socratic Questioning com IA</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Problema:</strong> Discussões rasas, respostas superficiais</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Solução:</strong> IA gera perguntas socráticas para aprofundar</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Exemplo Real:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Post do Aluno:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">> "Usei ChatGPT para criar quiz e funcionou bem."</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">IA Gera (privadamente para facilitador):</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Sugestões de perguntas para aprofundar:
+
+1. Clarificação: &quot;Que tipo de quiz? Para qual público?&quot;
+
+2. Suposições: &quot;O que você considera &#x27;funcionou bem&#x27;? Quais métricas usou?&quot;
+
+3. Razões/Evidências: &quot;Pode compartilhar exemplo de questão gerada? O que a tornou efetiva?&quot;
+
+4. Perspectivas: &quot;Como seus alunos reagiram comparado a quiz tradicional?&quot;
+
+5. Implicações: &quot;Que ajustes faria para próxima vez? O que aprendeu?&quot;
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Facilitador escolhe 2-3 perguntas e posta</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📚 Biblioteca de Conhecimento Viva</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Problema: Conhecimento enterrado em threads antigas</h4>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Solução: IA como Bibliotecário</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Estrutura:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Comunidade &quot;Professores IA&quot;
+│
+├── 📁 Biblioteca (IA-curated)
+│   ├── Prompts Testados (150+)
+│   ├── Casos de Uso (80+)
+│   ├── Recursos (200+)
+│   └── Glossário (500+ termos)
+│
+└── 💬 Discussões (Dinâmico)
+    └── IA extrai conhecimento → Move para Biblioteca
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Automação com IA:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt NotebookLM:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Analise últimas 50 discussões da comunidade.
+
+Identifique:
+1. 5 novos prompts que deveriam entrar na biblioteca
+2. 3 casos de uso documentáveis
+3. 2 novas perguntas frequentes (FAQ)
+
+Para cada item:
+- Título claro
+- Contexto (quando usar)
+- Autor original (crédito)
+- Tags relevantes
+- Link para discussão original
+
+Formato: JSON estruturado para importação
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🎓 Aprendizagem Entre Pares (Peer Learning)</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Modelo: Mentoria Aumentada</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Tradicional:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">1 mentor → 5 mentorados (limite humano)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Com IA:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">1 mentor + IA copiloto → 50 mentorados</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Como Funciona:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">1. IA Faz Triagem Inicial</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Mentorado faz pergunta →
+IA analisa:
+- Já respondida na biblioteca? → Envia link
+- Nível básico? → IA responde + pede feedback do mentor
+- Complexa? → Escalona para mentor com contexto preparado
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">2. Mentor Foca no Alto Valor</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">IA já resolveu 60% das perguntas</li>
+<li class="text-neutral-700 dark:text-neutral-300">Mentor dedica tempo a 40% que requerem expertise humana</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3. IA Aprende com Mentor</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Prompt Claude:
+Mentor respondeu pergunta sobre [TÓPICO]:
+
+Pergunta: [X]
+Resposta do mentor: [Y]
+
+Tarefa:
+1. Extraia padrão de raciocínio
+2. Identifique princípios gerais
+3. Sugira como responder perguntas similares futuras
+
+Adicione à base de conhecimento do copiloto.
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🏆 Reconhecimento e Reputação</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Sistema de Badges Comunitários</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Badges Ganhos por Contribuição:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">🌱 <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Cultivador</strong> (10 posts úteis)</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">💡 <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Inovador</strong> (Compartilhou ideia implementada por 5+ pessoas)</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">🤝 <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Conector</strong> (Apresentou 10 membros)</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">📚 <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Curador</strong> (20 recursos salvos na biblioteca)</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">🎯 <strong class="font-semibold text-neutral-900 dark:text-neutral-100">Especialista</strong> (50 respostas com 90%+ úteis)</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">IA Gerencia Automaticamente:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt Gemini:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Analise atividade de [MEMBRO] última semana:
+- 8 posts
+- 15 comentários
+- 23 reações recebidas
+- 3 recursos compartilhados
+
+Verifique elegibilidade para badges:
+[Listar critérios de cada badge]
+
+Se elegível, gere:
+1. Notificação personalizada
+2. Post de celebração para comunidade
+3. Atualização de perfil
+
+Formato: JSON para automação
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📊 Saúde da Comunidade - Métricas</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Indicadores-Chave:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">1. Atividade:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Posts/semana (meta: crescimento constante de 5%)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Tempo médio de resposta (meta: <24h)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Taxa de perguntas respondidas (meta: >85%)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">2. Qualidade:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Avaliação de utilidade (meta: média >4/5)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Profundidade de discussões (análise com IA)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Diversidade de tópicos (não concentrar em 1-2)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3. Inclusão:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">% de membros que postaram no último mês (meta: >30%)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Distribuição de voz (não dominada por <5 pessoas)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Taxa de retenção (meta: >70% após 3 meses)</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Dashboard Automatizado:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Prompt Claude:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+Gere relatório mensal de saúde da comunidade [NOME]:
+
+Dados:
+[Anexar CSV com métricas]
+
+Estrutura do relatório:
+1. 📊 Resumo Executivo (3 pontos: vermelho/amarelo/verde)
+2. 📈 Tendências (gráficos em ASCII art)
+3. 🎯 Conquistas do mês (top 3)
+4. ⚠️ Alertas (3 áreas de atenção)
+5. 💡 Recomendações (5 ações prioritárias)
+
+Tom: Objetivo mas encorajador
+Formato: Markdown para publicação
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🎨 Casos de Uso Práticos</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Caso 1: Fórum de Professores de Matemática</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Problema:</strong> 200 membros, mas apenas 10 participam ativamente</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Solução com IA:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Etapa 1 - Segmentação:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+IA analisou perfis e dividiu em 5 grupos:
+- Iniciantes em IA (40%)
+- Geometria (15%)
+- Álgebra (20%)
+- Estatística (15%)
+- Avaliação (10%)
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Etapa 2 - Conteúdo Personalizado:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+IA gerou 5 newsletters semanais diferentes
+Cada grupo recebe discussões + recursos relevantes
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Etapa 3 - Nudges Personalizados:</strong></p>
+<pre class="bg-neutral-800 dark:bg-black text-neutral-100 p-4 rounded-lg overflow-x-auto my-4 text-sm"><code class="language-text">
+IA identificou:
+- 20 membros &quot;quase-ativos&quot; → Enviou convite para desafio semanal
+- 15 especialistas silenciosos → Pediu feedback em post específico
+</code></pre>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Resultado:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Participação ativa: 10 → 45 membros (+350%)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Posts/semana: 3 → 18 (+500%)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Caso 2: Grupo de Estudo "IA na Prática"</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Estrutura:</strong> 30 professores, encontro síncrono semanal + assíncrono</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Uso de IA:</strong></p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Antes do Encontro:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">IA resume discussões assíncronas da semana</li>
+<li class="text-neutral-700 dark:text-neutral-300">Gera agenda baseada em tópicos mais engajados</li>
+<li class="text-neutral-700 dark:text-neutral-300">Sugere quem deve liderar cada tópico</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Durante:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">IA faz transcrição em tempo real</li>
+<li class="text-neutral-700 dark:text-neutral-300">Destaca action items e decisões</li>
+<li class="text-neutral-700 dark:text-neutral-300">Gera notas estruturadas</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">Depois:</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">IA cria resumo com timestamps</li>
+<li class="text-neutral-700 dark:text-neutral-300">Extrai 5 takeaways principais</li>
+<li class="text-neutral-700 dark:text-neutral-300">Gera tarefas para próxima semana</li>
+<li class="text-neutral-700 dark:text-neutral-300">Atualiza biblioteca de conhecimento</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">🛠️ Ferramentas Recomendadas</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Plataformas de Comunidade:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">1. Discord + Bots IA</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Pros: Grátis, flexível, integrações</li>
+<li class="text-neutral-700 dark:text-neutral-300">Cons: Curva de aprendizado</li>
+<li class="text-neutral-700 dark:text-neutral-300">Melhor para: Comunidades técnicas</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">2. Circle.so</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Pros: Interface polida, gamificação embutida</li>
+<li class="text-neutral-700 dark:text-neutral-300">Cons: Pago (\$\$)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Melhor para: Comunidades profissionais</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3. Slack + Apps</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Pros: Familiar, integrações</li>
+<li class="text-neutral-700 dark:text-neutral-300">Cons: Histórico limitado (plano grátis)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Melhor para: Grupos menores (<50)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">4. Discourse</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Pros: Open-source, focado em discussões</li>
+<li class="text-neutral-700 dark:text-neutral-300">Cons: Requer hospedagem</li>
+<li class="text-neutral-700 dark:text-neutral-300">Melhor para: Comunidades de longo prazo</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">Integrações IA:</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Zapier + ChatGPT:</strong> Automações customizadas</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Make.com + Claude:</strong> Workflows complexos</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">N8N:</strong> Open-source alternativa</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">💡 Facilitação: Do's e Don'ts</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">✅ Do's:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">1. Modele o comportamento desejado</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Seja o primeiro a fazer perguntas abertas</li>
+<li class="text-neutral-700 dark:text-neutral-300">Admita quando não sabe</li>
+<li class="text-neutral-700 dark:text-neutral-300">Celebre contribuições</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">2. Crie rituais</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">"Segunda-feira de Compartilhamento"</li>
+<li class="text-neutral-700 dark:text-neutral-300">"Sexta-feira de Feedback"</li>
+<li class="text-neutral-700 dark:text-neutral-300">"Spotlight mensal" (destacar membro)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3. Baixe barreiras</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Permita posts anônimos para perguntas "bobas"</li>
+<li class="text-neutral-700 dark:text-neutral-300">Crie "Safe to Fail" challenges</li>
+<li class="text-neutral-700 dark:text-neutral-300">Normalize erros como aprendizado</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">❌ Don'ts:</h4>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">1. Não deixe IA tomar decisões sociais</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">IA sugere, humano decide</li>
+<li class="text-neutral-700 dark:text-neutral-300">Nunca bana automaticamente</li>
+<li class="text-neutral-700 dark:text-neutral-300">Contexto humano é insubstituível</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">2. Não force participação</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Lurking é válido (80% das pessoas)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Nem todos querem ser ativos</li>
+<li class="text-neutral-700 dark:text-neutral-300">Respeite ritmos diferentes</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">3. Não ignore conflitos</strong></p>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">IA detecta tensões, mas humano resolve</li>
+<li class="text-neutral-700 dark:text-neutral-300">Endereçe desacordos com empatia</li>
+<li class="text-neutral-700 dark:text-neutral-300">Use como oportunidade de aprendizado</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📦 Recursos do Módulo</h3>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">📹 Videoaulas (3h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Teoria de Comunidades de Prática (45 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Facilitação com IA (50 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Curadoria e moderação (40 min)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Casos de sucesso (45 min)</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">💬 Práticas (7h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Projetar comunidade para seu contexto (3h)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Implementar 3 automações com IA (2h)</li>
+<li class="text-neutral-700 dark:text-neutral-300">Facilitar discussão piloto (2h)</li>
+</ul>
+<h4 class="text-xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200">✅ Avaliação (2h)</h4>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300">Projeto: Plano de comunidade completo</li>
+<li class="text-neutral-700 dark:text-neutral-300">Documento de governança</li>
+<li class="text-neutral-700 dark:text-neutral-300">Dashboard de métricas</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<h3 class="text-2xl font-bold mt-8 mb-4 text-primary dark:text-primary-light">📚 Referências</h3>
+<ul class="list-disc list-inside space-y-2 ml-6 my-4">
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Livro:</strong> <em>Cultivating Communities of Practice</em> - Etienne Wenger</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Artigo:</strong> "The Power of Learning Communities" (Educause Review)</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Framework:</strong> CMX Community Building Framework</li>
+<li class="text-neutral-700 dark:text-neutral-300"><strong class="font-bold">Recurso:</strong> Community Canvas (community-canvas.org)</li>
+</ul>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">---</p>
+<p class="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed"><strong class="font-semibold text-neutral-900 dark:text-neutral-100">© 2025 SuperProfessores | Licença MIT</strong></p>
+            </div>
+        `
+    }
+};
+
+    </script>
+</body>
+</html>

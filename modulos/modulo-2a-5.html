@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2A.5: Comunidades de Prática e Aprendizagem Social | SuperProfessores</title>
+    <meta name="description" content="Aprenda a facilitar comunidades de aprendizagem onde IA amplifica interações humanas. Domine curadoria automatizada, moderação assistida e cultivo de ">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        'trilha-a': '#9b59b6',
+                        'trilha-b': '#10B981',
+                        'module-color': '#9b59b6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out;
+        }
+        .preload * {
+            transition: none !important;
+        }
+    </style>
+</head>
+<body class="preload bg-neutral-50 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold bg-gradient-to-r from-primary to-trilha-a bg-clip-text text-transparent">
+                        🎓 SuperProfessores
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Início</a>
+                    <a href="../niveis/nivel-2a.html" class="text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Nível 2A</a>
+                    <a href="https://github.com/inematds/SuperProf" target="_blank" class="text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">GitHub</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-600">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <nav class="flex text-sm" aria-label="Breadcrumb">
+                <a href="../index.html" class="text-primary hover:text-blue-700">Início</a>
+                <span class="mx-2 text-neutral-400">/</span>
+                <a href="../niveis/nivel-2a.html" class="text-primary hover:text-blue-700">Trilha A</a><span class="mx-2 text-neutral-400">/</span><a href="../niveis/nivel-2a.html" class="text-primary hover:text-blue-700">Nível 2A</a><span class="mx-2 text-neutral-400">/</span><span class="text-neutral-600 dark:text-neutral-400">Módulo</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-module-color to-purple-700 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">Pedagógico</span>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4">Módulo 2A.5: Comunidades de Prática e Aprendizagem Social</h1>
+            <p class="text-xl text-purple-100 max-w-3xl">
+                Aprenda a facilitar comunidades de aprendizagem onde IA amplifica interações humanas. Domine curadoria automatizada, moderação assistida e cultivo de cultura colaborativa em escala.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Visão Geral -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6">📖 Visão Geral</h2>
+            <div class="prose prose-lg dark:prose-invert max-w-none">
+                <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-4">
+                    Aprenda a facilitar comunidades de aprendizagem onde IA amplifica interações humanas. Domine curadoria automatizada, moderação assistida e cultivo de cultura colaborativa em escala.
+                </p>
+                <p class='text-lg text-neutral-700 dark:text-neutral-300'><strong>Ao final deste módulo, você será capaz de:</strong></p>
+                <ul class='list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300'><li>Estruturar comunidades de prática efetivas</li><li>Usar IA para curadoria e moderação de conteúdo</li><li>Facilitar aprendizagem entre pares com IA como copiloto</li><li>Escalar mentoria de 1:10 para 1:100 com ferramentas inteligentes</li></ul>
+            </div>
+        </section>
+
+        <!-- Conteúdo Detalhado -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-8">📚 Conteúdo Detalhado</h2>
+            
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">🌐</span>
+                    <span>Teoria: Comunidades de Prática (Wenger)</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### 3 Elementos Essenciais:
+<strong>1. Domínio (Domain)</strong>
+<strong>O que:</strong> Área de conhecimento compartilhada
+<strong>Exemplo:</strong> "Professores usando IA em sala de aula"
+<strong>IA ajuda:</strong> Mapear subdomínios e identificar lacunas
+<strong>2. Comunidade (Community)</strong>
+<strong>O que:</strong> Relacionamentos e interações entre membros
+<strong>Exemplo:</strong> Fóruns, encontros, mentorias
+<strong>IA ajuda:</strong> Conectar pessoas com interesses similares
+<strong>3. Prática (Practice)</strong>
+<strong>O que:</strong> Conhecimento compartilhado, recursos, experiências
+<strong>Exemplo:</strong> Biblioteca de prompts, cases, ferramentas
+<strong>IA ajuda:</strong> Organizar, catalogar, recomendar
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">🎯</span>
+                    <span>Níveis de Participação</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Estrutura de Comunidade Saudável:
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+         🌟 Core Group (5%)
+        Líderes, Curadores, Facilitadores
+              /          \
+         💪 Active (15%)
+    Contribuem regularmente, respondem, compartilham
+              /          \
+         👀 Peripheral (80%)
+    Observam, aprendem, participam esporadicamente
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Objetivo:</strong> Criar jornada de Peripheral → Active → Core
+<strong>IA ajuda:</strong> Identificar membros prontos para subir de nível
+<strong>Prompt Claude:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Analise atividade de membros da comunidade [NOME]:
+Dados:
+[CSV: membro_id, posts, comments, reactions, quality_score, tenure_days]
+Identifique:
+1. 5 membros Peripheral prontos para Active (alta lurking quality, começando a comentar)
+2. 3 membros Active prontos para Core (consistência, qualidade, influência)
+3. Sugestões de "nudges" personalizados para cada um
+Formato: Tabela com recomendações de ação
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">🤖</span>
+                    <span>IA como Facilitador</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Funções da IA:
+<strong>1. Conector de Pessoas</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Detecta interesses comuns</li>
+<li>Sugere connections</li>
+<li>Forma grupos de estudo</li>
+</ul>
+<strong>Prompt ChatGPT:</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Membros da comunidade:
+1. Ana: Interessada em [prompts para matemática, avaliação formativa]
+2. Bruno: Interessado em [gamificação, engajamento de alunos]
+3. Carla: Interessada em [personalização, matemática adaptativa]
+...
+Sugira 3 conexões valiosas (pares que se beneficiariam de trocar experiências):
+<ul class="space-y-2 list-disc pl-6">
+<li>[Pessoa A] ↔️ [Pessoa B]: [Por que? Que tópico discutir?]</li>
+</ul>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>2. Curador de Conteúdo</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Resume discussões longas</li>
+<li>Destaca insights-chave</li>
+<li>Cria índices navegáveis</li>
+</ul>
+<strong>Prompt Gemini:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Fórum com 127 posts sobre "Prompt Engineering para redação".
+Tarefa:
+1. Resuma discussão em 5 pontos-chave
+2. Identifique 3 melhores práticas consensuais
+3. Destaque 2 debates não resolvidos
+4. Liste 5 recursos compartilhados (links, prompts, exemplos)
+Formato: Post de "TL;DR" formatado em markdown
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>3. Moderador Assistente</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>Detecta toxicidade</li>
+<li>Sugere reformulações</li>
+<li>Escalona para humano quando necessário</li>
+</ul>
+<strong>Prompt Claude:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Analise este comentário:
+"[COMENTÁRIO DO USUÁRIO]"
+Classifique:
+<ul class="space-y-2 list-disc pl-6">
+<li>Tom: [Construtivo/Neutro/Ofensivo]</li>
+<li>Contribuição: [Alta/Média/Baixa]</li>
+<li>Ação sugerida: [Aprovar/Pedir reformulação/Escalar para moderador]</li>
+</ul>
+Se reformulação necessária, sugira versão melhorada mantendo intenção original.
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">💬</span>
+                    <span>Facilitação de Discussões</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Técnica: Socratic Questioning com IA
+<strong>Problema:</strong> Discussões rasas, respostas superficiais
+<strong>Solução:</strong> IA gera perguntas socráticas para aprofundar
+<strong>Exemplo Real:</strong>
+<strong>Post do Aluno:</strong>
+> "Usei ChatGPT para criar quiz e funcionou bem."
+<strong>IA Gera (privadamente para facilitador):</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Sugestões de perguntas para aprofundar:
+1. Clarificação: "Que tipo de quiz? Para qual público?"
+2. Suposições: "O que você considera 'funcionou bem'? Quais métricas usou?"
+3. Razões/Evidências: "Pode compartilhar exemplo de questão gerada? O que a tornou efetiva?"
+4. Perspectivas: "Como seus alunos reagiram comparado a quiz tradicional?"
+5. Implicações: "Que ajustes faria para próxima vez? O que aprendeu?"
+</code>``
+<strong>Facilitador escolhe 2-3 perguntas e posta</strong>
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">📚</span>
+                    <span>Biblioteca de Conhecimento Viva</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Problema: Conhecimento enterrado em threads antigas
+### Solução: IA como Bibliotecário
+<strong>Estrutura:</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Comunidade "Professores IA"
+│
+├── 📁 Biblioteca (IA-curated)
+│   ├── Prompts Testados (150+)
+│   ├── Casos de Uso (80+)
+│   ├── Recursos (200+)
+│   └── Glossário (500+ termos)
+│
+└── 💬 Discussões (Dinâmico)
+    └── IA extrai conhecimento → Move para Biblioteca
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>Automação com IA:</strong>
+<strong>Prompt NotebookLM:</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Analise últimas 50 discussões da comunidade.
+Identifique:
+1. 5 novos prompts que deveriam entrar na biblioteca
+2. 3 casos de uso documentáveis
+3. 2 novas perguntas frequentes (FAQ)
+Para cada item:
+<ul class="space-y-2 list-disc pl-6">
+<li>Título claro</li>
+<li>Contexto (quando usar)</li>
+<li>Autor original (crédito)</li>
+<li>Tags relevantes</li>
+<li>Link para discussão original</li>
+</ul>
+Formato: JSON estruturado para importação
+</code>``
+---</p>
+                </div>
+            </div>
+
+            <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="text-3xl">🎓</span>
+                    <span>Aprendizagem Entre Pares (Peer Learning)</span>
+                </h3>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">### Modelo: Mentoria Aumentada
+<strong>Tradicional:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>1 mentor → 5 mentorados (limite humano)</li>
+</ul>
+<strong>Com IA:</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>1 mentor + IA copiloto → 50 mentorados</li>
+</ul>
+<strong>Como Funciona:</strong>
+<strong>1. IA Faz Triagem Inicial</strong>
+``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Mentorado faz pergunta →
+IA analisa:
+<ul class="space-y-2 list-disc pl-6">
+<li>Já respondida na biblioteca? → Envia link</li>
+<li>Nível básico? → IA responde + pede feedback do mentor</li>
+<li>Complexa? → Escalona para mentor com contexto preparado</li>
+</ul>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+<strong>2. Mentor Foca no Alto Valor</strong>
+<ul class="space-y-2 list-disc pl-6">
+<li>IA já resolveu 60% das perguntas</li>
+<li>Mentor dedica tempo a 40% que requerem expertise humana</li>
+</ul>
+<strong>3. IA Aprende com Mentor</strong>
+</code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
+Prompt Claude:
+Mentor respondeu pergunta sobre [TÓPICO]:
+Pergunta: [X]
+Resposta do mentor: [Y]
+Tarefa:
+1. Extraia padrão de raciocínio
+2. Identifique princípios gerais
+3. Sugira como responder perguntas similares futuras
+Adicione à base de conhecimento do copiloto.
+</code>``
+---</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10 rounded-xl p-8 text-center border-2 border-dashed border-module-color">
+                <p class="text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
+                    📚 Conteúdo Completo
+                </p>
+                <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+                    Faça download do material completo em Markdown para acessar todos os tópicos, exemplos, prompts e atividades detalhadas.
+                </p>
+                <a href="../pdfs/modulo-2a-5.md" download class="inline-block px-6 py-3 bg-module-color text-white rounded-lg font-semibold hover:opacity-90 transition-colors">
+                    📄 Baixar Material Completo (MD)
+                </a>
+            </div>
+        </section>
+
+        <!-- Recursos -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6">📦 Recursos do Módulo</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>📹</span>
+                        <span>Videoaulas</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Aulas detalhadas sobre cada tópico do módulo
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>💬</span>
+                        <span>Práticas</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Atividades hands-on com projetos reais
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>✅</span>
+                        <span>Avaliação</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Quizzes e projetos para certificação
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold mb-3 flex items-center gap-2">
+                        <span>📚</span>
+                        <span>Referências</span>
+                    </h3>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                        Materiais complementares selecionados
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegação -->
+        <section class="flex justify-between items-center pt-8 border-t border-neutral-200 dark:border-neutral-700">
+            <a href="../niveis/nivel-2a.html" class="px-6 py-3 bg-neutral-200 dark:bg-neutral-700 rounded-lg font-semibold hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors">
+                ← Voltar ao Nível 2A
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 dark:bg-black text-neutral-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 SuperProfessores. Licença MIT.</p>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
