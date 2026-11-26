@@ -78,7 +78,7 @@ Home (/)
 ### 1. **index.md** - Home Page
 
 **Localizaçêo:** `/index.md`
-**URL:** `https://inematds.github.io/SuperProf/`
+**URL:** `https://linnoff88-dev.github.io/arckhe-/`
 
 **Conteúdo:**
 - Hero section com CTAs
@@ -104,7 +104,7 @@ permalink: /
 ### 2. **doc/index.md** - Documentaçêo
 
 **Localizaçêo:** `/doc/index.md`
-**URL:** `https://inematds.github.io/SuperProf/doc/`
+**URL:** `https://linnoff88-dev.github.io/arckhe-/doc/`
 
 **Conteúdo:**
 - Índice de todos os documentos
@@ -128,7 +128,7 @@ permalink: /doc
 ### 3. **Proposta Completa**
 
 **Localizaçêo:** `/doc/superprofessores_modelo_hibrido_2025.md`
-**URL:** `https://inematds.github.io/SuperProf/doc/superprofessores_modelo_hibrido_2025.html`
+**URL:** `https://linnoff88-dev.github.io/arckhe-/doc/superprofessores_modelo_hibrido_2025.html`
 
 **Conteúdo (30 páginas):**
 - Contexto da mudança rápida
@@ -143,7 +143,7 @@ permalink: /doc
 ### 4. **Comparaçêo de Trilhas**
 
 **Localizaçêo:** `/doc/comparacao_trilhas.md`
-**URL:** `https://inematds.github.io/SuperProf/doc/comparacao_trilhas.html`
+**URL:** `https://linnoff88-dev.github.io/arckhe-/doc/comparacao_trilhas.html`
 
 **Conteúdo:**
 - Tabelas comparativas
@@ -156,7 +156,7 @@ permalink: /doc
 ### 5. **Sumário Executivo**
 
 **Localizaçêo:** `/doc/sumario_executivo_visual.md`
-**URL:** `https://inematds.github.io/SuperProf/doc/sumario_executivo_visual.html`
+**URL:** `https://linnoff88-dev.github.io/arckhe-/doc/sumario_executivo_visual.html`
 
 **Conteúdo:**
 - Diagramas e visualizações
@@ -287,7 +287,7 @@ Só mobile
 ```yaml
 title: SuperProfessores
 description: Transformando educadores em arquitetos do futuro da aprendizagem
-url: https://inematds.github.io
+url: https://linnoff88-dev.github.io
 baseurl: /SuperProf
 ```
 
@@ -371,7 +371,7 @@ Quando você faz `git push`:
 
 ### Verificar Status do Deploy
 
-1. Vá para: `https://github.com/inematds/SuperProf/actions`
+1. Vá para: `https://github.com/linnoff88-dev/SuperProf/actions`
 2. Veja o último workflow run
 3. Se verde ✅ = sucesso
 4. Se vermelho ❌ = erro (veja logs)
@@ -427,7 +427,7 @@ google_analytics: G-XXXXXXXXXX
 
 ### GitHub Insights (Grátis)
 
-Veja em: `https://github.com/inematds/SuperProf/graphs/traffic`
+Veja em: `https://github.com/linnoff88-dev/SuperProf/graphs/traffic`
 
 - Visitantes únicos
 - Views
@@ -508,8 +508,8 @@ Antes de lançar oficialmente:
 ## 📞 Suporte
 
 - **Documentaçêo:** Este arquivo + `CUSTOMIZACAO_VISUAL.md`
-- **Issues:** https://github.com/inematds/SuperProf/issues
-- **Email:** inematds@gmail.com
+- **Issues:** https://github.com/linnoff88-dev/SuperProf/issues
+- **Email:** linnoff88-dev@gmail.com
 
 ---
 

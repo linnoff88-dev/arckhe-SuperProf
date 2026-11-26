@@ -51,8 +51,8 @@ cd /home/nmaldaner/projetos/superprofessores
 git init
 
 # Configure suas credenciais
-git config user.name "inematds"
-git config user.email "inematds@gmail.com"
+git config user.name "linnoff88-dev"
+git config user.email "linnoff88-dev@gmail.com"
 
 # Adicione APENAS os arquivos necessários
 git add index.md _config.yml _sass/ doc/ README.md .gitignore
@@ -88,7 +88,7 @@ gh repo create SuperProf --public --description "SuperProfessores: Programa de f
 
 ```bash
 # Adicione o remote
-git remote add origin https://github.com/inematds/SuperProf.git
+git remote add origin https://github.com/linnoff88-dev/SuperProf.git
 
 # Verifique
 git remote -v
@@ -108,7 +108,7 @@ git push -u origin main
 
 ### 5️⃣ Ativar GitHub Pages (1 min)
 
-1. Vá para: https://github.com/inematds/SuperProf/settings/pages
+1. Vá para: https://github.com/linnoff88-dev/SuperProf/settings/pages
 2. Em **"Source"**, selecione: **"Deploy from a branch"**
 3. Em **"Branch"**, selecione: **main** e **/ (root)**
 4. Clique **"Save"**
@@ -119,10 +119,10 @@ git push -u origin main
 
 ### 6️⃣ Verificar o Site (1 min)
 
-1. Acesse: **https://inematds.github.io/SuperProf**
+1. Acesse: **https://linnoff88-dev.github.io/arckhe-SuperProf**
 2. Se nêo carregar, aguarde mais 1-2 min
 3. Verifique o status do deploy em:
-   https://github.com/inematds/SuperProf/actions
+   https://github.com/linnoff88-dev/SuperProf/actions
 
 Deve aparecer um check verde ✅
 
@@ -184,7 +184,7 @@ git push
 
 ### Erro: "Page build failed"
 
-1. Vá para: https://github.com/inematds/SuperProf/actions
+1. Vá para: https://github.com/linnoff88-dev/SuperProf/actions
 2. Clique no workflow com ❌
 3. Veja o erro nos logs
 4. Comum: YAML inválido no front matter
@@ -209,8 +209,8 @@ git push
 ### Monitore
 
 - [ ] Ative Google Analytics
-- [ ] Veja tráfego em: https://github.com/inematds/SuperProf/graphs/traffic
-- [ ] Responda issues: https://github.com/inematds/SuperProf/issues
+- [ ] Veja tráfego em: https://github.com/linnoff88-dev/SuperProf/graphs/traffic
+- [ ] Responda issues: https://github.com/linnoff88-dev/SuperProf/issues
 
 ### Melhore
 
@@ -232,24 +232,24 @@ cd /home/nmaldaner/projetos/superprofessores
 
 # 2. Git init e config
 git init
-git config user.name "inematds"
-git config user.email "inematds@gmail.com"
+git config user.name "linnoff88-dev"
+git config user.email "linnoff88-dev@gmail.com"
 
 # 3. Add e commit
 git add index.md _config.yml _sass/ doc/ README.md .gitignore GUIA_GITHUB_PAGES.md CUSTOMIZACAO_VISUAL.md ESTRUTURA_SITE.md package.json
 git commit -m "Initial commit: SuperProfessores v3.0 com Jekyll"
 
 # 4. Conecte ao GitHub (crie o repo primeiro em github.com/new)
-git remote add origin https://github.com/inematds/SuperProf.git
+git remote add origin https://github.com/linnoff88-dev/SuperProf.git
 git branch -M main
 git push -u origin main
 
 # 5. Ative GitHub Pages em:
-# https://github.com/inematds/SuperProf/settings/pages
+# https://github.com/linnoff88-dev/SuperProf/settings/pages
 # Source: Deploy from branch > main > / (root) > Save
 
 # 6. Aguarde 2-3 min e acesse:
-# https://inematds.github.io/SuperProf
+# https://linnoff88-dev.github.io/arckhe-SuperProf
 ```
 
 ---
@@ -259,7 +259,7 @@ git push -u origin main
 - **Documentaçêo:** Veja `GUIA_GITHUB_PAGES.md`
 - **Customizaçêo:** Veja `CUSTOMIZACAO_VISUAL.md`
 - **Estrutura:** Veja `ESTRUTURA_SITE.md`
-- **Email:** inematds@gmail.com
+- **Email:** linnoff88-dev@gmail.com
 
 ---
 
@@ -267,7 +267,7 @@ git push -u origin main
 
 Após seguir esses passos, seu site estará **ONLINE** em:
 
-**https://inematds.github.io/SuperProf**
+**https://linnoff88-dev.github.io/arckhe-SuperProf**
 
 Com:
 - ✅ Design profissional

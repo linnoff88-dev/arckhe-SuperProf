@@ -6,16 +6,16 @@
 
 ## 🎯 Objetivo
 
-Publicar o projeto SuperProfessores no GitHub Pages em: `https://inematds.github.io/SuperProf`
+Publicar o projeto SuperProfessores no GitHub Pages em: `https://linnoff88-dev.github.io/arckhe-SuperProf`
 
 ---
 
 ## 📋 Pré-requisitos
 
-- Conta GitHub: `inematds`
-- Email: `inematds@gmail.com`
+- Conta GitHub: `linnoff88-dev`
+- Email: `linnoff88-dev@gmail.com`
 - Git instalado localmente
-- Acesso ao repositório: `https://github.com/inematds/SuperProf`
+- Acesso ao repositório: `https://github.com/linnoff88-dev/SuperProf`
 
 ---
 
@@ -31,8 +31,8 @@ cd /home/nmaldaner/projetos/superprofessores
 git init
 
 # Configure seu nome e email
-git config user.name "inematds"
-git config user.email "inematds@gmail.com"
+git config user.name "linnoff88-dev"
+git config user.email "linnoff88-dev@gmail.com"
 ```
 
 ### 2. Preparar Arquivos para Commit
@@ -119,7 +119,7 @@ gh repo create SuperProf --public --description "SuperProfessores: Programa de f
 
 ```bash
 # Adicione o remote
-git remote add origin https://github.com/inematds/SuperProf.git
+git remote add origin https://github.com/linnoff88-dev/SuperProf.git
 
 # Verifique
 git remote -v
@@ -139,13 +139,13 @@ git push -u origin main
 
 **Via Interface Web:**
 
-1. Acesse: https://github.com/inematds/SuperProf/settings/pages
+1. Acesse: https://github.com/linnoff88-dev/SuperProf/settings/pages
 2. Em "Source", selecione: **Deploy from a branch**
 3. Em "Branch", selecione: **main** e **/ (root)**
 4. Clique em **Save**
 
 **Aguarde 1-2 minutos e seu site estará em:**
-`https://inematds.github.io/SuperProf`
+`https://linnoff88-dev.github.io/arckhe-SuperProf`
 
 ### 9. (Opcional) Configurar Tema Jekyll
 
@@ -159,7 +159,7 @@ cat > _config.yml << 'EOF'
 title: SuperProfessores
 description: Transformando educadores em arquitetos do futuro da aprendizagem
 baseurl: "/SuperProf"
-url: "https://inematds.github.io"
+url: "https://linnoff88-dev.github.io"
 
 # Theme
 theme: jekyll-theme-cayman
@@ -194,9 +194,9 @@ git push
 
 ### 10. Verificar Deploy
 
-1. Acesse: https://github.com/inematds/SuperProf/actions
+1. Acesse: https://github.com/linnoff88-dev/SuperProf/actions
 2. Veja o status do deploy (deve ter um check verde ✅)
-3. Acesse seu site: https://inematds.github.io/SuperProf
+3. Acesse seu site: https://linnoff88-dev.github.io/arckhe-SuperProf
 
 ---
 
@@ -349,16 +349,16 @@ git checkout main
 
 ### Ver Tráfego do Site
 
-1. Acesse: https://github.com/inematds/SuperProf/graphs/traffic
+1. Acesse: https://github.com/linnoff88-dev/SuperProf/graphs/traffic
 2. Veja visitantes únicos, views, clones
 
 ### Ver Quem Deu Star
 
-1. Acesse: https://github.com/inematds/SuperProf/stargazers
+1. Acesse: https://github.com/linnoff88-dev/SuperProf/stargazers
 
 ### Ver Forks
 
-1. Acesse: https://github.com/inematds/SuperProf/network/members
+1. Acesse: https://github.com/linnoff88-dev/SuperProf/network/members
 
 ---
 
@@ -388,8 +388,8 @@ git checkout main
 Se tiver problemas:
 
 1. Consulte a [documentaçêo do GitHub Pages](https://docs.github.com/pages)
-2. Abra uma [issue no GitHub](https://github.com/inematds/SuperProf/issues)
-3. Envie email: inematds@gmail.com
+2. Abra uma [issue no GitHub](https://github.com/linnoff88-dev/SuperProf/issues)
+3. Envie email: linnoff88-dev@gmail.com
 
 ---
 

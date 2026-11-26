@@ -419,7 +419,7 @@ Q4 2026 (Out-Dez)
 
 **🏫 Traga o SuperProfessores para Sua Rede!**
 
-- [📧 Contato Institucional](mailto:inematds@gmail.com)
+- [📧 Contato Institucional](mailto:linnoff88-dev@gmail.com)
 - [📋 Proposta Customizada](#)
 - [💼 Cases de Sucesso](#)
 
@@ -427,7 +427,7 @@ Q4 2026 (Out-Dez)
 
 **💻 Contribua com o Projeto!**
 
-- [⭐ GitHub](https://github.com/inematds/SuperProf)
+- [⭐ GitHub](https://github.com/linnoff88-dev/SuperProf)
 - [🤝 Como Contribuir](../CONTRIBUTING.md)
 - [📚 Documentaçêo Técnica](#)
 
@@ -445,9 +445,9 @@ Q4 2026 (Out-Dez)
 
 ## 📬 Contato
 
-**Email**: inematds@gmail.com
-**GitHub**: [@inematds](https://github.com/inematds)
-**Projeto**: [SuperProf](https://github.com/inematds/SuperProf)
+**Email**: linnoff88-dev@gmail.com
+**GitHub**: [@linnoff88-dev](https://github.com/linnoff88-dev)
+**Projeto**: [SuperProf](https://github.com/linnoff88-dev/SuperProf)
 
 ---
 
@@ -459,7 +459,7 @@ Q4 2026 (Out-Dez)
 
 > *"A única constante na IA é a mudança. Por isso, ensinamos a dançar com a mudança, nêo a lutar contra ela."*
 
-**[📖 Leia Mais](superprofessores_modelo_hibrido_2025.md)** | **[⭐ GitHub](https://github.com/inematds/SuperProf)** | **[🤝 Contribua](../CONTRIBUTING.md)**
+**[📖 Leia Mais](superprofessores_modelo_hibrido_2025.md)** | **[⭐ GitHub](https://github.com/linnoff88-dev/SuperProf)** | **[🤝 Contribua](../CONTRIBUTING.md)**
 
 ---
 

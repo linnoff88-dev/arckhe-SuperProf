@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('%c🎓 SuperProfessores', 'font-size: 24px; font-weight: bold; color: #3B82F6;');
     console.log('%cTransformando educadores em arquitetos do futuro da aprendizagem', 'font-size: 14px; color: #666;');
-    console.log('%c📖 GitHub: https://github.com/inematds/SuperProf', 'font-size: 12px; color: #10B981;');
+    console.log('%c📖 GitHub: https://github.com/linnoff88-dev/SuperProf', 'font-size: 12px; color: #10B981;');
 });
 
 // ============================================

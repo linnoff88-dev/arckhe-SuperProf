@@ -2,7 +2,7 @@
 title: SuperProfessores
 description: Transformando educadores em arquitetos do futuro da aprendizagem
 baseurl: "/SuperProf"
-url: "https://inematds.github.io"
+url: "https://linnoff88-dev.github.io"
 
 # Theme - Just-the-Docs (recomendado para documentaçêo educacional)
 remote_theme: just-the-docs/just-the-docs
@@ -31,13 +31,13 @@ nav_sort: case_insensitive
 # Botões de açêo no topo
 aux_links:
   "⭐ GitHub":
-    - "https://github.com/inematds/SuperProf"
+    - "https://github.com/linnoff88-dev/SuperProf"
   "✉️ Contato":
-    - "mailto:inematds@gmail.com"
+    - "mailto:linnoff88-dev@gmail.com"
 aux_links_new_tab: true
 
 # Rodapé
-footer_content: "Copyright &copy; 2025 SuperProfessores. Distribuído sob <a href=\"https://github.com/inematds/SuperProf/blob/main/LICENSE\">Licença MIT</a>."
+footer_content: "Copyright &copy; 2025 SuperProfessores. Distribuído sob <a href=\"https://github.com/linnoff88-dev/SuperProf/blob/main/LICENSE\">Licença MIT</a>."
 
 # Back to top
 back_to_top: true

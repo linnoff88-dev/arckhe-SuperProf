@@ -7,9 +7,9 @@
 
 ### Transformando educadores em arquitetos do futuro da aprendizagem
 
-[![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)](https://github.com/inematds/SuperProf)
-[![VersêÂ£o](https://img.shields.io/badge/Vers%C3%A3o-3.0-blue)](https://github.com/inematds/SuperProf)
-[![AtualizaêÂ§êÂ£o](https://img.shields.io/badge/Atualiza%C3%A7%C3%A3o-Novembro%202025-green)](https://github.com/inematds/SuperProf)
+[![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)](https://github.com/linnoff88-dev/SuperProf)
+[![VersêÂ£o](https://img.shields.io/badge/Vers%C3%A3o-3.0-blue)](https://github.com/linnoff88-dev/SuperProf)
+[![AtualizaêÂ§êÂ£o](https://img.shields.io/badge/Atualiza%C3%A7%C3%A3o-Novembro%202025-green)](https://github.com/linnoff88-dev/SuperProf)
 [![LicenêÂ§a](https://img.shields.io/badge/Licen%C3%A7a-MIT-lightgrey)](LICENSE)
 
 ---
@@ -190,9 +190,9 @@ Este êÂ© um projeto em desenvolvimento aberto a contribuiêÂ§êÂµes
 
 ## ê°Å¸âÂ¬ Contato
 
-**Email**: inematds@gmail.com
-**GitHub**: [@inematds](https://github.com/inematds)
-**Projeto**: [SuperProf](https://github.com/inematds/SuperProf)
+**Email**: linnoff88-dev@gmail.com
+**GitHub**: [@linnoff88-dev](https://github.com/linnoff88-dev)
+**Projeto**: [SuperProf](https://github.com/linnoff88-dev/SuperProf)
 
 ---
 
@@ -214,9 +214,9 @@ Este projeto estêÂ¡ sob a licenêÂ§a MIT. Veja o arquivo [LICENSE](LICE
 
 ## ê°Å¸âÅ  EstatêÂ­sticas
 
-![GitHub stars](https://img.shields.io/github/stars/inematds/SuperProf?style=social)
-![GitHub forks](https://img.shields.io/github/forks/inematds/SuperProf?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/inematds/SuperProf?style=social)
+![GitHub stars](https://img.shields.io/github/stars/linnoff88-dev/SuperProf?style=social)
+![GitHub forks](https://img.shields.io/github/forks/linnoff88-dev/SuperProf?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/linnoff88-dev/SuperProf?style=social)
 
 ---
 
@@ -236,7 +236,7 @@ Este êÂ© um **documento vivo**. AtualizaêÂ§êÂµes:
 
 ### ê°Å¸Å¡â¬ Junte-se êÂ  RevoluêÂ§êÂ£o da IA na EducaêÂ§êÂ£o!
 
-**[ê°Å¸ââ Leia a Proposta Completa](doc/superprofessores_modelo_hibrido_2025.md)** | **[ê¢Â­Â Deixe uma Estrela](https://github.com/inematds/SuperProf)** | **[ê°Å¸Â¤Â Contribua](CONTRIBUTING.md)**
+**[ê°Å¸ââ Leia a Proposta Completa](doc/superprofessores_modelo_hibrido_2025.md)** | **[ê¢Â­Â Deixe uma Estrela](https://github.com/linnoff88-dev/SuperProf)** | **[ê°Å¸Â¤Â Contribua](CONTRIBUTING.md)**
 
 ---
 

@@ -140,7 +140,7 @@ def generate_nivel_2a():
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="../index.html" class="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-primary font-medium">Início</a>
                     <a href="../index.html#trilhas" class="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-primary font-medium">Trilhas</a>
-                    <a href="https://github.com/inematds/SuperProf" target="_blank" class="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-primary font-medium">GitHub</a>
+                    <a href="https://github.com/linnoff88-dev/SuperProf" target="_blank" class="text-neutral-700 dark:text-neutral-300 hover:text-primary dark:hover:text-primary font-medium">GitHub</a>
 
                     <button id="theme-toggle" class="p-2 rounded-lg bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors">
                         <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -164,7 +164,7 @@ def generate_nivel_2a():
             <div class="px-4 py-4 space-y-3">
                 <a href="../index.html" class="block text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Início</a>
                 <a href="../index.html#trilhas" class="block text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">Trilhas</a>
-                <a href="https://github.com/inematds/SuperProf" target="_blank" class="block text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">GitHub</a>
+                <a href="https://github.com/linnoff88-dev/SuperProf" target="_blank" class="block text-neutral-700 dark:text-neutral-300 hover:text-primary font-medium">GitHub</a>
             </div>
         </div>
     </nav>

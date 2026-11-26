@@ -273,9 +273,9 @@ Ambas sêo valiosas, mas para áreas diferentes.
 
 ## 📞 Ainda em Dúvida?
 
-Entre em contato: **inematds@gmail.com**
+Entre em contato: **linnoff88-dev@gmail.com**
 
-Ou abra uma [issue no GitHub](https://github.com/inematds/SuperProf/issues) com suas dúvidas!
+Ou abra uma [issue no GitHub](https://github.com/linnoff88-dev/SuperProf/issues) com suas dúvidas!
 
 ---
 

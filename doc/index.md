@@ -100,16 +100,16 @@ A proposta original que serviu de base para o Modelo Híbrido:
 
 ### Para Desenvolvedores
 1. Veja o [README.md](../)
-2. Confira o [GitHub](https://github.com/inematds/SuperProf)
-3. Leia o [Guia de Contribuiçêo](https://github.com/inematds/SuperProf/blob/main/CONTRIBUTING.md)
+2. Confira o [GitHub](https://github.com/linnoff88-dev/SuperProf)
+3. Leia o [Guia de Contribuiçêo](https://github.com/linnoff88-dev/SuperProf/blob/main/CONTRIBUTING.md)
 
 ---
 
 ## 📞 Precisa de Ajuda?
 
-- **Email:** inematds@gmail.com
-- **GitHub:** [@inematds](https://github.com/inematds)
-- **Issues:** [Reporte problemas](https://github.com/inematds/SuperProf/issues)
+- **Email:** linnoff88-dev@gmail.com
+- **GitHub:** [@linnoff88-dev](https://github.com/linnoff88-dev)
+- **Issues:** [Reporte problemas](https://github.com/linnoff88-dev/SuperProf/issues)
 
 ---
 
