@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Script para gerar páginas HTML completas dos níveis 2A, 2B e 3A
-Seguindo EXATAMENTE o padrão do nivel-1.html
+Seguindo EXATAMENTE o padrêo do nivel-1.html
 """
 
 import os
@@ -16,7 +16,7 @@ def generate_nivel_2a():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nível 2A: Pedagógico | SuperProfessores</title>
-    <meta name="description" content="Trilha A: Aprofundamento pedagógico em IA - 60 horas de formação avançada">
+    <meta name="description" content="Trilha A: Aprofundamento pedagógico em IA - 60 horas de formaçêo avançada">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -190,7 +190,7 @@ def generate_nivel_2a():
                 <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Trilha A</span>
             </div>
             <h1 class="text-4xl lg:text-5xl font-bold mb-4">Nível 2A: Pedagógico</h1>
-            <p class="text-xl text-purple-100 mb-6">Aprofundamento pedagógico em design instrucional, avaliação formativa, personalização e gamificação com IA</p>
+            <p class="text-xl text-purple-100 mb-6">Aprofundamento pedagógico em design instrucional, avaliaçêo formativa, personalizaçêo e gamificaçêo com IA</p>
 
             <div class="grid md:grid-cols-3 gap-4 mt-8">
                 <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
@@ -244,10 +244,10 @@ def generate_nivel_2a():
                         </button>
                         <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border-l-4 border-primary">
                             <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
-                                <strong class="text-primary">O que é:</strong> Aplicação do modelo ADDIE (Análise, Design, Desenvolvimento, Implementação, Avaliação) acelerado por IA, reduzindo tempo de desenvolvimento de cursos em 70%.
+                                <strong class="text-primary">O que é:</strong> Aplicaçêo do modelo ADDIE (Análise, Design, Desenvolvimento, Implementaçêo, Avaliaçêo) acelerado por IA, reduzindo tempo de desenvolvimento de cursos em 70%.
                             </p>
                             <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
-                                <strong class="text-primary">Por que aprender:</strong> Transforme semanas de trabalho em horas usando IA para automatizar análise de necessidades, geração de conteúdo e avaliação.
+                                <strong class="text-primary">Por que aprender:</strong> Transforme semanas de trabalho em horas usando IA para automatizar análise de necessidades, geraçêo de conteúdo e avaliaçêo.
                             </p>
                         </div>
                     </li>
@@ -258,10 +258,10 @@ def generate_nivel_2a():
                         </button>
                         <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border-l-4 border-primary">
                             <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
-                                <strong class="text-primary">O que é:</strong> Geração automatizada de objetivos de aprendizagem nos 6 níveis cognitivos: Lembrar, Entender, Aplicar, Analisar, Avaliar, Criar.
+                                <strong class="text-primary">O que é:</strong> Geraçêo automatizada de objetivos de aprendizagem nos 6 níveis cognitivos: Lembrar, Entender, Aplicar, Analisar, Avaliar, Criar.
                             </p>
                             <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
-                                <strong class="text-primary">Por que aprender:</strong> Crie objetivos de aprendizagem balanceados e mensuráveis em minutos, garantindo progressão cognitiva adequada.
+                                <strong class="text-primary">Por que aprender:</strong> Crie objetivos de aprendizagem balanceados e mensuráveis em minutos, garantindo progressêo cognitiva adequada.
                             </p>
                         </div>
                     </li>
@@ -272,7 +272,7 @@ def generate_nivel_2a():
                         </button>
                         <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border-l-4 border-primary">
                             <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
-                                <strong class="text-primary">O que é:</strong> Aplicação dos 5 princípios (Problema, Ativação, Demonstração, Aplicação, Integração) com IA gerando sequências didáticas completas.
+                                <strong class="text-primary">O que é:</strong> Aplicaçêo dos 5 princípios (Problema, Ativaçêo, Demonstraçêo, Aplicaçêo, Integraçêo) com IA gerando sequências didáticas completas.
                             </p>
                             <p class="text-sm mb-1.5 text-neutral-700 dark:text-neutral-300">
                                 <strong class="text-primary">Por que aprender:</strong> Estruture aulas eficazes seguindo princípios cientificamente validados, com IA acelerando o processo de design.
@@ -303,7 +303,7 @@ def generate_nivel_2a():
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <p>&copy; 2025 SuperProfessores. Licença MIT.</p>
-                <p class="mt-2 text-neutral-500">Última atualização: Novembro 2025</p>
+                <p class="mt-2 text-neutral-500">Última atualizaçêo: Novembro 2025</p>
             </div>
         </div>
     </footer>
@@ -320,11 +320,11 @@ def generate_nivel_2a():
                 'modulo-2a-1': {
                     title: 'Módulo 2A.1: Design Instrucional com IA',
                     content: `
-                        <h2 class="text-3xl font-bold mb-6">Visão Geral</h2>
+                        <h2 class="text-3xl font-bold mb-6">Visêo Geral</h2>
                         <p class="text-lg mb-4">
                             Aprenda a criar experiências de aprendizagem estruturadas usando IA como copiloto de design.
                             Domine modelos como ADDIE, Bloom 2.0, e Framework de Merrill aplicados com ferramentas de IA
-                            para acelerar criação de cursos em 70%.
+                            para acelerar criaçêo de cursos em 70%.
                         </p>
                         <div class="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg mb-6">
                             <h3 class="text-xl font-bold mb-3">Objetivos</h3>

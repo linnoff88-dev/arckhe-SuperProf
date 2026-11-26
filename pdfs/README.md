@@ -1,10 +1,10 @@
 # 📄 PDFs dos Módulos - Instruções
 
-Os arquivos desta pasta estão em formato **Markdown (.md)** e precisam ser convertidos para **PDF**.
+Os arquivos desta pasta estêo em formato **Markdown (.md)** e precisam ser convertidos para **PDF**.
 
 ## 🔄 Como Converter para PDF:
 
-### Opção 1: Pandoc (Linux/Mac/Windows)
+### Opçêo 1: Pandoc (Linux/Mac/Windows)
 ```bash
 # Instalar pandoc
 sudo apt install pandoc texlive-xetex  # Ubuntu/Debian
@@ -19,23 +19,23 @@ pandoc modulo-1-4.md -o modulo-1-4.pdf --pdf-engine=xelatex
 pandoc modulo-1-5.md -o modulo-1-5.pdf --pdf-engine=xelatex
 ```
 
-### Opção 2: Typora (Mais fácil, interface gráfica)
+### Opçêo 2: Typora (Mais fácil, interface gráfica)
 1. Baixe Typora: https://typora.io/
 2. Abra cada arquivo .md
 3. File → Export → PDF
 4. Salve na mesma pasta
 
-### Opção 3: VSCode com extensão
-1. Instale extensão "Markdown PDF" no VSCode
+### Opçêo 3: VSCode com extensêo
+1. Instale extensêo "Markdown PDF" no VSCode
 2. Abra arquivo .md
 3. Ctrl+Shift+P → "Markdown PDF: Export (pdf)"
 
-### Opção 4: Ferramentas Online
+### Opçêo 4: Ferramentas Online
 - https://www.markdowntopdf.com/
 - https://md2pdf.netlify.app/
 - Upload do .md e download do PDF
 
-### Opção 5: Script Automático (se tiver pandoc)
+### Opçêo 5: Script Automático (se tiver pandoc)
 ```bash
 #!/bin/bash
 cd pdfs/
@@ -50,7 +50,7 @@ echo "✅ Todos os PDFs criados!"
 
 ## 📦 Arquivos Disponíveis:
 
-- `modulo-1-1.md` → `modulo-1-1.pdf` (Revolução da IA)
+- `modulo-1-1.md` → `modulo-1-1.pdf` (Revoluçêo da IA)
 - `modulo-1-2.md` → `modulo-1-2.pdf` (Ecossistema de Ferramentas)
 - `modulo-1-3.md` → `modulo-1-3.pdf` (Prompt Engineering)
 - `modulo-1-4.md` → `modulo-1-4.pdf` (Pensamento Crítico)
@@ -67,4 +67,4 @@ echo "✅ Todos os PDFs criados!"
 
 ---
 
-**Nota:** Os arquivos .md já estão completos e formatados. A conversão para PDF é apenas para distribuição final.
+**Nota:** Os arquivos .md já estêo completos e formatados. A conversêo para PDF é apenas para distribuiçêo final.

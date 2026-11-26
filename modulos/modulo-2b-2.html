@@ -94,9 +94,9 @@
     <!-- Main Content -->
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-        <!-- Visão Geral -->
+        <!-- Visêo Geral -->
         <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6">📖 Visão Geral</h2>
+            <h2 class="text-3xl font-bold mb-6">📖 Visêo Geral</h2>
             <div class="prose prose-lg dark:prose-invert max-w-none">
                 <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-4">
                     Aprenda a adaptar LLMs para necessidades educacionais específicas. Domine técnicas de fine-tuning (ajuste fino) e RAG (Retrieval-Augmented Generation) para criar assistentes especializados, bases de conhecimento personalizadas e sistemas de Q&A institucionais.
@@ -118,23 +118,23 @@
                 <div class="prose dark:prose-invert max-w-none">
                     <p class="mb-4">### Problema Comum:
 <strong>Cenário:</strong> Universidade quer chatbot que responde sobre regulamentos internos
-<strong>Opção 1: Prompt Engineering</strong> ❌
+<strong>Opçêo 1: Prompt Engineering</strong> ❌
 <ul class="space-y-2 list-disc pl-6">
 <li>Colar regulamento no prompt</li>
 <li>Limite: Contexto máximo (128k-200k tokens)</li>
 <li>Problema: Documento tem 500 páginas = 500k tokens</li>
 </ul>
-<strong>Opção 2: Fine-Tuning</strong> ⚠️
+<strong>Opçêo 2: Fine-Tuning</strong> ⚠️
 <ul class="space-y-2 list-disc pl-6">
 <li>Treinar modelo nos regulamentos</li>
-<li>Problema: Caro ($$$), lento, não atualiza fácil</li>
+<li>Problema: Caro ($$$), lento, nêo atualiza fácil</li>
 <li>Risco: Modelo "memoriza" mas pode alucinar</li>
 </ul>
-<strong>Opção 3: RAG</strong> ✅
+<strong>Opçêo 3: RAG</strong> ✅
 <ul class="space-y-2 list-disc pl-6">
 <li>Busca trechos relevantes + injeta no prompt</li>
 <li>Barato, rápido, atualizável, verificável</li>
-<li><strong>Solução ideal para 90% dos casos educacionais</strong></li>
+<li><strong>Soluçêo ideal para 90% dos casos educacionais</strong></li>
 </ul>
 ---</p>
                 </div>
@@ -150,7 +150,7 @@
 |----------|-----|-------------|
 | <strong>Custo</strong> | $ (barato) | $$$ (caro) |
 | <strong>Tempo setup</strong> | Horas | Dias/Semanas |
-| <strong>Atualização</strong> | Imediata (add docs) | Requer re-treino |
+| <strong>Atualizaçêo</strong> | Imediata (add docs) | Requer re-treino |
 | <strong>Verificabilidade</strong> | Alta (cita fonte) | Baixa (caixa-preta) |
 | <strong>Privacidade</strong> | Boa (docs locais) | Depende (modelo onde?) |
 | <strong>Complexidade</strong> | Baixa | Alta |
@@ -164,8 +164,8 @@
 ✅ Quer controle sobre o que modelo "sabe"
 <strong>Use Fine-Tuning quando:</strong>
 ✅ Precisa mudar comportamento/estilo do modelo
-✅ Domínio muito específico (jargão técnico)
-✅ Dados sensíveis (não podem ir para API externa)
+✅ Domínio muito específico (jargêo técnico)
+✅ Dados sensíveis (nêo podem ir para API externa)
 ✅ Tem expertise técnico + infraestrutura
 <strong>Use Ambos quando:</strong>
 ✅ Fine-tune para estilo + RAG para conhecimento
@@ -182,7 +182,7 @@
                 <div class="prose dark:prose-invert max-w-none">
                     <p class="mb-4">### Como Funciona (5 Passos):
 ``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
-1. INDEXAÇÃO (Feito 1x, ou quando docs mudam)
+1. INDEXAÇêO (Feito 1x, ou quando docs mudam)
    └─ Quebrar documentos em chunks (pedaços)
    └─ Gerar embeddings para cada chunk
    └─ Armazenar em vector database
@@ -319,7 +319,7 @@ Fontes:
                 </h3>
                 <div class="prose dark:prose-invert max-w-none">
                     <p class="mb-4">### Problema 1: Retrieval Ruim (Chunks Irrelevantes)
-<strong>Sintoma:</strong> LLM responde "Não encontrei informação sobre isso" mesmo tendo
+<strong>Sintoma:</strong> LLM responde "Nêo encontrei informaçêo sobre isso" mesmo tendo
 <strong>Causas:</strong>
 1. Embeddings ruins
 2. Chunks muito grandes/pequenos
@@ -332,7 +332,7 @@ query = "RAG"
 # Depois
 query_expanded = """
 RAG, Retrieval-Augmented Generation, busca semântica,
-recuperação de informação, embeddings
+recuperaçêo de informaçêo, embeddings
 """
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
 <strong>B) Hybrid Search (Keyword + Semantic)</strong>
@@ -358,13 +358,13 @@ def rerank(query, docs):
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
 ---
 ### Problema 2: Resposta Sem Contexto
-<strong>Sintoma:</strong> Resposta correta, mas não cita fonte ou dá detalhes
-<strong>Solução:</strong> Melhorar Prompt de Síntese
+<strong>Sintoma:</strong> Resposta correta, mas nêo cita fonte ou dá detalhes
+<strong>Soluçêo:</strong> Melhorar Prompt de Síntese
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">python
 from langchain.prompts import PromptTemplate
 template = """
 Você é um assistente educacional especializado.
-Use APENAS os trechos abaixo para responder. Se não souber, diga "Não encontrei essa informação nos materiais".
+Use APENAS os trechos abaixo para responder. Se nêo souber, diga "Nêo encontrei essa informaçêo nos materiais".
 Contexto:
 {context}
 Pergunta: {question}
@@ -428,23 +428,23 @@ embeddings_batch = embeddings.embed_documents(queries)  # 1 API call
 ``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
 GPT-3 (base): Completa texto
 Input: "Professor é"
-Output: "uma profissão importante que..." [neutro]
+Output: "uma profissêo importante que..." [neutro]
 ChatGPT (fine-tuned): Conversa
 Input: "Explique fotossíntese"
 Output: "Claro! Fotossíntese é o processo..." [instrutivo]
 Diferença: Fine-tuned com 10k+ exemplos de conversas instrutivas
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
 ---
-### Quando Fine-Tuning Faz Sentido (Educação):
-<strong>Caso 1: Correção Automática com Estilo Específico</strong>
+### Quando Fine-Tuning Faz Sentido (Educaçêo):
+<strong>Caso 1: Correçêo Automática com Estilo Específico</strong>
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
 Dados: 1000 redações + correções de professor específico
 Objetivo: Modelo que corrige no estilo desse professor
 Resultado: Feedback personalizado em escala
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
-<strong>Caso 2: Geração de Questões de Múltipla Escolha</strong>
+<strong>Caso 2: Geraçêo de Questões de Múltipla Escolha</strong>
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
-Dados: 5000 questões criadas por instituição
+Dados: 5000 questões criadas por instituiçêo
 Objetivo: Gerar novas questões no mesmo formato/dificuldade
 Resultado: Banco de questões infinito
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
@@ -460,7 +460,7 @@ Resultado: Suporte 24/7
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">json
 {"messages": [
   {"role": "system", "content": "Você é um corretor de redações do ENEM"},
-  {"role": "user", "content": "Redação: [TEXTO]"},
+  {"role": "user", "content": "Redaçêo: [TEXTO]"},
   {"role": "assistant", "content": "Análise: [FEEDBACK DETALHADO]"}
 ]}
 {"messages": [...]}
@@ -495,7 +495,7 @@ completion = openai.ChatCompletion.create(
   model="ft:gpt-3.5-turbo:org:modelo_redacao:abc123",  # Seu modelo
   messages=[
     {"role": "system", "content": "Você é um corretor de redações do ENEM"},
-    {"role": "user", "content": "Redação: [NOVA REDAÇÃO]"}
+    {"role": "user", "content": "Redaçêo: [NOVA REDAÇêO]"}
   ]
 )
 </code>``
@@ -541,10 +541,10 @@ completion = openai.ChatCompletion.create(
                 <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
                     <h3 class="font-bold mb-3 flex items-center gap-2">
                         <span>✅</span>
-                        <span>Avaliação</span>
+                        <span>Avaliaçêo</span>
                     </h3>
                     <p class="text-sm text-neutral-600 dark:text-neutral-400">
-                        Quizzes e projetos para certificação
+                        Quizzes e projetos para certificaçêo
                     </p>
                 </div>
                 <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
@@ -559,7 +559,7 @@ completion = openai.ChatCompletion.create(
             </div>
         </section>
 
-        <!-- Navegação -->
+        <!-- Navegaçêo -->
         <section class="flex justify-between items-center pt-8 border-t border-neutral-200 dark:border-neutral-700">
             <a href="../niveis/nivel-2b.html" class="px-6 py-3 bg-neutral-200 dark:bg-neutral-700 rounded-lg font-semibold hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors">
                 ← Voltar ao Nível 2B

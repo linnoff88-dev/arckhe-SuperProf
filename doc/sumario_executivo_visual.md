@@ -1,12 +1,12 @@
 # 📊 SuperProfessores - Sumário Executivo Visual
 
-## Versão 3.0 (Modelo Híbrido) - Novembro 2025
+## Versêo 3.0 (Modelo Híbrido) - Novembro 2025
 
 ---
 
 ## 🎯 O Problema
 
-### A Velocidade da Evolução da IA é Sem Precedentes
+### A Velocidade da Evoluçêo da IA é Sem Precedentes
 
 ```
 📅 Últimos 4 meses (Jul-Nov 2025):
@@ -23,8 +23,8 @@ Novembro ──→ NotebookLM áudio/vídeo lançado
 | Métrica | 2024 | 2025 | Crescimento |
 |---------|------|------|-------------|
 | **Mercado Global** | USD 5.47bi | USD 7.57bi | **+38.4%** |
-| **Adoção Estudantil** | 66% | 92% | **+26 pts** |
-| **Projeção 2034** | - | USD 208.2bi | CAGR 41.4% |
+| **Adoçêo Estudantil** | 66% | 92% | **+26 pts** |
+| **Projeçêo 2034** | - | USD 208.2bi | CAGR 41.4% |
 
 ### O Desafio
 
@@ -34,9 +34,9 @@ Novembro ──→ NotebookLM áudio/vídeo lançado
 
 ---
 
-## 💡 Nossa Solução
+## 💡 Nossa Soluçêo
 
-### Ensinar PRINCÍPIOS, não FERRAMENTAS
+### Ensinar PRINCÍPIOS, nêo FERRAMENTAS
 
 ```
 ❌ Curso Tradicional:
@@ -89,7 +89,7 @@ graph TD
 
 ## 📘 Estrutura do Programa
 
-### Visão Geral
+### Visêo Geral
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -137,7 +137,7 @@ graph TD
 
 👨‍🏫 Professor de qualquer disciplina
 👩‍💼 Gestores e coordenadores
-🎯 Objetivo: Produtividade + Inovação
+🎯 Objetivo: Produtividade + Inovaçêo
 
 ### O Que Você Aprende?
 
@@ -145,7 +145,7 @@ graph TD
 |-------|------|-------------|
 | **1** (60h) | **Fundamentos** | • Dominar ferramentas<br>• Prompt engineering<br>• Pensamento crítico |
 | **2A** (60h) | **Avançado** | • IA multimodal<br>• Learning analytics<br>• Chatbots no-code<br>• Design automatizado |
-| **3A** (60h) | **Liderança** | • Estratégia institucional<br>• Cálculo de ROI<br>• Gestão da mudança<br>• Formação de equipes |
+| **3A** (60h) | **Liderança** | • Estratégia institucional<br>• Cálculo de ROI<br>• Gestêo da mudança<br>• Formaçêo de equipes |
 
 ### Ferramentas Principais
 
@@ -161,7 +161,7 @@ graph TD
 ✅ Economiza 30-50% do tempo em tarefas administrativas
 ✅ Cria conteúdo personalizado em minutos
 ✅ Implementa IA em toda a escola
-✅ Lidera transformação digital
+✅ Lidera transformaçêo digital
 
 ---
 
@@ -169,7 +169,7 @@ graph TD
 
 ### Para Quem?
 
-👨‍💻 Professor de Computação, Robótica, STEM
+👨‍💻 Professor de Computaçêo, Robótica, STEM
 🔬 Professor de Ciências e Matemática
 🎯 Objetivo: Ensinar IA para alunos
 
@@ -178,7 +178,7 @@ graph TD
 | Nível | Foco | Habilidades |
 |-------|------|-------------|
 | **1** (60h) | **Fundamentos** | • Dominar ferramentas<br>• Prompt engineering<br>• Pensamento crítico |
-| **2B** (60h) | **Ensino de IA** | • Didática de IA<br>• Atividades unplugged<br>• Currículos por idade<br>• Projetos estudantis<br>• Avaliação |
+| **2B** (60h) | **Ensino de IA** | • Didática de IA<br>• Atividades unplugged<br>• Currículos por idade<br>• Projetos estudantis<br>• Avaliaçêo |
 
 ### Ferramentas Principais
 
@@ -198,28 +198,28 @@ graph TD
 
 ---
 
-## 📊 Comparação Lado a Lado
+## 📊 Comparaçêo Lado a Lado
 
 | Aspecto | Trilha A 🔵 | Trilha B 🟢 |
 |---------|-------------|-------------|
 | **Carga** | 180h (3 níveis) | 120h (2 níveis) |
 | **Foco** | Usar IA | Ensinar IA |
-| **Público** | Todos os professores | STEM, Computação |
-| **Programação** | ❌ No-code apenas | ✅ Python básico |
-| **Liderança** | ✅ Nível 3A dedicado | ❌ Não tem |
-| **Didática** | ❌ Não é foco | ✅ Central |
-| **ROI Institucional** | ✅ Sim | ❌ Não |
-| **Projetos Alunos** | ❌ Não | ✅ Sim |
+| **Público** | Todos os professores | STEM, Computaçêo |
+| **Programaçêo** | ❌ No-code apenas | ✅ Python básico |
+| **Liderança** | ✅ Nível 3A dedicado | ❌ Nêo tem |
+| **Didática** | ❌ Nêo é foco | ✅ Central |
+| **ROI Institucional** | ✅ Sim | ❌ Nêo |
+| **Projetos Alunos** | ❌ Nêo | ✅ Sim |
 
 ### Exemplos de Uso
 
-| Situação | Trilha A | Trilha B |
+| Situaçêo | Trilha A | Trilha B |
 |----------|----------|----------|
-| Criar prova de História | ✅ ChatGPT gera 20 questões | ❌ Não aplicável |
-| Ensinar ML para crianças | ❌ Não aplicável | ✅ Teachable Machine |
-| Automatizar feedback | ✅ IA corrige redações | ❌ Não aplicável |
-| Feira de ciências | ❌ Não aplicável | ✅ Orienta projeto de IA |
-| Transformação digital | ✅ Roadmap institucional | ❌ Não aplicável |
+| Criar prova de História | ✅ ChatGPT gera 20 questões | ❌ Nêo aplicável |
+| Ensinar ML para crianças | ❌ Nêo aplicável | ✅ Teachable Machine |
+| Automatizar feedback | ✅ IA corrige redações | ❌ Nêo aplicável |
+| Feira de ciências | ❌ Nêo aplicável | ✅ Orienta projeto de IA |
+| Transformaçêo digital | ✅ Roadmap institucional | ❌ Nêo aplicável |
 
 ---
 
@@ -230,7 +230,7 @@ graph TD
 - **74.8%** dos professores apoiam uso de IA
 - **EdTechs brasileiras** adotando IA em larga escala
 - **GPT-4 em português**: 90% de acurácia (vs 73% outros)
-- **Google Meet** com transcrição em português (Nov 2025)
+- **Google Meet** com transcriçêo em português (Nov 2025)
 
 ### Alinhamento
 
@@ -243,7 +243,7 @@ graph TD
 
 ## 🎓 Certificações
 
-### Progressão
+### Progressêo
 
 ```
 Nível 1 (60h)
@@ -286,16 +286,16 @@ Nível 1 (60h)
 
 #### 🏫 Para a Escola
 
-- 🎯 **Diferenciação** competitiva
-- 💡 **Cultura de inovação**
+- 🎯 **Diferenciaçêo** competitiva
+- 💡 **Cultura de inovaçêo**
 - 📊 **Melhores resultados** de aprendizagem
-- 💰 **Redução de custos** operacionais
+- 💰 **Reduçêo de custos** operacionais
 
 #### 🎓 Para os Alunos
 
 - 📚 **Aprendizagem personalizada**
 - 🚀 **Competências do século XXI**
-- 🌍 **Preparação para o futuro**
+- 🌍 **Preparaçêo para o futuro**
 
 ---
 
@@ -304,32 +304,32 @@ Nível 1 (60h)
 ### 1. ⚡ Resiliência à Mudança
 
 **Problema**: Ferramentas mudam a cada 4-6 meses
-**Solução**: Ensinamos princípios atemporais
+**Soluçêo**: Ensinamos princípios atemporais
 
 ### 2. 🎯 2 Trilhas Especializadas
 
 **Problema**: "Usar IA" ≠ "Ensinar IA"
-**Solução**: Duas especializações independentes
+**Soluçêo**: Duas especializações independentes
 
-### 3. 🇧🇷 Contextualização Brasileira
+### 3. 🇧🇷 Contextualizaçêo Brasileira
 
-**Problema**: Cursos internacionais não servem
-**Solução**: BNCC, LGPD, português, cases BR
+**Problema**: Cursos internacionais nêo servem
+**Soluçêo**: BNCC, LGPD, português, cases BR
 
 ### 4. 🔬 Baseado em Evidências
 
 **Problema**: Cursos superficiais
-**Solução**: UNESCO, Stanford, Harvard, MIT
+**Soluçêo**: UNESCO, Stanford, Harvard, MIT
 
 ### 5. 🛠️ 100% Prático
 
 **Problema**: Muito conceito, pouca prática
-**Solução**: Projetos em todos os níveis
+**Soluçêo**: Projetos em todos os níveis
 
 ### 6. 🤝 Comunidade Viva
 
 **Problema**: Isolamento pós-curso
-**Solução**: Webinars, Slack, biblioteca, mentoria
+**Soluçêo**: Webinars, Slack, biblioteca, mentoria
 
 ---
 
@@ -338,13 +338,13 @@ Nível 1 (60h)
 ```
 Q4 2025 (Nov-Dez)
 ├── ✅ Pesquisa de mercado
-├── ✅ Estruturação do modelo
-└── ✅ Documentação completa
+├── ✅ Estruturaçêo do modelo
+└── ✅ Documentaçêo completa
 
 Q1 2026 (Jan-Mar)
 ├── 🔄 Desenvolvimento Nível 1
-├── 🔄 Seleção de plataforma LMS
-├── 🔄 Criação de materiais
+├── 🔄 Seleçêo de plataforma LMS
+├── 🔄 Criaçêo de materiais
 └── 🔄 Turma piloto (50 educadores)
 
 Q2 2026 (Abr-Jun)
@@ -373,8 +373,8 @@ Q4 2026 (Out-Dez)
 |---------|-----------|-----------|
 | **Educadores Formados** | 500 | 2.000 |
 | **Escolas Parceiras** | 20 | 100 |
-| **NPS (satisfação)** | >70 | >80 |
-| **Taxa de Conclusão** | >80% | >85% |
+| **NPS (satisfaçêo)** | >70 | >80 |
+| **Taxa de Conclusêo** | >80% | >85% |
 | **Projetos Implementados** | 300 | 1.500 |
 
 ### Indicadores de Qualidade
@@ -382,24 +382,24 @@ Q4 2026 (Out-Dez)
 - ✅ 90%+ dos professores reportam **economia de tempo**
 - ✅ 80%+ implementam **projetos na escola**
 - ✅ 70%+ se tornam **multiplicadores**
-- ✅ 60%+ continuam para **certificação completa**
+- ✅ 60%+ continuam para **certificaçêo completa**
 
 ---
 
-## 🤝 Parceiros Estratégicos (Prospecção)
+## 🤝 Parceiros Estratégicos (Prospecçêo)
 
 ### Tecnologia
 - 🤝 OpenAI, Anthropic, Google (ferramentas)
 - 🤝 Microsoft Education (Copilot)
 - 🤝 EdTechs Brasileiras (cases de sucesso)
 
-### Educação
-- 🤝 Ministério da Educação (MEC)
-- 🤝 Secretarias Estaduais de Educação
-- 🤝 CIEB (Centro de Inovação para Educação Brasileira)
+### Educaçêo
+- 🤝 Ministério da Educaçêo (MEC)
+- 🤝 Secretarias Estaduais de Educaçêo
+- 🤝 CIEB (Centro de Inovaçêo para Educaçêo Brasileira)
 
 ### Academia
-- 🤝 Universidades (certificação)
+- 🤝 Universidades (certificaçêo)
 - 🤝 Stanford, MIT (frameworks)
 - 🤝 UNESCO (diretrizes)
 
@@ -429,15 +429,15 @@ Q4 2026 (Out-Dez)
 
 - [⭐ GitHub](https://github.com/inematds/SuperProf)
 - [🤝 Como Contribuir](../CONTRIBUTING.md)
-- [📚 Documentação Técnica](#)
+- [📚 Documentaçêo Técnica](#)
 
 ---
 
 ## 📚 Recursos Adicionais
 
 - [📖 Proposta Completa (30 páginas)](superprofessores_modelo_hibrido_2025.md)
-- [🆚 Comparação Detalhada das Trilhas](comparacao_trilhas.md)
-- [🎥 Vídeo de Apresentação](#) (em breve)
+- [🆚 Comparaçêo Detalhada das Trilhas](comparacao_trilhas.md)
+- [🎥 Vídeo de Apresentaçêo](#) (em breve)
 - [📊 Slides Executivos](#) (em breve)
 - [❓ FAQ Completo](#) (em breve)
 
@@ -453,16 +453,16 @@ Q4 2026 (Out-Dez)
 
 <div align="center">
 
-## 🚀 A Revolução da IA na Educação Começa Agora!
+## 🚀 A Revoluçêo da IA na Educaçêo Começa Agora!
 
-**SuperProfessores** não é só um curso. É um **movimento**.
+**SuperProfessores** nêo é só um curso. É um **movimento**.
 
-> *"A única constante na IA é a mudança. Por isso, ensinamos a dançar com a mudança, não a lutar contra ela."*
+> *"A única constante na IA é a mudança. Por isso, ensinamos a dançar com a mudança, nêo a lutar contra ela."*
 
 **[📖 Leia Mais](superprofessores_modelo_hibrido_2025.md)** | **[⭐ GitHub](https://github.com/inematds/SuperProf)** | **[🤝 Contribua](../CONTRIBUTING.md)**
 
 ---
 
-**Última atualização**: Novembro 2025 | **Versão**: 3.0 (Modelo Híbrido)
+**Última atualizaçêo**: Novembro 2025 | **Versêo**: 3.0 (Modelo Híbrido)
 
 </div>

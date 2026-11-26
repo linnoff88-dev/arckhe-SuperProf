@@ -2,7 +2,7 @@
 **Nome de Referência:** `ATIA Compact Topics System`
 
 ## 📋 Índice
-1. [Visão Geral](#visão-geral)
+1. [Visêo Geral](#visêo-geral)
 2. [Estrutura HTML](#estrutura-html)
 3. [JavaScript](#javascript)
 4. [Estilos CSS/Tailwind](#estilos-csstailwind)
@@ -13,9 +13,9 @@
 
 ---
 
-## 🎯 Visão Geral
+## 🎯 Visêo Geral
 
-O **Sistema de Tópicos Compactos ATIA** é uma implementação customizada baseada no padrão FEP, otimizada para apresentar conteúdo educacional de forma compacta e eficiente.
+O **Sistema de Tópicos Compactos ATIA** é uma implementaçêo customizada baseada no padrêo FEP, otimizada para apresentar conteúdo educacional de forma compacta e eficiente.
 
 **Características:**
 - ✅ Design ultra-compacto com espaçamento mínimo
@@ -25,7 +25,7 @@ O **Sistema de Tópicos Compactos ATIA** é uma implementação customizada base
 - ✅ Visual limpo com Tailwind CSS
 - ✅ Totalmente responsivo
 
-**Diferencial:** Espaçamento ultra-reduzido para máxima densidade de informação sem perder legibilidade.
+**Diferencial:** Espaçamento ultra-reduzido para máxima densidade de informaçêo sem perder legibilidade.
 
 ---
 
@@ -42,7 +42,7 @@ O **Sistema de Tópicos Compactos ATIA** é uma implementação customizada base
     <ul class="topics-list space-y-0.5">
         <!-- Tópico Individual -->
         <li class="topic-item" data-topic="identificador-unico">
-            <!-- Botão Clicável (padding mínimo) -->
+            <!-- Botêo Clicável (padding mínimo) -->
             <button class="topic-button w-full text-left px-4 py-1 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors font-medium text-gray-800">
                 🔍 Título do Tópico
             </button>
@@ -51,7 +51,7 @@ O **Sistema de Tópicos Compactos ATIA** é uma implementação customizada base
             <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 rounded-lg border-l-4 border-fundamentos">
                 <!-- Pergunta 1: O que é -->
                 <p class="text-sm mb-1.5">
-                    <strong class="text-fundamentos">O que é:</strong> Definição clara e concisa do conceito.
+                    <strong class="text-fundamentos">O que é:</strong> Definiçêo clara e concisa do conceito.
                 </p>
 
                 <!-- Pergunta 2: Por que aprender -->
@@ -76,11 +76,11 @@ O **Sistema de Tópicos Compactos ATIA** é uma implementação customizada base
 | `topics-list` | Container da lista | - |
 | `space-y-0.5` | Espaçamento entre botões | 2px |
 | `topic-item` | Container individual do tópico | - |
-| `topic-button` | Botão clicável | - |
-| `py-1` | Padding vertical do botão | 4px |
-| `px-4` | Padding horizontal do botão | 16px |
+| `topic-button` | Botêo clicável | - |
+| `py-1` | Padding vertical do botêo | 4px |
+| `px-4` | Padding horizontal do botêo | 16px |
 | `topic-explanation` | Conteúdo expansível | - |
-| `hidden` | Classe de ocultação | `display: none` |
+| `hidden` | Classe de ocultaçêo | `display: none` |
 | `mb-1.5` | Espaçamento entre parágrafos | 6px |
 | `border-fundamentos` | Borda verde (cor do nível) | `#10b981` |
 
@@ -90,7 +90,7 @@ O **Sistema de Tópicos Compactos ATIA** é uma implementação customizada base
 
 ### Código Principal
 
-**Localização:** `js/app.js` (linhas 107-133)
+**Localizaçêo:** `js/app.js` (linhas 107-133)
 
 ```javascript
 /* ========================================
@@ -105,7 +105,7 @@ document.addEventListener('click', function(e) {
         const explanation = topicItem.querySelector('.topic-explanation');
 
         if (explanation) {
-            // Toggle (mostra/esconde) a explicação
+            // Toggle (mostra/esconde) a explicaçêo
             explanation.classList.toggle('hidden');
 
             // COMPORTAMENTO ACCORDION: Fecha outras explicações abertas no mesmo card
@@ -125,7 +125,7 @@ document.addEventListener('click', function(e) {
 ### Como Funciona
 
 1. **Event Delegation**: Um único listener captura todos os cliques
-2. **Navegação DOM**: `closest()` sobe até encontrar o elemento pai correto
+2. **Navegaçêo DOM**: `closest()` sobe até encontrar o elemento pai correto
 3. **Toggle**: Adiciona/remove classe `hidden`
 4. **Accordion**: Fecha outros tópicos abertos no mesmo capítulo
 5. **Escopo**: Limitado ao `.chapter-card` para evitar interferência entre capítulos
@@ -182,7 +182,7 @@ document.addEventListener('click', function(e) {
 
 ### Passo 1: Adicionar o JavaScript
 
-Copie o código JavaScript do sistema de expansão para `js/app.js` dentro do `DOMContentLoaded`:
+Copie o código JavaScript do sistema de expansêo para `js/app.js` dentro do `DOMContentLoaded`:
 
 ```javascript
 document.addEventListener('DOMContentLoaded', function() {
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </button>
                 <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 rounded-lg border-l-4 border-fundamentos">
                     <p class="text-sm mb-1.5">
-                        <strong class="text-fundamentos">O que é:</strong> Definição
+                        <strong class="text-fundamentos">O que é:</strong> Definiçêo
                     </p>
                     <p class="text-sm mb-1.5">
                         <strong class="text-fundamentos">Por que aprender:</strong> Benefícios
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
 Para outros níveis além de Fundamentos, ajuste as cores:
 
 ```html
-<!-- Nível Aplicação (roxo) -->
+<!-- Nível Aplicaçêo (roxo) -->
 <div class="border-l-4 border-aplicacao">
     <strong class="text-aplicacao">...</strong>
 </div>
@@ -265,11 +265,11 @@ Para outros níveis além de Fundamentos, ajuste as cores:
 
 ### Valores Atuais (Ultra-Compacto)
 
-| Elemento | Classe | Valor | Descrição |
+| Elemento | Classe | Valor | Descriçêo |
 |----------|--------|-------|-----------|
 | Entre botões | `space-y-0.5` | 2px | Espaçamento vertical mínimo |
-| Padding vertical botão | `py-1` | 4px | Altura interna do botão |
-| Padding horizontal botão | `px-4` | 16px | Largura interna do botão |
+| Padding vertical botêo | `py-1` | 4px | Altura interna do botêo |
+| Padding horizontal botêo | `px-4` | 16px | Largura interna do botêo |
 | Entre parágrafos | `mb-1.5` | 6px | Espaço entre perguntas |
 
 ### Como Ajustar o Espaçamento
@@ -324,7 +324,7 @@ Se precisar modificar o espaçamento no futuro:
 ```html
 <div class="chapter-card bg-white rounded-xl shadow-md p-6 mb-6">
     <h2>Capítulo 1: O Tsunami da IA</h2>
-    <p>Descrição do capítulo...</p>
+    <p>Descriçêo do capítulo...</p>
 
     <div class="mb-4">
         <h3 class="font-semibold text-gray-900 mb-3">📚 Tópicos-chave:</h3>
@@ -337,13 +337,13 @@ Se precisar modificar o espaçamento no futuro:
                 </button>
                 <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 rounded-lg border-l-4 border-fundamentos">
                     <p class="text-sm mb-1.5">
-                        <strong class="text-fundamentos">O que é:</strong> Diferente de tecnologias anteriores com crescimento linear, a IA está em expansão exponencial...
+                        <strong class="text-fundamentos">O que é:</strong> Diferente de tecnologias anteriores com crescimento linear, a IA está em expansêo exponencial...
                     </p>
                     <p class="text-sm mb-1.5">
                         <strong class="text-fundamentos">Por que aprender:</strong> Entender a natureza exponencial ajuda a antecipar mudanças futuras...
                     </p>
                     <p class="text-sm">
-                        <strong class="text-fundamentos">Conceitos chave:</strong> Lei de Moore, aceleração de mudanças, curva exponencial.
+                        <strong class="text-fundamentos">Conceitos chave:</strong> Lei de Moore, aceleraçêo de mudanças, curva exponencial.
                     </p>
                 </div>
             </li>
@@ -351,7 +351,7 @@ Se precisar modificar o espaçamento no futuro:
             <!-- Tópico 2 -->
             <li class="topic-item" data-topic="cap1-historia">
                 <button class="topic-button w-full text-left px-4 py-1 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors font-medium text-gray-800">
-                    📜 História e Evolução da IA
+                    📜 História e Evoluçêo da IA
                 </button>
                 <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 rounded-lg border-l-4 border-fundamentos">
                     <p class="text-sm mb-1.5">
@@ -372,7 +372,7 @@ Se precisar modificar o espaçamento no futuro:
 </div>
 ```
 
-### Exemplo 2: Implementação Simples (Mínimo)
+### Exemplo 2: Implementaçêo Simples (Mínimo)
 
 ```html
 <ul class="topics-list space-y-0.5">
@@ -382,7 +382,7 @@ Se precisar modificar o espaçamento no futuro:
         </button>
         <div class="topic-explanation hidden ml-6 mt-2 p-4 bg-blue-50 rounded-lg border-l-4 border-fundamentos">
             <p class="text-sm mb-1.5">
-                <strong class="text-fundamentos">O que é:</strong> Definição
+                <strong class="text-fundamentos">O que é:</strong> Definiçêo
             </p>
             <p class="text-sm mb-1.5">
                 <strong class="text-fundamentos">Por que aprender:</strong> Benefício
@@ -397,7 +397,7 @@ Se precisar modificar o espaçamento no futuro:
 
 ---
 
-## 📊 Implementação Atual no ATIA
+## 📊 Implementaçêo Atual no ATIA
 
 ### Nível Fundamentos (nivel-fundamentos.html)
 
@@ -421,7 +421,7 @@ Se precisar modificar o espaçamento no futuro:
 - Mantenha consistência: sempre minúsculo, use hífens
 
 ### 2. Estrutura de Conteúdo
-- **O que é:** Definição clara e objetiva (1-2 frases)
+- **O que é:** Definiçêo clara e objetiva (1-2 frases)
 - **Por que aprender:** Benefício prático e relevância (1-2 frases)
 - **Conceitos chave:** Lista de termos separados por vírgula
 
@@ -431,7 +431,7 @@ Se precisar modificar o espaçamento no futuro:
 - Exemplos: 📈 📜 🔄 🌍 🧠 📝 🎭 ⚙️
 
 ### 4. Acessibilidade
-- Sempre use `<button>` (não `<div>` clicável)
+- Sempre use `<button>` (nêo `<div>` clicável)
 - Mantenha `text-left` para alinhamento natural
 - Use cores com bom contraste (`text-gray-800`)
 
@@ -439,14 +439,14 @@ Se precisar modificar o espaçamento no futuro:
 
 ## 🔧 Troubleshooting
 
-### Problema: Tópicos não expandem
-**Solução:** Verifique se o JavaScript está carregado e se as classes estão corretas:
+### Problema: Tópicos nêo expandem
+**Soluçêo:** Verifique se o JavaScript está carregado e se as classes estêo corretas:
 ```javascript
 console.log('Topic system loaded');
 ```
 
-### Problema: Accordion não fecha outros tópicos
-**Solução:** Verifique se o elemento pai tem a classe `.chapter-card`:
+### Problema: Accordion nêo fecha outros tópicos
+**Soluçêo:** Verifique se o elemento pai tem a classe `.chapter-card`:
 ```html
 <div class="chapter-card">
     <!-- seus tópicos aqui -->
@@ -454,28 +454,28 @@ console.log('Topic system loaded');
 ```
 
 ### Problema: Espaçamento inconsistente
-**Solução:** Verifique as classes Tailwind:
+**Soluçêo:** Verifique as classes Tailwind:
 - Lista: `space-y-0.5`
-- Botão: `py-1 px-4`
+- Botêo: `py-1 px-4`
 - Parágrafos: `mb-1.5` (exceto último)
 
 ---
 
 ## 📚 Referências
 
-- **Implementação:** `nivel-fundamentos.html`
+- **Implementaçêo:** `nivel-fundamentos.html`
 - **JavaScript:** `js/app.js` (linhas 107-133)
-- **Inspiração:** FEP Sistema de Expansão de Tópicos
+- **Inspiraçêo:** FEP Sistema de Expansêo de Tópicos
 - **Framework CSS:** Tailwind CSS 3.x
-- **Padrão de Projeto:** Event Delegation + Accordion
+- **Padrêo de Projeto:** Event Delegation + Accordion
 
 ---
 
 ## 📄 Histórico de Versões
 
-| Versão | Data | Mudanças |
+| Versêo | Data | Mudanças |
 |--------|------|----------|
-| 1.0 | 2025-01-04 | Implementação inicial baseada no FEP |
+| 1.0 | 2025-01-04 | Implementaçêo inicial baseada no FEP |
 | 1.1 | 2025-01-04 | Ajuste de espaçamento para ultra-compacto |
 | 1.2 | 2025-01-04 | Refinamento final de padding e margins |
 
@@ -489,6 +489,6 @@ console.log('Topic system loaded');
 
 ---
 
-**Última atualização:** 2025-01-04
-**Versão:** 1.2
+**Última atualizaçêo:** 2025-01-04
+**Versêo:** 1.2
 **Autor:** ATIA Team + Claude Code

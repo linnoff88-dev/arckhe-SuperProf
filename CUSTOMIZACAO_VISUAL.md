@@ -1,4 +1,4 @@
-# 🎨 Guia de Customização Visual
+# 🎨 Guia de Customizaçêo Visual
 
 ## SuperProfessores - Como personalizar o layout
 
@@ -10,7 +10,7 @@
 
 Escolhemos este tema porque:
 - ✅ Perfeito para conteúdo educacional
-- ✅ Navegação lateral intuitiva
+- ✅ Navegaçêo lateral intuitiva
 - ✅ Busca integrada
 - ✅ Responsivo
 - ✅ Suporte a diagramas (Mermaid)
@@ -22,7 +22,7 @@ Escolhemos este tema porque:
 ### Cores Principais
 
 ```scss
-Azul Educação (Principal):    #4a90e2
+Azul Educaçêo (Principal):    #4a90e2
 Verde (Trilha B):              #2ecc71
 Roxo (Trilha A):               #9b59b6
 Laranja (Destaques):           #e67e22
@@ -62,7 +62,7 @@ $green-300: #SUA_COR_AQUI;
 Use estas ferramentas:
 
 1. **Canva** (https://canva.com)
-   - Template "Logo" → Busque "Educação"
+   - Template "Logo" → Busque "Educaçêo"
    - Cores: #4a90e2 (azul)
    - Ícones sugeridos: 🎓, 🧠, 🚀, 💡
 
@@ -72,7 +72,7 @@ Use estas ferramentas:
 
 3. **LogoMaker.ai** (https://logomaker.com)
    - Gerador automático com IA
-   - Palavras-chave: "SuperProfessores", "IA", "Educação"
+   - Palavras-chave: "SuperProfessores", "IA", "Educaçêo"
 
 ### Sugestões de Logo
 
@@ -82,7 +82,7 @@ Use estas ferramentas:
   +💻
 = 🤖🎓
 ```
-Representa: IA + Educação
+Representa: IA + Educaçêo
 
 **Conceito 2: Gradiente Moderno**
 ```
@@ -160,7 +160,7 @@ NOVO
 > Destaque importante
 
 {: .warning }
-> Atenção!
+> Atençêo!
 
 {: .note }
 > Nota adicional
@@ -185,7 +185,7 @@ NOVO
 Parágrafo grande
 {: .fs-6 }
 
-Parágrafo normal (padrão)
+Parágrafo normal (padrêo)
 
 Parágrafo pequeno
 {: .fs-3 }
@@ -209,23 +209,23 @@ Texto bold (700)
 ### Estilos de Botões
 
 ```markdown
-[Texto do Botão](link.html){: .btn }
+[Texto do Botêo](link.html){: .btn }
 
-[Botão Primário](link.html){: .btn .btn-primary }
+[Botêo Primário](link.html){: .btn .btn-primary }
 
-[Botão Roxo](link.html){: .btn .btn-purple }
+[Botêo Roxo](link.html){: .btn .btn-purple }
 
-[Botão Verde](link.html){: .btn .btn-green }
+[Botêo Verde](link.html){: .btn .btn-green }
 
-[Botão Outline](link.html){: .btn .btn-outline }
+[Botêo Outline](link.html){: .btn .btn-outline }
 ```
 
 ### Botões com Tamanhos
 
 ```markdown
-[Botão Grande](link.html){: .btn .fs-5 }
+[Botêo Grande](link.html){: .btn .fs-5 }
 
-[Botão Pequeno](link.html){: .btn .fs-3 }
+[Botêo Pequeno](link.html){: .btn .fs-3 }
 ```
 
 ---
@@ -272,7 +272,7 @@ $body-font-family: 'Roboto', sans-serif;
 $heading-font-family: 'Montserrat', sans-serif;
 ```
 
-Não esqueça de importar do Google Fonts:
+Nêo esqueça de importar do Google Fonts:
 
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -415,7 +415,7 @@ Sites educacionais com ótimo design:
 
 ## 📞 Precisa de Ajuda?
 
-- [Documentação Just-the-Docs](https://just-the-docs.com/)
+- [Documentaçêo Just-the-Docs](https://just-the-docs.com/)
 - [GitHub Pages Docs](https://docs.github.com/pages)
 - [Mermaid Docs](https://mermaid.js.org/)
 

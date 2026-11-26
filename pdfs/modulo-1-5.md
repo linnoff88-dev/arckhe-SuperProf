@@ -4,20 +4,20 @@
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
 Síntese do Nível 1. Desenhe, implemente e avalie um projeto piloto de IA em sua prática docente por 30 dias. Aprenda a usar Canvas de Projeto, coletar métricas de impacto e apresentar resultados com storytelling de dados.
 
 ### Objetivos de Aprendizagem:
 
-- Projetar intervenção pedagógica com IA usando Canvas estruturado
+- Projetar intervençêo pedagógica com IA usando Canvas estruturado
 - Implementar piloto de 30 dias com acompanhamento semanal
 - Coletar e analisar 3 métricas de sucesso (qualitativa + quantitativa)
 - Apresentar resultados com storytelling de dados eficaz
 
 ---
 
-## 📋 Canvas de Projeto - Design de Intervenção
+## 📋 Canvas de Projeto - Design de Intervençêo
 
 Canvas de Projeto é uma ferramenta visual de **1 página** para planejar intervenções pedagógicas com IA. Garante que você considere todos os aspectos críticos antes de implementar.
 
@@ -25,10 +25,10 @@ Canvas de Projeto é uma ferramenta visual de **1 página** para planejar interv
 
 #### 1. Problema Pedagógico
 **Pergunta:** Qual dificuldade específica você quer resolver?
-**Exemplo:** "Alunos não revisam conteúdo fora da aula"
+**Exemplo:** "Alunos nêo revisam conteúdo fora da aula"
 
 #### 2. Público-Alvo
-**Pergunta:** Quem são os beneficiários?
+**Pergunta:** Quem sêo os beneficiários?
 **Exemplo:** "Turma A - 35 alunos, 7º ano, matemática"
 
 #### 3. Objetivo Mensurável
@@ -41,15 +41,15 @@ Canvas de Projeto é uma ferramenta visual de **1 página** para planejar interv
 
 #### 5. Estratégia Pedagógica
 **Pergunta:** Como integrará IA na aula?
-**Exemplo:** "Lição de casa interativa com IA"
+**Exemplo:** "Liçêo de casa interativa com IA"
 
-#### 6. Duração
+#### 6. Duraçêo
 **Pergunta:** Quanto tempo de piloto?
 **Exemplo:** "30 dias (6 semanas letivas)"
 
 #### 7. Métricas de Sucesso
 **Pergunta:** Como medirá impacto?
-**Exemplo:** "Tempo de estudo + notas + satisfação"
+**Exemplo:** "Tempo de estudo + notas + satisfaçêo"
 
 #### 8. Riscos e Mitigações
 **Pergunta:** O que pode dar errado?
@@ -62,7 +62,7 @@ Canvas de Projeto é uma ferramenta visual de **1 página** para planejar interv
 ### Exemplo Completo de Canvas:
 
 ```
-Problema: Alunos de redação não revisam textos antes de entregar (80% com erros evitáveis)
+Problema: Alunos de redaçêo nêo revisam textos antes de entregar (80% com erros evitáveis)
 
 Público: Turma B - 28 alunos, 1º ano EM, Língua Portuguesa
 
@@ -70,38 +70,38 @@ Objetivo: Reduzir erros gramaticais de 8 para 3 por texto (média)
 
 Ferramenta: Claude (análise de texto longo) + ChatGPT (feedback instantâneo)
 
-Estratégia: Alunos submetem rascunho → IA dá feedback → revisam → entregam versão final
+Estratégia: Alunos submetem rascunho → IA dá feedback → revisam → entregam versêo final
 
-Duração: 30 dias (4 redações)
+Duraçêo: 30 dias (4 redações)
 
-Métricas: 1) Nº de erros/texto, 2) Tempo de revisão, 3) Satisfação (survey)
+Métricas: 1) Nº de erros/texto, 2) Tempo de revisêo, 3) Satisfaçêo (survey)
 
-Riscos: Alunos copiam correção da IA → Mitigação: Exigir print do feedback + justificativa das mudanças
+Riscos: Alunos copiam correçêo da IA → Mitigaçêo: Exigir print do feedback + justificativa das mudanças
 
 Critério de parada: Se <60% usarem IA ou se qualidade piorar
 ```
 
 ---
 
-## 🚀 Implementação Guiada - Passo a Passo
+## 🚀 Implementaçêo Guiada - Passo a Passo
 
-Implementação requer disciplina e documentação. Este guia divide 30 dias em 4 fases com checklist semanal.
+Implementaçêo requer disciplina e documentaçêo. Este guia divide 30 dias em 4 fases com checklist semanal.
 
-### Semana 1: Preparação (Dias 1-7)
+### Semana 1: Preparaçêo (Dias 1-7)
 
 ☐ Apresentar projeto aos alunos (explicar IA, objetivos, ética)
 
 ☐ Coletar consentimento (LGPD) - pais + alunos
 
-☐ Realizar diagnóstico inicial (baseline): aplicar métrica antes da intervenção
+☐ Realizar diagnóstico inicial (baseline): aplicar métrica antes da intervençêo
 
 ☐ Treinar alunos na ferramenta (tutorial hands-on de 20 min)
 
 ☐ Criar canal de suporte (WhatsApp/Google Classroom para dúvidas)
 
-### Semanas 2-3: Execução Ativa (Dias 8-21)
+### Semanas 2-3: Execuçêo Ativa (Dias 8-21)
 
-☐ Monitorar uso diário (quem está/não está usando?)
+☐ Monitorar uso diário (quem está/nêo está usando?)
 
 ☐ Fazer check-ins semanais (5 min em aula: "Como está sendo?")
 
@@ -113,9 +113,9 @@ Implementação requer disciplina e documentação. Este guia divide 30 dias em 
 
 ### Semana 4: Coleta de Dados (Dias 22-28)
 
-☐ Aplicar métrica final (mesma do baseline para comparação)
+☐ Aplicar métrica final (mesma do baseline para comparaçêo)
 
-☐ Enviar survey de satisfação aos alunos (Google Forms, 5 min)
+☐ Enviar survey de satisfaçêo aos alunos (Google Forms, 5 min)
 
 ☐ Fazer 3-5 entrevistas qualitativas (voluntários, 10 min cada)
 
@@ -123,13 +123,13 @@ Implementação requer disciplina e documentação. Este guia divide 30 dias em 
 
 ☐ Organizar dados em planilha para análise
 
-### Dias 29-30: Análise e Reflexão
+### Dias 29-30: Análise e Reflexêo
 
 ☐ Comparar baseline vs final (houve melhora?)
 
 ☐ Analisar dados qualitativos (temas recorrentes)
 
-☐ Identificar o que funcionou / não funcionou
+☐ Identificar o que funcionou / nêo funcionou
 
 ☐ Escrever relatório de 1 página (modelo fornecido)
 
@@ -137,7 +137,7 @@ Implementação requer disciplina e documentação. Este guia divide 30 dias em 
 
 ### ⚠️ Avisos Importantes:
 
-- **Falhas são aprendizados:** Se projeto não funcionar, documente POR QUÊ (isso é ciência!)
+- **Falhas sêo aprendizados:** Se projeto nêo funcionar, documente POR QUÊ (isso é ciência!)
 - **Ética > Resultados:** Se IA prejudicar alunos, pare imediatamente (critério de parada)
 - **Documente tudo:** Screenshots, áudios de entrevistas, prints de conversas
 
@@ -145,18 +145,18 @@ Implementação requer disciplina e documentação. Este guia divide 30 dias em 
 
 ## 📊 Métricas de Sucesso - Avaliar Impacto
 
-Métricas são essenciais para validar se IA gerou valor real (não apenas "sensação" de sucesso). Use combinação de dados quantitativos + qualitativos.
+Métricas sêo essenciais para validar se IA gerou valor real (nêo apenas "sensaçêo" de sucesso). Use combinaçêo de dados quantitativos + qualitativos.
 
 ### Regra de Ouro: 1 + 1 + 1
 
-Colete pelo menos **1 métrica quantitativa + 1 qualitativa + 1 de percepção**
+Colete pelo menos **1 métrica quantitativa + 1 qualitativa + 1 de percepçêo**
 
 ### Métricas Quantitativas (Números):
 
 **Desempenho Acadêmico:**
 - Notas pré vs pós
-- Taxa de aprovação
-- Redução de erros
+- Taxa de aprovaçêo
+- Reduçêo de erros
 
 **Engajamento:**
 - % de alunos que usaram
@@ -169,11 +169,11 @@ Colete pelo menos **1 métrica quantitativa + 1 qualitativa + 1 de percepção**
 
 **Escalabilidade:**
 - Custo por aluno
-- Viabilidade de expansão
+- Viabilidade de expansêo
 
 ### Métricas Qualitativas (Insights):
 
-**Observação Direta:**
+**Observaçêo Direta:**
 - Anote comportamentos durante uso da IA
 - Exemplo: "Alunos colaboram mais ao discutir outputs da IA"
 
@@ -183,79 +183,79 @@ Colete pelo menos **1 métrica quantitativa + 1 qualitativa + 1 de percepção**
 
 **Entrevistas:**
 - Pergunte: O que aprendeu? O que frustra? O que surpreendeu?
-- Exemplo: "IA me fez pensar mais, não menos" (citação de aluno)
+- Exemplo: "IA me fez pensar mais, nêo menos" (citaçêo de aluno)
 
-### Métricas de Percepção (Satisfação):
+### Métricas de Percepçêo (Satisfaçêo):
 
 Use escala Likert (1-5) em survey anônimo
 
 **Perguntas essenciais:**
 1. "A IA ajudou você a aprender melhor?" (1=nada, 5=muito)
 2. "Você se sentiu confortável usando IA?" (1=desconfortável, 5=muito confortável)
-3. "Recomendaria IA para colegas?" (1=não, 5=sim)
+3. "Recomendaria IA para colegas?" (1=nêo, 5=sim)
 4. "O que você mais gostou / menos gostou?" (aberta)
 
 ### Exemplo de Análise de Métricas:
 
-**Projeto:** ChatGPT para revisão de redações (30 dias, n=28 alunos)
+**Projeto:** ChatGPT para revisêo de redações (30 dias, n=28 alunos)
 
 | Tipo | Resultado |
 |------|-----------|
-| **Quantitativo** | Erros: 8 → 3 (-62%) ✅<br>Uso: 89% aderiram ✅<br>Tempo: +12 min/revisão ⚠️ |
+| **Quantitativo** | Erros: 8 → 3 (-62%) ✅<br>Uso: 89% aderiram ✅<br>Tempo: +12 min/revisêo ⚠️ |
 | **Qualitativo** | Textos mais coesos<br>Alunos mais confiantes<br>Alguns copiam sem entender ⚠️ |
-| **Percepção** | Satisfação: 4.2/5 ✅<br>82% recomendam ✅<br>Preocupação com dependência |
+| **Percepçêo** | Satisfaçêo: 4.2/5 ✅<br>82% recomendam ✅<br>Preocupaçêo com dependência |
 
-**Conclusão:** Projeto bem-sucedido. Próximos passos: Treinar uso crítico (evitar cópia) + expandir para outras turmas
+**Conclusêo:** Projeto bem-sucedido. Próximos passos: Treinar uso crítico (evitar cópia) + expandir para outras turmas
 
 ---
 
-## 🎤 Apresentação de Resultados - Storytelling
+## 🎤 Apresentaçêo de Resultados - Storytelling
 
-Dados sem história são esquecíveis. Storytelling transforma métricas em narrativa convincente.
+Dados sem história sêo esquecíveis. Storytelling transforma métricas em narrativa convincente.
 
-### Estrutura de Apresentação (10 min):
+### Estrutura de Apresentaçêo (10 min):
 
 #### 1. Gancho Emocional (1 min)
 Comece com história real de um aluno
 
 **Exemplo:**
-> "João sempre entregava redações com 10+ erros. Depois do piloto com IA, erros caíram para 2. Ele me disse: 'Professor, agora eu entendo meus erros.'"
+> "Joêo sempre entregava redações com 10+ erros. Depois do piloto com IA, erros caíram para 2. Ele me disse: 'Professor, agora eu entendo meus erros.'"
 
-#### 2. Problema e Solução (2 min)
+#### 2. Problema e Soluçêo (2 min)
 Explique o desafio pedagógico e por que escolheu IA
 
-- Problema: 80% alunos não revisavam (falta de feedback imediato)
-- Solução: ChatGPT para feedback instantâneo
+- Problema: 80% alunos nêo revisavam (falta de feedback imediato)
+- Soluçêo: ChatGPT para feedback instantâneo
 
 #### 3. Método (1 min)
-Resumo do Canvas: Duração, ferramenta, métricas
+Resumo do Canvas: Duraçêo, ferramenta, métricas
 
-#### 4. Resultados (4 min) - O CORAÇÃO
+#### 4. Resultados (4 min) - O CORAÇêO
 Apresente dados com visualizações simples
 
 | ✅ O que funcionou | ⚠️ O que precisa melhorar |
 |-------------------|--------------------------|
-| Erros -62%<br>Satisfação 4.2/5 | Tempo +12 min<br>Alguns copiam |
+| Erros -62%<br>Satisfaçêo 4.2/5 | Tempo +12 min<br>Alguns copiam |
 
 #### 5. Lições Aprendidas (1 min)
 3 insights práticos para colegas
 
-1. Treine alunos a usar IA criticamente (não copiar)
+1. Treine alunos a usar IA criticamente (nêo copiar)
 2. Feedback imediato aumenta engajamento
 3. LGPD requer consentimento prévio
 
 #### 6. Próximos Passos (1 min)
-Decisão: Escalar, ajustar ou parar
+Decisêo: Escalar, ajustar ou parar
 
 **Exemplo:** "Expandir para 3 turmas no próximo semestre"
 
-### Dicas de Visualização:
+### Dicas de Visualizaçêo:
 
 - ✅ Use gráficos simples: Barras, linhas, pizza (evite 3D)
 - ✅ Destaque o delta: Mostre diferença antes/depois com setas
-- ✅ 1 mensagem por slide: Não sobrecarregue
+- ✅ 1 mensagem por slide: Nêo sobrecarregue
 - ✅ Citações literais: Inclua frases de alunos
-- ❌ Evite jargão: Fale "melhora de 62%" não "redução de 5 desvios-padrão"
+- ❌ Evite jargêo: Fale "melhora de 62%" nêo "reduçêo de 5 desvios-padrêo"
 
 ---
 
@@ -263,15 +263,15 @@ Decisão: Escalar, ajustar ou parar
 
 ### 📹 Videoaulas (2h)
 - Como preencher Canvas (30 min)
-- Gestão de projeto piloto (40 min)
+- Gestêo de projeto piloto (40 min)
 - Análise de métricas (30 min)
 - Storytelling com dados (20 min)
 
 ### 📄 Templates (2h)
 - Canvas de Projeto (editável)
 - Planilha de métricas
-- Survey de satisfação
-- Template de apresentação
+- Survey de satisfaçêo
+- Template de apresentaçêo
 
 ### 💬 Projeto Prático (7h)
 - Implementar seu piloto de 30 dias
@@ -279,19 +279,19 @@ Decisão: Escalar, ajustar ou parar
 - Documentar resultados
 - Apresentar para turma
 
-### ✅ Avaliação (1h)
+### ✅ Avaliaçêo (1h)
 - Entrega de Canvas preenchido
 - Relatório de 1 página
-- Apresentação de 10 min (gravada)
+- Apresentaçêo de 10 min (gravada)
 - Peer review de projetos
 
 ---
 
-## 🏆 Entrega Final = Certificação Nível 1
+## 🏆 Entrega Final = Certificaçêo Nível 1
 
 Ao concluir este módulo com sucesso, você receberá:
 
-**Certificado SuperProfessores - Nível 1: Fundamentos de IA na Educação (60h)**
+**Certificado SuperProfessores - Nível 1: Fundamentos de IA na Educaçêo (60h)**
 
 **Comprovando domínio de:**
 - Contexto e história da IA educacional

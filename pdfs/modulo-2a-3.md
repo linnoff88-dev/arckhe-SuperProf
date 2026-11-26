@@ -1,32 +1,32 @@
-# Módulo 2A.3: Personalização em Escala
+# Módulo 2A.3: Personalizaçêo em Escala
 
 **Nível 2A: Pedagógico | Carga Horária: 12 horas**
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
-Aprenda a criar experiências de aprendizagem personalizadas para cada aluno usando IA. Domine trilhas adaptativas, recomendação de conteúdo e diferenciação automatizada.
+Aprenda a criar experiências de aprendizagem personalizadas para cada aluno usando IA. Domine trilhas adaptativas, recomendaçêo de conteúdo e diferenciaçêo automatizada.
 
 ### Objetivos:
 - Criar trilhas de aprendizagem adaptativas com IA
-- Implementar sistema de recomendação de recursos
+- Implementar sistema de recomendaçêo de recursos
 - Diferenciar conteúdo por nível/estilo automaticamente
-- Escalar personalização para 100+ alunos
+- Escalar personalizaçêo para 100+ alunos
 
 ---
 
-## 🎯 3 Dimensões da Personalização
+## 🎯 3 Dimensões da Personalizaçêo
 
-### 1. Personalização de Ritmo
+### 1. Personalizaçêo de Ritmo
 **O que:** Cada aluno avança na sua velocidade
 **Como:** IA detecta domínio e libera próximo módulo
 
-### 2. Personalização de Conteúdo
+### 2. Personalizaçêo de Conteúdo
 **O que:** Materiais adaptados ao nível
 **Como:** IA gera versões fácil/média/difícil
 
-### 3. Personalização de Estilo
+### 3. Personalizaçêo de Estilo
 **O que:** Formato preferido (vídeo/texto/áudio)
 **Como:** IA recomenda baseado em histórico
 
@@ -51,26 +51,26 @@ Para cada módulo:
 # Etapa 2: Criar versões diferenciadas
 Para cada módulo, gere 3 versões:
 1. Simplificada (iniciante absoluto)
-2. Padrão (conhecimento básico)
+2. Padrêo (conhecimento básico)
 3. Avançada (já domina conceitos base)
 
-# Etapa 3: Definir regras de adaptação
+# Etapa 3: Definir regras de adaptaçêo
 Se aluno errar quiz do módulo X > 2x:
-→ Redirecionar para versão simplificada
+→ Redirecionar para versêo simplificada
 → Oferecer material de reforço
 → Sugerir tutoria com professor
 ```
 
 ---
 
-## 📦 Sistema de Recomendação
+## 📦 Sistema de Recomendaçêo
 
 ### Como Funciona:
-1. **Input:** Histórico de interação do aluno (cliques, tempo, quiz)
+1. **Input:** Histórico de interaçêo do aluno (cliques, tempo, quiz)
 2. **Processamento:** IA identifica lacunas e interesses
 3. **Output:** Lista de 5 recursos recomendados
 
-### Implementação Simples:
+### Implementaçêo Simples:
 
 **Prompt Gemini:**
 ```
@@ -82,7 +82,7 @@ Baseado neste perfil de aluno:
 - Estilo preferido: [Vídeo 60%, Texto 40%]
 
 Recomende 5 próximos recursos:
-1. [Título] - [Tipo] - [Duração] - [Por que?]
+1. [Título] - [Tipo] - [Duraçêo] - [Por que?]
 2. ...
 
 Critérios:
@@ -93,7 +93,7 @@ Critérios:
 
 ---
 
-## 🎨 Diferenciação Automática
+## 🎨 Diferenciaçêo Automática
 
 ### Ferramentas:
 - **Claude:** Simplificar textos acadêmicos
@@ -113,25 +113,25 @@ Critérios:
 > "Fotossíntese é o processo onde plantas convertem energia luminosa em glicose. Requer CO2 + H2O + Luz → C6H12O6 + O2."
 
 **Avançado (15+ anos):**
-> "Fotossíntese oxigênica ocorre em dois estágios: reações luminosas (fotossistemas I e II) e ciclo de Calvin (fixação de carbono via RuBisCO)."
+> "Fotossíntese oxigênica ocorre em dois estágios: reações luminosas (fotossistemas I e II) e ciclo de Calvin (fixaçêo de carbono via RuBisCO)."
 
 ---
 
 ## 📦 Recursos do Módulo
 
 ### 📹 Videoaulas (3h)
-- Personalização: O que é possível? (45 min)
+- Personalizaçêo: O que é possível? (45 min)
 - Trilhas adaptativas (50 min)
-- Sistemas de recomendação (45 min)
-- Diferenciação automática (40 min)
+- Sistemas de recomendaçêo (45 min)
+- Diferenciaçêo automática (40 min)
 
 ### 💬 Práticas (7h)
 - Criar trilha adaptativa (3h)
-- Implementar recomendação (2h)
+- Implementar recomendaçêo (2h)
 - Gerar 3 versões de conteúdo (2h)
 
-### ✅ Avaliação (2h)
-- Projeto: Sistema de personalização funcional
+### ✅ Avaliaçêo (2h)
+- Projeto: Sistema de personalizaçêo funcional
 
 ---
 

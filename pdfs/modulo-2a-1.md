@@ -4,12 +4,12 @@
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
-Aprenda a criar experiências de aprendizagem estruturadas usando IA como copiloto de design. Domine modelos como ADDIE, Bloom 2.0, e Framework de Merrill aplicados com ferramentas de IA para acelerar criação de cursos em 70%.
+Aprenda a criar experiências de aprendizagem estruturadas usando IA como copiloto de design. Domine modelos como ADDIE, Bloom 2.0, e Framework de Merrill aplicados com ferramentas de IA para acelerar criaçêo de cursos em 70%.
 
 ### Objetivos:
-- Aplicar ADDIE com IA em cada fase (Análise, Design, Desenvolvimento, Implementação, Avaliação)
+- Aplicar ADDIE com IA em cada fase (Análise, Design, Desenvolvimento, Implementaçêo, Avaliaçêo)
 - Criar objetivos de aprendizagem alinhados à Taxonomia de Bloom revisitada
 - Desenvolver sequências didáticas com Princípios de Merrill
 - Gerar storyboards de cursos com IA em 2h (vs 2 dias manual)
@@ -75,10 +75,10 @@ Exemplo: "Avaliar a qualidade de prompts usando Framework CRAFT em cenários rea
 ### 5 Princípios (First Principles of Instruction):
 
 1. **Centrado em Problema:** Aprendizagem focada em resolver problemas reais
-2. **Ativação:** Conectar com conhecimento prévio
-3. **Demonstração:** Mostrar o conhecimento
-4. **Aplicação:** Praticar com feedback
-5. **Integração:** Transferir para contexto real
+2. **Ativaçêo:** Conectar com conhecimento prévio
+3. **Demonstraçêo:** Mostrar o conhecimento
+4. **Aplicaçêo:** Praticar com feedback
+5. **Integraçêo:** Transferir para contexto real
 
 ### IA como Geradora de Sequências:
 
@@ -87,10 +87,10 @@ Exemplo: "Avaliar a qualidade de prompts usando Framework CRAFT em cenários rea
 Crie sequência didática de 50 min sobre [TEMA] usando Princípios de Merrill:
 
 1. Problema (5 min): Apresente caso real motivador
-2. Ativação (5 min): Perguntas para ativar conhecimento prévio
-3. Demonstração (15 min): Explique conceito com exemplo
-4. Aplicação (20 min): Atividade prática com scaffolding
-5. Integração (5 min): Reflexão sobre aplicação futura
+2. Ativaçêo (5 min): Perguntas para ativar conhecimento prévio
+3. Demonstraçêo (15 min): Explique conceito com exemplo
+4. Aplicaçêo (20 min): Atividade prática com scaffolding
+5. Integraçêo (5 min): Reflexêo sobre aplicaçêo futura
 
 Público: [DESCREVER]
 Nível: [INICIANTE/INTERMEDIÁRIO/AVANÇADO]
@@ -110,7 +110,7 @@ Nível: [INICIANTE/INTERMEDIÁRIO/AVANÇADO]
 - Projeto: Criar curso de 3h com IA (5h)
 - Peer review de designs (2h)
 
-### ✅ Avaliação (2h)
+### ✅ Avaliaçêo (2h)
 - Entregar storyboard completo
 - Quiz de frameworks (30 questões)
 

@@ -4,55 +4,55 @@
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
-LLMs não são infalíveis. Desenvolva ceticismo saudável para usar IA com responsabilidade. Aprenda a detectar alucinações (invenções), identificar vieses estruturais, avaliar qualidade com Framework CRAFT e usar detectores de IA criticamente.
+LLMs nêo sêo infalíveis. Desenvolva ceticismo saudável para usar IA com responsabilidade. Aprenda a detectar alucinações (invenções), identificar vieses estruturais, avaliar qualidade com Framework CRAFT e usar detectores de IA criticamente.
 
 ---
 
 ## 🎯 Tópico 1: Alucinações - O Risco #1
 
-### O que é Alucinação?
+### O que é Alucinaçêo?
 
-**Alucinação = Quando LLM inventa dados, referências ou fatos com confiança absoluta**
+**Alucinaçêo = Quando LLM inventa dados, referências ou fatos com confiança absoluta**
 
-É o risco #1 de IA na educação (alunos podem aprender informações falsas).
+É o risco #1 de IA na educaçêo (alunos podem aprender informações falsas).
 
-### 3 Tipos de Alucinação:
+### 3 Tipos de Alucinaçêo:
 
-#### 1. Alucinação Factual
-Invenção de dados ou eventos
+#### 1. Alucinaçêo Factual
+Invençêo de dados ou eventos
 
 **Exemplo:**
 ```
 Pergunta: "Qual livro Machado de Assis publicou em 1920?"
-Alucinação: "Em 1920 publicou 'A Última Crônica'" ❌
+Alucinaçêo: "Em 1920 publicou 'A Última Crônica'" ❌
 Realidade: Machado morreu em 1908 ✅
 ```
 
-#### 2. Alucinação de Referência
-Citação de fontes inexistentes
+#### 2. Alucinaçêo de Referência
+Citaçêo de fontes inexistentes
 
 **Exemplo:**
 ```
 Output: "Segundo estudo de Silva et al. (2024) na revista Nature..."
-Problema: Artigo não existe ❌
+Problema: Artigo nêo existe ❌
 ```
 
-#### 3. Alucinação de Conceito
-Confusão entre conceitos similares
+#### 3. Alucinaçêo de Conceito
+Confusêo entre conceitos similares
 
 **Exemplo:**
 ```
-Pergunta: "Explique fotofosforilação"
-Alucinação: [Mistura fotossíntese + fosforilação incorretamente]
+Pergunta: "Explique fotofosforilaçêo"
+Alucinaçêo: [Mistura fotossíntese + fosforilaçêo incorretamente]
 ```
 
 ### 5 Técnicas para Detectar Alucinações:
 
-1. **Validação cruzada:** Pergunte para 2-3 LLMs diferentes. Respostas divergentes = sinal de alerta
-2. **Peça fontes:** Sempre solicite referências. Se LLM hesita ou inventa, é alucinação
-3. **Verifique datas:** Cheque se eventos/publicações são cronologicamente possíveis
+1. **Validaçêo cruzada:** Pergunte para 2-3 LLMs diferentes. Respostas divergentes = sinal de alerta
+2. **Peça fontes:** Sempre solicite referências. Se LLM hesita ou inventa, é alucinaçêo
+3. **Verifique datas:** Cheque se eventos/publicações sêo cronologicamente possíveis
 4. **Busca manual:** Para informações críticas, confirme com Google Scholar/Wikipedia
 5. **Ceticismo com especificidade:** Quanto mais específico (nomes, datas, números), maior risco
 
@@ -64,21 +64,21 @@ Alucinação: [Mistura fotossíntese + fosforilação incorretamente]
 
 **Viés = Tendência sistemática do LLM favorecendo certos grupos/perspectivas**
 
-Não é "erro", mas reflexo dos dados de treinamento (majoritariamente inglês, ocidental, masculino).
+Nêo é "erro", mas reflexo dos dados de treinamento (majoritariamente inglês, ocidental, masculino).
 
 ### 5 Tipos de Viés em LLMs:
 
 #### 1️⃣ Viés Cultural
-**O que é:** Favorece cultura anglo-saxã
+**O que é:** Favorece cultura anglo-saxê
 **Exemplo:** "successful CEO" → descreve homem branco
 
 #### 2️⃣ Viés Temporal
-**O que é:** Dados até 2023, não sabe eventos recentes
-**Exemplo:** Não sabe eleições 2024, descobertas científicas recentes
+**O que é:** Dados até 2023, nêo sabe eventos recentes
+**Exemplo:** Nêo sabe eleições 2024, descobertas científicas recentes
 
 #### 3️⃣ Viés Linguístico
 **O que é:** Melhor em inglês, português tem mais erros
-**Exemplo:** Alucinações são mais comuns em português
+**Exemplo:** Alucinações sêo mais comuns em português
 
 #### 4️⃣ Viés de Gênero
 **O que é:** Assume profissões por gênero
@@ -92,8 +92,8 @@ Não é "erro", mas reflexo dos dados de treinamento (majoritariamente inglês, 
 
 - ✅ **Prompt explícito:** "Considere perspectivas de diferentes culturas/gêneros"
 - ✅ **Diversifique fontes:** Use múltiplos LLMs + busca humana
-- ✅ **Educação crítica:** Ensine alunos a identificar vieses
-- ✅ **Validação local:** Adapte outputs para contexto brasileiro
+- ✅ **Educaçêo crítica:** Ensine alunos a identificar vieses
+- ✅ **Validaçêo local:** Adapte outputs para contexto brasileiro
 
 ---
 
@@ -115,8 +115,8 @@ Framework de 5 critérios para avaliar confiabilidade de outputs de IA antes de 
 - ✅ Bom: Foco no que foi pedido
 - ❌ Ruim: Divaga em tópicos tangenciais
 
-#### A - Accuracy (Precisão)
-**Pergunta:** Informações são factuais e verificáveis?
+#### A - Accuracy (Precisêo)
+**Pergunta:** Informações sêo factuais e verificáveis?
 - ✅ Bom: Fatos corretos + fontes
 - ❌ Ruim: Alucinações ou erros conceituais
 
@@ -130,12 +130,12 @@ Framework de 5 critérios para avaliar confiabilidade de outputs de IA antes de 
 - ✅ Bom: Adequado ao nível/idade
 - ❌ Ruim: Muito técnico ou infantilizado
 
-### Sistema de Pontuação:
+### Sistema de Pontuaçêo:
 
 - Atribua 0-2 pontos para cada critério
-- Pontuação total: 0-10 pontos
+- Pontuaçêo total: 0-10 pontos
 - **8-10:** Pronto para usar ✅
-- **5-7:** Requer edição 🟡
+- **5-7:** Requer ediçêo 🟡
 - **0-4:** Refazer ou descartar ❌
 
 ---
@@ -144,7 +144,7 @@ Framework de 5 critérios para avaliar confiabilidade de outputs de IA antes de 
 
 ### Ferramentas Principais (Nov 2025):
 
-| Ferramenta | Custo | Precisão |
+| Ferramenta | Custo | Precisêo |
 |------------|-------|----------|
 | GPTZero | Gratuito | ~70% |
 | Turnitin AI Detector | Pago | ~75% |
@@ -153,21 +153,21 @@ Framework de 5 critérios para avaliar confiabilidade de outputs de IA antes de 
 
 ### Problemas dos Detectores:
 
-❌ **Falsos positivos:** 25-40% de textos humanos são marcados como IA
+❌ **Falsos positivos:** 25-40% de textos humanos sêo marcados como IA
 
-❌ **Viés contra não-nativos:** Alunos ESL (inglês como 2ª língua) são mais detectados
+❌ **Viés contra nêo-nativos:** Alunos ESL (inglês como 2ª língua) sêo mais detectados
 
 ❌ **Fácil de enganar:** Parafrasear ou traduzir texto burla detector
 
-❌ **Piora com edição:** Texto gerado por IA + editado por humano = indetectável
+❌ **Piora com ediçêo:** Texto gerado por IA + editado por humano = indetectável
 
-### Recomendação Pedagógica:
+### Recomendaçêo Pedagógica:
 
-**❌ NÃO use detectores como prova punitiva**
+**❌ NêO use detectores como prova punitiva**
 
 **✅ USO CORRETO:**
-- Detector acusa → Conversar com aluno (não punir automaticamente)
-- Foco em processo: Avaliar rascunhos, diário de bordo, apresentação oral
+- Detector acusa → Conversar com aluno (nêo punir automaticamente)
+- Foco em processo: Avaliar rascunhos, diário de bordo, apresentaçêo oral
 - Redesenhar avaliações: Menos textos escritos, mais atividades presenciais
 
 **❌ EVITAR:**
@@ -195,7 +195,7 @@ Framework de 5 critérios para avaliar confiabilidade de outputs de IA antes de 
 - Aplicar CRAFT em 10 textos (90 min)
 - Testar 4 detectores (45 min)
 
-### ✅ Avaliação (1h)
+### ✅ Avaliaçêo (1h)
 - Quiz de pensamento crítico (30 questões)
 - Análise de caso: Texto com alucinações
 - Proposta de política de IA na escola

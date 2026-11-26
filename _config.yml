@@ -4,13 +4,13 @@ description: Transformando educadores em arquitetos do futuro da aprendizagem
 baseurl: "/SuperProf"
 url: "https://inematds.github.io"
 
-# Theme - Just-the-Docs (recomendado para documentação educacional)
+# Theme - Just-the-Docs (recomendado para documentaçêo educacional)
 remote_theme: just-the-docs/just-the-docs
 
 # Logo
 logo: "/assets/images/logo.png"
 
-# Cor principal (azul educação)
+# Cor principal (azul educaçêo)
 color_scheme: superprofessores
 
 # Busca ativada
@@ -24,11 +24,11 @@ search:
   rel_url: true
   button: true
 
-# Navegação
+# Navegaçêo
 nav_enabled: true
 nav_sort: case_insensitive
 
-# Botões de ação no topo
+# Botões de açêo no topo
 aux_links:
   "⭐ GitHub":
     - "https://github.com/inematds/SuperProf"

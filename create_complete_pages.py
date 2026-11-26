@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Gera as 3 páginas HTML completas: nivel-2a.html, nivel-2b.html, nivel-3a.html
-Seguindo EXATAMENTE o padrão do nivel-1.html (1409 linhas, estrutura completa)
+Seguindo EXATAMENTE o padrêo do nivel-1.html (1409 linhas, estrutura completa)
 """
 
 import re
@@ -24,7 +24,7 @@ mods_3a = [read_md(f'modulo-3a-{i}.md') for i in range(1, 4)]
 # Módulos 2B
 mods_2b = [read_md(f'modulo-2b-{i}.md') for i in range(1, 5)]
 
-# Função para criar a página
+# Funçêo para criar a página
 def create_page(nivel_id, nivel_nome, cor, cor_gradiente, breadcrumb_trilha, trilha_link, modulos_md, carga_horas, descricao):
     html = template
     
@@ -88,7 +88,7 @@ def create_page(nivel_id, nivel_nome, cor, cor_gradiente, breadcrumb_trilha, tri
     
     # Gerar conteúdo dos módulos (substituir os 5 módulos do nível 1)
     # Aqui você adicionaria a lógica completa para cada módulo
-    # Por questão de espaço, mantenho a estrutura básica
+    # Por questêo de espaço, mantenho a estrutura básica
     
     return html
 
@@ -97,7 +97,7 @@ print("Criando nivel-2a.html...")
 nivel_2a = create_page(
     '2A', 'Pedagógico', '9b59b6', 'purple-600', 
     'Trilha A', 'trilha-a.html', mods_2a, '60',
-    'Aprofundamento pedagógico em design instrucional, avaliação formativa, personalização e gamificação com IA'
+    'Aprofundamento pedagógico em design instrucional, avaliaçêo formativa, personalizaçêo e gamificaçêo com IA'
 )
 with open('niveis/nivel-2a.html', 'w', encoding='utf-8') as f:
     f.write(nivel_2a)
@@ -106,7 +106,7 @@ print("Criando nivel-3a.html...")
 nivel_3a = create_page(
     '3A', 'Especialista', '8e44ad', 'purple-800', 
     'Trilha A', 'trilha-a.html', mods_3a, '60',
-    'Nível especialista: redesenho curricular, liderança em transformação digital e projeto final de certificação'
+    'Nível especialista: redesenho curricular, liderança em transformaçêo digital e projeto final de certificaçêo'
 )
 with open('niveis/nivel-3a.html', 'w', encoding='utf-8') as f:
     f.write(nivel_3a)
@@ -115,7 +115,7 @@ print("Criando nivel-2b.html...")
 nivel_2b = create_page(
     '2B', 'Técnico', '10B981', 'green-600', 
     'Trilha B', 'trilha-b.html', mods_2b, '60',
-    'Aprofundamento técnico em anatomia de LLMs, RAG, fine-tuning e criação de agentes educacionais'
+    'Aprofundamento técnico em anatomia de LLMs, RAG, fine-tuning e criaçêo de agentes educacionais'
 )
 with open('niveis/nivel-2b.html', 'w', encoding='utf-8') as f:
     f.write(nivel_2b)

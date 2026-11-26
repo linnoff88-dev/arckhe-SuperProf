@@ -6,7 +6,7 @@ echo ""
 
 # Verificar se pandoc está instalado
 if ! command -v pandoc &> /dev/null; then
-    echo "❌ Pandoc não está instalado!"
+    echo "❌ Pandoc nêo está instalado!"
     echo ""
     echo "📥 Para instalar:"
     echo "  Ubuntu/Debian: sudo apt install pandoc texlive-xetex"
@@ -40,12 +40,12 @@ for i in {1..5}; do
             echo "   ❌ Erro ao converter $input"
         fi
     else
-        echo "⚠️  Arquivo não encontrado: $input"
+        echo "⚠️  Arquivo nêo encontrado: $input"
     fi
     echo ""
 done
 
-echo "🎉 Conversão concluída!"
+echo "🎉 Conversêo concluída!"
 echo ""
 echo "📦 PDFs criados:"
 ls -lh modulo-1-*.pdf 2>/dev/null || echo "   Nenhum PDF foi criado (verifique erros acima)"

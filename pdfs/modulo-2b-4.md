@@ -4,32 +4,32 @@
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
-Projeto final integrador da Trilha B (Técnico) onde você cria uma aplicação funcional de IA para educação. Demonstre domínio de LLMs, RAG, agentes e deploy em produção, gerando portfólio técnico e certificação.
+Projeto final integrador da Trilha B (Técnico) onde você cria uma aplicaçêo funcional de IA para educaçêo. Demonstre domínio de LLMs, RAG, agentes e deploy em produçêo, gerando portfólio técnico e certificaçêo.
 
 ### Objetivos:
 - Sintetizar conhecimentos de módulos 1, 2B.1, 2B.2 e 2B.3
-- Implementar aplicação completa (backend + frontend + deploy)
+- Implementar aplicaçêo completa (backend + frontend + deploy)
 - Documentar código e arquitetura tecnicamente
 - Testar com usuários reais e medir impacto
-- Obter certificação "Educador de IA - Nível Técnico"
+- Obter certificaçêo "Educador de IA - Nível Técnico"
 
 ---
 
 ## 🎯 Opções de Projeto
 
-### Opção A: Sistema RAG Avançado
+### Opçêo A: Sistema RAG Avançado
 
-**Descrição:** Base de conhecimento institucional com busca semântica, chat e analytics
+**Descriçêo:** Base de conhecimento institucional com busca semântica, chat e analytics
 
 **Requisitos Técnicos:**
 - ✅ RAG com ≥100 documentos (PDFs, slides, vídeos transcritos)
 - ✅ Hybrid search (semantic + keyword)
 - ✅ Reranking de resultados
-- ✅ Citação de fontes com página/timestamp
+- ✅ Citaçêo de fontes com página/timestamp
 - ✅ Interface chat (Streamlit/Gradio)
-- ✅ Analytics: queries mais comuns, satisfação
+- ✅ Analytics: queries mais comuns, satisfaçêo
 
 **Stack Sugerido:**
 - Vector DB: ChromaDB ou Pinecone
@@ -38,16 +38,16 @@ Projeto final integrador da Trilha B (Técnico) onde você cria uma aplicação 
 - Frontend: Streamlit
 - Deploy: Streamlit Cloud ou Railway
 
-**Avaliação:**
+**Avaliaçêo:**
 - Qualidade do retrieval (Precision@5 >80%)
 - Velocidade (resposta <3s)
 - UX (survey de usuários >4/5)
 
 ---
 
-### Opção B: Agente Educacional Autônomo
+### Opçêo B: Agente Educacional Autônomo
 
-**Descrição:** Tutor/assistente que executa tarefas complexas com mínima supervisão
+**Descriçêo:** Tutor/assistente que executa tarefas complexas com mínima supervisêo
 
 **Requisitos Técnicos:**
 - ✅ Agente ReAct ou Plan-and-Execute
@@ -55,7 +55,7 @@ Projeto final integrador da Trilha B (Técnico) onde você cria uma aplicação 
 - ✅ Memória persistente (entre sessões)
 - ✅ Logging de raciocínio (observabilidade)
 - ✅ Tratamento de erros (loops, timeouts)
-- ✅ Avaliação de performance (A/B test)
+- ✅ Avaliaçêo de performance (A/B test)
 
 **Exemplos:**
 - Tutor socrático de matemática
@@ -70,30 +70,30 @@ Projeto final integrador da Trilha B (Técnico) onde você cria uma aplicação 
 - Frontend: Gradio ou custom React
 - Deploy: Railway ou AWS Lambda
 
-**Avaliação:**
+**Avaliaçêo:**
 - Taxa de sucesso em tarefas (>85%)
 - Eficiência (passos até completar)
 - Custo por tarefa (<$0.50)
 
 ---
 
-### Opção C: Fine-Tuning para Caso de Uso Específico
+### Opçêo C: Fine-Tuning para Caso de Uso Específico
 
-**Descrição:** Modelo especializado em tarefa educacional nichada
+**Descriçêo:** Modelo especializado em tarefa educacional nichada
 
 **Requisitos Técnicos:**
 - ✅ Dataset de treino (≥100 exemplos de qualidade)
 - ✅ Fine-tuning de modelo open-source (LLaMA, Mistral) ou GPT-3.5
-- ✅ Avaliação quantitativa (benchmark)
-- ✅ Comparação com modelo base
+- ✅ Avaliaçêo quantitativa (benchmark)
+- ✅ Comparaçêo com modelo base
 - ✅ Deployment do modelo (API)
-- ✅ Documentação de reprodutibilidade
+- ✅ Documentaçêo de reprodutibilidade
 
 **Exemplos:**
 - Corretor de redações no estilo institucional
 - Gerador de questões ENEM-like
-- Tradutor de jargão científico para linguagem acessível
-- Classificador de dúvidas (urgente/não-urgente, tópico)
+- Tradutor de jargêo científico para linguagem acessível
+- Classificador de dúvidas (urgente/nêo-urgente, tópico)
 
 **Stack Sugerido:**
 - Modelo: LLaMA 3 8B (via HuggingFace)
@@ -102,27 +102,27 @@ Projeto final integrador da Trilha B (Técnico) onde você cria uma aplicação 
 - Deploy: Hugging Face Spaces ou Modal
 - Monitoramento: Weights & Biases
 
-**Avaliação:**
+**Avaliaçêo:**
 - Performance vs baseline (F1 score, BLEU, ROUGE)
 - Análise de erros (qualitativa)
 - Tempo de inferência (<2s)
 
 ---
 
-### Opção D: Multi-Agent System (Avançado)
+### Opçêo D: Multi-Agent System (Avançado)
 
-**Descrição:** Sistema com ≥3 agentes especializados trabalhando juntos
+**Descriçêo:** Sistema com ≥3 agentes especializados trabalhando juntos
 
 **Requisitos Técnicos:**
 - ✅ 3-5 agentes com papéis distintos
-- ✅ Orquestração e comunicação entre agentes
+- ✅ Orquestraçêo e comunicaçêo entre agentes
 - ✅ Estado compartilhado (shared memory)
 - ✅ Handling de conflitos e consenso
 - ✅ Observabilidade (dashboards de atividade)
-- ✅ Testes de integração
+- ✅ Testes de integraçêo
 
 **Exemplo:**
-- **Sistema de Criação de Curso:**
+- **Sistema de Criaçêo de Curso:**
   - Agente Pesquisador (busca conteúdo)
   - Agente Designer (estrutura)
   - Agente Criador (gera materiais)
@@ -130,12 +130,12 @@ Projeto final integrador da Trilha B (Técnico) onde você cria uma aplicação 
 
 **Stack Sugerido:**
 - Framework: CrewAI ou AutoGen
-- LLM: Mix (GPT-4 para coordenação, GPT-3.5 para subtarefas)
-- Orquestração: Celery ou Temporal
+- LLM: Mix (GPT-4 para coordenaçêo, GPT-3.5 para subtarefas)
+- Orquestraçêo: Celery ou Temporal
 - Frontend: Custom React + WebSockets
 - Deploy: Kubernetes ou Railway
 
-**Avaliação:**
+**Avaliaçêo:**
 - Qualidade do output final (rubrica)
 - Eficiência vs agente único
 - Escalabilidade (10x tarefas em paralelo)
@@ -148,15 +148,15 @@ Projeto final integrador da Trilha B (Técnico) onde você cria uma aplicação 
 
 **Documento de Proposta (3-5 páginas):**
 
-**1. Problema e Motivação**
+**1. Problema e Motivaçêo**
 - Qual dor educacional você está resolvendo?
-- Por que uma solução técnica de IA é apropriada?
+- Por que uma soluçêo técnica de IA é apropriada?
 - Quantifique: quantas pessoas afetadas, quanto tempo economizado, etc
 
-**2. Solução Técnica**
+**2. Soluçêo Técnica**
 - Arquitetura de alto nível (diagrama)
 - Tecnologias escolhidas (justifique cada uma)
-- Trade-offs considerados (por que X e não Y?)
+- Trade-offs considerados (por que X e nêo Y?)
 
 **3. Roadmap Técnico**
 ```
@@ -170,7 +170,7 @@ Semana 6: User testing + Iteration
 
 **4. Critérios de Sucesso**
 - Métricas técnicas (latência, accuracy, F1)
-- Métricas de uso (usuários, queries, satisfação)
+- Métricas de uso (usuários, queries, satisfaçêo)
 - Metas numéricas para cada métrica
 
 **Template:**
@@ -180,7 +180,7 @@ Semana 6: User testing + Iteration
 ## 1. Problema
 [Descrever em 200 palavras]
 
-## 2. Solução
+## 2. Soluçêo
 [Descrever arquitetura em 300 palavras + diagrama]
 
 ## 3. Tecnologias
@@ -199,7 +199,7 @@ Semana 6: User testing + Iteration
 
 ---
 
-### Fase 2: Implementação (Semana 2-5)
+### Fase 2: Implementaçêo (Semana 2-5)
 
 **Boas Práticas de Código:**
 
@@ -212,7 +212,7 @@ meu-projeto/
 ├── src/                   # Código-fonte
 │   ├── __init__.py
 │   ├── data_pipeline.py   # ETL
-│   ├── embeddings.py      # Geração de embeddings
+│   ├── embeddings.py      # Geraçêo de embeddings
 │   ├── retrieval.py       # Busca
 │   ├── llm.py             # Interface com LLM
 │   └── agent.py           # Agente (se aplicável)
@@ -222,20 +222,20 @@ meu-projeto/
 ├── frontend/              # UI
 │   ├── app.py             # Streamlit/Gradio
 │   └── static/
-├── notebooks/             # Exploração
+├── notebooks/             # Exploraçêo
 │   └── exploracao.ipynb
 ├── configs/               # Configurações
 │   └── config.yaml
 ├── requirements.txt       # Dependências
 ├── Dockerfile             # Container
-├── README.md              # Documentação
+├── README.md              # Documentaçêo
 └── .env.example           # Exemplo de variáveis de ambiente
 ```
 
 **B) Versionamento (Git):**
 ```bash
 # Branches
-main          # Código em produção
+main          # Código em produçêo
 develop       # Desenvolvimento
 feature/rag   # Features específicas
 
@@ -245,7 +245,7 @@ git commit -m "fix: Handle timeout in LLM calls"
 git commit -m "docs: Update README with deployment steps"
 ```
 
-**C) Configuração e Secrets:**
+**C) Configuraçêo e Secrets:**
 ```yaml
 # configs/config.yaml
 llm:
@@ -324,7 +324,7 @@ def test_busca_vazia():
         buscar_documentos(query)
 ```
 
-**B) Testes de Integração:**
+**B) Testes de Integraçêo:**
 ```python
 def test_fluxo_completo_rag():
     # 1. Query
@@ -370,7 +370,7 @@ def test_latencia_end_to_end():
 
 ### Fase 4: Deploy (Semana 5)
 
-**Opção 1: Streamlit Cloud (Mais Fácil)**
+**Opçêo 1: Streamlit Cloud (Mais Fácil)**
 
 ```python
 # frontend/app.py
@@ -393,7 +393,7 @@ streamlit run frontend/app.py
 # Push → Auto-deploy
 ```
 
-**Opção 2: Docker + Railway**
+**Opçêo 2: Docker + Railway**
 
 ```dockerfile
 # Dockerfile
@@ -415,7 +415,7 @@ railway init
 railway up
 ```
 
-**Opção 3: API REST + Frontend Separado**
+**Opçêo 3: API REST + Frontend Separado**
 
 ```python
 # backend/api.py
@@ -458,7 +458,7 @@ async function pergunta(question) {
 - Perfil: Professores ou alunos (público-alvo)
 - Compromisso: Usar por 1 semana + dar feedback
 
-**B) Instrumentação:**
+**B) Instrumentaçêo:**
 ```python
 import mixpanel
 
@@ -486,12 +486,12 @@ mp.track(user_id, 'Feedback Given', {
 
 **Survey Pós-Uso (Google Forms):**
 ```
-1. Quão útil foi a ferramenta? (1-5)
-2. Quão precisa foram as respostas? (1-5)
-3. Velocidade foi adequada? (Sim/Não)
+1. Quêo útil foi a ferramenta? (1-5)
+2. Quêo precisa foram as respostas? (1-5)
+3. Velocidade foi adequada? (Sim/Nêo)
 4. O que você mais gostou?
 5. O que você mudaria?
-6. Usaria novamente? (Sim/Não)
+6. Usaria novamente? (Sim/Nêo)
 7. Recomendaria para colegas? (NPS: 0-10)
 ```
 
@@ -521,7 +521,7 @@ st.title("📊 Dashboard do Projeto")
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Total de Queries", df.shape[0])
 col2.metric("Usuários Únicos", df['user_id'].nunique())
-col3.metric("Satisfação Média", f"{df['rating'].mean():.1f}/5")
+col3.metric("Satisfaçêo Média", f"{df['rating'].mean():.1f}/5")
 col4.metric("Latência Média", f"{df['latency'].mean():.2f}s")
 
 # Gráficos
@@ -530,7 +530,7 @@ fig1 = px.line(df.groupby('date').size().reset_index(name='count'),
                x='date', y='count')
 st.plotly_chart(fig1)
 
-st.subheader("Distribuição de Ratings")
+st.subheader("Distribuiçêo de Ratings")
 fig2 = px.histogram(df, x='rating', nbins=5)
 st.plotly_chart(fig2)
 
@@ -541,7 +541,7 @@ st.bar_chart(top_queries)
 
 ---
 
-## 📝 Documentação Final
+## 📝 Documentaçêo Final
 
 ### Componentes Obrigatórios:
 
@@ -550,13 +550,13 @@ st.bar_chart(top_queries)
 # [Nome do Projeto]
 
 ## 🎯 Problema
-[Descrição do problema educacional]
+[Descriçêo do problema educacional]
 
-## 💡 Solução
+## 💡 Soluçêo
 [Como seu projeto resolve]
 
 ## 🏗️ Arquitetura
-[Diagrama + explicação de componentes]
+[Diagrama + explicaçêo de componentes]
 
 ## 🚀 Como Rodar Localmente
 ```bash
@@ -582,24 +582,24 @@ streamlit run frontend/app.py
 ## 🎥 Demo
 [Link para vídeo ou GIF]
 
-## 📚 Documentação Técnica
+## 📚 Documentaçêo Técnica
 [Link para docs/ folder]
 
 ## 🤝 Contato
 [Email, LinkedIn]
 ```
 
-**2. Documentação Técnica (docs/)**
+**2. Documentaçêo Técnica (docs/)**
 - `docs/arquitetura.md` - Decisões técnicas e justificativas
 - `docs/api.md` - Endpoints (se aplicável)
-- `docs/deployment.md` - Como deployar em produção
+- `docs/deployment.md` - Como deployar em produçêo
 - `docs/troubleshooting.md` - Problemas comuns e soluções
 
 **3. Relatório de Resultados (5-10 páginas PDF)**
 
 **Estrutura:**
 - Resumo Executivo (1 página)
-- Descrição Técnica (2 páginas)
+- Descriçêo Técnica (2 páginas)
 - Resultados de Testes (2 páginas)
   - Gráficos de performance
   - Tabelas de métricas
@@ -608,32 +608,32 @@ streamlit run frontend/app.py
   - O que deu certo
   - O que deu errado
   - Próximos passos
-- Conclusão (0.5 página)
+- Conclusêo (0.5 página)
 
 ---
 
-## 🎤 Apresentação Final (Semana 6)
+## 🎤 Apresentaçêo Final (Semana 6)
 
-### Formato: 15 min apresentação + 10 min Q&A
+### Formato: 15 min apresentaçêo + 10 min Q&A
 
 **Estrutura de Slides (10-15 slides):**
 
 **Slides 1-2: Contexto**
 - Problema educacional
-- Por que IA é solução apropriada
+- Por que IA é soluçêo apropriada
 
-**Slides 3-4: Solução Técnica**
+**Slides 3-4: Soluçêo Técnica**
 - Arquitetura de alto nível (diagrama)
 - Stack tecnológico (logos + justificativa)
 
 **Slide 5: Demo Live**
-- Mostrar aplicação funcionando
+- Mostrar aplicaçêo funcionando
 - 2-3 exemplos de uso
 
 **Slides 6-8: Resultados**
 - Métricas técnicas (gráficos)
 - Feedback de usuários (quotes + NPS)
-- Comparação antes/depois
+- Comparaçêo antes/depois
 
 **Slide 9: Desafios e Soluções**
 - Top 3 desafios técnicos
@@ -643,42 +643,42 @@ streamlit run frontend/app.py
 - Principais insights técnicos
 - Roadmap futuro (se fosse continuar)
 
-**Slide 11: Conclusão**
-- Recapitulação em 1 frase
+**Slide 11: Conclusêo**
+- Recapitulaçêo em 1 frase
 - Link para projeto (GitHub + deploy)
 - Contato
 
 ---
 
-## 🏆 Certificação "Educador de IA - Nível Técnico"
+## 🏆 Certificaçêo "Educador de IA - Nível Técnico"
 
-### Critérios de Avaliação (Total: 100 pontos):
+### Critérios de Avaliaçêo (Total: 100 pontos):
 
-**1. Implementação Técnica (40 pontos)**
+**1. Implementaçêo Técnica (40 pontos)**
 - Código limpo e organizado (10)
 - Funcionamento correto (15)
 - Boas práticas (testes, logging) (10)
-- Deploy em produção (5)
+- Deploy em produçêo (5)
 
 **2. Resultados e Impacto (30 pontos)**
 - Métricas técnicas atingidas (10)
 - Testes com usuários reais (10)
 - Evidência de valor educacional (10)
 
-**3. Documentação (15 pontos)**
+**3. Documentaçêo (15 pontos)**
 - README completo (5)
 - Docs técnicos (5)
 - Relatório de resultados (5)
 
-**4. Apresentação (15 pontos)**
+**4. Apresentaçêo (15 pontos)**
 - Clareza e estrutura (7)
 - Demo funcional (5)
 - Q&A (3)
 
-**Aprovação:**
-- ≥85 pontos: Certificação com Distinção
-- 70-84 pontos: Certificação Regular
-- <70 pontos: Revisão necessária
+**Aprovaçêo:**
+- ≥85 pontos: Certificaçêo com Distinçêo
+- 70-84 pontos: Certificaçêo Regular
+- <70 pontos: Revisêo necessária
 
 ### Badge Digital Inclui:
 - Nome completo
@@ -693,8 +693,8 @@ streamlit run frontend/app.py
 
 ### Do's:
 ✅ Comece simples, itere (MVP primeiro)
-✅ Teste frequentemente (não deixe para última semana)
-✅ Documente enquanto desenvolve (não depois)
+✅ Teste frequentemente (nêo deixe para última semana)
+✅ Documente enquanto desenvolve (nêo depois)
 ✅ Peça feedback cedo (mentores, pares)
 ✅ Use versionamento (commits pequenos e frequentes)
 
@@ -703,7 +703,7 @@ streamlit run frontend/app.py
 ❌ Ignorar performance (latência importa)
 ❌ Esquecer tratamento de erros (vai quebrar)
 ❌ Deploy sem teste (teste localmente primeiro)
-❌ Documentação vaga (seja específico)
+❌ Documentaçêo vaga (seja específico)
 
 ---
 
@@ -723,9 +723,9 @@ streamlit run frontend/app.py
 ## 📅 Cronograma Detalhado
 
 ### Semana 1: Planejamento
-- [ ] Escolher opção de projeto
+- [ ] Escolher opçêo de projeto
 - [ ] Escrever proposta (3-5 páginas)
-- [ ] Submeter para aprovação
+- [ ] Submeter para aprovaçêo
 - [ ] Setup do repositório GitHub
 
 ### Semana 2: Data & Core
@@ -735,25 +735,25 @@ streamlit run frontend/app.py
 
 ### Semana 3: Features
 - [ ] Adicionar features avançadas (reranking, tools, etc)
-- [ ] Integração de componentes
-- [ ] Testes de integração
+- [ ] Integraçêo de componentes
+- [ ] Testes de integraçêo
 
 ### Semana 4: Frontend & Polish
 - [ ] Criar interface de usuário
 - [ ] Refatorar código
-- [ ] Documentação inline (docstrings)
+- [ ] Documentaçêo inline (docstrings)
 
 ### Semana 5: Deploy & Testing
-- [ ] Deploy em produção
+- [ ] Deploy em produçêo
 - [ ] Testes de performance
-- [ ] Instrumentação (analytics)
+- [ ] Instrumentaçêo (analytics)
 - [ ] Recrutar beta testers
 
 ### Semana 6: User Testing & Docs
 - [ ] Coletar feedback de usuários
 - [ ] Iterar baseado em feedback
-- [ ] Escrever documentação completa
-- [ ] Preparar apresentação
+- [ ] Escrever documentaçêo completa
+- [ ] Preparar apresentaçêo
 - [ ] Apresentar para banca
 
 ---
@@ -767,7 +767,7 @@ Agora você é capaz de:
 ✅ Implementar sistemas RAG robustos
 ✅ Criar agentes autônomos de IA
 ✅ Fazer fine-tuning de modelos
-✅ Deployar aplicações em produção
+✅ Deployar aplicações em produçêo
 ✅ Documentar e apresentar projetos tecnicamente
 
 **Próximos Passos:**

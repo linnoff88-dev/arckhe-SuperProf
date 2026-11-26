@@ -4,12 +4,12 @@
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
-Entenda a arquitetura interna de Large Language Models. Domine conceitos de transformers, attention mechanisms, tokenização e embeddings. Saiba como modelos "pensam" para usar com mais eficácia.
+Entenda a arquitetura interna de Large Language Models. Domine conceitos de transformers, attention mechanisms, tokenizaçêo e embeddings. Saiba como modelos "pensam" para usar com mais eficácia.
 
 ### Objetivos:
-- Compreender arquitetura Transformer (não precisa codificar)
+- Compreender arquitetura Transformer (nêo precisa codificar)
 - Explicar como funciona self-attention e embeddings
 - Entender limitações técnicas (contexto, alucinações, vieses)
 - Comparar diferentes LLMs (GPT, Claude, Gemini, LLaMA)
@@ -19,19 +19,19 @@ Entenda a arquitetura interna de Large Language Models. Domine conceitos de tran
 
 ## 🧠 De Redes Neurais a Transformers
 
-### Evolução Histórica:
+### Evoluçêo Histórica:
 
 **1. Perceptron (1958) → Redes Neurais Simples**
 ```
 Input → [Camada de neurônios] → Output
-Limitação: Só funções lineares
+Limitaçêo: Só funções lineares
 ```
 
 **2. Deep Learning (2010s) → CNNs, RNNs**
 ```
-CNNs: Boas para imagens (convolução espacial)
+CNNs: Boas para imagens (convoluçêo espacial)
 RNNs: Boas para sequências (memória temporal)
-Limitação: RNNs não escalam (vanishing gradient)
+Limitaçêo: RNNs nêo escalam (vanishing gradient)
 ```
 
 **3. Attention Mechanism (2017) → Transformers**
@@ -43,7 +43,7 @@ Resultado: Escala para bilhões de parâmetros
 
 ### Por que Transformers Dominam:
 
-✅ **Paralelização:** Processa texto todo de uma vez (vs RNN sequencial)
+✅ **Paralelizaçêo:** Processa texto todo de uma vez (vs RNN sequencial)
 ✅ **Long-range dependencies:** Conecta palavras distantes no texto
 ✅ **Escalabilidade:** Mais dados + mais parâmetros = melhor performance
 ✅ **Transfer learning:** Pré-treino geral + fine-tune específico
@@ -57,21 +57,21 @@ Resultado: Escala para bilhões de parâmetros
 ```
 INPUT: "O gato está no telhado"
    ↓
-[1. TOKENIZAÇÃO]
+[1. TOKENIZAÇêO]
    → ["O", "gato", "está", "no", "tel", "hado"]
    ↓
 [2. EMBEDDING]
    → Cada token vira vetor de 768-12288 dimensões
    ↓
 [3. POSITIONAL ENCODING]
-   → Adiciona informação de ordem (palavra 1, 2, 3...)
+   → Adiciona informaçêo de ordem (palavra 1, 2, 3...)
    ↓
 [4. SELF-ATTENTION] (🔑 Magia acontece aqui)
    → Cada palavra "olha" para todas as outras
    → Identifica relações: "gato" se relaciona com "telhado"
    ↓
 [5. FEED-FORWARD]
-   → Transformações não-lineares
+   → Transformações nêo-lineares
    ↓
 [6. REPETIR 4-5] (12-96 vezes, dependendo do modelo)
    ↓
@@ -82,7 +82,7 @@ INPUT: "O gato está no telhado"
 
 ---
 
-## 💡 Self-Attention: O Coração do Transformer
+## 💡 Self-Attention: O Coraçêo do Transformer
 
 ### Como Funciona (Analogia):
 
@@ -91,11 +91,11 @@ Imagine uma sala de aula onde cada aluno (palavra) pode fazer perguntas para tod
 **Frase:** "O professor explica IA para alunos interessados"
 
 **Self-Attention calcula:**
-- "professor" deveria prestar atenção em: "explica" (0.8), "alunos" (0.6), "IA" (0.7)
-- "alunos" deveria prestar atenção em: "interessados" (0.9), "professor" (0.5)
-- "interessados" deveria prestar atenção em: "alunos" (0.95), "IA" (0.4)
+- "professor" deveria prestar atençêo em: "explica" (0.8), "alunos" (0.6), "IA" (0.7)
+- "alunos" deveria prestar atençêo em: "interessados" (0.9), "professor" (0.5)
+- "interessados" deveria prestar atençêo em: "alunos" (0.95), "IA" (0.4)
 
-**Resultado:** Modelo entende que "interessados" modifica "alunos", não "professor"
+**Resultado:** Modelo entende que "interessados" modifica "alunos", nêo "professor"
 
 ### Matematicamente (Conceitual):
 
@@ -103,20 +103,20 @@ Imagine uma sala de aula onde cada aluno (palavra) pode fazer perguntas para tod
 Para cada palavra:
 1. Query (Q): "O que eu estou procurando?"
 2. Key (K): "O que eu tenho a oferecer?"
-3. Value (V): "Qual informação eu carrego?"
+3. Value (V): "Qual informaçêo eu carrego?"
 
 Attention Score = Similarity(Q, K)
 Output = Weighted sum of Values
 
 Exemplo:
-Palavra "gato" (Query) procura sujeitos de ação
+Palavra "gato" (Query) procura sujeitos de açêo
 Palavra "pulou" (Key) oferece "sou um verbo"
-Score alto → "gato" presta atenção em "pulou"
+Score alto → "gato" presta atençêo em "pulou"
 ```
 
 ### Multi-Head Attention:
 
-Ao invés de 1 mecanismo de atenção, usa 8-96 em paralelo:
+Ao invés de 1 mecanismo de atençêo, usa 8-96 em paralelo:
 - Head 1: Foca em sintaxe (sujeito-verbo-objeto)
 - Head 2: Foca em semântica (significado)
 - Head 3: Foca em contexto longo
@@ -126,17 +126,17 @@ Ao invés de 1 mecanismo de atenção, usa 8-96 em paralelo:
 
 ---
 
-## 📦 Tokenização: Quebrando Texto em Pedaços
+## 📦 Tokenizaçêo: Quebrando Texto em Pedaços
 
-### O que são Tokens?
+### O que sêo Tokens?
 
-**Não são palavras!** São subunidades:
+**Nêo sêo palavras!** Sêo subunidades:
 
 **Exemplo (GPT-4):**
 ```
 Input: "Superprofessores"
 Tokens: ["Super", "prof", "ess", "ores"]
-4 tokens (não 1 palavra)
+4 tokens (nêo 1 palavra)
 
 Input: "ChatGPT é incrível!"
 Tokens: ["Chat", "G", "PT", " é", " in", "cr", "ível", "!"]
@@ -146,7 +146,7 @@ Tokens: ["Chat", "G", "PT", " é", " in", "cr", "ível", "!"]
 ### Por que Tokenizar?
 
 ✅ **Eficiência:** Vocabulário fixo (50k-100k tokens vs milhões de palavras)
-✅ **Generalização:** Palavras novas podem ser compostas de tokens conhecidos
+✅ **Generalizaçêo:** Palavras novas podem ser compostas de tokens conhecidos
 ✅ **Multilíngue:** Mesmos tokens funcionam em múltiplas línguas
 
 ### Algoritmos Comuns:
@@ -170,7 +170,7 @@ Tokens: ["Chat", "G", "PT", " é", " in", "cr", "ível", "!"]
 
 ⚠️ **Palavras longas custam mais**
 - "a" = 1 token
-- "Institucionalização" = 5+ tokens
+- "Institucionalizaçêo" = 5+ tokens
 
 **Ferramenta para Contar:** https://platform.openai.com/tokenizer
 
@@ -180,7 +180,7 @@ Tokens: ["Chat", "G", "PT", " é", " in", "cr", "ível", "!"]
 
 ### Conceito:
 
-**Palavra → Vetor numérico de alta dimensão**
+**Palavra → Vetor numérico de alta dimensêo**
 
 **Exemplo (simplificado para 3D):**
 ```
@@ -198,7 +198,7 @@ rei - homem + mulher ≈ rainha
 
 **1. Similaridade Semântica**
 Palavras similares têm vetores próximos:
-- "cachorro" e "cão" → Distância pequena
+- "cachorro" e "cêo" → Distância pequena
 - "cachorro" e "árvore" → Distância grande
 
 **2. Analogias**
@@ -212,16 +212,16 @@ Palavras similares têm vetores próximos:
 ### Embeddings em LLMs:
 
 **GPT-4:** 12,288 dimensões (cada token = vetor de 12k números)
-**Claude 3:** Não revelado (estimado 8k-16k)
-**Gemini:** Não revelado
+**Claude 3:** Nêo revelado (estimado 8k-16k)
+**Gemini:** Nêo revelado
 
-**Visualização:** t-SNE ou PCA reduzem para 2D/3D para plotar
+**Visualizaçêo:** t-SNE ou PCA reduzem para 2D/3D para plotar
 
 ---
 
 ## 🏗️ Escala: De GPT-2 a GPT-4
 
-### Evolução de Parâmetros:
+### Evoluçêo de Parâmetros:
 
 | Modelo | Parâmetros | Contexto | Ano |
 |--------|-----------|----------|-----|
@@ -232,15 +232,15 @@ Palavras similares têm vetores próximos:
 | Claude 3 Opus | ?** | 200k tokens | 2024 |
 | Gemini 1.5 | ?** | 1M tokens | 2024 |
 
-*Estimado, OpenAI não confirma
-**Não revelado
+*Estimado, OpenAI nêo confirma
+**Nêo revelado
 
 ### Lei de Escala (Scaling Laws):
 
 **Descoberta (Kaplan et al, 2020):**
-Performance ∝ (Parâmetros)^α × (Dados)^β × (Computação)^γ
+Performance ∝ (Parâmetros)^α × (Dados)^β × (Computaçêo)^γ
 
-**Implicação:** Modelos maiores com mais dados são previsivelmente melhores
+**Implicaçêo:** Modelos maiores com mais dados sêo previsivelmente melhores
 
 **Mas... há limites:**
 - 💰 Custo: GPT-4 custou ~$100M para treinar
@@ -250,7 +250,7 @@ Performance ∝ (Parâmetros)^α × (Dados)^β × (Computação)^γ
 
 ---
 
-## 🔬 Comparação de LLMs (Novembro 2025)
+## 🔬 Comparaçêo de LLMs (Novembro 2025)
 
 ### GPT-4 (OpenAI)
 
@@ -258,14 +258,14 @@ Performance ∝ (Parâmetros)^α × (Dados)^β × (Computação)^γ
 ✅ Raciocínio lógico superior
 ✅ Código (especialmente Python)
 ✅ Seguir instruções complexas
-✅ Integração com ferramentas (plugins)
+✅ Integraçêo com ferramentas (plugins)
 
 **Pontos Fracos:**
 ❌ Contexto "apenas" 128k
 ❌ Vieses ocidentais
 ❌ Custo alto (API)
 
-**Melhor para:** Tutoria 1-on-1, geração de código, raciocínio matemático
+**Melhor para:** Tutoria 1-on-1, geraçêo de código, raciocínio matemático
 
 ---
 
@@ -274,8 +274,8 @@ Performance ∝ (Parâmetros)^α × (Dados)^β × (Computação)^γ
 **Pontos Fortes:**
 ✅ Contexto 200k (mais longo)
 ✅ Ética e segurança (Constitutional AI)
-✅ Redação criativa e análise literária
-✅ Menos alucinação
+✅ Redaçêo criativa e análise literária
+✅ Menos alucinaçêo
 
 **Pontos Fracos:**
 ❌ Código inferior ao GPT-4
@@ -290,7 +290,7 @@ Performance ∝ (Parâmetros)^α × (Dados)^β × (Computação)^γ
 **Pontos Fortes:**
 ✅ Contexto 1M tokens (absurdo!)
 ✅ Multimodal nativo (texto+imagem+vídeo+áudio)
-✅ Integração com Google Workspace
+✅ Integraçêo com Google Workspace
 ✅ Busca em tempo real
 
 **Pontos Fracos:**
@@ -307,7 +307,7 @@ Performance ∝ (Parâmetros)^α × (Dados)^β × (Computação)^γ
 ✅ Open-source (gratuito)
 ✅ Pode rodar localmente (com GPU)
 ✅ Customizável (fine-tune completo)
-✅ Privacidade (dados não saem do servidor)
+✅ Privacidade (dados nêo saem do servidor)
 
 **Pontos Fracos:**
 ❌ Requer expertise técnico
@@ -324,13 +324,13 @@ Performance ∝ (Parâmetros)^α × (Dados)^β × (Computação)^γ
 
 **O que é:** Quantidade máxima de texto que modelo "lembra"
 
-**Implicação:**
+**Implicaçêo:**
 - Conversa longa → Esquece início
 - Documento > contexto → Precisa resumir/cortar
 
-**Solução:**
+**Soluçêo:**
 - RAG (Retrieval Augmented Generation) - Módulo 2B.2
-- Summarização iterativa
+- Summarizaçêo iterativa
 - Sliding window
 
 ---
@@ -340,18 +340,18 @@ Performance ∝ (Parâmetros)^α × (Dados)^β × (Computação)^γ
 **O que é:** Modelo inventa fatos que parecem verdade
 
 **Por que acontece:**
-- Treinado para gerar texto plausível, não verdadeiro
-- Não tem "check de realidade"
+- Treinado para gerar texto plausível, nêo verdadeiro
+- Nêo tem "check de realidade"
 - Preenche lacunas com "invenções"
 
 **Exemplo:**
 ```
 Prompt: "Quem ganhou Nobel de Física em 2035?"
-Modelo: "Dra. Maria Santos, por trabalho em fusão fria"
+Modelo: "Dra. Maria Santos, por trabalho em fusêo fria"
 [FALSO: 2035 é futuro! Mas resposta parece legítima]
 ```
 
-**Mitigação:**
+**Mitigaçêo:**
 - Pedir fontes e verificar
 - RAG com base de conhecimento confiável
 - Fine-tune em dados verificados
@@ -363,30 +363,30 @@ Modelo: "Dra. Maria Santos, por trabalho em fusão fria"
 **O que é:** Modelo reflete preconceitos nos dados de treino
 
 **Exemplos Documentados:**
-- Associação "CEO" → "homem" (mais frequente que "mulher")
+- Associaçêo "CEO" → "homem" (mais frequente que "mulher")
 - Descrições de profissões variam por gênero
-- Vieses raciais em geração de imagens
+- Vieses raciais em geraçêo de imagens
 
-**Mitigação:**
+**Mitigaçêo:**
 - Estar ciente e testar
 - Diversificar prompts
 - Usar modelos com RLHF (Reinforcement Learning from Human Feedback)
 
 ---
 
-### 4. Raciocínio ≠ Compreensão
+### 4. Raciocínio ≠ Compreensêo
 
-**Modelos são pattern matchers, não "pensadores":**
+**Modelos sêo pattern matchers, nêo "pensadores":**
 
 **O que fazem bem:**
 ✅ Reconhecer padrões estatísticos
 ✅ Completar sequências
 ✅ Interpolar conhecimento
 
-**O que NÃO fazem:**
+**O que NêO fazem:**
 ❌ Raciocínio causal profundo
 ❌ Planejamento de longo prazo
-❌ Compreensão física do mundo
+❌ Compreensêo física do mundo
 ❌ Teoria da mente (entender intenções)
 
 **Exemplo de Falha:**
@@ -401,7 +401,7 @@ Prompt: "Tenho 3 laranjas. Como 2. Pego mais 5. Planto 1. Quantas laranjas tenho
 GPT-3: "6" ❌ (errado: 5, pois plantei 1)
 ```
 
-**Lição:** Modelos falham em raciocínio multi-step com mudanças de estado
+**Liçêo:** Modelos falham em raciocínio multi-step com mudanças de estado
 
 ---
 
@@ -428,7 +428,7 @@ GPT-3: "6" ❌ (errado: 5, pois plantei 1)
 - Entender decisões do modelo
 
 **LLM Visualization:** https://bbycroft.net/llm
-- Animação 3D de forward pass
+- Animaçêo 3D de forward pass
 
 ---
 
@@ -455,16 +455,16 @@ GPT-3: "6" ❌ (errado: 5, pois plantei 1)
 ### 📹 Videoaulas (4h)
 - História: de RNNs a Transformers (40 min)
 - Arquitetura Transformer explicada (60 min)
-- Tokenização e Embeddings (45 min)
-- Comparação de LLMs (55 min)
+- Tokenizaçêo e Embeddings (45 min)
+- Comparaçêo de LLMs (55 min)
 
 ### 💬 Práticas (9h)
 - Explorar Playgrounds (3h)
 - Visualizar attention (2h)
 - Comparar outputs de diferentes LLMs (2h)
-- Testar limites (contexto, alucinação) (2h)
+- Testar limites (contexto, alucinaçêo) (2h)
 
-### ✅ Avaliação (2h)
+### ✅ Avaliaçêo (2h)
 - Quiz: 30 questões (conceitos técnicos)
 - Projeto: Relatório comparando 3 LLMs para caso de uso educacional
 

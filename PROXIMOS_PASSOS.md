@@ -1,6 +1,6 @@
 # 🚀 Próximos Passos para Publicar o Site
 
-## SuperProfessores - Guia Rápido de Publicação
+## SuperProfessores - Guia Rápido de Publicaçêo
 
 ---
 
@@ -9,14 +9,14 @@
 - [x] Estrutura do site configurada (Jekyll + Just-the-Docs)
 - [x] Paleta de cores personalizada
 - [x] Landing page profissional (index.md)
-- [x] Página de documentação organizada
-- [x] Guias de customização e estrutura
-- [x] Configuração do GitHub Pages (_config.yml)
+- [x] Página de documentaçêo organizada
+- [x] Guias de customizaçêo e estrutura
+- [x] Configuraçêo do GitHub Pages (_config.yml)
 - [x] .gitignore configurado
 
 ---
 
-## 📋 Checklist de Publicação
+## 📋 Checklist de Publicaçêo
 
 ### 1️⃣ OPCIONAL: Criar Logo (5-10 min)
 
@@ -47,7 +47,7 @@ mkdir -p assets/images
 # Navegue até o projeto
 cd /home/nmaldaner/projetos/superprofessores
 
-# Inicialize git (se ainda não fez)
+# Inicialize git (se ainda nêo fez)
 git init
 
 # Configure suas credenciais
@@ -67,19 +67,19 @@ git commit -m "Initial commit: SuperProfessores v3.0 com Jekyll"
 
 ### 3️⃣ Criar Repositório no GitHub (2 min)
 
-**Opção A: Via Interface Web** (Recomendado)
+**Opçêo A: Via Interface Web** (Recomendado)
 
 1. Acesse: https://github.com/new
 2. **Repository name:** `SuperProf`
 3. **Description:** `SuperProfessores: Transformando educadores em arquitetos do futuro da aprendizagem`
 4. **Público** ✅
-5. **NÃO** marque "Add a README" (já temos)
+5. **NêO** marque "Add a README" (já temos)
 6. Clique **"Create repository"**
 
-**Opção B: Via GitHub CLI** (se tiver instalado)
+**Opçêo B: Via GitHub CLI** (se tiver instalado)
 
 ```bash
-gh repo create SuperProf --public --description "SuperProfessores: Programa de formação em IA para educadores"
+gh repo create SuperProf --public --description "SuperProfessores: Programa de formaçêo em IA para educadores"
 ```
 
 ---
@@ -120,7 +120,7 @@ git push -u origin main
 ### 6️⃣ Verificar o Site (1 min)
 
 1. Acesse: **https://inematds.github.io/SuperProf**
-2. Se não carregar, aguarde mais 1-2 min
+2. Se nêo carregar, aguarde mais 1-2 min
 3. Verifique o status do deploy em:
    https://github.com/inematds/SuperProf/actions
 
@@ -215,10 +215,10 @@ git push
 ### Melhore
 
 - [ ] Adicione logo
-- [ ] Crie vídeo de apresentação
+- [ ] Crie vídeo de apresentaçêo
 - [ ] Adicione depoimentos
 - [ ] Crie página de FAQ
-- [ ] Adicione formulário de inscrição (Google Forms)
+- [ ] Adicione formulário de inscriçêo (Google Forms)
 
 ---
 
@@ -256,8 +256,8 @@ git push -u origin main
 
 ## 📞 Precisa de Ajuda?
 
-- **Documentação:** Veja `GUIA_GITHUB_PAGES.md`
-- **Customização:** Veja `CUSTOMIZACAO_VISUAL.md`
+- **Documentaçêo:** Veja `GUIA_GITHUB_PAGES.md`
+- **Customizaçêo:** Veja `CUSTOMIZACAO_VISUAL.md`
 - **Estrutura:** Veja `ESTRUTURA_SITE.md`
 - **Email:** inematds@gmail.com
 
@@ -271,7 +271,7 @@ Após seguir esses passos, seu site estará **ONLINE** em:
 
 Com:
 - ✅ Design profissional
-- ✅ Navegação intuitiva
+- ✅ Navegaçêo intuitiva
 - ✅ Busca integrada
 - ✅ Responsivo (mobile-friendly)
 - ✅ Diagramas (Mermaid)

@@ -1,32 +1,32 @@
-# SuperProfessores: Modelo Híbrido de Formação em IA
+# SuperProfessores: Modelo Híbrido de Formaçêo em IA
 ## Proposta Atualizada - Novembro 2025
 
 ---
 
-## 🎯 Visão Geral do Projeto
+## 🎯 Visêo Geral do Projeto
 
 **Nome**: SuperProfessores
 **Tagline**: *"Transformando educadores em arquitetos do futuro da aprendizagem"*
-**Versão**: 3.0 (Modelo Híbrido)
+**Versêo**: 3.0 (Modelo Híbrido)
 **Data**: Novembro 2025
 **Carga Horária Total**: 300 horas (2 trilhas especializadas)
 
 ---
 
-## ⚡ CONTEXTO CRÍTICO: A Velocidade da Evolução das Ferramentas de IA
+## ⚡ CONTEXTO CRÍTICO: A Velocidade da Evoluçêo das Ferramentas de IA
 
 ### 📊 O Cenário em Novembro de 2025
 
 **A realidade que NENHUM curso pode ignorar:**
 
-As ferramentas de IA estão evoluindo em uma velocidade sem precedentes. O que era "estado da arte" há 6 meses já está ultrapassado. O que ensinamos hoje pode estar obsoleto amanhã.
+As ferramentas de IA estêo evoluindo em uma velocidade sem precedentes. O que era "estado da arte" há 6 meses já está ultrapassado. O que ensinamos hoje pode estar obsoleto amanhê.
 
 #### Marcos Recentes (apenas nos últimos 4 meses):
 
 | Data | Lançamento | Impacto |
 |------|------------|---------|
 | **Agosto 2025** | Claude Learning Mode | Mudou como IA ensina (método socrático) |
-| **Agosto 2025** | Gemini Guided Learning | Google entra na educação com força |
+| **Agosto 2025** | Gemini Guided Learning | Google entra na educaçêo com força |
 | **Julho 2025** | ChatGPT Study Mode | OpenAI foca em estudantes |
 | **Novembro 2025** | Microsoft Study & Learn | Agente de IA gratuito para estudos |
 | **Novembro 2025** | Google NotebookLM Audio/Video | IA cria experiências multimídia |
@@ -34,8 +34,8 @@ As ferramentas de IA estão evoluindo em uma velocidade sem precedentes. O que e
 #### Dados de Mercado (2025):
 
 - **Crescimento do mercado**: USD 5.47bi (2024) → USD 7.57bi (2025) = **+38.4% em 1 ano**
-- **Adoção estudantil**: 66% (2024) → **92% (2025)** = +26 pontos em 1 ano
-- **Projeção 2034**: USD 208.2bi (CAGR de 41.4%)
+- **Adoçêo estudantil**: 66% (2024) → **92% (2025)** = +26 pontos em 1 ano
+- **Projeçêo 2034**: USD 208.2bi (CAGR de 41.4%)
 - **Brasil**: 74.8% dos professores apoiam uso de IA (2025)
 
 ### 🚨 O Problema do Conhecimento Perecível
@@ -45,13 +45,13 @@ As ferramentas de IA estão evoluindo em uma velocidade sem precedentes. O que e
 **Exemplos práticos:**
 - Em Março/2025, ensinávamos ChatGPT-4. Em Julho/2025, o Study Mode mudou tudo.
 - Em Junho/2025, Claude era "só um chatbot". Em Agosto/2025, virou tutor socrático.
-- Em Setembro/2025, Google Meet não tinha IA. Em Novembro/2025, transcreve em português automaticamente.
+- Em Setembro/2025, Google Meet nêo tinha IA. Em Novembro/2025, transcreve em português automaticamente.
 
-### 💡 Nossa Solução: Ensinar PRINCÍPIOS, não FERRAMENTAS
+### 💡 Nossa Soluçêo: Ensinar PRINCÍPIOS, nêo FERRAMENTAS
 
 Este curso é construído sobre um novo paradigma:
 
-> **"Não ensinamos a usar ChatGPT. Ensinamos a usar QUALQUER IA generativa que surgir."**
+> **"Nêo ensinamos a usar ChatGPT. Ensinamos a usar QUALQUER IA generativa que surgir."**
 
 #### Os 3 Pilares da Resiliência ao Tempo:
 
@@ -61,25 +61,25 @@ Este curso é construído sobre um novo paradigma:
 
 2. **Meta-aprendizagem: Aprender a Aprender IA**
    - Capacidade de avaliar novas ferramentas rapidamente
-   - Frameworks de decisão: "Quando usar ferramenta A vs B?"
-   - Mindset de experimentação contínua
+   - Frameworks de decisêo: "Quando usar ferramenta A vs B?"
+   - Mindset de experimentaçêo contínua
 
-3. **Ecossistema Vivo de Atualização**
+3. **Ecossistema Vivo de Atualizaçêo**
    - Comunidade de prática com updates mensais
    - Biblioteca de ferramentas atualizada semanalmente
    - Newsletter "O que mudou em IA este mês"
 
-#### O que NÃO muda (e que ensinamos intensamente):
+#### O que NêO muda (e que ensinamos intensamente):
 
 ✅ **Prompt Engineering** (princípios funcionam em qualquer LLM)
 ✅ **Pensamento Crítico** (avaliar outputs de IA)
 ✅ **Ética e Privacidade** (princípios universais)
 ✅ **Design Instrucional** (pedagogia é atemporal)
-✅ **Avaliação de Impacto** (métricas de eficácia)
+✅ **Avaliaçêo de Impacto** (métricas de eficácia)
 
-#### O que MUDA constantemente (e que NÃO ensinamos de forma estática):
+#### O que MUDA constantemente (e que NêO ensinamos de forma estática):
 
-❌ "Qual botão clicar no ChatGPT"
+❌ "Qual botêo clicar no ChatGPT"
 ❌ "A melhor ferramenta para X é Y"
 ❌ "Siga este tutorial passo-a-passo"
 
@@ -92,9 +92,9 @@ Este curso é construído sobre um novo paradigma:
 🔄 **Módulos "Living Updates" (20% do curso)**
 - Atualizados trimestralmente
 - Comparativos de ferramentas atuais
-- "Estado da Arte" em [data da última atualização]
+- "Estado da Arte" em [data da última atualizaçêo]
 
-🔄 **Comunidade de Atualização Contínua**
+🔄 **Comunidade de Atualizaçêo Contínua**
 - Webinars mensais: "O que há de novo em IA"
 - Slack/Discord ativo com early adopters
 - Crowdsourced: professores compartilham descobertas
@@ -112,7 +112,7 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 | **USAR IA** | Ser mais produtivo com IA | "Quero que IA me ajude a criar provas" |
 | **ENSINAR IA** | Ensinar conceitos de IA para alunos | "Quero que meus alunos entendam como IA funciona" |
 
-**Essas trilhas são complementares, mas independentes.**
+**Essas trilhas sêo complementares, mas independentes.**
 
 ---
 
@@ -123,11 +123,11 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 
 ### Estrutura:
 
-#### Módulo 1.1: A Revolução da IA na Educação (8h)
+#### Módulo 1.1: A Revoluçêo da IA na Educaçêo (8h)
 - O que é IA e como funciona (conceitos básicos)
 - História da IA: de 1950 a 2025
-- **NOVO**: A velocidade da evolução (2023-2025)
-- Framework UNESCO de IA na Educação
+- **NOVO**: A velocidade da evoluçêo (2023-2025)
+- Framework UNESCO de IA na Educaçêo
 - Ética, privacidade e LGPD
 
 #### Módulo 1.2: Ecossistema de Ferramentas de IA em 2025 (12h)
@@ -141,7 +141,7 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
   - Ferramentas com suporte em português
 
 - **Princípio Atemporal**: Como avaliar e escolher ferramentas de IA
-  - Framework de Avaliação de Ferramentas (FEAT)
+  - Framework de Avaliaçêo de Ferramentas (FEAT)
   - Custo vs Benefício
   - Privacidade de dados
   - Facilidade de uso
@@ -157,12 +157,12 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 - **NOVO**: Prompt engineering para diferentes LLMs
   - ChatGPT vs Claude vs Gemini (diferenças)
 - Casos práticos educacionais:
-  - Criação de planos de aula
-  - Geração de questões
+  - Criaçêo de planos de aula
+  - Geraçêo de questões
   - Feedback personalizado
-  - Tradução e simplificação de textos
+  - Traduçêo e simplificaçêo de textos
 
-#### Módulo 1.4: Pensamento Crítico e Avaliação de IA (12h)
+#### Módulo 1.4: Pensamento Crítico e Avaliaçêo de IA (12h)
 - Limitações da IA (alucinações, vieses)
 - Como validar outputs de IA
 - Detector de conteúdo gerado por IA (e suas limitações)
@@ -171,11 +171,11 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 
 #### Módulo 1.5: Projeto Prático - Piloto de 30 dias (12h)
 - Desenho de um projeto piloto de uso de IA
-- Implementação na sala de aula
+- Implementaçêo na sala de aula
 - Coleta de métricas de impacto
-- Apresentação de resultados
+- Apresentaçêo de resultados
 
-**Certificação**: "SuperProfessor Fundamentos em IA"
+**Certificaçêo**: "SuperProfessor Fundamentos em IA"
 
 ---
 
@@ -183,9 +183,9 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 
 **Carga Total**: 60h (Nível 1) + 60h (Nível 2A) + 60h (Nível 3A) = **180 horas**
 
-**Público**: Professores que querem usar IA como ferramenta de produtividade e inovação pedagógica
+**Público**: Professores que querem usar IA como ferramenta de produtividade e inovaçêo pedagógica
 
-**Resultado Final**: Professor capaz de criar soluções de IA personalizadas, automatizar processos e liderar transformação digital
+**Resultado Final**: Professor capaz de criar soluções de IA personalizadas, automatizar processos e liderar transformaçêo digital
 
 ---
 
@@ -195,10 +195,10 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 - **Simplificado de 20h → 16h** (removido fine-tuning técnico)
 - Prompt engineering avançado para casos complexos
 - **NOVO**: Multimodalidade (texto + imagem + áudio)
-  - DALL-E 3, Midjourney, Stable Diffusion para educação
-  - Geração de áudio com ElevenLabs
-  - Criação de vídeos educacionais com IA
-- **NOVO**: NotebookLM para criação de materiais
+  - DALL-E 3, Midjourney, Stable Diffusion para educaçêo
+  - Geraçêo de áudio com ElevenLabs
+  - Criaçêo de vídeos educacionais com IA
+- **NOVO**: NotebookLM para criaçêo de materiais
   - Transformar PDFs em quizzes
   - Gerar flashcards automaticamente
   - Criar podcasts educacionais
@@ -206,24 +206,24 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
   - Como "ensinar" IA sobre sua disciplina
 
 #### Módulo 2A.2: Learning Analytics - Decisões Baseadas em Dados (12h)
-- **Simplificado de 20h → 12h** (foco em interpretação, não construção)
-- Introdução ao Machine Learning educacional
-- Como LMS usam ML para personalização
+- **Simplificado de 20h → 12h** (foco em interpretaçêo, nêo construçêo)
+- Introduçêo ao Machine Learning educacional
+- Como LMS usam ML para personalizaçêo
 - Análise de dados de aprendizagem
 - Dashboards educacionais (Google Analytics for Education)
-- Sistemas de recomendação de conteúdo
-- **Prático**: Interpretar relatórios de ML, não construir modelos
+- Sistemas de recomendaçêo de conteúdo
+- **Prático**: Interpretar relatórios de ML, nêo construir modelos
 
 #### Módulo 2A.3: Design Instrucional Automatizado (12h)
 - IA para criar trilhas de aprendizagem adaptativas
-- Geração automática de rubricas de avaliação
+- Geraçêo automática de rubricas de avaliaçêo
 - **NOVO**: Microlearning com IA
   - Plataformas: Duolingo, Arist
   - Como criar pílulas de aprendizado com IA
-- Gamificação assistida por IA
+- Gamificaçêo assistida por IA
   - Pontos, badges, leaderboards automatizados
 
-#### Módulo 2A.4: Criação de Assistentes Educacionais No-Code (12h)
+#### Módulo 2A.4: Criaçêo de Assistentes Educacionais No-Code (12h)
 - **Simplificado de 20h → 12h** (foco em no-code)
 - Plataformas no-code para chatbots:
   - Dialogflow CX
@@ -231,72 +231,72 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
   - Microsoft Bot Framework (low-code)
 - **NOVO**: GPTs Personalizados (ChatGPT)
   - Como criar um GPT customizado para sua disciplina
-  - Exemplos: "GPT Professor de Química", "GPT Tutor de Redação"
-- Integração com WhatsApp e Telegram
+  - Exemplos: "GPT Professor de Química", "GPT Tutor de Redaçêo"
+- Integraçêo com WhatsApp e Telegram
 - **Prático**: Construir chatbot tutor sem programar
 
 #### Módulo 2A.5: Casos Práticos por Disciplina (8h) - **NOVO**
 - Trilhas especializadas:
   - IA para Matemática (Khan Academy + IA)
-  - IA para Língua Portuguesa (correção automática)
+  - IA para Língua Portuguesa (correçêo automática)
   - IA para Ciências (simulações e experimentos virtuais)
-  - IA para Educação Inclusiva (acessibilidade)
+  - IA para Educaçêo Inclusiva (acessibilidade)
 
-**Certificação**: "SuperProfessor Avançado - Especialista em IA Aplicada"
+**Certificaçêo**: "SuperProfessor Avançado - Especialista em IA Aplicada"
 
 ---
 
-### NÍVEL 3A: Liderança - Transformação Digital Institucional (60h)
+### NÍVEL 3A: Liderança - Transformaçêo Digital Institucional (60h)
 
 #### Módulo 3A.1: Estratégia e Governança de IA (20h)
 - **Simplificado de 30h → 20h**
-- Construção de Roadmap de IA institucional
+- Construçêo de Roadmap de IA institucional
 - Framework de maturidade digital (diagnóstico)
 - **NOVO**: Políticas de uso ético de IA
   - Como criar diretrizes institucionais
   - Casos: Universidade de Oxford, ASU, Northeastern
-- Cálculo de ROI de IA na educação
+- Cálculo de ROI de IA na educaçêo
   - Métricas de produtividade docente
   - Indicadores de engajamento estudantil
-  - Redução de custos operacionais
-- Gestão da mudança organizacional
+  - Reduçêo de custos operacionais
+- Gestêo da mudança organizacional
   - Como engajar professores resistentes
-  - Comunicação com pais e stakeholders
+  - Comunicaçêo com pais e stakeholders
 
-#### Módulo 3A.2: Implementação Prática em Escala (16h) - **NOVO**
+#### Módulo 3A.2: Implementaçêo Prática em Escala (16h) - **NOVO**
 - Workshop: "Primeiros 90 dias de IA na escola"
-- Quick wins para gerar adesão
-- Checklist de adoção gradual
+- Quick wins para gerar adesêo
+- Checklist de adoçêo gradual
 - Casos de erro e como evitá-los
 - **NOVO**: Cases brasileiros
   - Escolas inovadoras brasileiras
-  - Exemplos práticos de implementação
+  - Exemplos práticos de implementaçêo
 
 #### Módulo 3A.3: Comunidade e Suporte Contínuo (8h) - **NOVO**
-- Estruturação de comunidade de prática
+- Estruturaçêo de comunidade de prática
 - Plataforma online de suporte
 - Biblioteca de prompts e templates
 - Webinars mensais com especialistas
 - Mentoria entre pares
 
-#### Módulo 3A.4: Integração com TI (8h) - **SIMPLIFICADO**
+#### Módulo 3A.4: Integraçêo com TI (8h) - **SIMPLIFICADO**
 - **ANTES**: Arquitetura de Soluções (20h) - muito técnico
 - **AGORA**: Como falar com TI (8h) - prático
 - Como especificar necessidades técnicas
-- Integração de IA com LMS (Moodle, Canvas, Google Classroom)
+- Integraçêo de IA com LMS (Moodle, Canvas, Google Classroom)
 - APIs de IA: quando solicitar integrações
 - Low-code tools para conectar sistemas
-- **Foco**: Especificar, não desenvolver
+- **Foco**: Especificar, nêo desenvolver
 
-#### Módulo 3A.5: Formação de Multiplicadores (8h)
-- Técnicas de formação de adultos
+#### Módulo 3A.5: Formaçêo de Multiplicadores (8h)
+- Técnicas de formaçêo de adultos
 - Mentoria de professores
-- Como escalar a inovação na instituição
-- Criação de programa de "IA Champions"
+- Como escalar a inovaçêo na instituiçêo
+- Criaçêo de programa de "IA Champions"
 
-**Certificação**: "Líder em Transformação Digital Educacional"
+**Certificaçêo**: "Líder em Transformaçêo Digital Educacional"
 
-**Certificação Completa Trilha A**: "Mestre em IA Aplicada à Educação" (180h)
+**Certificaçêo Completa Trilha A**: "Mestre em IA Aplicada à Educaçêo" (180h)
 
 ---
 
@@ -304,7 +304,7 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 
 **Carga Total**: 60h (Nível 1) + 60h (Nível 2B) = **120 horas**
 
-**Público**: Professores que querem ensinar conceitos de IA, programação e pensamento computacional
+**Público**: Professores que querem ensinar conceitos de IA, programaçêo e pensamento computacional
 
 **Resultado Final**: Professor capaz de ensinar IA como disciplina, criar currículos por faixa etária e orientar projetos estudantis
 
@@ -316,7 +316,7 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 - Como explicar IA de forma lúdica
 - **Atividades Unplugged** (sem computador):
   - Jogos para ensinar algoritmos
-  - Dinâmicas de classificação (ML básico)
+  - Dinâmicas de classificaçêo (ML básico)
   - Rede neural humana (alunos simulam neurônios)
 - Storytelling sobre história da IA
   - De Alan Turing a ChatGPT
@@ -330,19 +330,19 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 - **IA para Ensino Fundamental I (6-10 anos)**
   - Reconhecimento de padrões com blocos
   - "Ensine o robô a fazer X"
-  - Classificação de imagens (gato vs cachorro)
+  - Classificaçêo de imagens (gato vs cachorro)
 
 - **IA para Ensino Fundamental II (11-14 anos)**
-  - Introdução a algoritmos
+  - Introduçêo a algoritmos
   - Scratch for AI
   - Teachable Machine (Google)
   - Projetos de ciência com IA
 
 - **IA para Ensino Médio (15-17 anos)**
-  - Programação com IA (Python básico)
+  - Programaçêo com IA (Python básico)
   - Ética e vieses algorítmicos
   - Projetos de impacto social
-  - Preparação para cursos técnicos/universidade
+  - Preparaçêo para cursos técnicos/universidade
 
 - **Alinhamento com BNCC**
   - Competências digitais
@@ -352,7 +352,7 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 #### Módulo 2B.3: Ferramentas Educacionais para Ensinar IA (12h)
 - **ATUALIZADO NOVEMBRO 2025**:
   - **Scratch for AI** (MIT)
-  - **Teachable Machine** (Google) - classificação de imagens
+  - **Teachable Machine** (Google) - classificaçêo de imagens
   - **AI4K12** (framework de Stanford para K-12)
   - **Code.org** - AI curriculum completo
   - **MIT App Inventor** com Machine Learning
@@ -364,7 +364,7 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 - Como avaliar segurança e privacidade
 
 #### Módulo 2B.4: Projetos Estudantis de IA (12h)
-- Estruturação de projetos de IA para alunos
+- Estruturaçêo de projetos de IA para alunos
 - Exemplos práticos:
   - **Fund I**: "Classifique brinquedos com IA"
   - **Fund II**: "Chatbot que responde sobre história do Brasil"
@@ -374,21 +374,21 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
   - Google Science Fair
   - Mostratec
   - Febrace
-- Como orientar Iniciação Científica em IA
+- Como orientar Iniciaçêo Científica em IA
 - Showcase de projetos estudantis
 
-#### Módulo 2B.5: Avaliação de Aprendizado de IA (8h)
+#### Módulo 2B.5: Avaliaçêo de Aprendizado de IA (8h)
 - Como avaliar conhecimento de IA dos alunos
 - Rubricas para projetos de IA
 - Portfólios digitais
 - Apresentações de projetos
-- Avaliação de competências (não apenas conhecimento):
+- Avaliaçêo de competências (nêo apenas conhecimento):
   - Pensamento computacional
-  - Resolução de problemas
+  - Resoluçêo de problemas
   - Criatividade
   - Trabalho em equipe
 
-**Certificação**: "Educador de IA Certificado - Especialista em Ensino de Inteligência Artificial"
+**Certificaçêo**: "Educador de IA Certificado - Especialista em Ensino de Inteligência Artificial"
 
 ---
 
@@ -397,36 +397,36 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 ### Trilha A: Professor 2.0
 - ✅ Nível 1: "SuperProfessor Fundamentos em IA" (60h)
 - ✅ Nível 2A: "SuperProfessor Avançado - Especialista em IA Aplicada" (120h acumuladas)
-- ✅ Nível 3A: **"Mestre em IA Aplicada à Educação"** (180h acumuladas)
+- ✅ Nível 3A: **"Mestre em IA Aplicada à Educaçêo"** (180h acumuladas)
 
 ### Trilha B: Educador de IA
 - ✅ Nível 1: "SuperProfessor Fundamentos em IA" (60h)
 - ✅ Nível 2B: **"Educador de IA Certificado"** (120h acumuladas)
 
-### Certificação Completa (Ambas Trilhas)
+### Certificaçêo Completa (Ambas Trilhas)
 - ✅ **"Grande Mestre em IA Educacional"** (240h - exclui Nível 1 duplicado)
 
 ---
 
-## 💰 Modelos de Implementação
+## 💰 Modelos de Implementaçêo
 
 ### Modelo 1: Trilha Única
 - Escolha Trilha A ou B após Nível 1
-- Duração: 10-12 meses
+- Duraçêo: 10-12 meses
 - Ideal para: Professor com objetivo claro
 
 ### Modelo 2: Jornada Completa
 - Nível 1 + Trilha A + Trilha B
-- Duração: 18-24 meses
+- Duraçêo: 18-24 meses
 - Ideal para: Escolas formando líderes completos
 
-### Modelo 3: Certificação Modular
+### Modelo 3: Certificaçêo Modular
 - Cada nível independente
-- Duração: Flexível
+- Duraçêo: Flexível
 - Ideal para: Educadores avançando no próprio ritmo
 
 ### Modelo 4: In-Company (Institucional)
-- Customização por demanda da escola
+- Customizaçêo por demanda da escola
 - Trilhas híbridas possíveis
 - Ideal para: Redes de ensino
 
@@ -451,26 +451,26 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 - 💼 Novas oportunidades de carreira
 
 **Para a Escola**:
-- 🎯 Diferenciação competitiva
-- 💡 Cultura de inovação
+- 🎯 Diferenciaçêo competitiva
+- 💡 Cultura de inovaçêo
 - 📊 Melhores resultados de aprendizagem
-- 💰 Redução de custos operacionais (automação)
+- 💰 Reduçêo de custos operacionais (automaçêo)
 
 **Para os Alunos**:
 - 🎓 Aprendizagem personalizada
 - 🚀 Competências do século XXI
-- 🌍 Preparação para o futuro do trabalho
+- 🌍 Preparaçêo para o futuro do trabalho
 
 ---
 
 ## 🌍 Diferenciais do Programa SuperProfessores
 
 ### 1. ⚡ Resiliência à Mudança Tecnológica
-- Ensino de **princípios**, não ferramentas
-- Atualização contínua (Living Updates)
+- Ensino de **princípios**, nêo ferramentas
+- Atualizaçêo contínua (Living Updates)
 - Comunidade ativa de early adopters
 
-### 2. 🇧🇷 Contextualização Brasileira
+### 2. 🇧🇷 Contextualizaçêo Brasileira
 - Ferramentas em português
 - Cases brasileiros de sucesso
 - Alinhamento com BNCC
@@ -501,7 +501,7 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 
 ## 📈 Roadmap de Lançamento
 
-### Fase 1: Validação (Mês 1-2)
+### Fase 1: Validaçêo (Mês 1-2)
 - [ ] Turma piloto Nível 1 (50 professores)
 - [ ] Coleta de feedback
 - [ ] Ajustes no conteúdo
@@ -509,16 +509,16 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 ### Fase 2: Soft Launch (Mês 3-6)
 - [ ] Lançamento Trilha A (Nível 2A + 3A)
 - [ ] Desenvolvimento Trilha B (Nível 2B)
-- [ ] Criação de comunidade online
+- [ ] Criaçêo de comunidade online
 
 ### Fase 3: Lançamento Completo (Mês 7-12)
 - [ ] Lançamento Trilha B
 - [ ] Parcerias com escolas
 - [ ] Escala nacional
 
-### Fase 4: Expansão (Ano 2)
-- [ ] Programa de certificação de tutores
-- [ ] Versão para redes de ensino
+### Fase 4: Expansêo (Ano 2)
+- [ ] Programa de certificaçêo de tutores
+- [ ] Versêo para redes de ensino
 - [ ] Parcerias internacionais (Portugal, Angola, Moçambique)
 
 ---
@@ -537,13 +537,13 @@ Identificamos **2 objetivos completamente diferentes** que educadores têm com I
 ## 📞 Contato e Informações
 
 **Projeto**: SuperProfessores
-**Versão**: 3.0 (Modelo Híbrido)
-**Atualização**: Novembro 2025
+**Versêo**: 3.0 (Modelo Híbrido)
+**Atualizaçêo**: Novembro 2025
 **Status**: Em desenvolvimento
 
 ---
 
-## 🔄 Política de Atualização
+## 🔄 Política de Atualizaçêo
 
 Este documento é um **documento vivo** que será atualizado:
 
@@ -551,13 +551,13 @@ Este documento é um **documento vivo** que será atualizado:
 - **Semestralmente**: Estrutura curricular
 - **Anualmente**: Estratégia e roadmap
 
-**Última atualização**: Novembro 2025
-**Próxima revisão**: Fevereiro 2026
+**Última atualizaçêo**: Novembro 2025
+**Próxima revisêo**: Fevereiro 2026
 
 ---
 
-> **"A única constante na IA é a mudança. Por isso, ensinamos a dançar com a mudança, não a lutar contra ela."**
+> **"A única constante na IA é a mudança. Por isso, ensinamos a dançar com a mudança, nêo a lutar contra ela."**
 
 ---
 
-*Documento elaborado com IA (Claude Sonnet 4.5) em colaboração com equipe SuperProfessores*
+*Documento elaborado com IA (Claude Sonnet 4.5) em colaboraçêo com equipe SuperProfessores*

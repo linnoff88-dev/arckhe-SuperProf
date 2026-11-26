@@ -4,7 +4,7 @@
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
 Panorama atualizado (Novembro 2025) das principais ferramentas de IA educacional. Aprenda a operar ChatGPT Study Mode, Claude Learning Mode, Gemini Guided Learning, Google NotebookLM e domine o Framework FEAT para ensinar com IA de forma estruturada.
 
@@ -21,9 +21,9 @@ Panorama atualizado (Novembro 2025) das principais ferramentas de IA educacional
 
 ### Recursos Principais (Nov 2025):
 
-- **Study Mode:** Tutor socrático que NÃO dá respostas prontas, mas guia com perguntas
+- **Study Mode:** Tutor socrático que NêO dá respostas prontas, mas guia com perguntas
 - **Canvas:** Editor colaborativo para textos e código (GPT-4o)
-- **Advanced Voice:** Conversação por voz em tempo real
+- **Advanced Voice:** Conversaçêo por voz em tempo real
 - **Custom GPTs:** Criar assistentes especializados (ex: "Corretor de Redações ENEM")
 - **Memory:** IA lembra preferências entre sessões
 
@@ -35,14 +35,14 @@ Panorama atualizado (Novembro 2025) das principais ferramentas de IA educacional
 Você é um criador de quizzes educacionais.
 
 Contexto: Turma de 9º ano, conteúdo "Fotossíntese"
-Objetivo: Avaliar compreensão de conceitos-chave
+Objetivo: Avaliar compreensêo de conceitos-chave
 
 Tarefa: Crie 10 questões de múltipla escolha:
 - 3 fáceis (conceitos básicos)
-- 5 médias (aplicação)
+- 5 médias (aplicaçêo)
 - 2 difíceis (análise)
 
-Formato: Para cada questão, forneça:
+Formato: Para cada questêo, forneça:
 1. Enunciado claro
 2. 4 alternativas (A, B, C, D)
 3. Resposta correta
@@ -59,7 +59,7 @@ Formato: Para cada questão, forneça:
 
 ### Quando Usar:
 
-- ✅ Geração rápida de materiais (quizzes, exercícios, resumos)
+- ✅ Geraçêo rápida de materiais (quizzes, exercícios, resumos)
 - ✅ Tutoria socrática com Study Mode
 - ✅ Brainstorming de ideias pedagógicas
 - ❌ Pesquisa de dados recentes (use Google/Perplexity)
@@ -72,7 +72,7 @@ Formato: Para cada questão, forneça:
 ### Vantagens Competitivas:
 
 - **Contexto massivo:** 200k tokens (equivale a 500 páginas) vs 128k do GPT-4
-- **Raciocínio superior:** Melhor em matemática, lógica e programação
+- **Raciocínio superior:** Melhor em matemática, lógica e programaçêo
 - **Transparência:** Explica raciocínio passo a passo (Chain-of-Thought nativo)
 - **Segurança:** Treinado com Constitutional AI (reduz vieses e toxicidade)
 
@@ -88,10 +88,10 @@ Você é um orientador de TCC experiente.
 
 Analise este trabalho em 3 dimensões:
 1. Estrutura metodológica (ABNT, coerência argumentativa)
-2. Qualidade do referencial teórico (autores-chave, atualização)
-3. Contribuição científica (originalidade, relevância)
+2. Qualidade do referencial teórico (autores-chave, atualizaçêo)
+3. Contribuiçêo científica (originalidade, relevância)
 
-Para cada dimensão, forneça:
+Para cada dimensêo, forneça:
 - Nota (0-10)
 - 3 pontos fortes
 - 3 pontos a melhorar (com sugestões concretas)
@@ -104,9 +104,9 @@ Para cada dimensão, forneça:
 ### Quando Usar:
 
 - ✅ Análise de documentos longos (TCCs, dissertações, apostilas)
-- ✅ Raciocínio complexo (matemática, lógica, programação)
+- ✅ Raciocínio complexo (matemática, lógica, programaçêo)
 - ✅ Feedback pedagógico detalhado
-- ❌ Geração de imagens (só texto)
+- ❌ Geraçêo de imagens (só texto)
 - ❌ Conhecimento de eventos recentes (dados até ago/2024)
 
 ---
@@ -115,20 +115,20 @@ Para cada dimensão, forneça:
 
 ### Recursos Únicos:
 
-- **Integração nativa:** Trabalha dentro de Google Docs/Sheets (sem copiar/colar)
+- **Integraçêo nativa:** Trabalha dentro de Google Docs/Sheets (sem copiar/colar)
 - **Análise de vídeos:** Transcreve e analisa vídeos do YouTube automaticamente
 - **Pesquisa em tempo real:** Acessa Google Search durante respostas
-- **Tradução avançada:** Melhor LLM para idiomas menos comuns
+- **Traduçêo avançada:** Melhor LLM para idiomas menos comuns
 
 ### Tutorial Prático - Plano de Aula:
 
-**Usando integração com Google Docs:**
+**Usando integraçêo com Google Docs:**
 
 1. Abra Google Docs e ative Gemini (ícone no canto superior direito)
 2. Digite o prompt:
 
 ```
-Crie um plano de aula de 50 minutos sobre "Revolução Industrial"
+Crie um plano de aula de 50 minutos sobre "Revoluçêo Industrial"
 para turma de 8º ano.
 
 Estrutura necessária:
@@ -136,7 +136,7 @@ Estrutura necessária:
 2. Materiais necessários
 3. Sequência didática (abertura, desenvolvimento, fechamento)
 4. Atividade prática (individual ou grupo)
-5. Avaliação formativa
+5. Avaliaçêo formativa
 
 Inclua 2 links de vídeos do YouTube relevantes.
 ```
@@ -150,7 +150,7 @@ Inclua 2 links de vídeos do YouTube relevantes.
 - ✅ Análise de vídeos do YouTube
 - ✅ Pesquisa de informações atualizadas
 - ❌ Raciocínio lógico complexo (use Claude)
-- ❌ Criação de tutores personalizados (use ChatGPT Custom GPTs)
+- ❌ Criaçêo de tutores personalizados (use ChatGPT Custom GPTs)
 
 ---
 
@@ -159,11 +159,11 @@ Inclua 2 links de vídeos do YouTube relevantes.
 ### Recursos Revolucionários:
 
 - **Audio Overviews:** Gera podcasts de 10-20 min com 2 vozes sintéticas (homem + mulher) conversando sobre o conteúdo
-- **Customização:** Ajustar tom (acadêmico/casual), duração, público-alvo
+- **Customizaçêo:** Ajustar tom (acadêmico/casual), duraçêo, público-alvo
 - **Flashcards automáticos:** Extrai conceitos-chave e gera cartões Anki
-- **Citações verificáveis:** Toda informação tem link para trecho original do documento
+- **Citações verificáveis:** Toda informaçêo tem link para trecho original do documento
 
-### Tutorial Prático - Criar Podcast de Revisão:
+### Tutorial Prático - Criar Podcast de Revisêo:
 
 **Passo a passo:**
 
@@ -173,18 +173,18 @@ Inclua 2 links de vídeos do YouTube relevantes.
 4. Aguarde 3-5 minutos (processamento)
 5. Download do MP3 (podcast de 10-20 min pronto para distribuir)
 
-**Exemplo real:** Apostila de 30 páginas sobre "Sistema Digestório" → Podcast de 15 min com 2 hosts conversando sobre digestão, enzimas e metabolismo
+**Exemplo real:** Apostila de 30 páginas sobre "Sistema Digestório" → Podcast de 15 min com 2 hosts conversando sobre digestêo, enzimas e metabolismo
 
 ### Casos de Uso:
 
-1. **Material de revisão:** Podcasts para alunos ouvirem no trajeto escola-casa
+1. **Material de revisêo:** Podcasts para alunos ouvirem no trajeto escola-casa
 2. **Acessibilidade:** Alunos com dislexia/deficiência visual aprendem por áudio
 3. **Ensino híbrido:** Alunos ausentes acessam conteúdo em formato alternativo
-4. **Estudo ativo:** Flashcards gerados automaticamente para revisão espaçada
+4. **Estudo ativo:** Flashcards gerados automaticamente para revisêo espaçada
 
 ### Limitações:
 
-- ❌ Só funciona com textos (não processa vídeos ou áudios como entrada)
+- ❌ Só funciona com textos (nêo processa vídeos ou áudios como entrada)
 - ❌ Vozes sintéticas ainda perceptíveis como IA
 - ❌ Limite de 50 páginas por documento
 
@@ -221,7 +221,7 @@ Framework pedagógico da UNESCO (2024) para integrar IA em sala de aula de forma
 **Métricas:**
 - Alunos aprenderam mais/melhor? (dados qualitativos/quantitativos)
 - Houve economia de tempo docente?
-- Inclusão foi ampliada? (acessibilidade, personalização)
+- Inclusêo foi ampliada? (acessibilidade, personalizaçêo)
 
 #### **T - Transform (Transformar)**
 
@@ -232,14 +232,14 @@ Framework pedagógico da UNESCO (2024) para integrar IA em sala de aula de forma
 - Treinar colegas professores
 - Integrar IA no plano pedagógico institucional
 
-### Exemplo de Aplicação FEAT:
+### Exemplo de Aplicaçêo FEAT:
 
-**Caso:** "Alunos têm dificuldade em interpretação de texto"
+**Caso:** "Alunos têm dificuldade em interpretaçêo de texto"
 
-- **F:** Objetivo = Melhorar compreensão leitora. Hipótese = Feedback imediato aumenta aprendizagem
+- **F:** Objetivo = Melhorar compreensêo leitora. Hipótese = Feedback imediato aumenta aprendizagem
 - **E:** Testar ChatGPT Study Mode (tutoria socrática) vs Claude (análise detalhada)
-- **A:** Comparar notas em avaliação (pré/pós). Coletar feedback dos alunos
-- **T:** Criar guia "Como usar ChatGPT para interpretação" e compartilhar com equipe
+- **A:** Comparar notas em avaliaçêo (pré/pós). Coletar feedback dos alunos
+- **T:** Criar guia "Como usar ChatGPT para interpretaçêo" e compartilhar com equipe
 
 ---
 
@@ -253,7 +253,7 @@ Framework pedagógico da UNESCO (2024) para integrar IA em sala de aula de forma
 - Framework FEAT explicado (40 min)
 
 ### 📄 Leituras (4h)
-- Documentação oficial das 4 ferramentas (120 min)
+- Documentaçêo oficial das 4 ferramentas (120 min)
 - Framework FEAT - Guia UNESCO (45 min)
 - Comparativo de LLMs educacionais (30 min)
 - 10 casos de uso práticos (45 min)
@@ -265,7 +265,7 @@ Framework pedagógico da UNESCO (2024) para integrar IA em sala de aula de forma
 - Podcast com NotebookLM (60 min)
 - Aplicar Framework FEAT (60 min)
 
-### ✅ Avaliação (1h)
+### ✅ Avaliaçêo (1h)
 - Quiz de ferramentas (20 questões)
 - Projeto prático: Criar material com 2 IAs
 - Peer review de materiais criados

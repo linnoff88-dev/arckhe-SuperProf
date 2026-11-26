@@ -1,55 +1,55 @@
-# Módulo 3A.2: Liderança em Transformação Digital Educacional
+# Módulo 3A.2: Liderança em Transformaçêo Digital Educacional
 
 **Nível 3A: Especialista | Carga Horária: 20 horas**
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
-Aprenda a liderar mudanças institucionais rumo à integração efetiva de IA. Domine gestão de resistências, construção de visão compartilhada, desenvolvimento de equipes e medição de impacto organizacional.
+Aprenda a liderar mudanças institucionais rumo à integraçêo efetiva de IA. Domine gestêo de resistências, construçêo de visêo compartilhada, desenvolvimento de equipes e mediçêo de impacto organizacional.
 
 ### Objetivos:
-- Diagnosticar maturidade digital da instituição
-- Construir roadmap de transformação realista
+- Diagnosticar maturidade digital da instituiçêo
+- Construir roadmap de transformaçêo realista
 - Gerenciar resistências e construir engajamento
 - Desenvolver capacidades docentes em escala
 - Medir impacto e demonstrar ROI educacional
 
 ---
 
-## 🎯 Os 8 Desafios da Transformação Digital Educacional
+## 🎯 Os 8 Desafios da Transformaçêo Digital Educacional
 
-### 1. "Não temos budget"
-**Realidade:** Custo de não transformar > Custo de transformar
-**Solução:** Demonstrar ROI com pilotos rápidos
+### 1. "Nêo temos budget"
+**Realidade:** Custo de nêo transformar > Custo de transformar
+**Soluçêo:** Demonstrar ROI com pilotos rápidos
 
-### 2. "Professores vão resistir"
-**Realidade:** Professores resistem a mudanças impostas, não co-criadas
-**Solução:** Envolver desde o dia 1
+### 2. "Professores vêo resistir"
+**Realidade:** Professores resistem a mudanças impostas, nêo co-criadas
+**Soluçêo:** Envolver desde o dia 1
 
 ### 3. "IA vai substituir professores"
-**Realidade:** IA aumenta, não substitui
-**Solução:** Narrativa clara + exemplos concretos
+**Realidade:** IA aumenta, nêo substitui
+**Soluçêo:** Narrativa clara + exemplos concretos
 
-### 4. "Não temos infraestrutura"
+### 4. "Nêo temos infraestrutura"
 **Realidade:** Ferramentas cloud democratizaram acesso
-**Solução:** Começar com gratuitas, escalar conforme necessário
+**Soluçêo:** Começar com gratuitas, escalar conforme necessário
 
 ### 5. "Falta tempo para treinar"
 **Realidade:** IA economiza mais tempo do que consome para aprender
-**Solução:** "Learn by doing" ao invés de treinamento massivo prévio
+**Soluçêo:** "Learn by doing" ao invés de treinamento massivo prévio
 
 ### 6. "E a privacidade dos alunos?"
-**Realidade:** Preocupação legítima
-**Solução:** Governança de dados + ferramentas LGPD-compliant
+**Realidade:** Preocupaçêo legítima
+**Soluçêo:** Governança de dados + ferramentas LGPD-compliant
 
 ### 7. "Cada um usa ferramenta diferente"
 **Realidade:** Diversidade é boa no início, padronizar depois
-**Solução:** Fase exploração (3 meses) → Fase convergência
+**Soluçêo:** Fase exploraçêo (3 meses) → Fase convergência
 
 ### 8. "Como medir se está funcionando?"
-**Realidade:** Se não mede, não gerencia
-**Solução:** Dashboard de KPIs desde semana 1
+**Realidade:** Se nêo mede, nêo gerencia
+**Soluçêo:** Dashboard de KPIs desde semana 1
 
 ---
 
@@ -57,36 +57,36 @@ Aprenda a liderar mudanças institucionais rumo à integração efetiva de IA. D
 
 ### Framework: 5 Níveis de Maturidade
 
-**Nível 1 - Conscientização (0-20%):**
-- Instituição reconhece importância da IA
-- Discussões iniciais, sem ação
-- **Ação:** Criar senso de urgência
+**Nível 1 - Conscientizaçêo (0-20%):**
+- Instituiçêo reconhece importância da IA
+- Discussões iniciais, sem açêo
+- **Açêo:** Criar senso de urgência
 
-**Nível 2 - Experimentação (20-40%):**
+**Nível 2 - Experimentaçêo (20-40%):**
 - Professores isolados testam ferramentas
-- Sem coordenação, muito "wild west"
-- **Ação:** Criar comunidade de prática
+- Sem coordenaçêo, muito "wild west"
+- **Açêo:** Criar comunidade de prática
 
-**Nível 3 - Implementação (40-60%):**
+**Nível 3 - Implementaçêo (40-60%):**
 - Pilotos estruturados em alguns cursos
 - Primeiras políticas e guidelines
-- **Ação:** Sistematizar e documentar
+- **Açêo:** Sistematizar e documentar
 
-**Nível 4 - Integração (60-80%):**
+**Nível 4 - Integraçêo (60-80%):**
 - IA integrada em múltiplas disciplinas
 - Processos administrativos também usam IA
-- **Ação:** Otimizar e escalar
+- **Açêo:** Otimizar e escalar
 
-**Nível 5 - Transformação (80-100%):**
+**Nível 5 - Transformaçêo (80-100%):**
 - IA permeia toda experiência educacional
-- Instituição referência no setor
-- **Ação:** Inovar e liderar mercado
+- Instituiçêo referência no setor
+- **Açêo:** Inovar e liderar mercado
 
 ### Ferramenta de Diagnóstico:
 
 **Prompt Claude:**
 ```
-Avalie maturidade digital da instituição [NOME]:
+Avalie maturidade digital da instituiçêo [NOME]:
 
 Dimensões a avaliar (0-10 cada):
 
@@ -95,41 +95,41 @@ Dimensões a avaliar (0-10 cada):
    - Ferramentas digitais disponíveis
    - Suporte técnico
 
-2. CAPACITAÇÃO:
+2. CAPACITAÇêO:
    - % professores treinados em IA
    - Frequência de PD (Prof. Development)
    - Qualidade dos treinamentos
 
 3. CULTURA:
-   - Abertura para inovação
+   - Abertura para inovaçêo
    - Tolerância a erros
-   - Colaboração entre docentes
+   - Colaboraçêo entre docentes
 
 4. LIDERANÇA:
-   - Visão clara para IA
+   - Visêo clara para IA
    - Recursos alocados
    - Cobrança de resultados
 
 5. PROCESSOS:
    - Políticas de uso de IA
    - Workflows documentados
-   - Avaliação de impacto
+   - Avaliaçêo de impacto
 
 Dados:
 [Responder questionário de 25 perguntas]
 
 Output:
-- Score por dimensão (radar chart)
+- Score por dimensêo (radar chart)
 - Nível geral de maturidade (1-5)
 - Top 3 gaps prioritários
-- Recomendações de ação (quick wins + long term)
+- Recomendações de açêo (quick wins + long term)
 
 Formato: Relatório executivo (3 páginas)
 ```
 
 ---
 
-## 🗺️ Roadmap de Transformação
+## 🗺️ Roadmap de Transformaçêo
 
 ### Template: 3 Horizontes (Nowist, Next, Future)
 
@@ -144,7 +144,7 @@ Formato: Relatório executivo (3 páginas)
 
 2. **Pilotos Rápidos (Semana 3-8)**
    - 3 use cases diferentes
-   - Ex: Geração de quiz, Feedback em redações, Personalização
+   - Ex: Geraçêo de quiz, Feedback em redações, Personalizaçêo
    - Documentar tempo economizado + qualidade
 
 3. **Showcase (Semana 10-12)**
@@ -160,18 +160,18 @@ Formato: Relatório executivo (3 páginas)
 
 **Horizonte 2 - PRÓXIMO (3-12 meses): Escala**
 
-**Objetivo:** Levar para 50%+ da instituição
+**Objetivo:** Levar para 50%+ da instituiçêo
 
 **Ações:**
-1. **Programa de Capacitação (Mês 3-6)**
+1. **Programa de Capacitaçêo (Mês 3-6)**
    - Trilha de 20h para todos os docentes
    - Baseado em SuperProfessores :)
-   - Certificação interna
+   - Certificaçêo interna
 
 2. **Políticas e Guidelines (Mês 4-5)**
    - Documento: "Uso Responsável de IA"
    - Co-criado com professores
-   - Revisão legal (LGPD, direitos autorais)
+   - Revisêo legal (LGPD, direitos autorais)
 
 3. **Infraestrutura (Mês 6-9)**
    - Licenças institucionais (ChatGPT Team, etc)
@@ -191,9 +191,9 @@ Formato: Relatório executivo (3 páginas)
 
 ---
 
-**Horizonte 3 - FUTURO (12-36 meses): Transformação**
+**Horizonte 3 - FUTURO (12-36 meses): Transformaçêo**
 
-**Objetivo:** IA como DNA da instituição
+**Objetivo:** IA como DNA da instituiçêo
 
 **Ações:**
 1. **Redesenho Curricular (Mês 12-18)**
@@ -201,15 +201,15 @@ Formato: Relatório executivo (3 páginas)
    - Competências de IA para todos alunos
    - Projetos integradores com IA
 
-2. **Inovação em Avaliação (Mês 15-20)**
-   - Avaliação formativa contínua com IA
+2. **Inovaçêo em Avaliaçêo (Mês 15-20)**
+   - Avaliaçêo formativa contínua com IA
    - Portfólios digitais aumentados
-   - Certificação baseada em competências
+   - Certificaçêo baseada em competências
 
 3. **Pesquisa e Desenvolvimento (Mês 18-36)**
    - Parcerias com universidades
-   - Publicação de casos em journals
-   - Criação de IP (propriedade intelectual)
+   - Publicaçêo de casos em journals
+   - Criaçêo de IP (propriedade intelectual)
 
 4. **Posicionamento de Mercado (Contínuo)**
    - Marketing: "Escola pioneira em IA"
@@ -224,11 +224,11 @@ Formato: Relatório executivo (3 páginas)
 
 ---
 
-## 🤝 Gestão de Resistências
+## 🤝 Gestêo de Resistências
 
 ### Tipos de Resistência e Estratégias:
 
-**1. Resistência Cognitiva: "Não entendo IA"**
+**1. Resistência Cognitiva: "Nêo entendo IA"**
 
 **Causa:** Medo do desconhecido
 **Sintomas:** Evita treinamentos, faz perguntas básicas repetidas
@@ -249,7 +249,7 @@ Para cada passo:
 - Tempo estimado
 - "O que pode dar errado" (troubleshooting)
 
-Tom: Encorajador, não-técnico
+Tom: Encorajador, nêo-técnico
 Formato: PDF ou slide deck
 ```
 
@@ -260,28 +260,28 @@ Formato: PDF ou slide deck
 **Causa:** Ameaça à identidade profissional
 **Sintomas:** Comentários defensivos, sarcasmo
 **Estratégia:**
-- Narrativa de empoderamento (IA como assistant, não replacement)
+- Narrativa de empoderamento (IA como assistant, nêo replacement)
 - Mostrar casos onde professor é MAIS valorizado com IA
 - Reconhecimento público de expertise humana insubstituível
 
 **Script de Conversa 1-on-1:**
 ```
-Líder: "Percebo certa hesitação sua em relação à IA. Posso entender o que te preocupa?"
+Líder: "Percebo certa hesitaçêo sua em relaçêo à IA. Posso entender o que te preocupa?"
 
 [Escutar ativamente]
 
-Líder: "Entendo sua preocupação. Vou te mostrar como [PROFESSOR RESPEITADO] está usando IA e ficou MAIS efetivo, não menos..."
+Líder: "Entendo sua preocupaçêo. Vou te mostrar como [PROFESSOR RESPEITADO] está usando IA e ficou MAIS efetivo, nêo menos..."
 
 [Mostrar caso concreto]
 
-Líder: "Que tal experimentarmos juntos por 2 semanas, sem pressão? Você escolhe quando parar se não gostar."
+Líder: "Que tal experimentarmos juntos por 2 semanas, sem pressêo? Você escolhe quando parar se nêo gostar."
 ```
 
 ---
 
-**3. Resistência Comportamental: "Não tenho tempo"**
+**3. Resistência Comportamental: "Nêo tenho tempo"**
 
-**Causa:** Sobrecarga real ou procrastinação
+**Causa:** Sobrecarga real ou procrastinaçêo
 **Sintomas:** Sempre tem desculpa, adia treinamentos
 **Estratégia:**
 - Provar que IA economiza mais tempo do que consome
@@ -304,7 +304,7 @@ Líder: "Que tal experimentarmos juntos por 2 semanas, sem pressão? Você escol
 
 **Script:**
 ```
-"Você tem razão em ser cético. Eu lembro da [TECH ANTERIOR] que não deu certo aqui. O que aprendemos daquilo que devemos evitar agora?"
+"Você tem razêo em ser cético. Eu lembro da [TECH ANTERIOR] que nêo deu certo aqui. O que aprendemos daquilo que devemos evitar agora?"
 
 [Transformar cético em advisor → gera ownership]
 ```
@@ -313,10 +313,10 @@ Líder: "Que tal experimentarmos juntos por 2 semanas, sem pressão? Você escol
 
 ## 👥 Desenvolvimento de Capacidades Docentes
 
-### Programa de Capacitação em 3 Níveis:
+### Programa de Capacitaçêo em 3 Níveis:
 
 **Nível 1 - Literacy (4h): "Entender IA"**
-- O que é IA, o que não é
+- O que é IA, o que nêo é
 - Limitações e riscos
 - Ética e uso responsável
 - **Outcome:** Professor pode explicar IA para alunos
@@ -324,16 +324,16 @@ Líder: "Que tal experimentarmos juntos por 2 semanas, sem pressão? Você escol
 **Nível 2 - Application (12h): "Usar IA"**
 - Prompt engineering básico
 - 5 use cases práticos na disciplina
-- Integração com ferramentas existentes
+- Integraçêo com ferramentas existentes
 - **Outcome:** Professor usa IA semanalmente
 
 **Nível 3 - Innovation (20h): "Criar com IA"**
 - Design de experiências aumentadas
-- Avaliação formativa com IA
+- Avaliaçêo formativa com IA
 - Projetos interdisciplinares
 - **Outcome:** Professor é champion interno
 
-### Certificação Interna:
+### Certificaçêo Interna:
 
 **Critérios para "IA Educator Certified":**
 1. ✅ Completou trilha de 20h
@@ -344,17 +344,17 @@ Líder: "Que tal experimentarmos juntos por 2 semanas, sem pressão? Você escol
 
 **Benefícios:**
 - Badge digital para email/LinkedIn
-- Menção em site da instituição
+- Mençêo em site da instituiçêo
 - Prioridade para eventos externos
 - Bônus financeiro (se viável)
 
 ---
 
-## 📈 Medição de Impacto
+## 📈 Mediçêo de Impacto
 
 ### Framework: Kirkpatrick 4 Levels
 
-**Level 1 - REAÇÃO: "Gostaram?"**
+**Level 1 - REAÇêO: "Gostaram?"**
 **Métrica:** NPS de professores/alunos
 **Coleta:** Survey após treinamentos/módulos
 **Meta:** NPS >50
@@ -362,9 +362,9 @@ Líder: "Que tal experimentarmos juntos por 2 semanas, sem pressão? Você escol
 **Level 2 - APRENDIZAGEM: "Aprenderam?"**
 **Métrica:** Score em avaliações, certificações
 **Coleta:** Quizzes, projetos práticos
-**Meta:** 80% aprovação
+**Meta:** 80% aprovaçêo
 
-**Level 3 - COMPORTAMENTO: "Estão usando?"**
+**Level 3 - COMPORTAMENTO: "Estêo usando?"**
 **Métrica:** Frequência de uso de ferramentas IA
 **Coleta:** Analytics de plataformas, self-report mensal
 **Meta:** 70% usam semanalmente após 6 meses
@@ -373,7 +373,7 @@ Líder: "Que tal experimentarmos juntos por 2 semanas, sem pressão? Você escol
 **Métricas:**
 - Tempo economizado por professor (hrs/semana)
 - Melhoria em performance de alunos (notas, engajamento)
-- Redução de evasão
+- Reduçêo de evasêo
 - ROI financeiro (custo do programa vs economia gerada)
 
 **Coleta:** Dashboard contínuo
@@ -381,7 +381,7 @@ Líder: "Que tal experimentarmos juntos por 2 semanas, sem pressão? Você escol
 **Meta:**
 - Economia de 3h/semana/professor
 - +10% em engajamento de alunos
-- -5% evasão
+- -5% evasêo
 - ROI positivo em 12 meses
 
 ---
@@ -390,7 +390,7 @@ Líder: "Que tal experimentarmos juntos por 2 semanas, sem pressão? Você escol
 
 **Prompt Claude:**
 ```
-Crie dashboard executivo de transformação digital para [INSTITUIÇÃO]:
+Crie dashboard executivo de transformaçêo digital para [INSTITUIÇêO]:
 
 Dados disponíveis:
 - 120 professores, 2.400 alunos
@@ -399,7 +399,7 @@ Dados disponíveis:
 
 KPIs a visualizar:
 
-1. 📊 ADOÇÃO:
+1. 📊 ADOÇêO:
    - % professores capacitados (barras por mês)
    - Frequência de uso (heatmap)
 
@@ -412,7 +412,7 @@ KPIs a visualizar:
    - Top 3 benefícios citados (word cloud)
 
 4. 🚦 ALERTAS:
-   - Professores em risco (não usam há 4+ semanas)
+   - Professores em risco (nêo usam há 4+ semanas)
    - Departamentos atrasados
 
 Formato: HTML interativo com Chart.js
@@ -425,14 +425,14 @@ Formato: HTML interativo com Chart.js
 ### Caso 1: Colégio Médio Porte (800 alunos)
 
 **Contexto:**
-- Escola privada, São Paulo
+- Escola privada, Sêo Paulo
 - 45 professores (média 50 anos, baixa afinidade tech)
 - Diretor visionário, mas corpo docente cético
 
 **Abordagem:**
 
 **Mês 1-2: Diagnóstico + Champions**
-- Diagnóstico: Nível 2 (Experimentação caótica)
+- Diagnóstico: Nível 2 (Experimentaçêo caótica)
 - Identificou 6 champions em 3 departamentos
 
 **Mês 3-4: Pilotos**
@@ -444,14 +444,14 @@ Formato: HTML interativo com Chart.js
 - Evento interno com 120 participantes (professores + pais)
 - 25 professores se voluntariaram para "segunda onda"
 
-**Mês 7-12: Capacitação + Políticas**
+**Mês 7-12: Capacitaçêo + Políticas**
 - 38/45 professores completaram trilha (84%)
 - Política de uso responsável co-criada e aprovada
 
 **Resultados (1 ano):**
 - Professores usando IA semanalmente: 78%
 - Tempo economizado (médio): 3.2h/semana
-- Satisfação docente: +23%
+- Satisfaçêo docente: +23%
 - Matrículas (ano seguinte): +12% (campanha destacou uso de IA)
 - ROI: Investimento R$60k → Valor gerado R$180k (tempo economizado × custo/hora)
 
@@ -462,47 +462,47 @@ Formato: HTML interativo com Chart.js
 **Contexto:**
 - Universidade pública, contexto de recursos limitados
 - 400 professores, autonomia departamental alta
-- Reitor novo com agenda de modernização
+- Reitor novo com agenda de modernizaçêo
 
 **Desafios Únicos:**
 - Budget zero para licenças pagas
-- Resistência cultural forte ("universidade é lugar de pensamento crítico, não de automação")
+- Resistência cultural forte ("universidade é lugar de pensamento crítico, nêo de automaçêo")
 - Estrutura descentralizada (difícil impor top-down)
 
 **Abordagem:**
 
 **Fase 1: Bottom-up Orgânico (6 meses)**
-- Não criou programa formal
+- Nêo criou programa formal
 - Apoiou iniciativas espontâneas de departamentos
 - Forneceu: espaço para experimentar + reconhecimento público
 
-**Fase 2: Documentação e Compartilhamento (6 meses)**
+**Fase 2: Documentaçêo e Compartilhamento (6 meses)**
 - Criou repositório aberto de casos de uso
 - Encontros trimestrais de compartilhamento (facultativo)
-- Paper coletivo: "IA na Educação: Experiências na [UNIVERSIDADE]"
+- Paper coletivo: "IA na Educaçêo: Experiências na [UNIVERSIDADE]"
 
-**Fase 3: Institucionalização Light (12 meses)**
+**Fase 3: Institucionalizaçêo Light (12 meses)**
 - Disciplina optativa: "IA para Educadores" (3 créditos)
-- Guidelines éticas (não políticas rígidas)
+- Guidelines éticas (nêo políticas rígidas)
 - Hub de recursos (prompts, tutoriais, comunidade)
 
 **Resultados (2 anos):**
 - 120 professores usando regularmente (30%)
-- 15 publicações acadêmicas sobre IA na educação
+- 15 publicações acadêmicas sobre IA na educaçêo
 - Disciplina optativa: 200 inscritos/semestre (wait list)
 - Visibilidade: Featured em mídia nacional como universidade inovadora
 - Budget adicional conquistado (MEC edital): R$500k para projeto IA
 
-**Lição:** Em contextos descentralizados, bottom-up supera top-down
+**Liçêo:** Em contextos descentralizados, bottom-up supera top-down
 
 ---
 
-## 🧰 Ferramentas do Líder de Transformação
+## 🧰 Ferramentas do Líder de Transformaçêo
 
-### 1. Comunicação:
+### 1. Comunicaçêo:
 
 **Town Halls Trimestrais:**
-- Formato: 30 min apresentação + 30 min Q&A
+- Formato: 30 min apresentaçêo + 30 min Q&A
 - Conteúdo: Progresso, casos de sucesso, próximos passos
 - IA ajuda: Gerar slides, antecipar perguntas
 
@@ -514,7 +514,7 @@ Formato: HTML interativo com Chart.js
 
 **Prompt para Newsletter:**
 ```
-Crie newsletter mensal sobre IA na educação para [INSTITUIÇÃO]:
+Crie newsletter mensal sobre IA na educaçêo para [INSTITUIÇêO]:
 
 Seções:
 1. 🎯 Destaques do Mês (3 conquistas)
@@ -524,7 +524,7 @@ Seções:
 5. 📅 Próximos Eventos
 
 Tom: Inspirador, celebratório, prático
-Extensão: 500 palavras
+Extensêo: 500 palavras
 Formato: HTML responsivo
 ```
 
@@ -533,16 +533,16 @@ Formato: HTML responsivo
 ### 2. Governança:
 
 **Comitê de IA:**
-- Composição: 1 líder, 2 professores, 1 TI, 1 legal, 1 aluno
+- Composiçêo: 1 líder, 2 professores, 1 TI, 1 legal, 1 aluno
 - Frequência: Mensal
 - Mandato: Aprovar políticas, revisar casos éticos, priorizar investimentos
 
 **Políticas Essenciais:**
-1. Uso Aceitável de IA (o que pode/não pode)
+1. Uso Aceitável de IA (o que pode/nêo pode)
 2. Transparência (quando informar que IA foi usada)
 3. Privacidade de Dados (LGPD compliance)
 4. Propriedade Intelectual (quem é dono do que IA gera?)
-5. Avaliação (IA em provas? Como?)
+5. Avaliaçêo (IA em provas? Como?)
 
 **Template de Política:**
 ```
@@ -554,21 +554,21 @@ DIRETRIZES:
 ✅ É permitido:
 - [Listar]
 
-❌ Não é permitido:
+❌ Nêo é permitido:
 - [Listar]
 
-⚠️ Requer aprovação:
+⚠️ Requer aprovaçêo:
 - [Listar]
 
 PROCEDIMENTOS:
 [Passo-a-passo para situações comuns]
 
-REVISÃO: [Data de próxima revisão]
+REVISêO: [Data de próxima revisêo]
 ```
 
 ---
 
-### 3. Gestão de Mudança:
+### 3. Gestêo de Mudança:
 
 **Framework ADKAR (Prosci):**
 
@@ -588,27 +588,27 @@ REVISÃO: [Data de próxima revisão]
 - Mudança se sustenta? (reconhecimento + accountability)
 
 **Checklist para Cada Fase:**
-[Ver frameworks de gestão de mudança específicos]
+[Ver frameworks de gestêo de mudança específicos]
 
 ---
 
 ## 📦 Recursos do Módulo
 
 ### 📹 Videoaulas (5h)
-- Fundamentos de liderança em transformação (60 min)
+- Fundamentos de liderança em transformaçêo (60 min)
 - Diagnóstico de maturidade (50 min)
-- Gestão de resistências (70 min)
+- Gestêo de resistências (70 min)
 - Desenvolvimento docente em escala (60 min)
-- Medição de impacto e ROI (80 min)
+- Mediçêo de impacto e ROI (80 min)
 
 ### 💬 Práticas (12h)
-- Diagnosticar sua instituição (3h)
+- Diagnosticar sua instituiçêo (3h)
 - Criar roadmap 12 meses (4h)
-- Desenhar programa de capacitação (3h)
+- Desenhar programa de capacitaçêo (3h)
 - Montar dashboard de métricas (2h)
 
-### ✅ Avaliação (3h)
-- Projeto: Plano de transformação completo
+### ✅ Avaliaçêo (3h)
+- Projeto: Plano de transformaçêo completo
 - Pitch: Apresentar para "board" simulado
 - Peer review: Dar feedback em 2 planos de colegas
 

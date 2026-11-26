@@ -1,9 +1,9 @@
-# Pesquisa: Frameworks e Cursos de IA na Educação
+# Pesquisa: Frameworks e Cursos de IA na Educaçêo
 
 ## 1. Framework UNESCO para Competências em IA (AI CFT)
 
 ### Estrutura Principal
-O AI CFT da UNESCO define conhecimento, habilidades e valores que professores devem dominar na era da IA, estruturado em **5 dimensões** e **3 níveis de progressão**.
+O AI CFT da UNESCO define conhecimento, habilidades e valores que professores devem dominar na era da IA, estruturado em **5 dimensões** e **3 níveis de progressêo**.
 
 ### Princípios Fundamentais
 - Proteger os direitos dos professores
@@ -16,7 +16,7 @@ O AI CFT da UNESCO define conhecimento, habilidades e valores que professores de
 - Atitudes e orientações críticas para interações humano-IA
 - Colocar necessidades humanas em primeiro lugar
 - Avaliar benefícios e riscos da IA
-- **Exemplo prático**: Questionar o impacto da IA na autonomia dos alunos ao usar correção automática
+- **Exemplo prático**: Questionar o impacto da IA na autonomia dos alunos ao usar correçêo automática
 
 #### 2. Ética da IA
 - Princípios éticos, regulamentações e leis
@@ -25,12 +25,12 @@ O AI CFT da UNESCO define conhecimento, habilidades e valores que professores de
 
 #### 3. Fundamentos e Aplicações da IA
 - Conhecimento conceitual e habilidades operacionais
-- Entender definição de IA e principais categorias
+- Entender definiçêo de IA e principais categorias
 - Selecionar, aplicar e personalizar ferramentas
-- **Exemplo prático**: Explicar aos alunos como funcionam sistemas de recomendação de conteúdo
+- **Exemplo prático**: Explicar aos alunos como funcionam sistemas de recomendaçêo de conteúdo
 
 #### 4. Pedagogia da IA
-- Integração pedagógica propositada e eficaz
+- Integraçêo pedagógica propositada e eficaz
 - Validar e selecionar ferramentas de IA
 - Integrar em métodos pedagógicos
 - **Exemplo prático**: Criar atividades personalizadas com auxílio de IA, adaptando conteúdo ao ritmo individual
@@ -43,18 +43,18 @@ O AI CFT da UNESCO define conhecimento, habilidades e valores que professores de
 
 ---
 
-## 2. Guia de Implementação Prática (4 Fases)
+## 2. Guia de Implementaçêo Prática (4 Fases)
 
-### Fase 1: Auto-capacitação (Custo: R$ 0)
+### Fase 1: Auto-capacitaçêo (Custo: R$ 0)
 - Criar grupo de estudos com 2-3 colegas
 - 1 hora por semana para testar ferramentas
 - Objetivo: ganhar familiaridade e confiança
 
-### Fase 2: Otimização do Trabalho Docente (Custo: R$ 0)
+### Fase 2: Otimizaçêo do Trabalho Docente (Custo: R$ 0)
 - Usar IA para aliviar carga de trabalho
 - Planejamento de aulas
-- Criação de listas de exercícios
-- Geração de exemplos
+- Criaçêo de listas de exercícios
+- Geraçêo de exemplos
 - Comunicados para pais
 
 ### Fase 3: Projeto Piloto com Alunos (Custo: R$ 0)
@@ -63,8 +63,8 @@ O AI CFT da UNESCO define conhecimento, habilidades e valores que professores de
 - Foco em uso ético e checagem de fatos
 - Documentar resultados
 
-### Fase 4: Disseminação dos Resultados (Custo: R$ 0)
-- Apresentar case para coordenação
+### Fase 4: Disseminaçêo dos Resultados (Custo: R$ 0)
+- Apresentar case para coordenaçêo
 - Compartilhar com outros professores
 - Mostrar benefícios e provar viabilidade
 
@@ -74,30 +74,30 @@ O AI CFT da UNESCO define conhecimento, habilidades e valores que professores de
 
 | Ferramenta | Melhor Para | Exemplo de Uso |
 |------------|-------------|----------------|
-| ChatGPT 3.5 | Planejamento e criação de textos | Criar planos de aula, exercícios |
+| ChatGPT 3.5 | Planejamento e criaçêo de textos | Criar planos de aula, exercícios |
 | Gemini (Google) | Pesquisa e dados atuais | Buscar notícias e fontes confiáveis |
 | Canva (IA) | Materiais visuais | Criar apresentações e infográficos |
 
 ---
 
-## 4. Cursos de Formação Existentes
+## 4. Cursos de Formaçêo Existentes
 
 ### Cursos Brasileiros Identificados
 
 1. **Nova Escola**: "Inteligência Artificial para Professores"
-   - Gratuito, com certificação
+   - Gratuito, com certificaçêo
    - Alinhado à BNCC
 
-2. **Fundação Getúlio Vargas (EV)**: "Inteligência Artificial para Educadores"
+2. **Fundaçêo Getúlio Vargas (EV)**: "Inteligência Artificial para Educadores"
    - Prático, acessível e inspirador
    - Foco em aplicações práticas
 
-3. **MEC - Escolas Conectadas**: "Bloco Temático 3: IA na Educação"
+3. **MEC - Escolas Conectadas**: "Bloco Temático 3: IA na Educaçêo"
    - Carga horária: 180h
-   - Curso introdutório para educação básica
+   - Curso introdutório para educaçêo básica
 
-4. **Consórcio STHEM**: "Formação em IA para Professores do Ensino Superior"
-   - Foco em novas fronteiras na educação
+4. **Consórcio STHEM**: "Formaçêo em IA para Professores do Ensino Superior"
+   - Foco em novas fronteiras na educaçêo
 
 5. **Professores do Futuro (Portugal)**: "IA para Professores"
    - Para professores sem experiência em IA
@@ -107,7 +107,7 @@ O AI CFT da UNESCO define conhecimento, habilidades e valores que professores de
 
 1. **Google**: "Generative AI for Educators with Gemini"
    - 2 horas, self-paced
-   - Economizar tempo, personalizar instrução
+   - Economizar tempo, personalizar instruçêo
 
 2. **AI for Education**: "AI Course for Educators"
    - GRATUITO, 2 horas, hands-on
@@ -117,7 +117,7 @@ O AI CFT da UNESCO define conhecimento, habilidades e valores que professores de
    - Conceitos fundamentais de IA
    - Como ensinar IA
 
-4. **MIT Professional Education**: "IA Generativa na Era da Transformação Digital"
+4. **MIT Professional Education**: "IA Generativa na Era da Transformaçêo Digital"
    - Programa online
    - Uso de IA generativa
 
@@ -126,12 +126,12 @@ O AI CFT da UNESCO define conhecimento, habilidades e valores que professores de
 ## 5. Estrutura Comum dos Cursos Eficazes
 
 ### Componentes Essenciais
-1. **Introdução conceitual**: O que é IA, como funciona
+1. **Introduçêo conceitual**: O que é IA, como funciona
 2. **Ética e responsabilidade**: Uso seguro, vieses, privacidade
 3. **Ferramentas práticas**: Hands-on com ChatGPT, Gemini, etc.
 4. **Aplicações pedagógicas**: Como usar em sala de aula
 5. **Projeto prático**: Criar algo aplicável imediatamente
-6. **Certificação**: Reconhecimento formal
+6. **Certificaçêo**: Reconhecimento formal
 
 ### Carga Horária Típica
 - **Cursos introdutórios**: 2-4 horas
@@ -140,7 +140,7 @@ O AI CFT da UNESCO define conhecimento, habilidades e valores que professores de
 
 ### Metodologias Utilizadas
 - Self-paced (ritmo próprio)
-- Hands-on (mão na massa)
+- Hands-on (mêo na massa)
 - Projetos práticos
 - Comunidades de prática
 - Mentoria e suporte
@@ -150,41 +150,41 @@ O AI CFT da UNESCO define conhecimento, habilidades e valores que professores de
 ## 6. Erros Comuns a Evitar
 
 1. **Começar grande demais**: Iniciar com escola inteira
-   - **Correção**: Projeto piloto pequeno, uma turma
+   - **Correçêo**: Projeto piloto pequeno, uma turma
 
 2. **Focar em equipamentos**: Achar que precisa de tablets
-   - **Correção**: Focar em capacitação, usar recursos existentes
+   - **Correçêo**: Focar em capacitaçêo, usar recursos existentes
 
-3. **Não envolver pais**: Falta de comunicação
-   - **Correção**: Reunião explicativa sobre objetivos pedagógicos
+3. **Nêo envolver pais**: Falta de comunicaçêo
+   - **Correçêo**: Reuniêo explicativa sobre objetivos pedagógicos
 
 4. **Apresentar como eficiência administrativa**: Gera resistência
-   - **Correção**: Apresentar como ferramenta pedagógica para o professor
+   - **Correçêo**: Apresentar como ferramenta pedagógica para o professor
 
 ---
 
 ## 7. Insights para Proposta de Curso
 
 ### Diferenciais Necessários
-- **Contextualização brasileira**: Realidade das escolas nacionais
+- **Contextualizaçêo brasileira**: Realidade das escolas nacionais
 - **Foco em custo zero**: Ferramentas gratuitas
 - **Abordagem gradual**: Do básico ao avançado
-- **Suporte contínuo**: Não apenas curso, mas acompanhamento
+- **Suporte contínuo**: Nêo apenas curso, mas acompanhamento
 - **Comunidade de prática**: Rede de apoio entre educadores
 - **Métricas de impacto**: Como medir sucesso
-- **Certificação reconhecida**: Valor curricular
+- **Certificaçêo reconhecida**: Valor curricular
 
 ### Público-Alvo Específico
 - Gestores escolares (diretores, coordenadores)
 - Professores de todas as disciplinas
 - Equipes pedagógicas
-- Secretarias municipais/estaduais de educação
+- Secretarias municipais/estaduais de educaçêo
 
 ### Estrutura Sugerida para Novo Curso
 
 **Módulo 1: Fundamentos** (8h)
 - O que é IA e como funciona
-- Impactos na educação
+- Impactos na educaçêo
 - Ética e responsabilidade
 
 **Módulo 2: Ferramentas Essenciais** (12h)
@@ -194,20 +194,20 @@ O AI CFT da UNESCO define conhecimento, habilidades e valores que professores de
 - Outras ferramentas gratuitas
 
 **Módulo 3: Pedagogia com IA** (16h)
-- Personalização da aprendizagem
-- Criação de materiais didáticos
-- Avaliação e feedback
+- Personalizaçêo da aprendizagem
+- Criaçêo de materiais didáticos
+- Avaliaçêo e feedback
 - Metodologias ativas + IA
 
-**Módulo 4: Implementação Escolar** (12h)
-- Framework de implementação
+**Módulo 4: Implementaçêo Escolar** (12h)
+- Framework de implementaçêo
 - Projeto piloto
-- Gestão da mudança
+- Gestêo da mudança
 - Envolvimento da comunidade
 
 **Módulo 5: Projeto Prático** (12h)
 - Desenvolvimento de projeto aplicável
-- Apresentação e feedback
-- Plano de ação personalizado
+- Apresentaçêo e feedback
+- Plano de açêo personalizado
 
 **Total**: 60 horas (formato híbrido: 40h online + 20h prática)

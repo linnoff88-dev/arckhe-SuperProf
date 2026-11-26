@@ -7,7 +7,7 @@ assundo o foco é claro trianr professores para ensinar ia
 
   Vejo que você está solicitando uma análise do projeto focado em treinar professores para ensinar IA.
 
-  Vou primeiro verificar a configuração do projeto e depois executar o comando de ajuda para mostrar as capacidades
+  Vou primeiro verificar a configuraçêo do projeto e depois executar o comando de ajuda para mostrar as capacidades
   disponíveis.
 
 ● Read(.bmad-core\core-config.yaml)
@@ -33,7 +33,7 @@ assundo o foco é claro trianr professores para ensinar ia
 ● Read(doc\proposta_curso_ia_expandida\sumario_executivo_expandido.md)
   ⎿  Read 127 lines
 
-● Agora vou ler mais alguns arquivos para ter uma visão completa:
+● Agora vou ler mais alguns arquivos para ter uma visêo completa:
 
 ● Read(doc\proposta_curso_ia_expandida\analise_documento.md)
   ⎿  Read 130 lines
@@ -53,17 +53,17 @@ assundo o foco é claro trianr professores para ensinar ia
   1. Estrutura Progressiva Bem Desenhada
   - 3 níveis claros (Fundamentos → Avançado → Expert)
   - Carga horária adequada: 240h total
-  - Segmentação por maturidade tecnológica
+  - Segmentaçêo por maturidade tecnológica
 
   2. Alinhamento com o Objetivo Principal
-  - Foco correto em capacitar professores, não apenas apresentar teoria
+  - Foco correto em capacitar professores, nêo apenas apresentar teoria
   - Metodologia hands-on com projetos práticos
-  - Progressão do uso de ferramentas até liderança institucional
+  - Progressêo do uso de ferramentas até liderança institucional
 
   3. Abordagem Humanizada
-  - Conceito de "Superprofessor" (IA empodera, não substitui)
+  - Conceito de "Superprofessor" (IA empodera, nêo substitui)
   - Ética e UNESCO Framework incluídos
-  - Foco na transformação cultural, não apenas técnica
+  - Foco na transformaçêo cultural, nêo apenas técnica
 
   4. Conteúdo Robusto
   - Baseado em pesquisa (Stanford, Harvard, MIT)
@@ -73,16 +73,16 @@ assundo o foco é claro trianr professores para ensinar ia
   ---
   ⚠️ O Que Poderia Ser AMPLIADO
 
-  🔴 CRÍTICO: Confusão de Escopo
+  🔴 CRÍTICO: Confusêo de Escopo
 
   Problema Identificado: O projeto está confuso entre dois objetivos diferentes:
 
   1. Treinar professores para USAR IA no ensino (objetivo atual dominante)
   2. Treinar professores para ENSINAR sobre IA (objetivo declarado no seu pedido)
 
-  Recomendação: Você precisa definir claramente qual é o foco:
+  Recomendaçêo: Você precisa definir claramente qual é o foco:
 
-  | Se o foco é... | Então o curso deve...                                        | Exemplo de conteúdo
+  | Se o foco é... | Entêo o curso deve...                                        | Exemplo de conteúdo
                |
   |----------------|--------------------------------------------------------------|---------------------------------
   -------------|
@@ -91,7 +91,7 @@ assundo o foco é claro trianr professores para ensinar ia
   | Ensinar IA     | Ensinar conceitos de IA para alunos                          | Como explicar Machine Learning
   para crianças |
 
-  Atualmente o projeto está em USAR IA, não ENSINAR IA.
+  Atualmente o projeto está em USAR IA, nêo ENSINAR IA.
 
   ---
   📚 Se o Foco é "Ensinar IA aos Alunos" - O Que ADICIONAR:
@@ -103,7 +103,7 @@ assundo o foco é claro trianr professores para ensinar ia
     - Atividades unplugged (sem computador) sobre IA
     - Jogos e dinâmicas para ensinar ML básico
     - Storytelling sobre história da IA
-    - Exemplo: "Como ensinar redes neurais usando classificação de frutas"
+    - Exemplo: "Como ensinar redes neurais usando classificaçêo de frutas"
   2. Currículos de IA por Faixa Etária (Nível 2)
     - IA para Ensino Fundamental I (6-10 anos)
     - IA para Ensino Fundamental II (11-14 anos)
@@ -119,7 +119,7 @@ assundo o foco é claro trianr professores para ensinar ia
     - Como orientar alunos em projetos de ciência com IA
     - Competições e olimpíadas de IA
     - Showcase de projetos estudantis
-  5. Avaliação de Conhecimento de IA dos Alunos (Nível 2)
+  5. Avaliaçêo de Conhecimento de IA dos Alunos (Nível 2)
     - Rubricas para avaliar projetos de IA
     - Métricas de aprendizado de conceitos de IA
     - Portfólios digitais de projetos
@@ -127,17 +127,17 @@ assundo o foco é claro trianr professores para ensinar ia
     - Ensinar vieses algorítmicos para crianças
     - Privacidade e segurança de dados
     - Fake news e IA
-    - Deepfakes e manipulação
+    - Deepfakes e manipulaçêo
 
   ---
   📊 Se o Foco é "Usar IA para Melhorar o Ensino" - O Que AMPLIAR:
 
-  1. Módulo de Implementação Prática Expandido
+  1. Módulo de Implementaçêo Prática Expandido
 
   - Adicionar: Workshop de 8h sobre "Primeiros 90 dias com IA na escola"
-  - Checklist de adoção gradual
+  - Checklist de adoçêo gradual
   - Casos de erro e como evitá-los
-  - Quick wins para gerar adesão
+  - Quick wins para gerar adesêo
 
   2. Comunidade e Suporte Contínuo
 
@@ -153,12 +153,12 @@ assundo o foco é claro trianr professores para ensinar ia
   - Indicadores de engajamento estudantil
   - Frameworks de ROI educacional
 
-  4. Gestão da Mudança
+  4. Gestêo da Mudança
 
-  - Adicionar: Módulo de 8h sobre "Liderando a transformação digital"
+  - Adicionar: Módulo de 8h sobre "Liderando a transformaçêo digital"
   - Como engajar professores resistentes
-  - Comunicação com pais e stakeholders
-  - Gestão de expectativas
+  - Comunicaçêo com pais e stakeholders
+  - Gestêo de expectativas
 
   5. Casos de Uso Especializados
 
@@ -166,42 +166,42 @@ assundo o foco é claro trianr professores para ensinar ia
     - IA para Matemática
     - IA para Língua Portuguesa
     - IA para Ciências
-    - IA para Educação Inclusiva
+    - IA para Educaçêo Inclusiva
 
   ---
   ❌ O Que Poderia Ser RETIRADO ou SIMPLIFICADO
 
   🔻 Nível 3 - Expert (100h) - Muito Técnico para Professores
 
-  Problema: Módulos muito técnicos que não servem ao objetivo de treinar professores:
+  Problema: Módulos muito técnicos que nêo servem ao objetivo de treinar professores:
 
   Módulo 3.3: Arquitetura de Soluções de IA (20h)
 
-  - ❌ Remover: "Integração de APIs de IA em sistemas existentes (LMS)"
+  - ❌ Remover: "Integraçêo de APIs de IA em sistemas existentes (LMS)"
   - ❌ Remover: "Noções de arquitetura de dados"
   - ❌ Remover: "Desenvolvimento de soluções de baixo código (low-code)"
 
-  Por quê? Isso é trabalho de desenvolvedores/TI, não de professores.
+  Por quê? Isso é trabalho de desenvolvedores/TI, nêo de professores.
 
   Alternativa: Focar em "Como SOLICITAR integrações à equipe de TI" (2h) ao invés de fazer você mesmo.
 
   ---
-  Módulo 2.2: Machine Learning para Personalização (20h)
+  Módulo 2.2: Machine Learning para Personalizaçêo (20h)
 
   - ⚠️ Simplificar: Reduzir para 8h
   - ❌ Remover: Partes muito técnicas sobre algoritmos
-  - ✅ Manter: Learning Analytics e interpretação de dados
+  - ✅ Manter: Learning Analytics e interpretaçêo de dados
 
-  Por quê? Professores precisam interpretar dados de ML, não construir modelos.
+  Por quê? Professores precisam interpretar dados de ML, nêo construir modelos.
 
   ---
   Módulo 2.4: Desenvolvimento de Agentes Educacionais (20h)
 
   - ⚠️ Simplificar: Reduzir para 8h
-  - ❌ Remover: Programação de chatbots do zero
+  - ❌ Remover: Programaçêo de chatbots do zero
   - ✅ Manter: Uso de plataformas no-code como Dialogflow, Voiceflow
 
-  Por quê? Foco em configurar, não programar.
+  Por quê? Foco em configurar, nêo programar.
 
   ---
   🔻 Nível 2 - Avançado - Conteúdo Duplicado
@@ -224,7 +224,7 @@ assundo o foco é claro trianr professores para ensinar ia
   2. Módulo "Currículos de IA por Idade" (16h) - Nível 2
   3. Módulo "Ferramentas Educacionais de IA" (12h) - Nível 2
   4. Módulo "Projetos Estudantis de IA" (12h) - Nível 2
-  5. Módulo "Avaliação de Aprendizado de IA" (8h) - Nível 2
+  5. Módulo "Avaliaçêo de Aprendizado de IA" (8h) - Nível 2
 
   ❌ REMOVER/SIMPLIFICAR:
 
@@ -239,32 +239,32 @@ assundo o foco é claro trianr professores para ensinar ia
 
   ✅ AMPLIAR:
 
-  1. Implementação Prática (+8h workshop)
+  1. Implementaçêo Prática (+8h workshop)
   2. Comunidade de Prática (plataforma online)
   3. Métricas e ROI (+4h)
-  4. Gestão da Mudança (+8h)
+  4. Gestêo da Mudança (+8h)
   5. Casos por Disciplina (+24h trilhas especializadas)
 
   ❌ SIMPLIFICAR:
 
   - Arquitetura técnica (20h → 4h "Como falar com TI")
-  - Machine Learning (20h → 8h interpretação)
+  - Machine Learning (20h → 8h interpretaçêo)
   - Desenvolvimento (20h → 8h no-code tools)
 
   Resultado: Foco mais prático e menos teórico
 
   ---
-  🎯 Questão para Decisão:
+  🎯 Questêo para Decisêo:
 
   Qual é o VERDADEIRO objetivo do projeto?
 
   1. Formar professores que ENSINAM conceitos de IA para alunos (ensinar O QUE é IA)
   2. Formar professores que USAM IA como ferramenta pedagógica (ensinar COM IA)
 
-  A resposta define completamente a direção do conteúdo.
+  A resposta define completamente a direçêo do conteúdo.
 
   ---
-  💡 Sugestão Final
+  💡 Sugestêo Final
 
   Considerando que o nome é "SuperProfessores" e a base é o documento eu recomendaria:
 
@@ -286,6 +286,6 @@ assundo o foco é claro trianr professores para ensinar ia
   Isso resolve a ambiguidade e atende ambos públicos!
 
   ---
-  Qual direção você gostaria de seguir? Posso ajudar a reestruturar o conteúdo de acordo com sua decisão! 🚀
+  Qual direçêo você gostaria de seguir? Posso ajudar a reestruturar o conteúdo de acordo com sua decisêo! 🚀
 
 

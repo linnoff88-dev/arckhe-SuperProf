@@ -4,13 +4,13 @@
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
-Aprenda a facilitar comunidades de aprendizagem onde IA amplifica interações humanas. Domine curadoria automatizada, moderação assistida e cultivo de cultura colaborativa em escala.
+Aprenda a facilitar comunidades de aprendizagem onde IA amplifica interações humanas. Domine curadoria automatizada, moderaçêo assistida e cultivo de cultura colaborativa em escala.
 
 ### Objetivos:
 - Estruturar comunidades de prática efetivas
-- Usar IA para curadoria e moderação de conteúdo
+- Usar IA para curadoria e moderaçêo de conteúdo
 - Facilitar aprendizagem entre pares com IA como copiloto
 - Escalar mentoria de 1:10 para 1:100 com ferramentas inteligentes
 
@@ -37,7 +37,7 @@ Aprenda a facilitar comunidades de aprendizagem onde IA amplifica interações h
 
 ---
 
-## 🎯 Níveis de Participação
+## 🎯 Níveis de Participaçêo
 
 ### Estrutura de Comunidade Saudável:
 
@@ -68,7 +68,7 @@ Identifique:
 2. 3 membros Active prontos para Core (consistência, qualidade, influência)
 3. Sugestões de "nudges" personalizados para cada um
 
-Formato: Tabela com recomendações de ação
+Formato: Tabela com recomendações de açêo
 ```
 
 ---
@@ -85,9 +85,9 @@ Formato: Tabela com recomendações de ação
 **Prompt ChatGPT:**
 ```
 Membros da comunidade:
-1. Ana: Interessada em [prompts para matemática, avaliação formativa]
-2. Bruno: Interessado em [gamificação, engajamento de alunos]
-3. Carla: Interessada em [personalização, matemática adaptativa]
+1. Ana: Interessada em [prompts para matemática, avaliaçêo formativa]
+2. Bruno: Interessado em [gamificaçêo, engajamento de alunos]
+3. Carla: Interessada em [personalizaçêo, matemática adaptativa]
 ...
 
 Sugira 3 conexões valiosas (pares que se beneficiariam de trocar experiências):
@@ -101,12 +101,12 @@ Sugira 3 conexões valiosas (pares que se beneficiariam de trocar experiências)
 
 **Prompt Gemini:**
 ```
-Fórum com 127 posts sobre "Prompt Engineering para redação".
+Fórum com 127 posts sobre "Prompt Engineering para redaçêo".
 
 Tarefa:
-1. Resuma discussão em 5 pontos-chave
+1. Resuma discussêo em 5 pontos-chave
 2. Identifique 3 melhores práticas consensuais
-3. Destaque 2 debates não resolvidos
+3. Destaque 2 debates nêo resolvidos
 4. Liste 5 recursos compartilhados (links, prompts, exemplos)
 
 Formato: Post de "TL;DR" formatado em markdown
@@ -124,21 +124,21 @@ Analise este comentário:
 
 Classifique:
 - Tom: [Construtivo/Neutro/Ofensivo]
-- Contribuição: [Alta/Média/Baixa]
-- Ação sugerida: [Aprovar/Pedir reformulação/Escalar para moderador]
+- Contribuiçêo: [Alta/Média/Baixa]
+- Açêo sugerida: [Aprovar/Pedir reformulaçêo/Escalar para moderador]
 
-Se reformulação necessária, sugira versão melhorada mantendo intenção original.
+Se reformulaçêo necessária, sugira versêo melhorada mantendo intençêo original.
 ```
 
 ---
 
-## 💬 Facilitação de Discussões
+## 💬 Facilitaçêo de Discussões
 
 ### Técnica: Socratic Questioning com IA
 
 **Problema:** Discussões rasas, respostas superficiais
 
-**Solução:** IA gera perguntas socráticas para aprofundar
+**Soluçêo:** IA gera perguntas socráticas para aprofundar
 
 **Exemplo Real:**
 
@@ -149,11 +149,11 @@ Se reformulação necessária, sugira versão melhorada mantendo intenção orig
 ```
 Sugestões de perguntas para aprofundar:
 
-1. Clarificação: "Que tipo de quiz? Para qual público?"
+1. Clarificaçêo: "Que tipo de quiz? Para qual público?"
 
 2. Suposições: "O que você considera 'funcionou bem'? Quais métricas usou?"
 
-3. Razões/Evidências: "Pode compartilhar exemplo de questão gerada? O que a tornou efetiva?"
+3. Razões/Evidências: "Pode compartilhar exemplo de questêo gerada? O que a tornou efetiva?"
 
 4. Perspectivas: "Como seus alunos reagiram comparado a quiz tradicional?"
 
@@ -168,7 +168,7 @@ Sugestões de perguntas para aprofundar:
 
 ### Problema: Conhecimento enterrado em threads antigas
 
-### Solução: IA como Bibliotecário
+### Soluçêo: IA como Bibliotecário
 
 **Estrutura:**
 
@@ -185,7 +185,7 @@ Comunidade "Professores IA"
     └── IA extrai conhecimento → Move para Biblioteca
 ```
 
-**Automação com IA:**
+**Automaçêo com IA:**
 
 **Prompt NotebookLM:**
 ```
@@ -201,9 +201,9 @@ Para cada item:
 - Contexto (quando usar)
 - Autor original (crédito)
 - Tags relevantes
-- Link para discussão original
+- Link para discussêo original
 
-Formato: JSON estruturado para importação
+Formato: JSON estruturado para importaçêo
 ```
 
 ---
@@ -242,7 +242,7 @@ Pergunta: [X]
 Resposta do mentor: [Y]
 
 Tarefa:
-1. Extraia padrão de raciocínio
+1. Extraia padrêo de raciocínio
 2. Identifique princípios gerais
 3. Sugira como responder perguntas similares futuras
 
@@ -251,11 +251,11 @@ Adicione à base de conhecimento do copiloto.
 
 ---
 
-## 🏆 Reconhecimento e Reputação
+## 🏆 Reconhecimento e Reputaçêo
 
 ### Sistema de Badges Comunitários
 
-**Badges Ganhos por Contribuição:**
+**Badges Ganhos por Contribuiçêo:**
 
 🌱 **Cultivador** (10 posts úteis)
 💡 **Inovador** (Compartilhou ideia implementada por 5+ pessoas)
@@ -277,11 +277,11 @@ Verifique elegibilidade para badges:
 [Listar critérios de cada badge]
 
 Se elegível, gere:
-1. Notificação personalizada
-2. Post de celebração para comunidade
-3. Atualização de perfil
+1. Notificaçêo personalizada
+2. Post de celebraçêo para comunidade
+3. Atualizaçêo de perfil
 
-Formato: JSON para automação
+Formato: JSON para automaçêo
 ```
 
 ---
@@ -296,14 +296,14 @@ Formato: JSON para automação
 - Taxa de perguntas respondidas (meta: >85%)
 
 **2. Qualidade:**
-- Avaliação de utilidade (meta: média >4/5)
+- Avaliaçêo de utilidade (meta: média >4/5)
 - Profundidade de discussões (análise com IA)
-- Diversidade de tópicos (não concentrar em 1-2)
+- Diversidade de tópicos (nêo concentrar em 1-2)
 
-**3. Inclusão:**
+**3. Inclusêo:**
 - % de membros que postaram no último mês (meta: >30%)
-- Distribuição de voz (não dominada por <5 pessoas)
-- Taxa de retenção (meta: >70% após 3 meses)
+- Distribuiçêo de voz (nêo dominada por <5 pessoas)
+- Taxa de retençêo (meta: >70% após 3 meses)
 
 ### Dashboard Automatizado:
 
@@ -318,11 +318,11 @@ Estrutura do relatório:
 1. 📊 Resumo Executivo (3 pontos: vermelho/amarelo/verde)
 2. 📈 Tendências (gráficos em ASCII art)
 3. 🎯 Conquistas do mês (top 3)
-4. ⚠️ Alertas (3 áreas de atenção)
+4. ⚠️ Alertas (3 áreas de atençêo)
 5. 💡 Recomendações (5 ações prioritárias)
 
 Tom: Objetivo mas encorajador
-Formato: Markdown para publicação
+Formato: Markdown para publicaçêo
 ```
 
 ---
@@ -333,16 +333,16 @@ Formato: Markdown para publicação
 
 **Problema:** 200 membros, mas apenas 10 participam ativamente
 
-**Solução com IA:**
+**Soluçêo com IA:**
 
-**Etapa 1 - Segmentação:**
+**Etapa 1 - Segmentaçêo:**
 ```
 IA analisou perfis e dividiu em 5 grupos:
 - Iniciantes em IA (40%)
 - Geometria (15%)
 - Álgebra (20%)
 - Estatística (15%)
-- Avaliação (10%)
+- Avaliaçêo (10%)
 ```
 
 **Etapa 2 - Conteúdo Personalizado:**
@@ -359,7 +359,7 @@ IA identificou:
 ```
 
 **Resultado:**
-- Participação ativa: 10 → 45 membros (+350%)
+- Participaçêo ativa: 10 → 45 membros (+350%)
 - Posts/semana: 3 → 18 (+500%)
 
 ---
@@ -376,7 +376,7 @@ IA identificou:
 - Sugere quem deve liderar cada tópico
 
 **Durante:**
-- IA faz transcrição em tempo real
+- IA faz transcriçêo em tempo real
 - Destaca action items e decisões
 - Gera notas estruturadas
 
@@ -398,7 +398,7 @@ IA identificou:
 - Melhor para: Comunidades técnicas
 
 **2. Circle.so**
-- Pros: Interface polida, gamificação embutida
+- Pros: Interface polida, gamificaçêo embutida
 - Cons: Pago ($$)
 - Melhor para: Comunidades profissionais
 
@@ -420,13 +420,13 @@ IA identificou:
 
 ---
 
-## 💡 Facilitação: Do's e Don'ts
+## 💡 Facilitaçêo: Do's e Don'ts
 
 ### ✅ Do's:
 
 **1. Modele o comportamento desejado**
 - Seja o primeiro a fazer perguntas abertas
-- Admita quando não sabe
+- Admita quando nêo sabe
 - Celebre contribuições
 
 **2. Crie rituais**
@@ -441,17 +441,17 @@ IA identificou:
 
 ### ❌ Don'ts:
 
-**1. Não deixe IA tomar decisões sociais**
+**1. Nêo deixe IA tomar decisões sociais**
 - IA sugere, humano decide
 - Nunca bana automaticamente
 - Contexto humano é insubstituível
 
-**2. Não force participação**
+**2. Nêo force participaçêo**
 - Lurking é válido (80% das pessoas)
 - Nem todos querem ser ativos
 - Respeite ritmos diferentes
 
-**3. Não ignore conflitos**
+**3. Nêo ignore conflitos**
 - IA detecta tensões, mas humano resolve
 - Endereçe desacordos com empatia
 - Use como oportunidade de aprendizado
@@ -462,16 +462,16 @@ IA identificou:
 
 ### 📹 Videoaulas (3h)
 - Teoria de Comunidades de Prática (45 min)
-- Facilitação com IA (50 min)
-- Curadoria e moderação (40 min)
+- Facilitaçêo com IA (50 min)
+- Curadoria e moderaçêo (40 min)
 - Casos de sucesso (45 min)
 
 ### 💬 Práticas (7h)
 - Projetar comunidade para seu contexto (3h)
 - Implementar 3 automações com IA (2h)
-- Facilitar discussão piloto (2h)
+- Facilitar discussêo piloto (2h)
 
-### ✅ Avaliação (2h)
+### ✅ Avaliaçêo (2h)
 - Projeto: Plano de comunidade completo
 - Documento de governança
 - Dashboard de métricas

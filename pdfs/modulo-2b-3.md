@@ -1,25 +1,25 @@
-# Módulo 2B.3: Criação de Agentes Educacionais com IA
+# Módulo 2B.3: Criaçêo de Agentes Educacionais com IA
 
 **Nível 2B: Técnico | Carga Horária: 15 horas**
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
-Aprenda a criar agentes autônomos de IA capazes de executar tarefas complexas em educação. Domine frameworks como LangChain Agents, AutoGPT e CrewAI para construir tutores personalizados, geradores de conteúdo e assistentes de pesquisa que agem com mínima supervisão humana.
+Aprenda a criar agentes autônomos de IA capazes de executar tarefas complexas em educaçêo. Domine frameworks como LangChain Agents, AutoGPT e CrewAI para construir tutores personalizados, geradores de conteúdo e assistentes de pesquisa que agem com mínima supervisêo humana.
 
 ### Objetivos:
 - Entender arquitetura de agentes (ReAct, Plan-and-Execute)
 - Implementar agente com ferramentas customizadas
 - Criar tutor socrático que faz perguntas ao invés de dar respostas
-- Construir gerador de conteúdo multi-step (pesquisa + síntese + validação)
+- Construir gerador de conteúdo multi-step (pesquisa + síntese + validaçêo)
 - Orquestrar múltiplos agentes (multi-agent systems)
 
 ---
 
-## 🤖 O que são Agentes de IA?
+## 🤖 O que sêo Agentes de IA?
 
-### Definição:
+### Definiçêo:
 
 **Agente = LLM + Ferramentas + Loop de Raciocínio**
 
@@ -42,7 +42,7 @@ Agent (interno):
 3. Observation: [Resultados da busca]
 4. Thought: "Preciso sintetizar em tópicos"
 5. Action: None (raciocínio suficiente)
-6. Final Answer: "Aqui estão 5 novidades sobre Paris..."
+6. Final Answer: "Aqui estêo 5 novidades sobre Paris..."
 
 [Multi-step, usa ferramentas, raciocínio iterativo]
 ```
@@ -53,7 +53,7 @@ Agent (interno):
 
 ### Componente 1: Brain (LLM)
 
-**Função:** Raciocínio e decisão
+**Funçêo:** Raciocínio e decisêo
 
 **Modelos Recomendados:**
 - **GPT-4:** Melhor raciocínio, mais caro
@@ -65,7 +65,7 @@ Agent (interno):
 
 ### Componente 2: Tools (Ferramentas)
 
-**Função:** Ações que agente pode executar
+**Funçêo:** Ações que agente pode executar
 
 **Exemplos Educacionais:**
 
@@ -74,7 +74,7 @@ tools = [
     Tool(
         name="Buscar_Biblioteca",
         func=buscar_em_pdfs,
-        description="Busca informação em materiais do curso"
+        description="Busca informaçêo em materiais do curso"
     ),
     Tool(
         name="Gerar_Quiz",
@@ -96,14 +96,14 @@ tools = [
 
 **Anatomia de uma Tool:**
 - **Nome:** Identificador único
-- **Função:** Código Python que executa
-- **Descrição:** Como LLM entende quando usar (crítico!)
+- **Funçêo:** Código Python que executa
+- **Descriçêo:** Como LLM entende quando usar (crítico!)
 
 ---
 
 ### Componente 3: Memory (Memória)
 
-**Função:** Lembrar interações passadas
+**Funçêo:** Lembrar interações passadas
 
 **Tipos:**
 
@@ -134,7 +134,7 @@ memory = VectorStoreRetrieverMemory(retriever=vectordb.as_retriever())
 
 ```
 Loop até responder:
-1. REASON: "Que informação preciso?"
+1. REASON: "Que informaçêo preciso?"
 2. ACT: Usar ferramenta
 3. OBSERVE: Ver resultado
 4. [Repetir ou finalizar]
@@ -148,7 +148,7 @@ User: "Crie quiz sobre fotossíntese para 8º ano"
 Iteration 1:
 ├─ Thought: "Preciso saber o que alunos já aprenderam"
 ├─ Action: Buscar_Biblioteca(tópico="fotossíntese", série="8º ano")
-└─ Observation: "Alunos já viram cloroplastos, mas não Calvin cycle"
+└─ Observation: "Alunos já viram cloroplastos, mas nêo Calvin cycle"
 
 Iteration 2:
 ├─ Thought: "Vou criar questões focadas no nível deles"
@@ -156,18 +156,18 @@ Iteration 2:
 └─ Observation: [5 questões geradas]
 
 Iteration 3:
-├─ Thought: "Questões estão boas, posso responder"
+├─ Thought: "Questões estêo boas, posso responder"
 ├─ Action: None
 └─ Final Answer: "Aqui está seu quiz: [QUESTÕES]"
 ```
 
 ---
 
-## 🛠️ Implementação: Tutor Socrático
+## 🛠️ Implementaçêo: Tutor Socrático
 
 ### Objetivo:
 
-Criar agente que ensina fazendo perguntas (método socrático), não dando respostas diretas.
+Criar agente que ensina fazendo perguntas (método socrático), nêo dando respostas diretas.
 
 ### Código (LangChain):
 
@@ -183,7 +183,7 @@ def avaliar_compreensao(resposta_aluno: str) -> str:
     Resposta do aluno: {resposta_aluno}
 
     Analise:
-    1. Aluno demonstrou compreensão? (Sim/Parcial/Não)
+    1. Aluno demonstrou compreensêo? (Sim/Parcial/Nêo)
     2. Conceitos corretos mencionados
     3. Misconceptions identificadas
 
@@ -199,7 +199,7 @@ def gerar_pergunta_socratica(topico: str, nivel_dificuldade: str) -> str:
     Nível: {nivel_dificuldade}
 
     Crie pergunta socrática que:
-    - Não dá resposta direta
+    - Nêo dá resposta direta
     - Faz aluno pensar e conectar conceitos
     - Usa analogias ou contra-exemplos
 
@@ -213,7 +213,7 @@ tools = [
     Tool(
         name="Avaliar_Compreensao",
         func=avaliar_compreensao,
-        description="Usa isto quando aluno responder uma pergunta. Retorna análise de compreensão."
+        description="Usa isto quando aluno responder uma pergunta. Retorna análise de compreensêo."
     ),
     Tool(
         name="Gerar_Pergunta",
@@ -299,7 +299,7 @@ Crie plano com:
 1. Objetivos de aprendizagem (3-5)
 2. Estrutura da aula (tempo em minutos)
 3. Materiais necessários
-4. Forma de avaliação
+4. Forma de avaliaçêo
 
 Formato: Lista numerada de passos acionáveis
 """
@@ -346,7 +346,7 @@ resultado = agent.run(
 ```
 Plan:
 1. Pesquisar: conceitos de IA adequados para ensino médio
-2. Estruturar: aula de 50min (5min intro, 20min conceitos, 15min prática, 10min avaliação)
+2. Estruturar: aula de 50min (5min intro, 20min conceitos, 15min prática, 10min avaliaçêo)
 3. Criar: 10 slides sobre IA (história, tipos, ética)
 4. Gerar: 5 questões de múltipla escolha
 5. Validar: checar alinhamento com BNCC
@@ -354,7 +354,7 @@ Plan:
 
 Executing Step 1...
 [Agente usa ferramenta Pesquisar_Conteudo]
-Found: "IA é campo da computação que simula inteligência humana..."
+Found: "IA é campo da computaçêo que simula inteligência humana..."
 
 Executing Step 2...
 [Agente raciocina sobre estrutura]
@@ -377,7 +377,7 @@ Final Package:
 
 Múltiplos agentes especializados trabalhando juntos.
 
-**Exemplo: Criação de Curso Completo**
+**Exemplo: Criaçêo de Curso Completo**
 
 ```
 Agente 1 - Pesquisador:
@@ -396,7 +396,7 @@ Agente 5 - Revisor:
 └─ Valida qualidade, corrige erros
 ```
 
-### Implementação (CrewAI):
+### Implementaçêo (CrewAI):
 
 ```python
 from crewai import Agent, Task, Crew
@@ -405,7 +405,7 @@ from crewai import Agent, Task, Crew
 pesquisador = Agent(
     role="Pesquisador Educacional",
     goal="Encontrar conteúdo de qualidade sobre {topico}",
-    backstory="Você é PhD em Educação com 15 anos pesquisando métodos eficazes",
+    backstory="Você é PhD em Educaçêo com 15 anos pesquisando métodos eficazes",
     tools=[google_search, arxiv_search, wikipedia],
     verbose=True
 )
@@ -471,9 +471,9 @@ print(resultado)
 **Output:**
 ```
 [Pesquisador]: Encontrei 10 recursos sobre pensamento computacional...
-[Designer]: Estruturei curso em 6 módulos: 1) Decomposição, 2) Padrões...
+[Designer]: Estruturei curso em 6 módulos: 1) Decomposiçêo, 2) Padrões...
 [Criador]: Gerados 6 conjuntos de materiais com 18 atividades...
-[Revisor]: Validação completa. Sugestões: Módulo 3 muito denso, sugiro dividir...
+[Revisor]: Validaçêo completa. Sugestões: Módulo 3 muito denso, sugiro dividir...
 
 Final Result:
 ✅ Curso de 12h estruturado
@@ -491,15 +491,15 @@ Final Result:
 **Problema:** Agente fica preso em ciclo
 
 ```
-Thought: Preciso de mais informação
+Thought: Preciso de mais informaçêo
 Action: Buscar
 Observation: [Resultados]
-Thought: Preciso de mais informação
+Thought: Preciso de mais informaçêo
 Action: Buscar
 [LOOP INFINITO]
 ```
 
-**Solução:**
+**Soluçêo:**
 ```python
 agent = initialize_agent(
     ...,
@@ -514,7 +514,7 @@ agent = initialize_agent(
 
 **Problema:** Agente usa 10 ferramentas para tarefa simples (custo $$)
 
-**Solução: Few-shot Examples**
+**Soluçêo: Few-shot Examples**
 
 ```python
 system_prompt = """
@@ -522,12 +522,12 @@ Você é um agente eficiente.
 
 Bons exemplos:
 User: "Qual a capital da França?"
-Thought: Sei a resposta, não preciso de ferramentas
+Thought: Sei a resposta, nêo preciso de ferramentas
 Action: None
 Final Answer: "Paris"
 
 User: "Pesquise últimas notícias sobre IA"
-Thought: Preciso buscar informação atualizada
+Thought: Preciso buscar informaçêo atualizada
 Action: google_search("IA novidades 2025")
 [Usa ferramenta apropriadamente]
 """
@@ -535,16 +535,16 @@ Action: google_search("IA novidades 2025")
 
 ---
 
-### 3. Alucinação de Ferramentas
+### 3. Alucinaçêo de Ferramentas
 
-**Problema:** Agente inventa ferramentas que não existem
+**Problema:** Agente inventa ferramentas que nêo existem
 
 ```
 Action: Ferramenta_Magica(input="resolver tudo")
-[ERRO: Ferramenta não existe]
+[ERRO: Ferramenta nêo existe]
 ```
 
-**Solução: Descrições Claras**
+**Soluçêo: Descrições Claras**
 
 ```python
 # Ruim
@@ -553,13 +553,13 @@ Tool(name="Search", description="Busca coisas")
 # Bom
 Tool(
     name="Buscar_Biblioteca_Curso",
-    description="Busca informação APENAS nos PDFs do curso XYZ. Use quando aluno perguntar sobre conteúdo do curso. NÃO use para informações gerais da web."
+    description="Busca informaçêo APENAS nos PDFs do curso XYZ. Use quando aluno perguntar sobre conteúdo do curso. NêO use para informações gerais da web."
 )
 ```
 
 ---
 
-## 📊 Avaliação de Agentes
+## 📊 Avaliaçêo de Agentes
 
 ### Métricas:
 
@@ -629,7 +629,7 @@ for case in test_cases:
 
 **Fluxo:**
 ```
-User: "Pesquise sobre gamificação em educação STEM"
+User: "Pesquise sobre gamificaçêo em educaçêo STEM"
 
 Agent:
 1. Busca ArXiv + Scholar (últimos 3 anos)
@@ -655,11 +655,11 @@ User: "Quero aprender Python para Data Science"
 
 Agent:
 1. Aplica quiz diagnóstico (10 questões)
-2. Identifica: "Usuário sabe programação básica, mas zero estatística"
+2. Identifica: "Usuário sabe programaçêo básica, mas zero estatística"
 3. Cria trilha:
    - Semana 1-2: Pandas + NumPy
    - Semana 3-4: Estatística descritiva
-   - Semana 5-6: Visualização (Matplotlib)
+   - Semana 5-6: Visualizaçêo (Matplotlib)
    - Semana 7-8: Machine Learning intro
 4. Recomenda recursos específicos para cada semana
 5. Gera cronograma adaptado a "3h/semana disponível"
@@ -678,7 +678,7 @@ Agent:
 
 **Fluxo:**
 ```
-Novo post: "Não entendo polinômios, socorro!"
+Novo post: "Nêo entendo polinômios, socorro!"
 
 Agent:
 1. Classifica: "Pedido de ajuda em matemática"
@@ -695,16 +695,16 @@ Agent:
 - Fundamentos de agentes (ReAct, Plan-Execute) (50 min)
 - Implementando agente com LangChain (60 min)
 - Multi-agent systems (60 min)
-- Troubleshooting e otimização (50 min)
+- Troubleshooting e otimizaçêo (50 min)
 
 ### 💬 Práticas (9h)
 - Criar tutor socrático (3h)
 - Implementar gerador de conteúdo multi-step (3h)
 - Construir sistema multi-agente (3h)
 
-### ✅ Avaliação (2h)
+### ✅ Avaliaçêo (2h)
 - Projeto: Agente funcional com ≥3 ferramentas customizadas
-- Demonstração: Resolver 5 tarefas educacionais
+- Demonstraçêo: Resolver 5 tarefas educacionais
 - Análise: Comparar performance (GPT-3.5 vs GPT-4, single vs multi-agent)
 
 ---

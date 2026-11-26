@@ -4,7 +4,7 @@
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
 Aprenda a adaptar LLMs para necessidades educacionais específicas. Domine técnicas de fine-tuning (ajuste fino) e RAG (Retrieval-Augmented Generation) para criar assistentes especializados, bases de conhecimento personalizadas e sistemas de Q&A institucionais.
 
@@ -23,20 +23,20 @@ Aprenda a adaptar LLMs para necessidades educacionais específicas. Domine técn
 
 **Cenário:** Universidade quer chatbot que responde sobre regulamentos internos
 
-**Opção 1: Prompt Engineering** ❌
+**Opçêo 1: Prompt Engineering** ❌
 - Colar regulamento no prompt
 - Limite: Contexto máximo (128k-200k tokens)
 - Problema: Documento tem 500 páginas = 500k tokens
 
-**Opção 2: Fine-Tuning** ⚠️
+**Opçêo 2: Fine-Tuning** ⚠️
 - Treinar modelo nos regulamentos
-- Problema: Caro ($$$), lento, não atualiza fácil
+- Problema: Caro ($$$), lento, nêo atualiza fácil
 - Risco: Modelo "memoriza" mas pode alucinar
 
-**Opção 3: RAG** ✅
+**Opçêo 3: RAG** ✅
 - Busca trechos relevantes + injeta no prompt
 - Barato, rápido, atualizável, verificável
-- **Solução ideal para 90% dos casos educacionais**
+- **Soluçêo ideal para 90% dos casos educacionais**
 
 ---
 
@@ -46,7 +46,7 @@ Aprenda a adaptar LLMs para necessidades educacionais específicas. Domine técn
 |----------|-----|-------------|
 | **Custo** | $ (barato) | $$$ (caro) |
 | **Tempo setup** | Horas | Dias/Semanas |
-| **Atualização** | Imediata (add docs) | Requer re-treino |
+| **Atualizaçêo** | Imediata (add docs) | Requer re-treino |
 | **Verificabilidade** | Alta (cita fonte) | Baixa (caixa-preta) |
 | **Privacidade** | Boa (docs locais) | Depende (modelo onde?) |
 | **Complexidade** | Baixa | Alta |
@@ -63,8 +63,8 @@ Aprenda a adaptar LLMs para necessidades educacionais específicas. Domine técn
 
 **Use Fine-Tuning quando:**
 ✅ Precisa mudar comportamento/estilo do modelo
-✅ Domínio muito específico (jargão técnico)
-✅ Dados sensíveis (não podem ir para API externa)
+✅ Domínio muito específico (jargêo técnico)
+✅ Dados sensíveis (nêo podem ir para API externa)
 ✅ Tem expertise técnico + infraestrutura
 
 **Use Ambos quando:**
@@ -78,7 +78,7 @@ Aprenda a adaptar LLMs para necessidades educacionais específicas. Domine técn
 ### Como Funciona (5 Passos):
 
 ```
-1. INDEXAÇÃO (Feito 1x, ou quando docs mudam)
+1. INDEXAÇêO (Feito 1x, ou quando docs mudam)
    └─ Quebrar documentos em chunks (pedaços)
    └─ Gerar embeddings para cada chunk
    └─ Armazenar em vector database
@@ -231,7 +231,7 @@ Fontes:
 
 ### Problema 1: Retrieval Ruim (Chunks Irrelevantes)
 
-**Sintoma:** LLM responde "Não encontrei informação sobre isso" mesmo tendo
+**Sintoma:** LLM responde "Nêo encontrei informaçêo sobre isso" mesmo tendo
 
 **Causas:**
 1. Embeddings ruins
@@ -248,7 +248,7 @@ query = "RAG"
 # Depois
 query_expanded = """
 RAG, Retrieval-Augmented Generation, busca semântica,
-recuperação de informação, embeddings
+recuperaçêo de informaçêo, embeddings
 """
 ```
 
@@ -283,9 +283,9 @@ def rerank(query, docs):
 
 ### Problema 2: Resposta Sem Contexto
 
-**Sintoma:** Resposta correta, mas não cita fonte ou dá detalhes
+**Sintoma:** Resposta correta, mas nêo cita fonte ou dá detalhes
 
-**Solução:** Melhorar Prompt de Síntese
+**Soluçêo:** Melhorar Prompt de Síntese
 
 ```python
 from langchain.prompts import PromptTemplate
@@ -293,7 +293,7 @@ from langchain.prompts import PromptTemplate
 template = """
 Você é um assistente educacional especializado.
 
-Use APENAS os trechos abaixo para responder. Se não souber, diga "Não encontrei essa informação nos materiais".
+Use APENAS os trechos abaixo para responder. Se nêo souber, diga "Nêo encontrei essa informaçêo nos materiais".
 
 Contexto:
 {context}
@@ -371,7 +371,7 @@ embeddings_batch = embeddings.embed_documents(queries)  # 1 API call
 ```
 GPT-3 (base): Completa texto
 Input: "Professor é"
-Output: "uma profissão importante que..." [neutro]
+Output: "uma profissêo importante que..." [neutro]
 
 ChatGPT (fine-tuned): Conversa
 Input: "Explique fotossíntese"
@@ -382,18 +382,18 @@ Diferença: Fine-tuned com 10k+ exemplos de conversas instrutivas
 
 ---
 
-### Quando Fine-Tuning Faz Sentido (Educação):
+### Quando Fine-Tuning Faz Sentido (Educaçêo):
 
-**Caso 1: Correção Automática com Estilo Específico**
+**Caso 1: Correçêo Automática com Estilo Específico**
 ```
 Dados: 1000 redações + correções de professor específico
 Objetivo: Modelo que corrige no estilo desse professor
 Resultado: Feedback personalizado em escala
 ```
 
-**Caso 2: Geração de Questões de Múltipla Escolha**
+**Caso 2: Geraçêo de Questões de Múltipla Escolha**
 ```
-Dados: 5000 questões criadas por instituição
+Dados: 5000 questões criadas por instituiçêo
 Objetivo: Gerar novas questões no mesmo formato/dificuldade
 Resultado: Banco de questões infinito
 ```
@@ -414,7 +414,7 @@ Resultado: Suporte 24/7
 ```json
 {"messages": [
   {"role": "system", "content": "Você é um corretor de redações do ENEM"},
-  {"role": "user", "content": "Redação: [TEXTO]"},
+  {"role": "user", "content": "Redaçêo: [TEXTO]"},
   {"role": "assistant", "content": "Análise: [FEEDBACK DETALHADO]"}
 ]}
 {"messages": [...]}
@@ -456,7 +456,7 @@ completion = openai.ChatCompletion.create(
   model="ft:gpt-3.5-turbo:org:modelo_redacao:abc123",  # Seu modelo
   messages=[
     {"role": "system", "content": "Você é um corretor de redações do ENEM"},
-    {"role": "user", "content": "Redação: [NOVA REDAÇÃO]"}
+    {"role": "user", "content": "Redaçêo: [NOVA REDAÇêO]"}
   ]
 )
 ```
@@ -469,7 +469,7 @@ completion = openai.ChatCompletion.create(
 
 **Stack:**
 - RAG para conteúdo (apostilas, slides)
-- LangChain para orquestração
+- LangChain para orquestraçêo
 - Streamlit para interface
 - ChromaDB para vector store
 
@@ -516,7 +516,7 @@ if user_input:
 
 **Soluções:**
 
-**1. Anonimização**
+**1. Anonimizaçêo**
 ```python
 import re
 
@@ -545,13 +545,13 @@ llm = HuggingFacePipeline.from_model_id(
 ```
 
 **3. Azure OpenAI (Enterprise)**
-- Dados não são usados para treinar
+- Dados nêo sêo usados para treinar
 - SLA de privacidade
 - Compliance com LGPD/GDPR
 
 ---
 
-## 📊 Benchmarking e Avaliação
+## 📊 Benchmarking e Avaliaçêo
 
 ### Como Avaliar se RAG Está Funcionando?
 
@@ -559,14 +559,14 @@ llm = HuggingFacePipeline.from_model_id(
 
 **1. Retrieval Precision@K**
 ```
-Dos K chunks retornados, quantos são realmente relevantes?
+Dos K chunks retornados, quantos sêo realmente relevantes?
 Precision@5 = (Chunks relevantes retornados) / 5
 ```
 
 **2. MRR (Mean Reciprocal Rank)**
 ```
-Em que posição aparece o primeiro chunk relevante?
-MRR = 1 / (posição do primeiro relevante)
+Em que posiçêo aparece o primeiro chunk relevante?
+MRR = 1 / (posiçêo do primeiro relevante)
 ```
 
 **3. Answer Quality (Humano)**
@@ -606,7 +606,7 @@ for item in test_set:
 
 ### 📹 Videoaulas (4h)
 - RAG: Conceitos e arquitetura (50 min)
-- Implementação RAG do zero (90 min)
+- Implementaçêo RAG do zero (90 min)
 - Fine-tuning: Quando e como (60 min)
 - Casos práticos e troubleshooting (40 min)
 
@@ -616,10 +616,10 @@ for item in test_set:
 - Criar interface com Streamlit (2h)
 - Avaliar e iterar (1h)
 
-### ✅ Avaliação (2h)
+### ✅ Avaliaçêo (2h)
 - Projeto: Chatbot RAG funcional com ≥20 docs
-- Demonstração: Responder 10 perguntas com fontes
-- Documentação: Explicar escolhas técnicas
+- Demonstraçêo: Responder 10 perguntas com fontes
+- Documentaçêo: Explicar escolhas técnicas
 
 ---
 

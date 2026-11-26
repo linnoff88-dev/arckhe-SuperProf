@@ -1,6 +1,6 @@
 # 🏗️ Estrutura do Site SuperProfessores
 
-## Arquitetura e Organização
+## Arquitetura e Organizaçêo
 
 ---
 
@@ -11,9 +11,9 @@ SuperProf/
 ├── 📄 index.md                    # Página inicial (Home)
 ├── 📄 _config.yml                 # Configurações do Jekyll
 ├── 📄 .gitignore                  # Arquivos ignorados pelo Git
-├── 📄 README.md                   # Documentação do projeto (GitHub)
+├── 📄 README.md                   # Documentaçêo do projeto (GitHub)
 ├── 📄 GUIA_GITHUB_PAGES.md        # Como publicar no GitHub Pages
-├── 📄 CUSTOMIZACAO_VISUAL.md      # Guia de personalização visual
+├── 📄 CUSTOMIZACAO_VISUAL.md      # Guia de personalizaçêo visual
 ├── 📄 ESTRUTURA_SITE.md           # Este arquivo
 │
 ├── 📂 _sass/                      # Estilos CSS
@@ -24,8 +24,8 @@ SuperProf/
 │   ├── 📂 images/                 # Imagens (logo, hero, etc.)
 │   └── 📂 css/                    # CSS adicional
 │
-├── 📂 doc/                        # Documentação completa
-│   ├── index.md                   # Página índice da documentação
+├── 📂 doc/                        # Documentaçêo completa
+│   ├── index.md                   # Página índice da documentaçêo
 │   ├── superprofessores_modelo_hibrido_2025.md
 │   ├── comparacao_trilhas.md
 │   ├── sumario_executivo_visual.md
@@ -38,7 +38,7 @@ SuperProf/
 │       ├── pesquisa_frameworks_cursos.md
 │       └── pesquisa_conteudos_avancados.md
 │
-└── 📂 node_modules/               # Dependências (não commitado)
+└── 📂 node_modules/               # Dependências (nêo commitado)
 ```
 
 ---
@@ -47,23 +47,23 @@ SuperProf/
 
 ### Tema: Just-the-Docs
 
-**Arquivo de configuração:** `_config.yml`
+**Arquivo de configuraçêo:** `_config.yml`
 
 #### Características:
-- ✅ Navegação lateral automática
+- ✅ Navegaçêo lateral automática
 - ✅ Busca integrada
 - ✅ Breadcrumbs
 - ✅ Responsivo
 - ✅ Suporte a Mermaid (diagramas)
 - ✅ Syntax highlighting
 
-#### Estrutura de Navegação:
+#### Estrutura de Navegaçêo:
 
 ```
 Home (/)
-├── Documentação (/doc)
+├── Documentaçêo (/doc)
 │   ├── Proposta Completa
-│   ├── Comparação de Trilhas
+│   ├── Comparaçêo de Trilhas
 │   ├── Sumário Executivo
 │   └── Proposta Original (histórico)
 └── Links Externos
@@ -77,12 +77,12 @@ Home (/)
 
 ### 1. **index.md** - Home Page
 
-**Localização:** `/index.md`
+**Localizaçêo:** `/index.md`
 **URL:** `https://inematds.github.io/SuperProf/`
 
 **Conteúdo:**
 - Hero section com CTAs
-- Problema e solução
+- Problema e soluçêo
 - Escolha de trilhas (A e B)
 - Dados de mercado
 - Estrutura do programa
@@ -101,22 +101,22 @@ permalink: /
 
 ---
 
-### 2. **doc/index.md** - Documentação
+### 2. **doc/index.md** - Documentaçêo
 
-**Localização:** `/doc/index.md`
+**Localizaçêo:** `/doc/index.md`
 **URL:** `https://inematds.github.io/SuperProf/doc/`
 
 **Conteúdo:**
 - Índice de todos os documentos
 - Links para proposta completa
-- Navegação por tópico
+- Navegaçêo por tópico
 - Guias para diferentes públicos
 
 **Front Matter:**
 ```yaml
 ---
 layout: default
-title: Documentação
+title: Documentaçêo
 nav_order: 2
 has_children: true
 permalink: /doc
@@ -127,12 +127,12 @@ permalink: /doc
 
 ### 3. **Proposta Completa**
 
-**Localização:** `/doc/superprofessores_modelo_hibrido_2025.md`
+**Localizaçêo:** `/doc/superprofessores_modelo_hibrido_2025.md`
 **URL:** `https://inematds.github.io/SuperProf/doc/superprofessores_modelo_hibrido_2025.html`
 
 **Conteúdo (30 páginas):**
 - Contexto da mudança rápida
-- Visão geral do projeto
+- Visêo geral do projeto
 - Nível 1: Fundamentos
 - Trilha A completa
 - Trilha B completa
@@ -140,22 +140,22 @@ permalink: /doc
 
 ---
 
-### 4. **Comparação de Trilhas**
+### 4. **Comparaçêo de Trilhas**
 
-**Localização:** `/doc/comparacao_trilhas.md`
+**Localizaçêo:** `/doc/comparacao_trilhas.md`
 **URL:** `https://inematds.github.io/SuperProf/doc/comparacao_trilhas.html`
 
 **Conteúdo:**
 - Tabelas comparativas
 - FAQ interativo
-- Guia de decisão
+- Guia de decisêo
 - Perfis recomendados
 
 ---
 
 ### 5. **Sumário Executivo**
 
-**Localização:** `/doc/sumario_executivo_visual.md`
+**Localizaçêo:** `/doc/sumario_executivo_visual.md`
 **URL:** `https://inematds.github.io/SuperProf/doc/sumario_executivo_visual.html`
 
 **Conteúdo:**
@@ -172,7 +172,7 @@ permalink: /doc
 
 | Cor | Hex | Uso |
 |-----|-----|-----|
-| Azul Educação | `#4a90e2` | Principal, links |
+| Azul Educaçêo | `#4a90e2` | Principal, links |
 | Verde | `#2ecc71` | Trilha B |
 | Roxo | `#9b59b6` | Trilha A |
 | Laranja | `#e67e22` | Destaques |
@@ -188,8 +188,8 @@ permalink: /doc
 # Texto Verde (Trilha B)
 {: .text-green-300 }
 
-[Botão Roxo](link.html){: .btn .btn-purple }
-[Botão Verde](link.html){: .btn .btn-green }
+[Botêo Roxo](link.html){: .btn .btn-purple }
+[Botêo Verde](link.html){: .btn .btn-green }
 ```
 
 ---
@@ -199,7 +199,7 @@ permalink: /doc
 ### Botões
 
 ```markdown
-[Texto](link.html){: .btn }                    # Padrão
+[Texto](link.html){: .btn }                    # Padrêo
 [Texto](link.html){: .btn .btn-primary }       # Primário (azul)
 [Texto](link.html){: .btn .btn-purple }        # Roxo
 [Texto](link.html){: .btn .btn-green }         # Verde
@@ -226,7 +226,7 @@ Gratuito
 > Destaque importante
 
 {: .warning }
-> Atenção!
+> Atençêo!
 
 {: .note }
 > Nota informativa
@@ -296,7 +296,7 @@ baseurl: /SuperProf
 ```yaml
 ---
 title: Título da Página
-description: Descrição para SEO
+description: Descriçêo para SEO
 ---
 ```
 
@@ -310,7 +310,7 @@ description: Descrição para SEO
 
 ## 🧪 Testar Localmente
 
-### Opção 1: Com Ruby e Jekyll
+### Opçêo 1: Com Ruby e Jekyll
 
 ```bash
 # Instalar dependências
@@ -333,7 +333,7 @@ bundle exec jekyll serve
 # Acesse: http://localhost:4000/SuperProf/
 ```
 
-### Opção 2: Com Docker (mais fácil)
+### Opçêo 2: Com Docker (mais fácil)
 
 ```bash
 # Baixar imagem
@@ -345,7 +345,7 @@ docker run --rm -v $(pwd):/srv/jekyll -p 4000:4000 jekyll/jekyll jekyll serve
 # Acesse: http://localhost:4000/SuperProf/
 ```
 
-### Opção 3: GitHub Codespaces (na nuvem)
+### Opçêo 3: GitHub Codespaces (na nuvem)
 
 1. Vá para o repositório no GitHub
 2. Clique em "Code" → "Codespaces" → "Create codespace"
@@ -378,7 +378,7 @@ Quando você faz `git push`:
 
 ---
 
-## 🔧 Manutenção
+## 🔧 Manutençêo
 
 ### Adicionar Nova Página
 
@@ -390,7 +390,7 @@ Quando você faz `git push`:
 layout: default
 title: Título da Página
 nav_order: 3
-parent: Documentação  # Se é subpágina
+parent: Documentaçêo  # Se é subpágina
 ---
 ```
 
@@ -403,7 +403,7 @@ parent: Documentação  # Se é subpágina
 2. Commit e push
 3. Aguarde rebuild (1-2 min)
 
-### Mudar Ordem de Navegação
+### Mudar Ordem de Navegaçêo
 
 No front matter de cada página:
 
@@ -442,33 +442,33 @@ Veja em: `https://github.com/inematds/SuperProf/graphs/traffic`
 
 **Causa:** Link quebrado ou baseurl incorreto
 
-**Solução:**
+**Soluçêo:**
 - Verifique links relativos: `[Texto](../pasta/arquivo.html)`
 - Ou use absolutos: `[Texto]({{ site.baseurl }}/pasta/arquivo.html)`
 
-### Problema: CSS não carrega
+### Problema: CSS nêo carrega
 
 **Causa:** Baseurl incorreto
 
-**Solução:**
+**Soluçêo:**
 - Verifique `_config.yml`:
 ```yaml
 baseurl: "/SuperProf"  # Com barra inicial, SEM barra final
 ```
 
-### Problema: Mermaid não renderiza
+### Problema: Mermaid nêo renderiza
 
-**Causa:** Sintaxe incorreta ou versão desatualizada
+**Causa:** Sintaxe incorreta ou versêo desatualizada
 
-**Solução:**
+**Soluçêo:**
 - Verifique sintaxe em: https://mermaid.live
-- Atualize versão no `_config.yml`
+- Atualize versêo no `_config.yml`
 
 ### Problema: Build falha
 
 **Causa:** Erro de sintaxe ou plugin faltando
 
-**Solução:**
+**Soluçêo:**
 1. Veja logs em GitHub Actions
 2. Teste localmente
 3. Verifique front matter (YAML válido)
@@ -477,7 +477,7 @@ baseurl: "/SuperProf"  # Com barra inicial, SEM barra final
 
 ## 📚 Recursos Úteis
 
-### Documentação Oficial
+### Documentaçêo Oficial
 - [Jekyll Docs](https://jekyllrb.com/docs/)
 - [Just-the-Docs Theme](https://just-the-docs.com/)
 - [GitHub Pages Docs](https://docs.github.com/pages)
@@ -507,7 +507,7 @@ Antes de lançar oficialmente:
 
 ## 📞 Suporte
 
-- **Documentação:** Este arquivo + `CUSTOMIZACAO_VISUAL.md`
+- **Documentaçêo:** Este arquivo + `CUSTOMIZACAO_VISUAL.md`
 - **Issues:** https://github.com/inematds/SuperProf/issues
 - **Email:** inematds@gmail.com
 

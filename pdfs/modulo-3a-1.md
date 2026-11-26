@@ -4,7 +4,7 @@
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
 Aprenda a redesenhar currículos inteiros usando IA como copiloto estratégico. Domine mapeamento de competências, desenho de trilhas adaptativas e alinhamento com frameworks educacionais (BNCC, Common Core, IB).
 
@@ -13,7 +13,7 @@ Aprenda a redesenhar currículos inteiros usando IA como copiloto estratégico. 
 - Redesenhar experiências de aprendizagem orientadas por competências
 - Criar trilhas adaptativas multi-nível
 - Alinhar com frameworks nacionais/internacionais
-- Implementar currículo vivo (atualização contínua com IA)
+- Implementar currículo vivo (atualizaçêo contínua com IA)
 
 ---
 
@@ -25,13 +25,13 @@ Aprenda a redesenhar currículos inteiros usando IA como copiloto estratégico. 
 ```
 Objetivo: "Ensinar 20 horas de álgebra"
 Métrica: Tempo gasto
-Problema: Não garante aprendizado
+Problema: Nêo garante aprendizado
 ```
 
 **Currículo Aumentado (Outcome-based):**
 ```
 Objetivo: "Aluno resolve problemas reais usando álgebra"
-Métrica: Demonstração de competência
+Métrica: Demonstraçêo de competência
 IA ajuda: Caminhos personalizados para chegar lá
 ```
 
@@ -49,8 +49,8 @@ Analise este currículo de [DISCIPLINA] para [ANO/SÉRIE]:
 
 Identifique:
 1. Competências trabalhadas (explícitas e implícitas)
-2. Taxonomia de Bloom: distribuição entre níveis (lembrar → criar)
-3. Gaps: o que está faltando para formação completa?
+2. Taxonomia de Bloom: distribuiçêo entre níveis (lembrar → criar)
+3. Gaps: o que está faltando para formaçêo completa?
 4. Redundâncias: o que está repetido desnecessariamente?
 5. Sequenciamento: ordem lógica está otimizada?
 
@@ -69,7 +69,7 @@ Currículo de Matemática 9º ano:
 Tarefa: Mapear para competências gerais e específicas da BNCC:
 
 Competências Gerais (1-10):
-[Listar quais são trabalhadas]
+[Listar quais sêo trabalhadas]
 
 Objetos de Conhecimento (Matemática):
 - Números
@@ -111,25 +111,25 @@ Formato: PNG 1920x1080
 **1. Critical Thinking (Pensamento Crítico)**
 **Como integrar:**
 - Análise de vieses em outputs de IA
-- Avaliação de fontes (fact-checking assistido)
-- Resolução de problemas complexos com múltiplas variáveis
+- Avaliaçêo de fontes (fact-checking assistido)
+- Resoluçêo de problemas complexos com múltiplas variáveis
 
 **Atividade Exemplo:**
 > "Use 3 LLMs diferentes (ChatGPT, Claude, Gemini) para pesquisar [TÓPICO CONTROVERSO]. Compare respostas, identifique vieses, construa síntese crítica."
 
-**2. Communication (Comunicação)**
+**2. Communication (Comunicaçêo)**
 **Como integrar:**
 - Prompt engineering como escrita persuasiva
-- Adaptação de mensagem para públicos diferentes (IA gera versões)
+- Adaptaçêo de mensagem para públicos diferentes (IA gera versões)
 - Narrativas multimídia (texto + imagem + áudio com IA)
 
 **Atividade Exemplo:**
-> "Explique [CONCEITO COMPLEXO] para 3 públicos: criança 8 anos, adolescente 15 anos, adulto especialista. Use IA para primeira versão, depois refine."
+> "Explique [CONCEITO COMPLEXO] para 3 públicos: criança 8 anos, adolescente 15 anos, adulto especialista. Use IA para primeira versêo, depois refine."
 
-**3. Collaboration (Colaboração)**
+**3. Collaboration (Colaboraçêo)**
 **Como integrar:**
 - Projetos em grupo com IA como 'membro adicional'
-- Resolução distribuída (cada aluno usa IA, depois consolidam)
+- Resoluçêo distribuída (cada aluno usa IA, depois consolidam)
 - Peer review assistido por IA
 
 **Atividade Exemplo:**
@@ -138,8 +138,8 @@ Formato: PNG 1920x1080
 **4. Creativity (Criatividade)**
 **Como integrar:**
 - IA como ferramenta de brainstorming
-- Iteração criativa (humano + IA em loop)
-- Remixagem e adaptação (pegar output IA e transformar)
+- Iteraçêo criativa (humano + IA em loop)
+- Remixagem e adaptaçêo (pegar output IA e transformar)
 
 **Atividade Exemplo:**
 > "Crie história original: 1) IA gera 5 premissas, 2) Você escolhe 1 e desenvolve, 3) IA sugere plot twist, 4) Você decide se aceita ou cria outro."
@@ -159,7 +159,7 @@ Formato: PNG 1920x1080
          │                │                │
     [3 módulos]      [4 módulos]      [5 módulos]
          │                │                │
-    [Quiz]  ──────►  [Quiz]  ──────►  [Certificação]
+    [Quiz]  ──────►  [Quiz]  ──────►  [Certificaçêo]
          │                │
     Se <70%: Review   Se <80%: Reforço
     Se ≥70%: Avança   Se ≥80%: Avança
@@ -170,7 +170,7 @@ Formato: PNG 1920x1080
 **Prompt Gemini:**
 ```
 Crie trilha de aprendizagem adaptativa para competência:
-"[DESCRIÇÃO DA COMPETÊNCIA]"
+"[DESCRIÇêO DA COMPETÊNCIA]"
 
 Contexto:
 - Público: [IDADE/NÍVEL]
@@ -182,7 +182,7 @@ Estrutura:
 2. 3 trilhas paralelas (Iniciante/Intermediário/Avançado)
 3. Cada trilha: 3-5 módulos com objetivos SMART
 4. Checkpoints: onde aluno pode mudar de trilha
-5. Critérios de progressão claros
+5. Critérios de progressêo claros
 6. Recursos diferenciados por trilha
 
 Formato: Tabela + Fluxograma em Mermaid
@@ -190,14 +190,14 @@ Formato: Tabela + Fluxograma em Mermaid
 
 ---
 
-## 📚 Currículo Vivo: Atualização Contínua
+## 📚 Currículo Vivo: Atualizaçêo Contínua
 
 ### Problema do Currículo Estático:
 - Criado em 2020 → Obsoleto em 2022
-- IA evolui mais rápido que ciclos de revisão curricular
+- IA evolui mais rápido que ciclos de revisêo curricular
 - Conteúdo desatualizado desmotiva alunos
 
-### Solução: Currículo que se Atualiza
+### Soluçêo: Currículo que se Atualiza
 
 **Sistema de Monitoramento:**
 
@@ -225,10 +225,10 @@ Recomendações:
 Formato: Relatório executivo (2 páginas)
 ```
 
-**Ciclo de Atualização:**
+**Ciclo de Atualizaçêo:**
 ```
 Mês 1-3: Implementar currículo v1.0
-Mês 4: IA gera relatório de atualização
+Mês 4: IA gera relatório de atualizaçêo
 Mês 5: Equipe revisa e decide mudanças
 Mês 6: Lançar v1.1 com updates
 [Repetir ciclo]
@@ -250,8 +250,8 @@ Mês 6: Lançar v1.1 com updates
 **Etapa 1 - Auditoria (2h):**
 ```
 Claude analisou ementa de 80 páginas
-Identificou: 70% focado em memorização, 15% aplicação, 15% análise
-Gap: Zero conexão com biotecnologia moderna, CRISPR, genômica
+Identificou: 70% focado em memorizaçêo, 15% aplicaçêo, 15% análise
+Gap: Zero conexêo com biotecnologia moderna, CRISPR, genômica
 ```
 
 **Etapa 2 - Redesenho (4h):**
@@ -267,11 +267,11 @@ Adicionou: Módulo "Biotecnologia na Prática"
 - Entrevista com cientista (IA agenda e prepara perguntas)
 ```
 
-**Etapa 3 - Implementação (12 semanas):**
+**Etapa 3 - Implementaçêo (12 semanas):**
 ```
 Aula tradicional → Flipped classroom + IA
 - Antes: IA gera quiz diagnóstico
-- Durante: Discussão + lab
+- Durante: Discussêo + lab
 - Depois: IA corrige relatórios e dá feedback
 ```
 
@@ -282,14 +282,14 @@ Aula tradicional → Flipped classroom + IA
 
 ---
 
-### Caso 2: Currículo Técnico de Programação
+### Caso 2: Currículo Técnico de Programaçêo
 
 **Contexto:**
 - Bootcamp 16 semanas, 40h/semana
 - Objetivo: Preparar para mercado como desenvolvedor júnior
 - Desafio: Mercado muda rápido, stack overflow de tecnologias
 
-**Solução com IA:**
+**Soluçêo com IA:**
 
 **Currículo Dinâmico:**
 ```
@@ -306,7 +306,7 @@ Electives (40% - Atualizado a cada cohort):
 - Ex: Cohort Jul/25: Svelte, Supabase, Kubernetes, Python+FastAPI
 ```
 
-**Personalização por Aluno:**
+**Personalizaçêo por Aluno:**
 ```
 Semana 8: IA analisa performance de cada aluno
 - Aluno A: Forte em frontend, fraco em backend
@@ -320,28 +320,28 @@ Semana 8: IA analisa performance de cada aluno
 **Resultados:**
 - Taxa de emprego 6 meses: 78% → 91%
 - Salário médio primeiro emprego: +22%
-- Satisfação com currículo: 8.9/10
+- Satisfaçêo com currículo: 8.9/10
 
 ---
 
 ## 🧰 Ferramentas e Recursos
 
-### Plataformas de Gestão Curricular:
+### Plataformas de Gestêo Curricular:
 
 **1. Atlas Curriculum (atlas.org)**
 - Mapeamento visual de currículo
 - Alinhamento com standards
-- Colaboração entre professores
+- Colaboraçêo entre professores
 
 **2. Curriculum Trak**
-- Integração com SIS (Student Information Systems)
+- Integraçêo com SIS (Student Information Systems)
 - Relatórios de cobertura curricular
 - Tracking de objetivos
 
 **3. Planboard**
 - Planejamento de aulas alinhado a currículo
 - Compartilhamento de planos
-- Feedback de coordenação
+- Feedback de coordenaçêo
 
 ### Integrações IA:
 
@@ -356,7 +356,7 @@ Semana 8: IA analisa performance de cada aluno
    → Se sim: gera proposta de módulo
 
 3. Aluno completa módulo com <60%
-   → IA gera caminho de recuperação personalizado
+   → IA gera caminho de recuperaçêo personalizado
    → Notifica professor + aluno
 ```
 
@@ -371,18 +371,18 @@ Semana 8: IA analisa performance de cada aluno
 - Meta: ≥90% das competências essenciais
 
 **2. Profundidade:**
-- Distribuição por Bloom: % em cada nível
+- Distribuiçêo por Bloom: % em cada nível
 - Meta: >30% em Aplicar/Analisar/Avaliar/Criar
 
 **3. Engajamento:**
-- Taxa de conclusão de módulos (meta: >85%)
+- Taxa de conclusêo de módulos (meta: >85%)
 - Tempo médio em atividades (crescente é bom)
 - Feedback de alunos (survey mensal)
 
 **4. Outcomes:**
 - Performance em avaliações externas
-- Taxa de progressão para próximo nível
-- Aplicação em projetos reais
+- Taxa de progressêo para próximo nível
+- Aplicaçêo em projetos reais
 
 ### Dashboard Automatizado:
 
@@ -395,7 +395,7 @@ Dados:
 
 Análises:
 1. 🎯 Cobertura de competências (gráfico)
-2. 📊 Distribuição Bloom (pizza chart)
+2. 📊 Distribuiçêo Bloom (pizza chart)
 3. 📈 Tendências (comparar com trimestre anterior)
 4. ⚠️ Alertas (módulos com <70% completion ou <3.5 feedback)
 5. 💡 Recomendações (3-5 ações prioritárias)
@@ -411,7 +411,7 @@ Formato: Markdown com tabelas e gráficos ASCII
 
 **PLAN (Planejar):**
 - IA analisa dados anteriores e sugere experimentos
-- Ex: "Módulo X tem baixa conclusão. Testar versão gamificada?"
+- Ex: "Módulo X tem baixa conclusêo. Testar versêo gamificada?"
 
 **DO (Fazer):**
 - Implementar mudança com grupo piloto (A/B test)
@@ -428,7 +428,7 @@ Formato: Markdown com tabelas e gráficos ASCII
 
 **Prompt para Análise A/B:**
 ```
-Experimento: Gamificação no Módulo 3
+Experimento: Gamificaçêo no Módulo 3
 
 Grupo A (Controle, n=50):
 - Completion: 72%
@@ -444,7 +444,7 @@ Análise:
 1. Diferença é estatisticamente significativa? (t-test)
 2. Houve trade-offs? (mais tempo gasto, ok?)
 3. Feedback qualitativo favorável? [Analisar comentários]
-4. Recomendação: Escalar/Ajustar/Descartar?
+4. Recomendaçêo: Escalar/Ajustar/Descartar?
 
 Formato: Relatório científico (1 página)
 ```
@@ -465,9 +465,9 @@ Formato: Relatório científico (1 página)
 - Redesenhar 1 unidade completa (6h)
 - Criar dashboard de métricas (2h)
 
-### ✅ Avaliação (3h)
+### ✅ Avaliaçêo (3h)
 - Projeto: Currículo redesenhado completo
-- Apresentação: Defesa de escolhas curriculares
+- Apresentaçêo: Defesa de escolhas curriculares
 - Peer review: Avaliar projetos de colegas
 
 ---

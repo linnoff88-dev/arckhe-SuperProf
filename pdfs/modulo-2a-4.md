@@ -1,12 +1,12 @@
-# Módulo 2A.4: Gamificação e Engajamento
+# Módulo 2A.4: Gamificaçêo e Engajamento
 
 **Nível 2A: Pedagógico | Carga Horária: 12 horas**
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
-Aprenda a usar gamificação baseada em IA para aumentar engajamento em 3-5x. Domine sistemas de pontos, badges, leaderboards adaptativos e narrativas personalizadas.
+Aprenda a usar gamificaçêo baseada em IA para aumentar engajamento em 3-5x. Domine sistemas de pontos, badges, leaderboards adaptativos e narrativas personalizadas.
 
 ### Objetivos:
 - Implementar sistema de pontos e recompensas com IA
@@ -16,18 +16,18 @@ Aprenda a usar gamificação baseada em IA para aumentar engajamento em 3-5x. Do
 
 ---
 
-## 🎮 Fundamentos de Gamificação
+## 🎮 Fundamentos de Gamificaçêo
 
-### O que NÃO é Gamificação:
+### O que NêO é Gamificaçêo:
 ❌ Apenas adicionar pontos e badges
-❌ Competição forçada entre alunos
+❌ Competiçêo forçada entre alunos
 ❌ Recompensas extrínsecas vazias
 
-### O que É Gamificação Efetiva:
+### O que É Gamificaçêo Efetiva:
 ✅ **Autonomia:** Aluno escolhe desafios
 ✅ **Maestria:** Progresso visível e conquistas
-✅ **Propósito:** Conexão com objetivos reais
-✅ **Social:** Colaboração e reconhecimento
+✅ **Propósito:** Conexêo com objetivos reais
+✅ **Social:** Colaboraçêo e reconhecimento
 
 ---
 
@@ -39,9 +39,9 @@ Aprenda a usar gamificação baseada em IA para aumentar engajamento em 3-5x. Do
 **Como:** IA gera missões conectadas a impacto real
 **Prompt Claude:**
 ```
-Crie missão gamificada sobre [TEMA] que conecte com:
+Crie missêo gamificada sobre [TEMA] que conecte com:
 - Problema real do mundo
-- Contribuição para comunidade
+- Contribuiçêo para comunidade
 - Legado que o aluno deixará
 
 Tom: Épico mas autêntico
@@ -64,16 +64,16 @@ Formato: JSON estruturado
 **3. Empowerment of Creativity**
 **Como:** Desafios abertos com showcase
 **Exemplo:**
-> "Crie sua própria explicação de [CONCEITO] usando IA. Melhor criação vira material oficial do curso!"
+> "Crie sua própria explicaçêo de [CONCEITO] usando IA. Melhor criaçêo vira material oficial do curso!"
 
 **4. Ownership & Possession**
 **Como:** Portfólio gamificado
-- Coleção de badges únicos
-- Customização de avatar com IA
+- Coleçêo de badges únicos
+- Customizaçêo de avatar com IA
 - "Itens raros" desbloqueados por maestria
 
 **5. Social Influence & Relatedness**
-**Como:** Guilds e cooperação
+**Como:** Guilds e cooperaçêo
 - Times de 4-6 alunos
 - Missões cooperativas (todos ganham ou todos perdem)
 - Reconhecimento público de contribuições
@@ -82,7 +82,7 @@ Formato: JSON estruturado
 **Como:** Eventos limitados
 - "Desafio Relâmpago" 24h
 - Badges sazonais
-- ⚠️ Usar com moderação (pode desmotivar)
+- ⚠️ Usar com moderaçêo (pode desmotivar)
 
 **7. Unpredictability & Curiosity**
 **Como:** IA gera surpresas
@@ -91,13 +91,13 @@ Prompt Gemini:
 Gere "Easter Egg" educacional para aluno que completou [MÓDULO]:
 - Fato surpreendente relacionado
 - Mini-desafio bônus inesperado
-- Conexão com interesse demonstrado
+- Conexêo com interesse demonstrado
 ```
 
 **8. Loss & Avoidance**
-**Como:** Streaks positivos (não punitivos)
+**Como:** Streaks positivos (nêo punitivos)
 - "Você está há 7 dias estudando consecutivos! Continue!"
-- Recuperação de streak perdido com missão especial
+- Recuperaçêo de streak perdido com missêo especial
 
 ---
 
@@ -108,7 +108,7 @@ Gere "Easter Egg" educacional para aluno que completou [MÓDULO]:
 - Aluno B faz mesma tarefa em 2h → 100 pontos
 - Aluno B se sente injustiçado
 
-### Solução IA:
+### Soluçêo IA:
 **Pontos baseados em esforço relativo**
 
 **Prompt NotebookLM:**
@@ -124,7 +124,7 @@ Para tarefa [TAREFA]:
 
 Calcule pontos considerando:
 1. Esforço relativo (comparado com próprio histórico)
-2. Melhoria em relação a tentativas anteriores
+2. Melhoria em relaçêo a tentativas anteriores
 3. Qualidade do resultado
 4. Bônus por persistência (tentativas múltiplas)
 
@@ -171,14 +171,14 @@ Crie badge circular para conquista "[NOME]":
 ### Problema dos Leaderboards Tradicionais:
 - Top 10% fica motivado
 - 90% fica desmotivado
-- Competição tóxica
+- Competiçêo tóxica
 
-### Solução: Leaderboards Personalizados
+### Soluçêo: Leaderboards Personalizados
 
 **Tipos:**
 
 **1. Leaderboard de Crescimento**
-Não mostra posição absoluta, mas % de melhoria
+Nêo mostra posiçêo absoluta, mas % de melhoria
 ```
 🏆 Top 5 Maior Crescimento (Última Semana):
 1. Ana: +45% em quiz score
@@ -195,7 +195,7 @@ IA agrupa alunos similares (nível, ritmo, estilo)
 ```
 
 **3. Leaderboard Cooperativo**
-Time vs Time (não indivíduo vs indivíduo)
+Time vs Time (nêo indivíduo vs indivíduo)
 ```
 🤝 Ranking de Guilds:
 1. Guild "Innovators" - 12.450 pts
@@ -213,7 +213,7 @@ Time vs Time (não indivíduo vs indivíduo)
 1. **Mundo:** Contexto imersivo relacionado ao tema
 2. **Personagem:** Aluno é protagonista (ou mentor)
 3. **Conflito:** Problema a resolver com conhecimento
-4. **Resolução:** Aplicação prática = progresso na história
+4. **Resoluçêo:** Aplicaçêo prática = progresso na história
 
 ### Exemplo Prático:
 
@@ -223,9 +223,9 @@ Time vs Time (não indivíduo vs indivíduo)
 
 > **Capítulo 1: A Torre dos Prompts**
 >
-> Você é um(a) Arquiteto(a) de Linguagem em 2025. A Torre Central de IA da cidade está em caos: prompts mal-escritos estão gerando respostas confusas, causando falhas em sistemas críticos.
+> Você é um(a) Arquiteto(a) de Linguagem em 2025. A Torre Central de IA da cidade está em caos: prompts mal-escritos estêo gerando respostas confusas, causando falhas em sistemas críticos.
 >
-> **Sua Missão:** Escalar os 10 andares da Torre, corrigindo prompts quebrados em cada nível. Quanto mais preciso seu conserto, mais rápido você sobe.
+> **Sua Missêo:** Escalar os 10 andares da Torre, corrigindo prompts quebrados em cada nível. Quanto mais preciso seu conserto, mais rápido você sobe.
 >
 > **Andar 1: Fundações Rachadas**
 > Um prompt vago está causando respostas genéricas:
@@ -256,7 +256,7 @@ Público: [IDADE/NÍVEL]
 
 ---
 
-## 🎨 Implementação Prática
+## 🎨 Implementaçêo Prática
 
 ### Stack Tecnológico:
 
@@ -266,12 +266,12 @@ Público: [IDADE/NÍVEL]
 - Google Classroom + extensões
 
 **2. Ferramentas IA:**
-- ChatGPT: Geração de desafios adaptativos
+- ChatGPT: Geraçêo de desafios adaptativos
 - Claude: Feedback narrativo personalizado
 - Gemini: Análise de padrões de engajamento
 
 **3. Integrações:**
-- Zapier: Automatizar badges quando condições são atingidas
+- Zapier: Automatizar badges quando condições sêo atingidas
 - Make.com: Conectar IA com LMS
 
 ### Exemplo de Fluxo:
@@ -287,7 +287,7 @@ Público: [IDADE/NÍVEL]
    ↓
 5. Zapier envia de volta para Moodle
    ↓
-6. Aluno recebe notificação com missão personalizada
+6. Aluno recebe notificaçêo com missêo personalizada
 ```
 
 ---
@@ -299,7 +299,7 @@ Público: [IDADE/NÍVEL]
 **1. Métricas de Atividade:**
 - Frequência de login
 - Tempo médio em plataforma
-- Taxa de conclusão de módulos
+- Taxa de conclusêo de módulos
 
 **2. Métricas de Qualidade:**
 - Score em avaliações
@@ -323,8 +323,8 @@ Dados brutos:
 Gere relatório:
 1. Alunos em risco (baixo engajamento)
 2. Padrões identificados (horários, tópicos populares)
-3. Recomendações de ajuste (quais mecânicas funcionam/não funcionam)
-4. Sugestões de intervenção personalizada (top 5 alunos que precisam atenção)
+3. Recomendações de ajuste (quais mecânicas funcionam/nêo funcionam)
+4. Sugestões de intervençêo personalizada (top 5 alunos que precisam atençêo)
 
 Formato: Executivo (1 página) + Dados (tabelas)
 ```
@@ -336,17 +336,17 @@ Formato: Executivo (1 página) + Dados (tabelas)
 ### Caso 1: Duolingo
 **Mecânica:** Streaks + Owl mascot + Stories
 **Resultado:** Engajamento 3x maior que competidores
-**Lição:** Personalidade (owl) + hábito (streak) + contexto (stories)
+**Liçêo:** Personalidade (owl) + hábito (streak) + contexto (stories)
 
 ### Caso 2: Classcraft
 **Mecânica:** RPG em sala de aula (avatares, quests, teams)
-**Resultado:** +75% participação em tarefas
-**Lição:** Narrativa imersiva + colaboração
+**Resultado:** +75% participaçêo em tarefas
+**Liçêo:** Narrativa imersiva + colaboraçêo
 
 ### Caso 3: Khan Academy
 **Mecânica:** Árvore de habilidades + pontos de energia
 **Resultado:** +60% tempo médio em plataforma
-**Lição:** Visualização de progresso + autonomia na escolha
+**Liçêo:** Visualizaçêo de progresso + autonomia na escolha
 
 ---
 
@@ -360,10 +360,10 @@ Formato: Executivo (1 página) + Dados (tabelas)
 ✅ **Significado:** Conecte com objetivos reais
 
 ### Don'ts:
-❌ **Gamificação Superficial:** Pontos sem propósito
-❌ **Competição Tóxica:** Ranking público fixo
-❌ **Pressão Excessiva:** Timers estressantes
-❌ **Recompensas Vazias:** Badges que não significam maestria
+❌ **Gamificaçêo Superficial:** Pontos sem propósito
+❌ **Competiçêo Tóxica:** Ranking público fixo
+❌ **Pressêo Excessiva:** Timers estressantes
+❌ **Recompensas Vazias:** Badges que nêo significam maestria
 ❌ **Complexidade:** Sistema difícil de entender
 
 ---
@@ -374,17 +374,17 @@ Formato: Executivo (1 página) + Dados (tabelas)
 - Octalysis Framework aplicado (50 min)
 - Design de sistemas de pontos (45 min)
 - Narrativas gamificadas (40 min)
-- Ética em gamificação (45 min)
+- Ética em gamificaçêo (45 min)
 
 ### 💬 Práticas (7h)
-- Criar sistema de gamificação para seu curso (4h)
+- Criar sistema de gamificaçêo para seu curso (4h)
 - Implementar 3 mecânicas com IA (2h)
 - Análise de métricas (1h)
 
-### ✅ Avaliação (2h)
+### ✅ Avaliaçêo (2h)
 - Projeto: Sistema gamificado funcional
 - Documento de design (GDD simplificado)
-- Apresentação de resultados
+- Apresentaçêo de resultados
 
 ---
 

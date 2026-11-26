@@ -59,7 +59,7 @@ def extract_topics(md_content):
     for i, line in enumerate(lines):
         if line.startswith('## ') and not line.startswith('###'):
             title = line[3:].strip()
-            # Pegar próximo parágrafo como explicação
+            # Pegar próximo parágrafo como explicaçêo
             explanation = ''
             for j in range(i+1, min(i+10, len(lines))):
                 if lines[j].strip() and not lines[j].startswith('#'):
@@ -90,13 +90,13 @@ configs = {
         'trilha': 'Trilha A',
         'trilha_link': 'trilha-a.html',
         'carga': 60,
-        'descricao': 'Aprofundamento pedagógico em design instrucional, avaliação formativa, personalização, gamificação e comunidades de prática com IA',
+        'descricao': 'Aprofundamento pedagógico em design instrucional, avaliaçêo formativa, personalizaçêo, gamificaçêo e comunidades de prática com IA',
         'modulos': [f'modulo-2a-{i}.md' for i in range(1, 6)],
         'titulos': [
             'Design Instrucional com IA',
-            'Avaliação Formativa Assistida por IA', 
-            'Personalização em Escala',
-            'Gamificação Inteligente',
+            'Avaliaçêo Formativa Assistida por IA', 
+            'Personalizaçêo em Escala',
+            'Gamificaçêo Inteligente',
             'Comunidades de Prática e Aprendizagem Social'
         ]
     },
@@ -109,12 +109,12 @@ configs = {
         'trilha': 'Trilha B',
         'trilha_link': 'trilha-b.html',
         'carga': 60,
-        'descricao': 'Aprofundamento técnico em anatomia de LLMs, fine-tuning, RAG e criação de agentes educacionais autônomos',
+        'descricao': 'Aprofundamento técnico em anatomia de LLMs, fine-tuning, RAG e criaçêo de agentes educacionais autônomos',
         'modulos': [f'modulo-2b-{i}.md' for i in range(1, 5)],
         'titulos': [
             'Anatomia de LLMs - Como Funcionam Por Dentro',
             'Fine-Tuning e RAG - Especializando LLMs',
-            'Criação de Agentes Educacionais com IA',
+            'Criaçêo de Agentes Educacionais com IA',
             'Projeto Técnico - Educador de IA'
         ]
     },
@@ -127,12 +127,12 @@ configs = {
         'trilha': 'Trilha A',
         'trilha_link': 'trilha-a.html',
         'carga': 60,
-        'descricao': 'Nível especialista: redesenho curricular completo, liderança em transformação digital educacional e projeto final de certificação',
+        'descricao': 'Nível especialista: redesenho curricular completo, liderança em transformaçêo digital educacional e projeto final de certificaçêo',
         'modulos': [f'modulo-3a-{i}.md' for i in range(1, 4)],
         'titulos': [
             'Currículo Aumentado por IA',
-            'Liderança em Transformação Digital Educacional',
-            'Projeto de Certificação - Professor 2.0'
+            'Liderança em Transformaçêo Digital Educacional',
+            'Projeto de Certificaçêo - Professor 2.0'
         ]
     }
 }
@@ -255,7 +255,7 @@ for filename, config in configs.items():
         modulos_html_parts.append(modulo_card)
     
     # 6. Substituir módulos do nível 1 pelos novos
-    # Encontrar seção de módulos
+    # Encontrar seçêo de módulos
     main_start = html.find('<!-- Main Content -->')
     main_end = html.find('<!-- Modal Container -->')
     

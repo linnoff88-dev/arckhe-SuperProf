@@ -117,13 +117,13 @@ configs = {
         'id': '2A', 'nome': 'Pedagógico', 'cor': '#9b59b6',
         'gradient': 'from-primary to-purple-600',
         'trilha': 'Trilha A', 'trilha_link': 'trilha-a.html', 'carga': 60,
-        'descricao': 'Aprofundamento pedagógico em design instrucional, avaliação formativa, personalização, gamificação e comunidades de prática com IA',
+        'descricao': 'Aprofundamento pedagógico em design instrucional, avaliaçêo formativa, personalizaçêo, gamificaçêo e comunidades de prática com IA',
         'mds': all_mds['2a'],
         'titulos': [
             'Design Instrucional com IA',
-            'Avaliação Formativa Assistida por IA', 
-            'Personalização em Escala',
-            'Gamificação Inteligente',
+            'Avaliaçêo Formativa Assistida por IA', 
+            'Personalizaçêo em Escala',
+            'Gamificaçêo Inteligente',
             'Comunidades de Prática e Aprendizagem Social'
         ]
     },
@@ -131,12 +131,12 @@ configs = {
         'id': '2B', 'nome': 'Técnico', 'cor': '#10B981',
         'gradient': 'from-success to-green-600',
         'trilha': 'Trilha B', 'trilha_link': 'trilha-b.html', 'carga': 60,
-        'descricao': 'Aprofundamento técnico em anatomia de LLMs, fine-tuning, RAG e criação de agentes educacionais autônomos',
+        'descricao': 'Aprofundamento técnico em anatomia de LLMs, fine-tuning, RAG e criaçêo de agentes educacionais autônomos',
         'mds': all_mds['2b'],
         'titulos': [
             'Anatomia de LLMs - Como Funcionam Por Dentro',
             'Fine-Tuning e RAG - Especializando LLMs',
-            'Criação de Agentes Educacionais com IA',
+            'Criaçêo de Agentes Educacionais com IA',
             'Projeto Técnico - Educador de IA'
         ]
     },
@@ -144,12 +144,12 @@ configs = {
         'id': '3A', 'nome': 'Especialista', 'cor': '#8e44ad',
         'gradient': 'from-primary to-purple-800',
         'trilha': 'Trilha A', 'trilha_link': 'trilha-a.html', 'carga': 60,
-        'descricao': 'Nível especialista: redesenho curricular completo, liderança em transformação digital educacional e projeto final de certificação',
+        'descricao': 'Nível especialista: redesenho curricular completo, liderança em transformaçêo digital educacional e projeto final de certificaçêo',
         'mds': all_mds['3a'],
         'titulos': [
             'Currículo Aumentado por IA',
-            'Liderança em Transformação Digital Educacional',
-            'Projeto de Certificação - Professor 2.0'
+            'Liderança em Transformaçêo Digital Educacional',
+            'Projeto de Certificaçêo - Professor 2.0'
         ]
     }
 }

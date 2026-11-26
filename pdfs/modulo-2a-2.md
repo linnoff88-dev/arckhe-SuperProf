@@ -1,22 +1,22 @@
-# Módulo 2A.2: Avaliação Formativa Assistida por IA
+# Módulo 2A.2: Avaliaçêo Formativa Assistida por IA
 
 **Nível 2A: Pedagógico | Carga Horária: 12 horas**
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
-Transforme avaliação de punitiva para formativa usando IA. Aprenda a dar feedback personalizado em escala, criar rubricas adaptativas e detectar gaps de aprendizagem com análise automática.
+Transforme avaliaçêo de punitiva para formativa usando IA. Aprenda a dar feedback personalizado em escala, criar rubricas adaptativas e detectar gaps de aprendizagem com análise automática.
 
 ### Objetivos:
 - Gerar feedback personalizado para 30+ alunos em 1h (vs 6h manual)
 - Criar rubricas analíticas com IA alinhadas a objetivos
-- Implementar avaliação diagnóstica, formativa e somativa com IA
+- Implementar avaliaçêo diagnóstica, formativa e somativa com IA
 - Analisar padrões de erro em turmas com dashboards automatizados
 
 ---
 
-## 📊 Tipos de Avaliação com IA
+## 📊 Tipos de Avaliaçêo com IA
 
 ### 1. Diagnóstica (Pré-curso)
 **Objetivo:** Identificar conhecimento prévio
@@ -26,10 +26,10 @@ Transforme avaliação de punitiva para formativa usando IA. Aprenda a dar feedb
 ```
 Crie teste diagnóstico de 15 questões sobre [TEMA]:
 - 5 fáceis (conceitos básicos)
-- 5 médias (aplicação)
+- 5 médias (aplicaçêo)
 - 5 difíceis (análise)
 
-Para cada questão:
+Para cada questêo:
 - Enunciado claro
 - 4 alternativas
 - Feedback para cada alternativa (por que está certa/errada)
@@ -42,8 +42,8 @@ Formato: JSON estruturado para quiz adaptativo
 **Objetivo:** Monitorar progresso e ajustar ensino
 **IA:** Feedback automatizado
 
-**Caso Real - Correção de Redações:**
-- Sem IA: 3 min/redação × 30 alunos = 90 min
+**Caso Real - Correçêo de Redações:**
+- Sem IA: 3 min/redaçêo × 30 alunos = 90 min
 - Com IA: 30 min total (revisar outputs da IA)
 - **Economia: 67%**
 
@@ -86,7 +86,7 @@ Público: [NÍVEL]
 ### Problema:
 Professores gastam 6h/semana dando feedback. 80% é repetitivo.
 
-### Solução IA:
+### Soluçêo IA:
 **Feedback Generator** - Personaliza mensagens baseado em padrões
 
 **Prompt Multi-LLM:**
@@ -95,7 +95,7 @@ Professores gastam 6h/semana dando feedback. 80% é repetitivo.
 Analise estas 30 redações e identifique:
 1. Erros mais comuns (top 5)
 2. Pontos fortes recorrentes (top 3)
-3. Perfis de alunos (por padrão de erro)
+3. Perfis de alunos (por padrêo de erro)
 
 # Etapa 2: ChatGPT gera feedbacks personalizados
 Para cada aluno, crie feedback que:
@@ -103,7 +103,7 @@ Para cada aluno, crie feedback que:
 - Sugere 2 melhorias prioritárias
 - Conecta com erro comum identificado
 - Tom: Encorajador, construtivo, específico
-- Extensão: 100-150 palavras
+- Extensêo: 100-150 palavras
 
 # Etapa 3: Professor revisa e ajusta
 ```
@@ -115,8 +115,8 @@ Para cada aluno, crie feedback que:
 ## 📦 Recursos do Módulo
 
 ### 📹 Videoaulas (3h)
-- Avaliação formativa vs somativa (40 min)
-- Criação de rubricas (45 min)
+- Avaliaçêo formativa vs somativa (40 min)
+- Criaçêo de rubricas (45 min)
 - Feedback em escala (50 min)
 - Análise de padrões (45 min)
 
@@ -125,7 +125,7 @@ Para cada aluno, crie feedback que:
 - Corrigir 10 trabalhos com IA (3h)
 - Implementar ciclo de feedback (2h)
 
-### ✅ Avaliação (2h)
+### ✅ Avaliaçêo (2h)
 - Entregar rubrica + 10 feedbacks
 - Análise de impacto
 

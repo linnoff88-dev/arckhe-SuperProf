@@ -4,7 +4,7 @@
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
 Prompt Engineering é a habilidade mais valiosa da era da IA. Técnicas comprovadas para aumentar em 40-80% a qualidade das respostas de LLMs. Domine: Anatomia de Prompts, Chain-of-Thought, Few-Shot Learning, Engenharia de Persona e Estratégias Multi-LLM.
 
@@ -29,11 +29,11 @@ Especifique o que quer
 
 #### 4. Formato (Format)
 Defina a estrutura da resposta
-- "Formato: Para cada exercício, forneça: equação desbalanceada, nível (1-10), dica pedagógica"
+- "Formato: Para cada exercício, forneça: equaçêo desbalanceada, nível (1-10), dica pedagógica"
 
 #### 5. Tom (Tone)
-Especifique o estilo de comunicação
-- "Tom: Linguagem acessível para adolescentes, evite jargão técnico excessivo"
+Especifique o estilo de comunicaçêo
+- "Tom: Linguagem acessível para adolescentes, evite jargêo técnico excessivo"
 
 ### Exemplo Completo:
 
@@ -41,7 +41,7 @@ Especifique o estilo de comunicação
 Papel: Você é um professor de química do ensino médio com 15 anos de experiência.
 Contexto: Turma de 30 alunos, 2º ano EM, dificuldade em balanceamento de equações.
 Tarefa: Crie 10 exercícios progressivos (fácil→difícil).
-Formato: Para cada exercício: equação desbalanceada, nível (1-10), dica pedagógica.
+Formato: Para cada exercício: equaçêo desbalanceada, nível (1-10), dica pedagógica.
 Tom: Linguagem acessível para adolescentes.
 ```
 
@@ -51,18 +51,18 @@ Tom: Linguagem acessível para adolescentes.
 
 ### O que é?
 
-Pesquisa do Google (2022) mostrou aumento de **40-80% na precisão** ao pedir que o LLM "pense passo a passo".
+Pesquisa do Google (2022) mostrou aumento de **40-80% na precisêo** ao pedir que o LLM "pense passo a passo".
 
 ### Como Funciona:
 
-Em vez de pedir resposta direta, instrua o LLM a "mostrar seu raciocínio". Isso força decomposição de problemas complexos em etapas lógicas.
+Em vez de pedir resposta direta, instrua o LLM a "mostrar seu raciocínio". Isso força decomposiçêo de problemas complexos em etapas lógicas.
 
-### Comparação:
+### Comparaçêo:
 
 **❌ Sem CoT (Resposta Direta):**
 ```
 Prompt: "Quanto é 23 × 47?"
-Resposta: "1081" (sem explicação)
+Resposta: "1081" (sem explicaçêo)
 ```
 
 **✅ Com CoT (Passo a Passo):**
@@ -74,15 +74,15 @@ Resposta:
 3. 920 + 161 = 1081
 ```
 
-### Aplicação Pedagógica - Correção de Redação:
+### Aplicaçêo Pedagógica - Correçêo de Redaçêo:
 
 ```
 Você é um corretor de redações ENEM.
 
-Tarefa: Avalie esta redação seguindo as 5 competências do ENEM.
+Tarefa: Avalie esta redaçêo seguindo as 5 competências do ENEM.
 
 Instruções:
-1. Leia a redação completamente
+1. Leia a redaçêo completamente
 2. Para CADA competência (C1 a C5):
    a) Identifique 2 pontos fortes
    b) Identifique 2 pontos fracos
@@ -98,10 +98,10 @@ Mostre seu raciocínio passo a passo.
 
 ### Quando Usar CoT:
 
-- ✅ Problemas matemáticos/lógicos (aumenta precisão 40-80%)
+- ✅ Problemas matemáticos/lógicos (aumenta precisêo 40-80%)
 - ✅ Análise de textos complexos (redações, TCCs)
 - ✅ Planejamento pedagógico (planos de aula, sequências didáticas)
-- ✅ Debugging de código (programação)
+- ✅ Debugging de código (programaçêo)
 
 ---
 
@@ -109,11 +109,11 @@ Mostre seu raciocínio passo a passo.
 
 ### Princípio:
 
-"Mostre, não explique. LLMs aprendem melhor vendo exemplos concretos do que lendo instruções abstratas."
+"Mostre, nêo explique. LLMs aprendem melhor vendo exemplos concretos do que lendo instruções abstratas."
 
 ### Como Funciona:
 
-Mostre 2-5 exemplos do output desejado. O modelo replica o padrão automaticamente.
+Mostre 2-5 exemplos do output desejado. O modelo replica o padrêo automaticamente.
 
 ### Exemplo Prático - Criar Questões de Quiz:
 
@@ -129,23 +129,23 @@ Crie questões de múltipla escolha sobre fotossíntese seguindo este formato:
 
 Exemplo 1:
 Nível: Fácil
-Questão: Qual gás é liberado durante a fotossíntese?
+Questêo: Qual gás é liberado durante a fotossíntese?
 A) Nitrogênio | B) Oxigênio ✓ | C) CO2 | D) Hidrogênio
-Justificativa: Conceito básico, memorização
+Justificativa: Conceito básico, memorizaçêo
 
 Exemplo 2:
 Nível: Médio
-Questão: O que acontece se bloquearmos a luz em uma planta?
+Questêo: O que acontece se bloquearmos a luz em uma planta?
 A) Cresce mais | B) Para fotossíntese ✓ | C) Morre imediatamente | D) Produz mais O2
-Justificativa: Exige compreensão de relação causal
+Justificativa: Exige compreensêo de relaçêo causal
 
 Exemplo 3:
 Nível: Difícil
-Questão: Por que plantas C4 são mais eficientes em climas quentes?
+Questêo: Por que plantas C4 sêo mais eficientes em climas quentes?
 A) Usam menos água | B) Concentram CO2 ✓ | C) Crescem mais rápido | D) Absorvem mais luz
-Justificativa: Análise de adaptação evolutiva
+Justificativa: Análise de adaptaçêo evolutiva
 
-Agora crie mais 7 questões seguindo exatamente esse padrão.
+Agora crie mais 7 questões seguindo exatamente esse padrêo.
 ```
 
 **Resultado:** Output consistente, com formato e dificuldade controlados.
@@ -168,16 +168,16 @@ Transformar LLMs genéricos em especialistas ao definir identidade, experiência
 ### Componentes de uma Persona Eficaz:
 
 #### 1. Identidade Profissional
-"Você é a Dra. Maria Silva, pedagoga com PhD em Tecnologias Educacionais pela USP, 20 anos de experiência em formação docente."
+"Você é a Dra. Maria Silva, pedagoga com PhD em Tecnologias Educacionais pela USP, 20 anos de experiência em formaçêo docente."
 
 #### 2. Expertise Específica
-"Especialista em: ensino híbrido, gamificação, avaliação formativa e integração de IA em currículos."
+"Especialista em: ensino híbrido, gamificaçêo, avaliaçêo formativa e integraçêo de IA em currículos."
 
-#### 3. Estilo de Comunicação
+#### 3. Estilo de Comunicaçêo
 "Tom: empático, pragmático, usa metáforas do cotidiano. Sempre fornece exemplos concretos."
 
 #### 4. Valores e Princípios
-"Princípios: educação inclusiva, aprendizagem ativa, avaliação como aprendizagem (não punição)."
+"Princípios: educaçêo inclusiva, aprendizagem ativa, avaliaçêo como aprendizagem (nêo puniçêo)."
 
 ### Exemplo Completo - Tutor Socrático:
 
@@ -188,19 +188,19 @@ Expertise: Mestre em fazer perguntas que levam alunos a descobrirem respostas po
 
 Estilo: Curioso, paciente, nunca dá respostas diretas. Usa analogias do cotidiano grego.
 
-Princípios: "Só sei que nada sei". Aprendizagem = descoberta, não transmissão.
+Princípios: "Só sei que nada sei". Aprendizagem = descoberta, nêo transmissêo.
 
 Comportamento:
 - Quando aluno faz pergunta, responda com 2-3 perguntas investigativas
-- Se aluno erra, não corrija. Pergunte: "Por que você pensa isso?"
-- Celebre raciocínio, não resposta correta
+- Se aluno erra, nêo corrija. Pergunte: "Por que você pensa isso?"
+- Celebre raciocínio, nêo resposta correta
 ```
 
 ### Biblioteca de Personas para Educadores:
 
 - **📚 Curator de Conteúdo:** Seleciona e organiza recursos por nível/tema
 - **✅ Avaliador Formativo:** Dá feedback construtivo sem notas punitivas
-- **🎮 Designer de Gamificação:** Transforma conteúdos em jogos educativos
+- **🎮 Designer de Gamificaçêo:** Transforma conteúdos em jogos educativos
 - **🧩 Adaptador Inclusivo:** Ajusta materiais para necessidades especiais (TDAH, dislexia)
 
 ---
@@ -218,17 +218,17 @@ Comportamento:
 1. **ChatGPT:** Brainstorming inicial (gera 20 ideias de tópicos)
 2. **Claude:** Analisa as 20 ideias e seleciona as 5 melhores (raciocínio profundo)
 3. **Gemini:** Pesquisa vídeos do YouTube para cada tópico (acesso em tempo real)
-4. **NotebookLM:** Gera podcast de revisão (material auditivo)
+4. **NotebookLM:** Gera podcast de revisêo (material auditivo)
 
 **Tempo total:** 20 min | **Resultado:** Material multimídia completo
 
-### Estratégia 2: Validação Cruzada
+### Estratégia 2: Validaçêo Cruzada
 
-**Caso:** Verificar Informação Factual
+**Caso:** Verificar Informaçêo Factual
 
 **Problema:** LLMs podem alucinar (inventar dados)
 
-**Solução:** Pergunte para 3 LLMs diferentes e compare respostas
+**Soluçêo:** Pergunte para 3 LLMs diferentes e compare respostas
 
 **Exemplo:**
 ```
@@ -241,11 +241,11 @@ Pergunta: "Qual a data exata do Tratado de Tordesilhas?"
 Consenso = Alta confiança
 ```
 
-### Estratégia 3: Especialização por Tarefa
+### Estratégia 3: Especializaçêo por Tarefa
 
 | Tarefa | LLM Ideal | Por quê? |
 |--------|-----------|----------|
-| Geração rápida | ChatGPT | Velocidade |
+| Geraçêo rápida | ChatGPT | Velocidade |
 | Análise profunda | Claude | Raciocínio |
 | Pesquisa web | Gemini | Tempo real |
 | Materiais áudio | NotebookLM | Podcasts |
@@ -273,7 +273,7 @@ Consenso = Alta confiança
 - Projeto: Pipeline Multi-LLM
 - Peer review de prompts
 
-### ✅ Avaliação (1h)
+### ✅ Avaliaçêo (1h)
 - Quiz de técnicas (25 questões)
 - Desafio de prompting
 - Portfólio de 5 prompts

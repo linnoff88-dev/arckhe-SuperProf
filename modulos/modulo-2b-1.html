@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Módulo 2B.1: Anatomia de LLMs - Como Funcionam Por Dentro | SuperProfessores</title>
-    <meta name="description" content="Entenda a arquitetura interna de Large Language Models. Domine conceitos de transformers, attention mechanisms, tokenização e embeddings. Saiba como m">
+    <meta name="description" content="Entenda a arquitetura interna de Large Language Models. Domine conceitos de transformers, attention mechanisms, tokenizaçêo e embeddings. Saiba como m">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -86,7 +86,7 @@
             <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-4">Técnico</span>
             <h1 class="text-4xl lg:text-5xl font-bold mb-4">Módulo 2B.1: Anatomia de LLMs - Como Funcionam Por Dentro</h1>
             <p class="text-xl text-purple-100 max-w-3xl">
-                Entenda a arquitetura interna de Large Language Models. Domine conceitos de transformers, attention mechanisms, tokenização e embeddings. Saiba como modelos "pensam" para usar com mais eficácia.
+                Entenda a arquitetura interna de Large Language Models. Domine conceitos de transformers, attention mechanisms, tokenizaçêo e embeddings. Saiba como modelos "pensam" para usar com mais eficácia.
             </p>
         </div>
     </section>
@@ -94,15 +94,15 @@
     <!-- Main Content -->
     <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-        <!-- Visão Geral -->
+        <!-- Visêo Geral -->
         <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6">📖 Visão Geral</h2>
+            <h2 class="text-3xl font-bold mb-6">📖 Visêo Geral</h2>
             <div class="prose prose-lg dark:prose-invert max-w-none">
                 <p class="text-lg text-neutral-700 dark:text-neutral-300 mb-4">
-                    Entenda a arquitetura interna de Large Language Models. Domine conceitos de transformers, attention mechanisms, tokenização e embeddings. Saiba como modelos "pensam" para usar com mais eficácia.
+                    Entenda a arquitetura interna de Large Language Models. Domine conceitos de transformers, attention mechanisms, tokenizaçêo e embeddings. Saiba como modelos "pensam" para usar com mais eficácia.
                 </p>
                 <p class='text-lg text-neutral-700 dark:text-neutral-300'><strong>Ao final deste módulo, você será capaz de:</strong></p>
-                <ul class='list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300'><li>Compreender arquitetura Transformer (não precisa codificar)</li><li>Explicar como funciona self-attention e embeddings</li><li>Entender limitações técnicas (contexto, alucinações, vieses)</li><li>Comparar diferentes LLMs (GPT, Claude, Gemini, LLaMA)</li><li>Tomar decisões informadas sobre qual modelo usar quando</li></ul>
+                <ul class='list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300'><li>Compreender arquitetura Transformer (nêo precisa codificar)</li><li>Explicar como funciona self-attention e embeddings</li><li>Entender limitações técnicas (contexto, alucinações, vieses)</li><li>Comparar diferentes LLMs (GPT, Claude, Gemini, LLaMA)</li><li>Tomar decisões informadas sobre qual modelo usar quando</li></ul>
             </div>
         </section>
 
@@ -116,17 +116,17 @@
                     <span>De Redes Neurais a Transformers</span>
                 </h3>
                 <div class="prose dark:prose-invert max-w-none">
-                    <p class="mb-4">### Evolução Histórica:
+                    <p class="mb-4">### Evoluçêo Histórica:
 <strong>1. Perceptron (1958) → Redes Neurais Simples</strong>
 ``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
 Input → [Camada de neurônios] → Output
-Limitação: Só funções lineares
+Limitaçêo: Só funções lineares
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
 <strong>2. Deep Learning (2010s) → CNNs, RNNs</strong>
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
-CNNs: Boas para imagens (convolução espacial)
+CNNs: Boas para imagens (convoluçêo espacial)
 RNNs: Boas para sequências (memória temporal)
-Limitação: RNNs não escalam (vanishing gradient)
+Limitaçêo: RNNs nêo escalam (vanishing gradient)
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
 <strong>3. Attention Mechanism (2017) → Transformers</strong>
 </code>`<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
@@ -135,7 +135,7 @@ Ideia: Focar em partes relevantes do input
 Resultado: Escala para bilhões de parâmetros
 </code>``
 ### Por que Transformers Dominam:
-✅ <strong>Paralelização:</strong> Processa texto todo de uma vez (vs RNN sequencial)
+✅ <strong>Paralelizaçêo:</strong> Processa texto todo de uma vez (vs RNN sequencial)
 ✅ <strong>Long-range dependencies:</strong> Conecta palavras distantes no texto
 ✅ <strong>Escalabilidade:</strong> Mais dados + mais parâmetros = melhor performance
 ✅ <strong>Transfer learning:</strong> Pré-treino geral + fine-tune específico
@@ -153,21 +153,21 @@ Resultado: Escala para bilhões de parâmetros
 ``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
 INPUT: "O gato está no telhado"
    ↓
-[1. TOKENIZAÇÃO]
+[1. TOKENIZAÇêO]
    → ["O", "gato", "está", "no", "tel", "hado"]
    ↓
 [2. EMBEDDING]
    → Cada token vira vetor de 768-12288 dimensões
    ↓
 [3. POSITIONAL ENCODING]
-   → Adiciona informação de ordem (palavra 1, 2, 3...)
+   → Adiciona informaçêo de ordem (palavra 1, 2, 3...)
    ↓
 [4. SELF-ATTENTION] (🔑 Magia acontece aqui)
    → Cada palavra "olha" para todas as outras
    → Identifica relações: "gato" se relaciona com "telhado"
    ↓
 [5. FEED-FORWARD]
-   → Transformações não-lineares
+   → Transformações nêo-lineares
    ↓
 [6. REPETIR 4-5] (12-96 vezes, dependendo do modelo)
    ↓
@@ -182,7 +182,7 @@ INPUT: "O gato está no telhado"
             <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
                 <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
                     <span class="text-3xl">💡</span>
-                    <span>Self-Attention: O Coração do Transformer</span>
+                    <span>Self-Attention: O Coraçêo do Transformer</span>
                 </h3>
                 <div class="prose dark:prose-invert max-w-none">
                     <p class="mb-4">### Como Funciona (Analogia):
@@ -190,26 +190,26 @@ Imagine uma sala de aula onde cada aluno (palavra) pode fazer perguntas para tod
 <strong>Frase:</strong> "O professor explica IA para alunos interessados"
 <strong>Self-Attention calcula:</strong>
 <ul class="space-y-2 list-disc pl-6">
-<li>"professor" deveria prestar atenção em: "explica" (0.8), "alunos" (0.6), "IA" (0.7)</li>
-<li>"alunos" deveria prestar atenção em: "interessados" (0.9), "professor" (0.5)</li>
-<li>"interessados" deveria prestar atenção em: "alunos" (0.95), "IA" (0.4)</li>
+<li>"professor" deveria prestar atençêo em: "explica" (0.8), "alunos" (0.6), "IA" (0.7)</li>
+<li>"alunos" deveria prestar atençêo em: "interessados" (0.9), "professor" (0.5)</li>
+<li>"interessados" deveria prestar atençêo em: "alunos" (0.95), "IA" (0.4)</li>
 </ul>
-<strong>Resultado:</strong> Modelo entende que "interessados" modifica "alunos", não "professor"
+<strong>Resultado:</strong> Modelo entende que "interessados" modifica "alunos", nêo "professor"
 ### Matematicamente (Conceitual):
 ``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
 Para cada palavra:
 1. Query (Q): "O que eu estou procurando?"
 2. Key (K): "O que eu tenho a oferecer?"
-3. Value (V): "Qual informação eu carrego?"
+3. Value (V): "Qual informaçêo eu carrego?"
 Attention Score = Similarity(Q, K)
 Output = Weighted sum of Values
 Exemplo:
-Palavra "gato" (Query) procura sujeitos de ação
+Palavra "gato" (Query) procura sujeitos de açêo
 Palavra "pulou" (Key) oferece "sou um verbo"
-Score alto → "gato" presta atenção em "pulou"
+Score alto → "gato" presta atençêo em "pulou"
 </code>``
 ### Multi-Head Attention:
-Ao invés de 1 mecanismo de atenção, usa 8-96 em paralelo:
+Ao invés de 1 mecanismo de atençêo, usa 8-96 em paralelo:
 <ul class="space-y-2 list-disc pl-6">
 <li>Head 1: Foca em sintaxe (sujeito-verbo-objeto)</li>
 <li>Head 2: Foca em semântica (significado)</li>
@@ -224,23 +224,23 @@ Ao invés de 1 mecanismo de atenção, usa 8-96 em paralelo:
             <div class="bg-white dark:bg-neutral-800 rounded-xl p-8 mb-6 shadow-lg border-l-4 border-module-color">
                 <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
                     <span class="text-3xl">📦</span>
-                    <span>Tokenização: Quebrando Texto em Pedaços</span>
+                    <span>Tokenizaçêo: Quebrando Texto em Pedaços</span>
                 </h3>
                 <div class="prose dark:prose-invert max-w-none">
-                    <p class="mb-4">### O que são Tokens?
-<strong>Não são palavras!</strong> São subunidades:
+                    <p class="mb-4">### O que sêo Tokens?
+<strong>Nêo sêo palavras!</strong> Sêo subunidades:
 <strong>Exemplo (GPT-4):</strong>
 ``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
 Input: "Superprofessores"
 Tokens: ["Super", "prof", "ess", "ores"]
-4 tokens (não 1 palavra)
+4 tokens (nêo 1 palavra)
 Input: "ChatGPT é incrível!"
 Tokens: ["Chat", "G", "PT", " é", " in", "cr", "ível", "!"]
 8 tokens
 </code>``
 ### Por que Tokenizar?
 ✅ <strong>Eficiência:</strong> Vocabulário fixo (50k-100k tokens vs milhões de palavras)
-✅ <strong>Generalização:</strong> Palavras novas podem ser compostas de tokens conhecidos
+✅ <strong>Generalizaçêo:</strong> Palavras novas podem ser compostas de tokens conhecidos
 ✅ <strong>Multilíngue:</strong> Mesmos tokens funcionam em múltiplas línguas
 ### Algoritmos Comuns:
 <strong>1. Byte-Pair Encoding (BPE) - Usado por GPT</strong>
@@ -266,7 +266,7 @@ Tokens: ["Chat", "G", "PT", " é", " in", "cr", "ível", "!"]
 ⚠️ <strong>Palavras longas custam mais</strong>
 <ul class="space-y-2 list-disc pl-6">
 <li>"a" = 1 token</li>
-<li>"Institucionalização" = 5+ tokens</li>
+<li>"Institucionalizaçêo" = 5+ tokens</li>
 </ul>
 <strong>Ferramenta para Contar:</strong> https://platform.openai.com/tokenizer
 ---</p>
@@ -280,7 +280,7 @@ Tokens: ["Chat", "G", "PT", " é", " in", "cr", "ível", "!"]
                 </h3>
                 <div class="prose dark:prose-invert max-w-none">
                     <p class="mb-4">### Conceito:
-<strong>Palavra → Vetor numérico de alta dimensão</strong>
+<strong>Palavra → Vetor numérico de alta dimensêo</strong>
 <strong>Exemplo (simplificado para 3D):</strong>
 ``<code class="bg-neutral-100 dark:bg-neutral-700 px-2 py-1 rounded">
 "rei"      → [0.8, 0.3, 0.1]
@@ -295,7 +295,7 @@ rei - homem + mulher ≈ rainha
 <strong>1. Similaridade Semântica</strong>
 Palavras similares têm vetores próximos:
 <ul class="space-y-2 list-disc pl-6">
-<li>"cachorro" e "cão" → Distância pequena</li>
+<li>"cachorro" e "cêo" → Distância pequena</li>
 <li>"cachorro" e "árvore" → Distância grande</li>
 </ul>
 <strong>2. Analogias</strong>
@@ -310,9 +310,9 @@ Palavras similares têm vetores próximos:
 </ul>
 ### Embeddings em LLMs:
 <strong>GPT-4:</strong> 12,288 dimensões (cada token = vetor de 12k números)
-<strong>Claude 3:</strong> Não revelado (estimado 8k-16k)
-<strong>Gemini:</strong> Não revelado
-<strong>Visualização:</strong> t-SNE ou PCA reduzem para 2D/3D para plotar
+<strong>Claude 3:</strong> Nêo revelado (estimado 8k-16k)
+<strong>Gemini:</strong> Nêo revelado
+<strong>Visualizaçêo:</strong> t-SNE ou PCA reduzem para 2D/3D para plotar
 ---</p>
                 </div>
             </div>
@@ -323,7 +323,7 @@ Palavras similares têm vetores próximos:
                     <span>🏗️ Escala: De GPT-2 a GPT-4</span>
                 </h3>
                 <div class="prose dark:prose-invert max-w-none">
-                    <p class="mb-4">### Evolução de Parâmetros:
+                    <p class="mb-4">### Evoluçêo de Parâmetros:
 | Modelo | Parâmetros | Contexto | Ano |
 |--------|-----------|----------|-----|
 | GPT-2 | 1.5B | 1k tokens | 2019 |
@@ -332,12 +332,12 @@ Palavras similares têm vetores próximos:
 | GPT-4 | ~1.7T* | 128k tokens | 2023 |
 | Claude 3 Opus | ?** | 200k tokens | 2024 |
 | Gemini 1.5 | ?** | 1M tokens | 2024 |
-*Estimado, OpenAI não confirma
-**Não revelado
+*Estimado, OpenAI nêo confirma
+**Nêo revelado
 ### Lei de Escala (Scaling Laws):
 <strong>Descoberta (Kaplan et al, 2020):</strong>
-Performance ∝ (Parâmetros)^α × (Dados)^β × (Computação)^γ
-<strong>Implicação:</strong> Modelos maiores com mais dados são previsivelmente melhores
+Performance ∝ (Parâmetros)^α × (Dados)^β × (Computaçêo)^γ
+<strong>Implicaçêo:</strong> Modelos maiores com mais dados sêo previsivelmente melhores
 <strong>Mas... há limites:</strong>
 <ul class="space-y-2 list-disc pl-6">
 <li>💰 Custo: GPT-4 custou ~$100M para treinar</li>
@@ -387,10 +387,10 @@ Performance ∝ (Parâmetros)^α × (Dados)^β × (Computação)^γ
                 <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
                     <h3 class="font-bold mb-3 flex items-center gap-2">
                         <span>✅</span>
-                        <span>Avaliação</span>
+                        <span>Avaliaçêo</span>
                     </h3>
                     <p class="text-sm text-neutral-600 dark:text-neutral-400">
-                        Quizzes e projetos para certificação
+                        Quizzes e projetos para certificaçêo
                     </p>
                 </div>
                 <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg">
@@ -405,7 +405,7 @@ Performance ∝ (Parâmetros)^α × (Dados)^β × (Computação)^γ
             </div>
         </section>
 
-        <!-- Navegação -->
+        <!-- Navegaçêo -->
         <section class="flex justify-between items-center pt-8 border-t border-neutral-200 dark:border-neutral-700">
             <a href="../niveis/nivel-2b.html" class="px-6 py-3 bg-neutral-200 dark:bg-neutral-700 rounded-lg font-semibold hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors">
                 ← Voltar ao Nível 2B

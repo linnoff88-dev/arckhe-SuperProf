@@ -1,4 +1,4 @@
-# 📘 Guia de Publicação no GitHub Pages
+# 📘 Guia de Publicaçêo no GitHub Pages
 
 ## SuperProfessores - Como publicar este projeto
 
@@ -83,7 +83,7 @@ EOF
 # Adicione o .gitignore
 git add .gitignore
 
-# Remova arquivos que não devem ser commitados
+# Remova arquivos que nêo devem ser commitados
 git rm -r --cached node_modules
 git rm -r --cached .bmad-core
 git rm -r --cached .claude
@@ -100,19 +100,19 @@ git commit -m "Initial commit: SuperProfessores v3.0 - Modelo Híbrido"
 
 ### 5. Criar Repositório no GitHub
 
-**Opção A: Via Interface Web**
+**Opçêo A: Via Interface Web**
 
 1. Acesse: https://github.com/new
 2. Nome do repositório: `SuperProf`
-3. Descrição: "SuperProfessores: Transformando educadores em arquitetos do futuro da aprendizagem"
+3. Descriçêo: "SuperProfessores: Transformando educadores em arquitetos do futuro da aprendizagem"
 4. Público
-5. **NÃO** inicialize com README (já temos um)
+5. **NêO** inicialize com README (já temos um)
 6. Clique em "Create repository"
 
-**Opção B: Via GitHub CLI** (se instalado)
+**Opçêo B: Via GitHub CLI** (se instalado)
 
 ```bash
-gh repo create SuperProf --public --description "SuperProfessores: Programa de formação em IA para educadores"
+gh repo create SuperProf --public --description "SuperProfessores: Programa de formaçêo em IA para educadores"
 ```
 
 ### 6. Conectar Repositório Local ao GitHub
@@ -205,13 +205,13 @@ git push
 ```
 SuperProf/
 ├── README.md                          # Página inicial
-├── _config.yml                        # Configuração Jekyll
+├── _config.yml                        # Configuraçêo Jekyll
 ├── .gitignore                         # Arquivos ignorados
 ├── package.json                       # Dependências (apenas referência)
 ├── GUIA_GITHUB_PAGES.md              # Este guia
 ├── doc/
 │   ├── superprofessores_modelo_hibrido_2025.md    # Proposta completa
-│   ├── comparacao_trilhas.md                       # Comparação Trilha A vs B
+│   ├── comparacao_trilhas.md                       # Comparaçêo Trilha A vs B
 │   ├── sumario_executivo_visual.md                # Sumário executivo
 │   └── proposta_curso_ia_final/                   # Proposta original
 │       ├── README_expandido.md
@@ -283,7 +283,7 @@ title: Contato
 ```bash
 # Após fazer mudanças nos arquivos
 git add .
-git commit -m "Descrição da atualização"
+git commit -m "Descriçêo da atualizaçêo"
 git push
 ```
 
@@ -315,30 +315,30 @@ git checkout main
 
 ## 🐛 Troubleshooting
 
-### Problema: Site não aparece
+### Problema: Site nêo aparece
 
-**Solução:**
+**Soluçêo:**
 1. Verifique se o GitHub Pages está ativado em Settings
 2. Aguarde 1-2 minutos após o push
 3. Force refresh: Ctrl+F5 (Windows) ou Cmd+Shift+R (Mac)
 
 ### Problema: Página 404
 
-**Solução:**
+**Soluçêo:**
 1. Verifique se o arquivo existe no repositório
 2. Verifique se o `baseurl` no `_config.yml` está correto
 3. Links devem ser: `/SuperProf/doc/arquivo.md` ou relativos
 
-### Problema: Formatação quebrada
+### Problema: Formataçêo quebrada
 
-**Solução:**
+**Soluçêo:**
 1. Verifique se o Markdown está correto
 2. Teste localmente com: `bundle exec jekyll serve`
 3. Veja o log de build em Actions
 
-### Problema: Imagens não aparecem
+### Problema: Imagens nêo aparecem
 
-**Solução:**
+**Soluçêo:**
 1. Caminhos devem ser relativos: `![](../imagem.png)`
 2. Ou absolutos: `![](https://github.com/.../imagem.png)`
 3. Ou com baseurl: `![]({{ site.baseurl }}/imagem.png)`
@@ -375,11 +375,11 @@ git checkout main
 
 ### Melhorias Futuras:
 
-- [ ] Adicionar vídeo de apresentação
-- [ ] Criar página de inscrição (Google Forms)
+- [ ] Adicionar vídeo de apresentaçêo
+- [ ] Criar página de inscriçêo (Google Forms)
 - [ ] Adicionar depoimentos de educadores
-- [ ] Criar blog com artigos sobre IA na educação
-- [ ] Adicionar seção de recursos (prompts, templates)
+- [ ] Criar blog com artigos sobre IA na educaçêo
+- [ ] Adicionar seçêo de recursos (prompts, templates)
 
 ---
 
@@ -387,7 +387,7 @@ git checkout main
 
 Se tiver problemas:
 
-1. Consulte a [documentação do GitHub Pages](https://docs.github.com/pages)
+1. Consulte a [documentaçêo do GitHub Pages](https://docs.github.com/pages)
 2. Abra uma [issue no GitHub](https://github.com/inematds/SuperProf/issues)
 3. Envie email: inematds@gmail.com
 
@@ -395,7 +395,7 @@ Se tiver problemas:
 
 ## 📚 Recursos Adicionais
 
-- [Documentação Jekyll](https://jekyllrb.com/docs/)
+- [Documentaçêo Jekyll](https://jekyllrb.com/docs/)
 - [Temas Jekyll](https://jekyllthemes.io/)
 - [GitHub Pages Docs](https://docs.github.com/pages)
 - [Markdown Guide](https://www.markdownguide.org/)
@@ -404,7 +404,7 @@ Se tiver problemas:
 
 <div align="center">
 
-**Boa sorte com a publicação! 🚀**
+**Boa sorte com a publicaçêo! 🚀**
 
 Se este guia foi útil, considere deixar uma ⭐ no repositório!
 

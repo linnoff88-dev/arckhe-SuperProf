@@ -1,19 +1,19 @@
-# Módulo 3A.3: Projeto de Certificação - Professor 2.0
+# Módulo 3A.3: Projeto de Certificaçêo - Professor 2.0
 
 **Nível 3A: Especialista | Carga Horária: 20 horas**
 
 ---
 
-## 📖 Visão Geral
+## 📖 Visêo Geral
 
-Projeto final integrador onde você demonstra domínio completo das competências do programa. Crie, implemente e documente uma transformação educacional real usando IA, gerando portfólio profissional e certificação reconhecida.
+Projeto final integrador onde você demonstra domínio completo das competências do programa. Crie, implemente e documente uma transformaçêo educacional real usando IA, gerando portfólio profissional e certificaçêo reconhecida.
 
 ### Objetivos:
 - Sintetizar aprendizados de todos os 11 módulos anteriores
 - Implementar projeto real com impacto mensurável
 - Documentar processo e resultados de forma profissional
 - Apresentar e defender escolhas pedagógicas e técnicas
-- Obter certificação "Professor 2.0 - IA Educator"
+- Obter certificaçêo "Professor 2.0 - IA Educator"
 
 ---
 
@@ -21,28 +21,28 @@ Projeto final integrador onde você demonstra domínio completo das competência
 
 ### Opções de Projeto (Escolha 1):
 
-**Opção A: Curso Aumentado por IA (Redesign Completo)**
+**Opçêo A: Curso Aumentado por IA (Redesign Completo)**
 - Pegue curso/disciplina existente
 - Redesenhe usando IA em todas as fases (ADDIE)
 - Implemente com turma real (mínimo 10 alunos)
 - Documente processo e resultados
 
-**Opção B: Programa de Capacitação Institucional**
-- Desenhe e conduza capacitação em IA para colegas
+**Opçêo B: Programa de Capacitaçêo Institucional**
+- Desenhe e conduza capacitaçêo em IA para colegas
 - Mínimo 10 participantes, 12h de conteúdo
-- Inclua: diagnóstico, trilha personalizada, avaliação
+- Inclua: diagnóstico, trilha personalizada, avaliaçêo
 - Meça impacto na prática docente
 
-**Opção C: Comunidade de Prática de IA na Educação**
+**Opçêo C: Comunidade de Prática de IA na Educaçêo**
 - Crie e facilite comunidade por 3 meses
 - Mínimo 20 membros ativos
 - Produza biblioteca de 50+ recursos curados
-- Documente evolução e engajamento
+- Documente evoluçêo e engajamento
 
-**Opção D: Inovação Pedagógica com IA (Projeto Livre)**
-- Proponha solução original para problema real
+**Opçêo D: Inovaçêo Pedagógica com IA (Projeto Livre)**
+- Proponha soluçêo original para problema real
 - Deve integrar ≥3 conceitos de módulos diferentes
-- Requer aprovação prévia do orientador
+- Requer aprovaçêo prévia do orientador
 - Foco em escalabilidade e impacto
 
 ---
@@ -57,7 +57,7 @@ Projeto final integrador onde você demonstra domínio completo das competência
 
 **1.1 Contexto e Problema**
 ```
-- Descreva instituição/contexto
+- Descreva instituiçêo/contexto
 - Identifique problema específico
 - Dados: quantifique o problema (tempo perdido, baixo engajamento, etc)
 - Por que este problema importa?
@@ -72,7 +72,7 @@ Relevante: [Alinha com objetivos institucionais?]
 Temporal: [Cronograma detalhado]
 ```
 
-**1.3 Fundamentação Teórica**
+**1.3 Fundamentaçêo Teórica**
 ```
 - Quais conceitos dos módulos 1-11 você vai aplicar?
 - Cite pelo menos 5 referências (módulos + literatura adicional)
@@ -84,13 +84,13 @@ Temporal: [Cronograma detalhado]
 - Participantes: quantos? perfil?
 - Ferramentas IA: quais? por que?
 - Fases do projeto: timeline visual (Gantt)
-- Riscos: o que pode dar errado? mitigação?
+- Riscos: o que pode dar errado? mitigaçêo?
 ```
 
-**1.5 Plano de Avaliação**
+**1.5 Plano de Avaliaçêo**
 ```
 - Métricas quantitativas (3-5)
-- Métrica qualitativa (entrevistas, observação)
+- Métrica qualitativa (entrevistas, observaçêo)
 - Instrumentos: surveys, analytics, etc
 - Baseline: dados antes do projeto
 ```
@@ -102,11 +102,11 @@ Revise esta proposta de projeto educacional:
 [Colar proposta]
 
 Analise:
-1. Objetivos são SMART? Se não, como melhorar?
+1. Objetivos sêo SMART? Se nêo, como melhorar?
 2. Escopo é realista para 3 meses? Sugestões?
 3. Metodologia está clara e detalhada?
 4. Falta algum componente crítico?
-5. Avaliação captura impacto real?
+5. Avaliaçêo captura impacto real?
 
 Dê feedback construtivo (tom: mentor experiente)
 Formato: Comentários numerados + proposta revisada
@@ -114,7 +114,7 @@ Formato: Comentários numerados + proposta revisada
 
 ---
 
-### 2. Implementação (Semana 3-10)
+### 2. Implementaçêo (Semana 3-10)
 
 **Diário de Bordo (Semanal):**
 
@@ -132,7 +132,7 @@ Formato: Comentários numerados + proposta revisada
 
 💡 Aprendizados:
 - [O que funcionou bem]
-- [O que não funcionou]
+- [O que nêo funcionou]
 - [Ajustes necessários]
 
 🤖 Uso de IA:
@@ -145,16 +145,16 @@ Formato: Comentários numerados + proposta revisada
 - [Como foram superados]
 
 📅 Próxima Semana:
-- [Plano de ação]
+- [Plano de açêo]
 ```
 
 **IA como Copiloto do Projeto:**
 
 **Prompt para Check-in Semanal:**
 ```
-Sou professor executando projeto de transformação digital.
+Sou professor executando projeto de transformaçêo digital.
 
-Situação atual:
+Situaçêo atual:
 - Semana: 5 de 10
 - Objetivo: [Resumir]
 - Progresso: [Listar conquistas]
@@ -173,7 +173,7 @@ Formato: Bullet points acionáveis
 
 ---
 
-### 3. Documentação Final (Semana 11-12)
+### 3. Documentaçêo Final (Semana 11-12)
 
 **Relatório de Projeto (15-25 páginas):**
 
@@ -182,21 +182,21 @@ Formato: Bullet points acionáveis
 **Capa:**
 - Título do projeto
 - Nome completo
-- Instituição
+- Instituiçêo
 - Data
 - Logo SuperProfessores
 
 **Resumo Executivo (1 página):**
-- Problema, solução, resultados em 300 palavras
+- Problema, soluçêo, resultados em 300 palavras
 - Para executivos que têm 2 minutos
 
-**Capítulo 1: Introdução**
-- Contexto e motivação
+**Capítulo 1: Introduçêo**
+- Contexto e motivaçêo
 - Objetivos do projeto
 - Estrutura do documento
 
-**Capítulo 2: Fundamentação**
-- Revisão de conceitos relevantes (dos módulos)
+**Capítulo 2: Fundamentaçêo**
+- Revisêo de conceitos relevantes (dos módulos)
 - Estado da arte (o que outros fizeram)
 - Como seu projeto se diferencia
 
@@ -206,7 +206,7 @@ Formato: Bullet points acionáveis
 - Procedimentos passo-a-passo
 - Instrumentos de coleta de dados
 
-**Capítulo 4: Implementação**
+**Capítulo 4: Implementaçêo**
 - Narrativa do processo (baseado no diário de bordo)
 - Ajustes feitos no caminho e por quê
 - Exemplos concretos (screenshots, transcrições)
@@ -214,20 +214,20 @@ Formato: Bullet points acionáveis
 **Capítulo 5: Resultados**
 - Dados quantitativos (gráficos, tabelas)
 - Análise qualitativa (temas emergentes)
-- Comparação antes/depois
+- Comparaçêo antes/depois
 - Testes de significância (se aplicável)
 
-**Capítulo 6: Discussão**
-- Interpretação dos resultados
+**Capítulo 6: Discussêo**
+- Interpretaçêo dos resultados
 - Alinhamento com objetivos
 - Limitações do estudo
-- Comparação com literatura
+- Comparaçêo com literatura
 
 **Capítulo 7: Conclusões e Recomendações**
 - Síntese de aprendizados
 - Implicações práticas
 - Próximos passos
-- Recomendações para replicação
+- Recomendações para replicaçêo
 
 **Referências**
 - Mínimo 15 (módulos + artigos + livros)
@@ -249,8 +249,8 @@ Formato: Bullet points acionáveis
 Pode usar: Google Sites, Notion, Wix, WordPress
 
 **Seções:**
-- Hero: Título + descrição 1 frase + imagem impactante
-- Problema e Solução (visual)
+- Hero: Título + descriçêo 1 frase + imagem impactante
+- Problema e Soluçêo (visual)
 - Processo (timeline com fotos)
 - Resultados (infográficos)
 - Depoimentos (2-3 participantes)
@@ -261,23 +261,23 @@ Pode usar: Google Sites, Notion, Wix, WordPress
 ```
 Crie conteúdo para site de projeto educacional:
 
-Projeto: [Título e descrição]
+Projeto: [Título e descriçêo]
 Resultados: [Principais números]
 Público-alvo do site: [Educadores que querem replicar]
 
 Gere:
 1. Hero headline (10 palavras, impactante)
-2. Descrição do problema (100 palavras, empática)
-3. Descrição da solução (150 palavras, clara)
-4. Seção "Como Funciona" (5 passos visuais)
-5. Seção de resultados (3 métricas + interpretação)
-6. CTA (call-to-action): que ação você quer que visitem tomem?
+2. Descriçêo do problema (100 palavras, empática)
+3. Descriçêo da soluçêo (150 palavras, clara)
+4. Seçêo "Como Funciona" (5 passos visuais)
+5. Seçêo de resultados (3 métricas + interpretaçêo)
+6. CTA (call-to-action): que açêo você quer que visitem tomem?
 
 Tom: Inspirador, acessível, baseado em dados
 Formato: HTML markdown
 ```
 
-**4.2 Vídeo de Apresentação (5-7 min)**
+**4.2 Vídeo de Apresentaçêo (5-7 min)**
 
 **Roteiro Sugerido:**
 ```
@@ -289,7 +289,7 @@ Formato: HTML markdown
 - Contexto e desafio
 - Por que importa
 
-1:30-3:00 | SOLUÇÃO
+1:30-3:00 | SOLUÇêO
 - O que você fez (overview)
 - Como IA foi usada (exemplos visuais)
 
@@ -308,8 +308,8 @@ Formato: HTML markdown
 ```
 
 **Ferramentas:**
-- Gravação: Loom, OBS
-- Edição: DaVinci Resolve (grátis), iMovie, CapCut
+- Gravaçêo: Loom, OBS
+- Ediçêo: DaVinci Resolve (grátis), iMovie, CapCut
 - IA para roteiro: Claude (refinamento)
 - IA para legendas: Otter.ai
 
@@ -319,21 +319,21 @@ Formato: HTML markdown
 1. **Plano de aula/curso completo** (doc editável)
 2. **Top 20 prompts usados** (com contexto)
 3. **Templates** (rubricas, surveys, etc)
-4. **Guia de replicação** (1-pager: como outro professor faria)
+4. **Guia de replicaçêo** (1-pager: como outro professor faria)
 5. **Dados anonimizados** (para transparência)
 
 ---
 
-## 🎤 Apresentação e Defesa (Semana 13)
+## 🎤 Apresentaçêo e Defesa (Semana 13)
 
-### Formato: Apresentação de 15 min + Q&A de 15 min
+### Formato: Apresentaçêo de 15 min + Q&A de 15 min
 
 **Banca Avaliadora:**
 - 1 facilitador do SuperProfessores
 - 1 par (outro aluno do programa)
 - 1 especialista externo (se possível)
 
-**Estrutura da Apresentação:**
+**Estrutura da Apresentaçêo:**
 
 **Slides 1-2: Contexto** (2 min)
 - Quem você é, onde trabalha
@@ -354,19 +354,19 @@ Formato: HTML markdown
 - Top 3 insights
 - O que você faria diferente
 
-**Slide 11: Conclusão** (1 min)
+**Slide 11: Conclusêo** (1 min)
 - Resumo em 1 frase
 - Próximos passos
 - Chamada para contato
 
 **Perguntas Típicas da Banca:**
-1. "Por que escolheu esta ferramenta IA e não outra?"
+1. "Por que escolheu esta ferramenta IA e nêo outra?"
 2. "Como garantiu ética e privacidade?"
-3. "Resultados são sustentáveis a longo prazo?"
+3. "Resultados sêo sustentáveis a longo prazo?"
 4. "Maior desafio e como superou?"
 5. "Conselho #1 para alguém replicando?"
 
-**Prompt para Preparação:**
+**Prompt para Preparaçêo:**
 ```
 Simule banca avaliadora de projeto educacional.
 
@@ -385,68 +385,68 @@ Formato: Q&A estruturado
 
 ---
 
-## 📊 Critérios de Avaliação
+## 📊 Critérios de Avaliaçêo
 
-### Rubrica de Avaliação (Total: 100 pontos)
+### Rubrica de Avaliaçêo (Total: 100 pontos)
 
 **1. Proposta e Planejamento (15 pontos)**
 - Clareza dos objetivos (5)
-- Fundamentação teórica (5)
+- Fundamentaçêo teórica (5)
 - Viabilidade do plano (5)
 
-**2. Implementação (25 pontos)**
-- Execução conforme plano (10)
+**2. Implementaçêo (25 pontos)**
+- Execuçêo conforme plano (10)
 - Uso apropriado de IA (10)
-- Adaptações e resolução de problemas (5)
+- Adaptações e resoluçêo de problemas (5)
 
-**3. Documentação (20 pontos)**
+**3. Documentaçêo (20 pontos)**
 - Qualidade do relatório (10)
 - Rigor metodológico (5)
-- Clareza e organização (5)
+- Clareza e organizaçêo (5)
 
 **4. Resultados e Impacto (25 pontos)**
 - Atingimento de objetivos (10)
 - Evidências de impacto (10)
 - Análise crítica (5)
 
-**5. Apresentação e Defesa (15 pontos)**
-- Qualidade da apresentação (7)
-- Capacidade de argumentação (5)
+**5. Apresentaçêo e Defesa (15 pontos)**
+- Qualidade da apresentaçêo (7)
+- Capacidade de argumentaçêo (5)
 - Profissionalismo (3)
 
-**Critério de Aprovação:**
-- ≥ 85 pontos: Certificação com Distinção
-- 70-84 pontos: Certificação Regular
-- < 70 pontos: Revisão e resubmissão necessária
+**Critério de Aprovaçêo:**
+- ≥ 85 pontos: Certificaçêo com Distinçêo
+- 70-84 pontos: Certificaçêo Regular
+- < 70 pontos: Revisêo e resubmissêo necessária
 
 ---
 
-## 🏆 Certificação "Professor 2.0 - IA Educator"
+## 🏆 Certificaçêo "Professor 2.0 - IA Educator"
 
 ### O que é Certificado:
 
 **Badge Digital Inclui:**
 - Nome completo
-- Data de conclusão
+- Data de conclusêo
 - Carga horária total: 180h (Trilha A completa)
 - Competências certificadas (lista de 12)
 - Número de certificado único (verificável)
-- QR code para validação online
+- QR code para validaçêo online
 
 **Competências Certificadas:**
 
-1. ✅ Fundamentos de IA na Educação
+1. ✅ Fundamentos de IA na Educaçêo
 2. ✅ Prompt Engineering Avançado
 3. ✅ Design Instrucional Aumentado por IA
-4. ✅ Avaliação Formativa Assistida
-5. ✅ Personalização em Escala
-6. ✅ Gamificação com IA
-7. ✅ Facilitação de Comunidades
+4. ✅ Avaliaçêo Formativa Assistida
+5. ✅ Personalizaçêo em Escala
+6. ✅ Gamificaçêo com IA
+7. ✅ Facilitaçêo de Comunidades
 8. ✅ Redesign Curricular
-9. ✅ Liderança em Transformação Digital
-10. ✅ Gestão de Mudança Educacional
+9. ✅ Liderança em Transformaçêo Digital
+10. ✅ Gestêo de Mudança Educacional
 11. ✅ Ética em IA Educacional
-12. ✅ Implementação e Avaliação de Projetos
+12. ✅ Implementaçêo e Avaliaçêo de Projetos
 
 **Onde Usar o Certificado:**
 - LinkedIn (Add to profile → Licenses & Certifications)
@@ -457,12 +457,12 @@ Formato: Q&A estruturado
 
 ---
 
-## 💼 Oportunidades Pós-Certificação
+## 💼 Oportunidades Pós-Certificaçêo
 
 ### Trajetórias Comuns:
 
 **1. Especialista Interno**
-- Tornar-se referência em IA na sua instituição
+- Tornar-se referência em IA na sua instituiçêo
 - Liderar capacitações internas
 - Consultor de projetos de colegas
 
@@ -472,14 +472,14 @@ Formato: Q&A estruturado
 - Taxa horária: R$150-500/h (varia por experiência)
 
 **3. Criador de Conteúdo**
-- Blog/YouTube sobre IA na educação
+- Blog/YouTube sobre IA na educaçêo
 - Cursos online próprios
 - Parcerias com edtechs
 
 **4. Pesquisador**
 - Mestrado/Doutorado em Tecnologia Educacional
 - Publicações em journals
-- Participação em conferências (AIED, LAK, CSCL)
+- Participaçêo em conferências (AIED, LAK, CSCL)
 
 **5. Edtech Empreendedor**
 - Criar produto/serviço baseado em aprendizados
@@ -497,7 +497,7 @@ Formato: Q&A estruturado
 - Tópicos: dúvidas técnicas, desbloqueios, feedback
 
 **2. Office Hours Semanais**
-- Sessão coletiva online
+- Sessêo coletiva online
 - Q&A aberto
 - Compartilhamento entre pares
 
@@ -516,9 +516,9 @@ Formato: Q&A estruturado
 ## 📅 Cronograma Detalhado
 
 ### Semana 1-2: Planejamento
-- [ ] Escolher opção de projeto
+- [ ] Escolher opçêo de projeto
 - [ ] Redigir proposta (3-5 páginas)
-- [ ] Submeter para aprovação
+- [ ] Submeter para aprovaçêo
 - [ ] Incorporar feedback e finalizar
 
 ### Semana 3-4: Setup
@@ -527,7 +527,7 @@ Formato: Q&A estruturado
 - [ ] Configurar ferramentas
 - [ ] Coletar baseline data
 
-### Semana 5-9: Implementação
+### Semana 5-9: Implementaçêo
 - [ ] Executar projeto semana a semana
 - [ ] Preencher diário de bordo
 - [ ] Coletar dados continuamente
@@ -540,37 +540,37 @@ Formato: Q&A estruturado
 - [ ] Fazer debriefing com participantes
 - [ ] Organizar materiais
 
-### Semana 11-12: Documentação
+### Semana 11-12: Documentaçêo
 - [ ] Escrever relatório completo
 - [ ] Criar site de projeto
 - [ ] Gravar vídeo
 - [ ] Montar biblioteca de recursos
 - [ ] Revisar tudo
 
-### Semana 13: Apresentação
+### Semana 13: Apresentaçêo
 - [ ] Preparar slides
-- [ ] Ensaiar apresentação
+- [ ] Ensaiar apresentaçêo
 - [ ] Defender para banca
 - [ ] Incorporar feedback final
-- [ ] Submeter versão definitiva
+- [ ] Submeter versêo definitiva
 
 ---
 
 ## 🎓 Exemplos de Projetos Anteriores
 
-### Exemplo 1: "Redações Aumentadas" (Opção A)
+### Exemplo 1: "Redações Aumentadas" (Opçêo A)
 
 **Professora:** Ana Silva, Português 9º ano
 
 **Problema:** 180 redações/mês para corrigir, feedback superficial por falta de tempo
 
-**Solução:**
-- Sistema híbrido: IA (Claude) faz primeira correção
+**Soluçêo:**
+- Sistema híbrido: IA (Claude) faz primeira correçêo
 - Professora revisa e personaliza feedback
-- Alunos fazem 2ª versão com orientações
+- Alunos fazem 2ª versêo com orientações
 
 **Resultados:**
-- Tempo de correção: 6h → 2h/semana (67% redução)
+- Tempo de correçêo: 6h → 2h/semana (67% reduçêo)
 - Qualidade do feedback: Score 6.5 → 8.7/10 (alunos)
 - Performance em redações: Nota média 7.2 → 8.1
 - 85% alunos preferiram novo método
@@ -579,16 +579,16 @@ Formato: Q&A estruturado
 
 ---
 
-### Exemplo 2: "Bootcamp IA para Docentes" (Opção B)
+### Exemplo 2: "Bootcamp IA para Docentes" (Opçêo B)
 
 **Professor:** Carlos Mendes, Coordenador TI
 
 **Problema:** 40 professores querendo aprender IA, zero estrutura
 
-**Solução:**
+**Soluçêo:**
 - Programa 12h: 3 encontros de 4h
 - Trilha adaptativa (iniciante/intermediário/avançado)
-- Certificação interna
+- Certificaçêo interna
 
 **Resultados:**
 - 32/40 completaram (80%)
@@ -600,13 +600,13 @@ Formato: Q&A estruturado
 
 ---
 
-### Exemplo 3: "CoP de Matemática Aumentada" (Opção C)
+### Exemplo 3: "CoP de Matemática Aumentada" (Opçêo C)
 
 **Professora:** Beatriz Costa, Matemática Ensino Médio
 
 **Problema:** Professores de matemática isolados, reinventando roda
 
-**Solução:**
+**Soluçêo:**
 - Comunidade online (Discord)
 - Biblioteca de 100 prompts para matemática
 - Encontro quinzenal de compartilhamento
@@ -615,7 +615,7 @@ Formato: Q&A estruturado
 - 35 membros ativos (de 50 inscritos)
 - 120 recursos compartilhados em 3 meses
 - 8 projetos colaborativos emergentes
-- Expansão para outras disciplinas
+- Expansêo para outras disciplinas
 
 **Link:** [Ver projeto completo]
 
@@ -625,11 +625,11 @@ Formato: Q&A estruturado
 
 ### Antes de Submeter:
 
-**Documentação:**
+**Documentaçêo:**
 - [ ] Relatório completo (15-25 páginas)
 - [ ] Todas as seções preenchidas
 - [ ] Referências formatadas (APA/ABNT)
-- [ ] Revisão ortográfica e gramatical
+- [ ] Revisêo ortográfica e gramatical
 - [ ] PDF exportado (nome: Sobrenome_ProjetoFinal_2025.pdf)
 
 **Portfólio Digital:**
@@ -638,9 +638,9 @@ Formato: Q&A estruturado
 - [ ] Recursos disponíveis para download
 - [ ] Links testados (todos funcionando)
 
-**Apresentação:**
+**Apresentaçêo:**
 - [ ] Slides finalizados (11-15 slides)
-- [ ] Apresentação ensaiada (timer: 15 min)
+- [ ] Apresentaçêo ensaiada (timer: 15 min)
 - [ ] Respostas preparadas para perguntas típicas
 - [ ] Backup local de todos os arquivos
 
@@ -648,7 +648,7 @@ Formato: Q&A estruturado
 - [ ] Consentimentos assinados (participantes)
 - [ ] Dados anonimizados
 - [ ] Créditos atribuídos (fontes, IA, colaboradores)
-- [ ] Nenhuma informação sensível exposta
+- [ ] Nenhuma informaçêo sensível exposta
 
 ---
 
@@ -663,12 +663,12 @@ Este projeto é a síntese de 180 horas de aprendizado intenso. Você agora faz 
 2. Compartilhe seus aprendizados com o mundo
 3. Continue aprendendo (IA evolui rápido!)
 4. Inspire outros educadores
-5. Faça parte do movimento de transformação educacional
+5. Faça parte do movimento de transformaçêo educacional
 
 **Mantenha Contato:**
 - Alumni network do SuperProfessores
-- Eventos trimestrais de atualização
-- Oportunidades de co-criação
+- Eventos trimestrais de atualizaçêo
+- Oportunidades de co-criaçêo
 
 ---
 
@@ -677,7 +677,7 @@ Este projeto é a síntese de 180 horas de aprendizado intenso. Você agora faz 
 - **Todos os módulos anteriores (1.1 a 3A.2)**
 - **Livro:** *The Reflective Practitioner* - Donald Schön
 - **Framework:** Design-Based Research (DBR)
-- **Guia:** APA 7th Edition (para formatação)
+- **Guia:** APA 7th Edition (para formataçêo)
 
 ---
 

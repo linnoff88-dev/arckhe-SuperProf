@@ -13,7 +13,7 @@ def generate_nivel_2a():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nível 2A: Pedagógico | SuperProfessores</title>
-    <meta name="description" content="Trilha A - Nível Pedagógico: 60 horas de especialização em pedagogia aumentada por IA">
+    <meta name="description" content="Trilha A - Nível Pedagógico: 60 horas de especializaçêo em pedagogia aumentada por IA">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -120,7 +120,7 @@ def generate_nivel_2a():
                 <span class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">60 horas</span>
             </div>
             <h1 class="text-4xl lg:text-5xl font-bold mb-4">Nível 2A: Pedagógico</h1>
-            <p class="text-xl text-purple-100 mb-6">Especializaç\u00e3o em pedagogia aumentada por IA - Design instrucional, avaliação formativa e personalização</p>
+            <p class="text-xl text-purple-100 mb-6">Especializaç\u00e3o em pedagogia aumentada por IA - Design instrucional, avaliaçêo formativa e personalizaçêo</p>
             <div class="grid md:grid-cols-3 gap-4 mt-8">
                 <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
                     <div class="text-2xl font-bold">5</div>

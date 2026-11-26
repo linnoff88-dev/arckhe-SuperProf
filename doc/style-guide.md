@@ -6,7 +6,7 @@
 
 ## 📋 Índice
 
-1. [Visão Geral](#visão-geral)
+1. [Visêo Geral](#visêo-geral)
 2. [Identidade Visual](#identidade-visual)
 3. [Design Tokens](#design-tokens)
 4. [Tipografia](#tipografia)
@@ -19,7 +19,7 @@
 
 ---
 
-## 🎯 Visão Geral
+## 🎯 Visêo Geral
 
 O FEP utiliza um design moderno, limpo e acessível, focado na experiência do usuário. O sistema de design foi construído com base em **três níveis de aprendizado** que possuem identidades visuais distintas:
 
@@ -30,7 +30,7 @@ O FEP utiliza um design moderno, limpo e acessível, focado na experiência do u
 ### Princípios de Design
 
 1. **Clareza**: Interface limpa e fácil de navegar
-2. **Progressão Visual**: Cada nível tem sua própria identidade
+2. **Progressêo Visual**: Cada nível tem sua própria identidade
 3. **Acessibilidade**: WCAG 2.1 AA compliant
 4. **Performance**: Animações suaves e carregamento otimizado
 5. **Responsivo**: Mobile-first design
@@ -50,13 +50,13 @@ O FEP utiliza um design moderno, limpo e acessível, focado na experiência do u
 
 - **Tom**: Profissional, educacional, acessível
 - **Estilo**: Moderno, minimalista, tecnológico
-- **Emoção**: Confiança, clareza, progresso
+- **Emoçêo**: Confiança, clareza, progresso
 
 ---
 
 ## 🎪 Design Tokens
 
-Os design tokens são as variáveis fundamentais que definem o sistema de design:
+Os design tokens sêo as variáveis fundamentais que definem o sistema de design:
 
 ```css
 :root {
@@ -98,11 +98,11 @@ Os design tokens são as variáveis fundamentais que definem o sistema de design
 | Elemento | Tamanho | Peso | Uso |
 |----------|---------|------|-----|
 | H1 (Hero) | 4rem (64px) | 700 | Títulos principais na hero section |
-| H2 | 2.5rem (40px) | 700 | Títulos de seção |
+| H2 | 2.5rem (40px) | 700 | Títulos de seçêo |
 | H3 | 1.875rem (30px) | 700 | Títulos de cards |
 | H4 | 1.5rem (24px) | 600 | Sub-títulos |
 | Body Large | 1.25rem (20px) | 400 | Texto de destaque |
-| Body | 1rem (16px) | 400 | Texto padrão |
+| Body | 1rem (16px) | 400 | Texto padrêo |
 | Small | 0.875rem (14px) | 400 | Labels, badges |
 
 #### Mobile (< 640px)
@@ -181,10 +181,10 @@ pre code { background: none; padding: 0; }
 
 | Cor | Nome | Hex | Uso |
 |-----|------|-----|-----|
-| Gray 50 | Background | `#F9FAFB` | Fundos de seção |
+| Gray 50 | Background | `#F9FAFB` | Fundos de seçêo |
 | Gray 100 | Background Alt | `#F3F4F6` | Cards alternativos, code blocks |
 | Gray 200 | Border Light | `#E5E7EB` | Bordas sutis |
-| Gray 300 | Border | `#D1D5DB` | Bordas padrão |
+| Gray 300 | Border | `#D1D5DB` | Bordas padrêo |
 | Gray 400 | Text Disabled | `#9CA3AF` | Texto desabilitado |
 | Gray 600 | Text Secondary | `#6B7280` | Texto secundário |
 | Gray 700 | Text Primary | `#374151` | Texto principal |
@@ -222,9 +222,9 @@ background: linear-gradient(to bottom right, #FAF5FF, #FFFFFF);
 /* from-purple-50 to-white */
 ```
 
-### Estados de Interação
+### Estados de Interaçêo
 
-| Estado | Aplicação |
+| Estado | Aplicaçêo |
 |--------|-----------|
 | **Hover** | Escurecer 1 tom (ex: Blue 500 → Blue 600) |
 | **Active** | `transform: scale(0.98)` |
@@ -243,7 +243,7 @@ Baseado em múltiplos de **1rem (16px)**:
 |-------|-------|--------|-----|
 | `spacing-xs` | 0.25rem | 4px | Espaçamentos internos mínimos |
 | `spacing-sm` | 0.5rem | 8px | Gaps pequenos |
-| `spacing-md` | 1rem | 16px | Espaçamento padrão |
+| `spacing-md` | 1rem | 16px | Espaçamento padrêo |
 | `spacing-lg` | 1.5rem | 24px | Espaçamentos entre elementos |
 | `spacing-xl` | 2rem | 32px | Espaçamentos entre seções |
 | `spacing-2xl` | 3rem | 48px | Padding de seções |
@@ -254,7 +254,7 @@ Baseado em múltiplos de **1rem (16px)**:
 **Framework**: Tailwind CSS Grid
 
 ```css
-/* Container padrão */
+/* Container padrêo */
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -282,7 +282,7 @@ gap-8 /* 2rem - 32px */
 
 ## 🧩 Componentes
 
-### 1. Navegação (Navigation)
+### 1. Navegaçêo (Navigation)
 
 #### Desktop Navigation
 
@@ -295,7 +295,7 @@ gap-8 /* 2rem - 32px */
 ```
 
 **Propriedades**:
-- Posição: `sticky top-0`
+- Posiçêo: `sticky top-0`
 - Z-index: `50`
 - Background: Branco
 - Shadow: `shadow-sm`
@@ -304,7 +304,7 @@ gap-8 /* 2rem - 32px */
 #### Mobile Navigation
 
 - Hamburger menu: 3 linhas horizontais
-- Menu expansível com animação fade
+- Menu expansível com animaçêo fade
 - Links em lista vertical
 
 ---
@@ -315,7 +315,7 @@ gap-8 /* 2rem - 32px */
 <section class="bg-gradient-to-br from-blue-600 via-blue-700 to-purple-700">
   <!-- Texto branco -->
   <!-- Título: 4rem (desktop), 2rem (mobile) -->
-  <!-- CTA: Botão branco com texto azul -->
+  <!-- CTA: Botêo branco com texto azul -->
 </section>
 ```
 
@@ -336,9 +336,9 @@ Cards principais para Iniciante, Técnico e Masterclass
 [Emoji]
 [Título]
 [Badge de horas]
-[Descrição]
+[Descriçêo]
 [Lista de tópicos]
-[Botão CTA]
+[Botêo CTA]
 ```
 
 **Variantes**:
@@ -347,19 +347,19 @@ Cards principais para Iniciante, Técnico e Masterclass
 - Gradiente: `from-emerald-50 to-white`
 - Borda: `border-2 border-emerald-200`
 - Hover: `border-emerald-400`
-- Botão: `bg-emerald-500 hover:bg-emerald-600`
+- Botêo: `bg-emerald-500 hover:bg-emerald-600`
 
 #### Técnico (Blue)
 - Gradiente: `from-blue-50 to-white`
 - Borda: `border-2 border-blue-200`
 - Hover: `border-blue-400`
-- Botão: `bg-blue-500 hover:bg-blue-600`
+- Botêo: `bg-blue-500 hover:bg-blue-600`
 
 #### Masterclass (Purple)
 - Gradiente: `from-purple-50 to-white`
 - Borda: `border-2 border-purple-200`
 - Hover: `border-purple-400`
-- Botão: `bg-purple-500 hover:bg-purple-600`
+- Botêo: `bg-purple-500 hover:bg-purple-600`
 
 **Efeitos**:
 - Hover: `transform: translateY(-4px)` + `shadow-xl`
@@ -376,7 +376,7 @@ Cards menores que representam módulos individuais
 ```
 [Badge de nível]
 [Título do módulo]
-[Descrição]
+[Descriçêo]
 [Botões: Modal | Página]
 ```
 
@@ -434,12 +434,12 @@ Cards menores que representam módulos individuais
 
 #### Content Buttons (Modal/Página)
 
-**Botão Modal**:
+**Botêo Modal**:
 - Background: Blue 500
 - Ícone: 📖
 - Texto: "Ver em Modal"
 
-**Botão Página**:
+**Botêo Página**:
 - Background: Transparent
 - Border: Blue 500
 - Ícone: 📄
@@ -496,7 +496,7 @@ Cards menores que representam módulos individuais
 - Background: Gray 200
 - Fill: Gradiente Blue → Purple
 - Border radius: `9999px` (circular)
-- Transição: `width 0.5s ease-out`
+- Transiçêo: `width 0.5s ease-out`
 
 ---
 
@@ -540,10 +540,10 @@ Modal para exibir conteúdo completo de módulos
 - Max-width: `90vw` ou `1000px`
 - Max-height: `90vh`
 - Scroll: Interno
-- Botão fechar: Canto superior direito
+- Botêo fechar: Canto superior direito
 
 **Conteúdo Markdown**:
-- Segue estilos de tipografia markdown (ver seção Tipografia)
+- Segue estilos de tipografia markdown (ver seçêo Tipografia)
 - Blockquotes: Borda esquerda verde (Iniciante)
 
 ---
@@ -567,11 +567,11 @@ Modal para exibir conteúdo completo de módulos
 
 ## ✨ Animações e Transições
 
-### Princípios de Animação
+### Princípios de Animaçêo
 
 1. **Suavidade**: Usar easing functions naturais
 2. **Performance**: Usar `transform` e `opacity`
-3. **Sutileza**: Animações devem melhorar, não distrair
+3. **Sutileza**: Animações devem melhorar, nêo distrair
 4. **Acessibilidade**: Respeitar `prefers-reduced-motion`
 
 ---
@@ -804,7 +804,7 @@ O design é construído primeiro para mobile e depois expandido para telas maior
 
 ### Conformidade
 
-**Padrão**: WCAG 2.1 Level AA
+**Padrêo**: WCAG 2.1 Level AA
 
 ---
 
@@ -836,12 +836,12 @@ Link invisível que aparece ao receber foco.
 }
 ```
 
-Indicador visual claro para navegação por teclado.
+Indicador visual claro para navegaçêo por teclado.
 
-#### 4. Navegação por Teclado
+#### 4. Navegaçêo por Teclado
 
 - ESC: Fecha menu mobile
-- Tab: Navegação sequencial
+- Tab: Navegaçêo sequencial
 - Enter/Space: Ativa botões
 
 #### 5. ARIA Labels
@@ -849,7 +849,7 @@ Indicador visual claro para navegação por teclado.
 Botões e links possuem labels descritivos:
 
 ```html
-<button aria-label="Abrir menu de navegação">
+<button aria-label="Abrir menu de navegaçêo">
   [Ícone hamburger]
 </button>
 ```
@@ -857,7 +857,7 @@ Botões e links possuem labels descritivos:
 #### 6. Semantic HTML
 
 Uso correto de tags semânticas:
-- `<nav>` para navegação
+- `<nav>` para navegaçêo
 - `<main>` para conteúdo principal
 - `<article>` para módulos
 - `<section>` para seções
@@ -869,7 +869,7 @@ Todas as imagens possuem `alt` descritivo.
 
 #### 8. Reduced Motion
 
-Respeita preferência `prefers-reduced-motion` (ver seção Animações).
+Respeita preferência `prefers-reduced-motion` (ver seçêo Animações).
 
 #### 9. Scrollbar Customizada
 
@@ -896,12 +896,12 @@ Respeita preferência `prefers-reduced-motion` (ver seção Animações).
 
 ## 🖨️ Print Styles
 
-Otimização para impressão:
+Otimizaçêo para impressêo:
 
 ```css
 @media print {
   nav, footer {
-    display: none; /* Remove navegação e rodapé */
+    display: none; /* Remove navegaçêo e rodapé */
   }
 
   .no-print {
@@ -939,7 +939,7 @@ Quando usuário seleciona texto, aparece com fundo azul.
 
 ### Custom Scrollbar
 
-Ver seção de Acessibilidade.
+Ver seçêo de Acessibilidade.
 
 ---
 
@@ -961,7 +961,7 @@ Rolagem suave ao clicar em links âncora.
 
 1. **Tailwind CSS**
    - URL: `https://cdn.tailwindcss.com`
-   - Versão: Latest
+   - Versêo: Latest
 
 2. **Google Fonts - Inter**
    - URL: `https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap`
@@ -978,26 +978,26 @@ Rolagem suave ao clicar em links âncora.
 1. **Font Display**: `display=swap` no Google Fonts
 2. **Lazy Loading**: Imagens com `loading="lazy"`
 3. **Preconnect**: Links para Google Fonts
-4. **CSS Minificado**: Produção usa arquivo minificado
+4. **CSS Minificado**: Produçêo usa arquivo minificado
 5. **Smooth Animations**: Apenas `transform` e `opacity`
 
 ---
 
 ## 📝 Notas Finais
 
-### Manutenção
+### Manutençêo
 
 - Manter consistência nas cores dos níveis
 - Testar novos componentes em todos os breakpoints
 - Validar contraste de cores com ferramentas WCAG
 - Testar animações com `prefers-reduced-motion`
 
-### Expansão
+### Expansêo
 
-Este style guide é um documento vivo e deve ser atualizado conforme novos componentes são adicionados ao projeto.
+Este style guide é um documento vivo e deve ser atualizado conforme novos componentes sêo adicionados ao projeto.
 
 ---
 
-**Última atualização**: 2025-11-04
-**Versão**: 1.0
+**Última atualizaçêo**: 2025-11-04
+**Versêo**: 1.0
 **Autor**: FEP Team
